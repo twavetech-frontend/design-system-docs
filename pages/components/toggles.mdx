@@ -1,0 +1,154 @@
+import { Toggle } from '../../components/Toggle'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Toggles
+
+Toggle(스위치)는 On/Off 두 가지 상태를 가지는 컨트롤입니다.
+설정 화면에서 기능을 켜거나 끄는 데 사용합니다.
+
+Figma 컴포넌트: `Toggle`
+
+---
+
+## Type: Default
+
+기본 토글 스위치입니다.
+
+### Toggle Only
+
+<ComponentPreview code={`<Toggle pressed={false} size="md" />
+<Toggle pressed={true} size="md" />
+<Toggle pressed={false} size="md" state="hover" />
+<Toggle pressed={true} size="md" state="hover" />
+<Toggle pressed={false} size="md" state="focus" />
+<Toggle pressed={true} size="md" state="focus" />
+<Toggle pressed={false} size="md" state="disabled" />
+<Toggle pressed={true} size="md" state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, auto)', gap: '16px 24px', alignItems: 'center', justifyContent: 'start' }}>
+    <Toggle pressed={false} size="md" />
+    <Toggle pressed={true} size="md" />
+    <Toggle pressed={false} size="md" state="hover" />
+    <Toggle pressed={true} size="md" state="hover" />
+    <Toggle pressed={false} size="md" state="focus" />
+    <Toggle pressed={true} size="md" state="focus" />
+    <Toggle pressed={false} size="md" state="disabled" />
+    <Toggle pressed={true} size="md" state="disabled" />
+  </div>
+</ComponentPreview>
+
+### With Label
+
+<ComponentPreview code={`<Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." />
+<Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." />
+<Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+<Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+<Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+<Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+<Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+<Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: '16px 24px', alignItems: 'start' }}>
+    <Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." />
+    <Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." />
+    <Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Toggle pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+    <Toggle pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Type: Slim
+
+더 얇은 형태의 토글입니다.
+
+### Toggle Only
+
+<ComponentPreview code={`<Toggle type="slim" pressed={false} size="md" />
+<Toggle type="slim" pressed={true} size="md" />
+<Toggle type="slim" pressed={false} size="md" state="hover" />
+<Toggle type="slim" pressed={true} size="md" state="hover" />
+<Toggle type="slim" pressed={false} size="md" state="focus" />
+<Toggle type="slim" pressed={true} size="md" state="focus" />
+<Toggle type="slim" pressed={false} size="md" state="disabled" />
+<Toggle type="slim" pressed={true} size="md" state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, auto)', gap: '16px 24px', alignItems: 'center', justifyContent: 'start' }}>
+    <Toggle type="slim" pressed={false} size="md" />
+    <Toggle type="slim" pressed={true} size="md" />
+    <Toggle type="slim" pressed={false} size="md" state="hover" />
+    <Toggle type="slim" pressed={true} size="md" state="hover" />
+    <Toggle type="slim" pressed={false} size="md" state="focus" />
+    <Toggle type="slim" pressed={true} size="md" state="focus" />
+    <Toggle type="slim" pressed={false} size="md" state="disabled" />
+    <Toggle type="slim" pressed={true} size="md" state="disabled" />
+  </div>
+</ComponentPreview>
+
+### With Label
+
+<ComponentPreview code={`<Toggle type="slim" pressed={false} size="md" label="Remember me" description="Save my login details for next time." />
+<Toggle type="slim" pressed={true} size="md" label="Remember me" description="Save my login details for next time." />
+<Toggle type="slim" pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+<Toggle type="slim" pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: '16px 24px', alignItems: 'start' }}>
+    <Toggle type="slim" pressed={false} size="md" label="Remember me" description="Save my login details for next time." />
+    <Toggle type="slim" pressed={true} size="md" label="Remember me" description="Save my login details for next time." />
+    <Toggle type="slim" pressed={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Toggle type="slim" pressed={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Size
+
+sm, md 두 가지 사이즈를 지원합니다.
+
+<ComponentPreview code={`<Toggle pressed={true} size="sm" />
+<Toggle pressed={true} size="md" />
+<Toggle type="slim" pressed={true} size="sm" />
+<Toggle type="slim" pressed={true} size="md" />`}>
+  <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+    <Toggle pressed={true} size="sm" />
+    <Toggle pressed={true} size="md" />
+    <Toggle type="slim" pressed={true} size="sm" />
+    <Toggle type="slim" pressed={true} size="md" />
+  </div>
+</ComponentPreview>
+
+### SM with Label
+
+<ComponentPreview code={`<Toggle pressed={false} size="sm" label="Remember me" description="Save my login details for next time." />
+<Toggle pressed={true} size="sm" label="Remember me" description="Save my login details for next time." />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16, alignItems: 'start' }}>
+    <Toggle pressed={false} size="sm" label="Remember me" description="Save my login details for next time." />
+    <Toggle pressed={true} size="sm" label="Remember me" description="Save my login details for next time." />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'type', type: "'default' | 'slim'", default: "'default'", description: '토글 타입 (기본 또는 슬림)' },
+  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '토글 크기' },
+  { name: 'pressed', type: 'boolean', default: 'false', description: 'On/Off 상태' },
+  { name: 'state', type: "'default' | 'hover' | 'focus' | 'disabled'", default: "'default'", description: '토글 상태 (문서 시각화용)' },
+  { name: 'label', type: 'string', default: '-', description: '레이블 텍스트' },
+  { name: 'description', type: 'string', default: '-', description: '부가 설명 텍스트' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Default` `Slim` |
+| **Size** | `sm` `md` |
+| **Pressed** | `True` `False` |
+| **State** | `Default` `Hover` `Focus` `Disabled` |
+| **Text** | `True` `False` |

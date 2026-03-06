@@ -1,0 +1,238 @@
+import { Input, Textarea, MailIcon, CopyIcon } from '../../components/Input'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Inputs
+
+사용자에게 텍스트 입력을 받는 필드입니다. 다양한 유형과 상태를 지원합니다.
+
+Figma 컴포넌트: `Input field`, `Textarea input field`
+
+---
+
+## Input Field
+
+### Type: Default
+
+기본 텍스트 입력 필드입니다.
+
+<ComponentPreview code={`<Input label="Email" placeholder="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." />
+<Input label="Email" value="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." state="filled" />
+<Input label="Email" value="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." state="focused" />
+<Input label="Email" placeholder="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Input label="Email" placeholder="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." />
+    <Input label="Email" value="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." state="filled" />
+    <Input label="Email" value="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." state="focused" />
+    <Input label="Email" placeholder="olivia@julee.design" size="md" required helpIcon hint="This is a hint text to help user." state="disabled" />
+  </div>
+</ComponentPreview>
+
+### Type: Leading Dropdown
+
+왼쪽에 드롭다운이 있는 입력 필드입니다. 국가 코드, 통화 선택 등에 사용합니다.
+
+<ComponentPreview code={`<Input label="Phone number" placeholder="+1 (555) 000-0000" type="leading-dropdown" leadingDropdown="US" size="md" required hint="This is a hint text to help user." />
+<Input label="Phone number" value="+1 (555) 000-0000" type="leading-dropdown" leadingDropdown="US" size="md" required hint="This is a hint text to help user." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Input label="Phone number" placeholder="+1 (555) 000-0000" type="leading-dropdown" leadingDropdown="US" size="md" required hint="This is a hint text to help user." />
+    <Input label="Phone number" value="+1 (555) 000-0000" type="leading-dropdown" leadingDropdown="US" size="md" required hint="This is a hint text to help user." state="focused" />
+  </div>
+</ComponentPreview>
+
+### Type: Trailing Dropdown
+
+오른쪽에 드롭다운이 있는 입력 필드입니다. 단위 선택 등에 사용합니다.
+
+<ComponentPreview code={`<Input label="Sale amount" placeholder="$ 1,000.00" type="trailing-dropdown" trailingDropdown="USD" size="md" required hint="This is a hint text to help user." />
+<Input label="Sale amount" value="$ 1,000.00" type="trailing-dropdown" trailingDropdown="USD" size="md" required hint="This is a hint text to help user." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Input label="Sale amount" placeholder="$ 1,000.00" type="trailing-dropdown" trailingDropdown="USD" size="md" required hint="This is a hint text to help user." />
+    <Input label="Sale amount" value="$ 1,000.00" type="trailing-dropdown" trailingDropdown="USD" size="md" required hint="This is a hint text to help user." state="focused" />
+  </div>
+</ComponentPreview>
+
+### Type: Leading Text
+
+왼쪽에 고정 텍스트가 있는 입력 필드입니다. URL 입력 등에 사용합니다.
+
+<ComponentPreview code={`<Input label="Website" placeholder="www.julee.design" type="leading-text" leadingText="http://" size="md" required hint="This is a hint text to help user." />
+<Input label="Website" value="www.julee.design" type="leading-text" leadingText="http://" size="md" required hint="This is a hint text to help user." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Input label="Website" placeholder="www.julee.design" type="leading-text" leadingText="http://" size="md" required hint="This is a hint text to help user." />
+    <Input label="Website" value="www.julee.design" type="leading-text" leadingText="http://" size="md" required hint="This is a hint text to help user." state="focused" />
+  </div>
+</ComponentPreview>
+
+### Type: Payment Input
+
+카드 결제 입력 필드입니다.
+
+<ComponentPreview code={`<Input label="Card number" placeholder="Card number" type="payment" paymentBrand="#f04438" size="md" required hint="This is a hint text to help user." />
+<Input label="Card number" value="Card number" type="payment" paymentBrand="#f04438" size="md" required hint="This is a hint text to help user." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Input label="Card number" placeholder="Card number" type="payment" paymentBrand="#f04438" size="md" required hint="This is a hint text to help user." />
+    <Input label="Card number" value="Card number" type="payment" paymentBrand="#f04438" size="md" required hint="This is a hint text to help user." state="focused" />
+  </div>
+</ComponentPreview>
+
+### Type: Tags
+
+태그를 입력할 수 있는 필드입니다. 사용자, 카테고리 태깅 등에 사용합니다.
+
+<ComponentPreview code={`<Input label="Users" placeholder="Add users" type="tags" tags={[]} size="md" required hint="This is a hint text to help user." />
+<Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="filled" />
+<Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 320px)', gap: 16 }}>
+    <Input label="Users" placeholder="Add users" type="tags" tags={[]} size="md" required hint="This is a hint text to help user." />
+    <Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="filled" />
+    <Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="focused" />
+  </div>
+</ComponentPreview>
+
+### Type: Trailing Button
+
+오른쪽에 버튼이 있는 입력 필드입니다. 복사, 검색 등의 액션에 사용합니다.
+
+<ComponentPreview code={`<Input label="Website" placeholder="www.julee.design" type="trailing-button" trailingButton="Copy" size="md" required hint="This is a hint text to help user." />
+<Input label="Website" value="www.julee.design" type="trailing-button" trailingButton="Copy" size="md" required hint="This is a hint text to help user." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 320px)', gap: 16 }}>
+    <Input label="Website" placeholder="www.julee.design" type="trailing-button" trailingButton="Copy" size="md" required hint="This is a hint text to help user." />
+    <Input label="Website" value="www.julee.design" type="trailing-button" trailingButton="Copy" size="md" required hint="This is a hint text to help user." state="focused" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Size
+
+sm, md 두 가지 사이즈를 지원합니다.
+
+<ComponentPreview code={`<Input label="Email" placeholder="olivia@julee.design" size="sm" hint="Size SM (40px)" />
+<Input label="Email" placeholder="olivia@julee.design" size="md" hint="Size MD (44px)" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16, alignItems: 'start' }}>
+    <Input label="Email" placeholder="olivia@julee.design" size="sm" hint="Size SM (40px)" />
+    <Input label="Email" placeholder="olivia@julee.design" size="md" hint="Size MD (44px)" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Destructive
+
+에러 상태의 입력 필드입니다. 유효성 검사 실패 시 사용합니다.
+
+<ComponentPreview code={`<Input label="Email" value="olivia@julee.design" size="md" destructive hint="This is an error message." required helpIcon />
+<Input label="Email" value="olivia@julee.design" size="md" destructive hint="This is an error message." state="focused" required helpIcon />
+<Input label="Phone number" value="+1 (555) 000-0000" type="leading-dropdown" leadingDropdown="US" size="md" destructive hint="This is an error message." required />
+<Input label="Website" value="www.julee.design" type="leading-text" leadingText="http://" size="md" destructive hint="This is an error message." required />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Input label="Email" value="olivia@julee.design" size="md" destructive hint="This is an error message." required helpIcon />
+    <Input label="Email" value="olivia@julee.design" size="md" destructive hint="This is an error message." state="focused" required helpIcon />
+    <Input label="Phone number" value="+1 (555) 000-0000" type="leading-dropdown" leadingDropdown="US" size="md" destructive hint="This is an error message." required />
+    <Input label="Website" value="www.julee.design" type="leading-text" leadingText="http://" size="md" destructive hint="This is an error message." required />
+  </div>
+</ComponentPreview>
+
+---
+
+## Textarea
+
+### Default
+
+여러 줄 텍스트 입력 영역입니다.
+
+<ComponentPreview code={`<Textarea label="Description" placeholder="Enter a description..." required helpIcon hint="This is a hint text to help user." />
+<Textarea label="Description" value="A little about the company and the team that you'll be working with." required helpIcon hint="This is a hint text to help user." state="filled" />
+<Textarea label="Description" value="A little about the company and the team that you'll be working with." required helpIcon hint="This is a hint text to help user." state="focused" />
+<Textarea label="Description" placeholder="Enter a description..." required helpIcon hint="This is a hint text to help user." state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Textarea label="Description" placeholder="Enter a description..." required helpIcon hint="This is a hint text to help user." />
+    <Textarea label="Description" value="A little about the company and the team that you'll be working with." required helpIcon hint="This is a hint text to help user." state="filled" />
+    <Textarea label="Description" value="A little about the company and the team that you'll be working with." required helpIcon hint="This is a hint text to help user." state="focused" />
+    <Textarea label="Description" placeholder="Enter a description..." required helpIcon hint="This is a hint text to help user." state="disabled" />
+  </div>
+</ComponentPreview>
+
+### Textarea with Tags
+
+태그를 입력할 수 있는 Textarea입니다.
+
+<ComponentPreview code={`<Textarea label="Description" placeholder="Add tags..." type="tags" required helpIcon hint="This is a hint text to help user." />
+<Textarea label="Description" type="tags" tags={["Design", "Software"]} required helpIcon hint="This is a hint text to help user." />
+<Textarea label="Description" type="tags" tags={["Design", "Software"]} required helpIcon hint="This is a hint text to help user." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Textarea label="Description" placeholder="Add tags..." type="tags" required helpIcon hint="This is a hint text to help user." />
+    <Textarea label="Description" type="tags" tags={["Design", "Software"]} required helpIcon hint="This is a hint text to help user." />
+    <Textarea label="Description" type="tags" tags={["Design", "Software"]} required helpIcon hint="This is a hint text to help user." state="focused" />
+  </div>
+</ComponentPreview>
+
+### Textarea Destructive
+
+<ComponentPreview code={`<Textarea label="Description" value="A little about the company and the team that you'll be working with." destructive required helpIcon hint="This is an error message." />
+<Textarea label="Description" value="A little about the company and the team that you'll be working with." destructive required helpIcon hint="This is an error message." state="focused" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: 16 }}>
+    <Textarea label="Description" value="A little about the company and the team that you'll be working with." destructive required helpIcon hint="This is an error message." />
+    <Textarea label="Description" value="A little about the company and the team that you'll be working with." destructive required helpIcon hint="This is an error message." state="focused" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+### Input
+
+<PropsTable data={[
+  { name: 'label', type: 'string', default: '-', description: '레이블 텍스트' },
+  { name: 'placeholder', type: 'string', default: "''", description: '플레이스홀더 텍스트' },
+  { name: 'value', type: 'string', default: '-', description: '입력 값' },
+  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '입력 필드 크기' },
+  { name: 'state', type: "'default' | 'filled' | 'focused' | 'disabled'", default: "'default'", description: '입력 필드 상태' },
+  { name: 'destructive', type: 'boolean', default: 'false', description: '에러 상태 여부' },
+  { name: 'type', type: "'default' | 'leading-dropdown' | 'trailing-dropdown' | 'leading-text' | 'payment' | 'tags' | 'trailing-button'", default: "'default'", description: '입력 필드 유형' },
+  { name: 'required', type: 'boolean', default: 'false', description: '필수 표시 (*) 여부' },
+  { name: 'helpIcon', type: 'boolean', default: 'false', description: '도움말 아이콘 표시 여부' },
+  { name: 'hint', type: 'string', default: '-', description: '힌트 또는 에러 메시지' },
+  { name: 'leadingText', type: 'string', default: '-', description: '왼쪽 고정 텍스트 (type=leading-text)' },
+  { name: 'leadingDropdown', type: 'string', default: '-', description: '왼쪽 드롭다운 텍스트 (type=leading-dropdown)' },
+  { name: 'trailingDropdown', type: 'string', default: '-', description: '오른쪽 드롭다운 텍스트 (type=trailing-dropdown)' },
+  { name: 'trailingButton', type: 'string', default: '-', description: '오른쪽 버튼 텍스트 (type=trailing-button)' },
+  { name: 'tags', type: 'string[]', default: '[]', description: '태그 목록 (type=tags)' },
+]} />
+
+### Textarea
+
+<PropsTable data={[
+  { name: 'label', type: 'string', default: '-', description: '레이블 텍스트' },
+  { name: 'placeholder', type: 'string', default: "''", description: '플레이스홀더 텍스트' },
+  { name: 'value', type: 'string', default: '-', description: '입력 값' },
+  { name: 'state', type: "'default' | 'filled' | 'focused' | 'disabled'", default: "'default'", description: 'Textarea 상태' },
+  { name: 'destructive', type: 'boolean', default: 'false', description: '에러 상태 여부' },
+  { name: 'type', type: "'default' | 'tags'", default: "'default'", description: 'Textarea 유형' },
+  { name: 'required', type: 'boolean', default: 'false', description: '필수 표시 (*) 여부' },
+  { name: 'helpIcon', type: 'boolean', default: 'false', description: '도움말 아이콘 표시 여부' },
+  { name: 'hint', type: 'string', default: '-', description: '힌트 또는 에러 메시지' },
+  { name: 'tags', type: 'string[]', default: '[]', description: '태그 목록 (type=tags)' },
+]} />
+
+---
+
+## Figma Variants
+
+### Input Field
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` |
+| **Type** | `Default` `Leading dropdown` `Trailing dropdown` `Leading text` `Payment input` `Tags` `Trailing button` |
+| **Destructive** | `True` `False` |
+| **State** | `Placeholder` `Filled` `Focused` `Disabled` |
+
+### Textarea
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Default` `Tags` |
+| **Destructive** | `True` `False` |
+| **State** | `Placeholder` `Default` `Focused` `Disabled` |

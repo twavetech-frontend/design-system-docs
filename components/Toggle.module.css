@@ -1,0 +1,179 @@
+/* ===========================
+   Toggle Wrapper (with text)
+   =========================== */
+.wrapper {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--fontFamily-fontFamilyBody, 'Inter', sans-serif);
+  cursor: pointer;
+}
+
+.wrapper.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--colors-grayLightMode-700, #344054);
+}
+.size-sm .label {
+  font-size: 14px;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--colors-grayLightMode-600, #475467);
+}
+
+/* ===========================
+   Track (Default type)
+   =========================== */
+.track {
+  position: relative;
+  border-radius: 9999px;
+  background: var(--colors-grayLightMode-100, #f2f4f7);
+  transition: background 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Default sizes */
+.size-sm .track {
+  width: 36px;
+  height: 20px;
+}
+.size-md .track {
+  width: 44px;
+  height: 24px;
+}
+
+/* Pressed (on) */
+.pressed .track {
+  background: var(--colors-brand-600, #7f56d9);
+}
+
+/* Hover */
+.hover .track {
+  background: var(--colors-grayLightMode-200, #eaecf0);
+}
+.hover.pressed .track {
+  background: var(--colors-brand-700, #6941c6);
+}
+
+/* Focus */
+.focus .track {
+  box-shadow: 0 0 0 4px var(--colors-grayLightMode-100, #f2f4f7);
+}
+.focus.pressed .track {
+  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+}
+
+/* Disabled */
+.disabled .track {
+  background: var(--colors-grayLightMode-100, #f2f4f7);
+  cursor: not-allowed;
+}
+.disabled.pressed .track {
+  background: var(--colors-grayLightMode-100, #f2f4f7);
+}
+
+/* ===========================
+   Thumb
+   =========================== */
+.thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
+  transition: transform 0.2s;
+}
+
+.size-sm .thumb {
+  width: 16px;
+  height: 16px;
+}
+.size-md .thumb {
+  width: 20px;
+  height: 20px;
+}
+
+/* Pressed → slide right */
+.size-sm.pressed .thumb {
+  transform: translateX(16px);
+}
+.size-md.pressed .thumb {
+  transform: translateX(20px);
+}
+
+/* ===========================
+   Slim Type
+   =========================== */
+.slim .track {
+  background: var(--colors-grayLightMode-300, #d0d5dd);
+}
+
+.size-sm.slim .track {
+  width: 32px;
+  height: 16px;
+}
+.size-md.slim .track {
+  width: 40px;
+  height: 20px;
+}
+
+.slim .thumb {
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+.size-sm.slim .thumb {
+  width: 12px;
+  height: 12px;
+}
+.size-md.slim .thumb {
+  width: 16px;
+  height: 16px;
+}
+
+.slim.pressed .track {
+  background: var(--colors-brand-600, #7f56d9);
+}
+
+.slim.hover .track {
+  background: var(--colors-grayLightMode-400, #98a2b3);
+}
+.slim.hover.pressed .track {
+  background: var(--colors-brand-700, #6941c6);
+}
+
+.slim.focus .track {
+  box-shadow: 0 0 0 4px var(--colors-grayLightMode-100, #f2f4f7);
+}
+.slim.focus.pressed .track {
+  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+}
+
+.slim.disabled .track {
+  background: var(--colors-grayLightMode-200, #eaecf0);
+  cursor: not-allowed;
+}
+.slim.disabled.pressed .track {
+  background: var(--colors-grayLightMode-200, #eaecf0);
+}
+
+/* Slim pressed → slide right */
+.size-sm.slim.pressed .thumb {
+  transform: translateX(16px);
+}
+.size-md.slim.pressed .thumb {
+  transform: translateX(20px);
+}

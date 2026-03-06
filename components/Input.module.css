@@ -1,0 +1,377 @@
+/* ===========================
+   Input Field Wrapper
+   =========================== */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--fontFamily-fontFamilyBody, 'Inter', sans-serif);
+}
+
+/* Label */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--colors-grayLightMode-700, #344054);
+}
+
+.required {
+  color: var(--colors-error-500, #f04438);
+}
+
+.help-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--colors-grayLightMode-400, #98a2b3);
+  cursor: help;
+}
+.help-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===========================
+   Input Container
+   =========================== */
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* Sizes */
+.size-sm .input-container {
+  border-radius: 8px;
+  min-height: 40px;
+}
+.size-md .input-container {
+  border-radius: 8px;
+  min-height: 44px;
+}
+
+/* States */
+.focused .input-container {
+  border-color: var(--colors-brand-300, #d6bbfb);
+  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+}
+
+.disabled .input-container {
+  background: var(--colors-grayLightMode-50, #f9fafb);
+  pointer-events: none;
+}
+.disabled .input-container input,
+.disabled .input-container textarea {
+  color: var(--colors-grayLightMode-500, #667085);
+}
+
+.destructive .input-container {
+  border-color: var(--colors-error-300, #fda29b);
+}
+.destructive.focused .input-container {
+  border-color: var(--colors-error-300, #fda29b);
+  box-shadow: 0 0 0 4px var(--colors-error-100, #fee4e2);
+}
+
+/* ===========================
+   Input Element
+   =========================== */
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--colors-grayLightMode-900, #101828);
+  min-width: 0;
+}
+
+.size-sm .input {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.size-md .input {
+  padding: 10px 14px;
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: var(--colors-grayLightMode-500, #667085);
+}
+
+/* ===========================
+   Addons
+   =========================== */
+
+/* Leading icon */
+.leading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 14px;
+  color: var(--colors-grayLightMode-500, #667085);
+  flex-shrink: 0;
+}
+.leading-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.leading-icon + .input {
+  padding-left: 8px;
+}
+
+/* Trailing icon */
+.trailing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 14px;
+  color: var(--colors-grayLightMode-500, #667085);
+  flex-shrink: 0;
+}
+.trailing-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.destructive .trailing-icon {
+  color: var(--colors-error-500, #f04438);
+}
+
+/* Leading text (e.g. http://) */
+.leading-text {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 16px;
+  color: var(--colors-grayLightMode-600, #475467);
+  background: var(--colors-grayLightMode-50, #f9fafb);
+  border-right: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  white-space: nowrap;
+  align-self: stretch;
+}
+.size-sm .leading-text {
+  font-size: 14px;
+}
+
+/* Leading dropdown */
+.leading-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--colors-grayLightMode-900, #101828);
+  border-right: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  cursor: pointer;
+  white-space: nowrap;
+  align-self: stretch;
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  font-family: inherit;
+}
+.leading-dropdown svg {
+  width: 16px;
+  height: 16px;
+  color: var(--colors-grayLightMode-500, #667085);
+}
+
+/* Trailing dropdown */
+.trailing-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--colors-grayLightMode-900, #101828);
+  border-left: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  cursor: pointer;
+  white-space: nowrap;
+  align-self: stretch;
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  font-family: inherit;
+}
+.trailing-dropdown svg {
+  width: 16px;
+  height: 16px;
+  color: var(--colors-grayLightMode-500, #667085);
+}
+
+/* Trailing button */
+.trailing-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--colors-grayLightMode-700, #344054);
+  border-left: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  align-self: stretch;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  font-family: inherit;
+}
+.trailing-button:hover {
+  background: var(--colors-grayLightMode-50, #f9fafb);
+}
+
+/* Payment icon */
+.payment-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  flex-shrink: 0;
+}
+.payment-icon span {
+  width: 28px;
+  height: 20px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Tags inside input */
+.tags-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+.size-sm .tags-container {
+  padding: 4px 8px;
+}
+.size-md .tags-container {
+  padding: 6px 10px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--colors-grayLightMode-700, #344054);
+  background: var(--colors-grayLightMode-100, #f2f4f7);
+  border: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  white-space: nowrap;
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--colors-brand-500, #9e77ed);
+  flex-shrink: 0;
+}
+
+.tag-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  color: var(--colors-grayLightMode-400, #98a2b3);
+}
+.tag-close svg {
+  width: 12px;
+  height: 12px;
+}
+
+.tags-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--colors-grayLightMode-900, #101828);
+  min-width: 60px;
+  flex: 1;
+  padding: 2px 4px;
+}
+.tags-input::placeholder {
+  color: var(--colors-grayLightMode-500, #667085);
+}
+
+/* ===========================
+   Hint / Error text
+   =========================== */
+.hint {
+  font-size: 14px;
+  color: var(--colors-grayLightMode-600, #475467);
+}
+
+.destructive .hint {
+  color: var(--colors-error-600, #d92d20);
+}
+
+/* ===========================
+   Textarea
+   =========================== */
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.focused .textarea-container {
+  border-color: var(--colors-brand-300, #d6bbfb);
+  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+}
+
+.disabled .textarea-container {
+  background: var(--colors-grayLightMode-50, #f9fafb);
+  pointer-events: none;
+}
+
+.destructive .textarea-container {
+  border-color: var(--colors-error-300, #fda29b);
+}
+.destructive.focused .textarea-container {
+  border-color: var(--colors-error-300, #fda29b);
+  box-shadow: 0 0 0 4px var(--colors-error-100, #fee4e2);
+}
+
+.textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--colors-grayLightMode-900, #101828);
+  padding: 12px 14px;
+  resize: vertical;
+  min-height: 128px;
+}
+.textarea::placeholder {
+  color: var(--colors-grayLightMode-500, #667085);
+}

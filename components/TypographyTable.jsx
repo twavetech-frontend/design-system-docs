@@ -129,7 +129,7 @@ export function TypographyTable() {
                 <td style={{ padding: '12px' }}>{w.value}</td>
                 <td style={{ padding: '12px' }}>{w.numeric}</td>
                 <td style={{ padding: '12px', fontWeight: w.numeric, fontFamily: 'Pretendard', fontSize: 16, fontStyle: w.value.includes('italic') ? 'italic' : 'normal' }}>
-                  다람쥐 헌 쳇바퀴에 타고파 Aa
+                  함께 성장하는 습관 소셜 핀테크. 아임인
                 </td>
                 <td style={{ padding: '12px' }}>
                   <code style={{ background: '#f0f0f0', padding: '2px 6px', borderRadius: 4, fontSize: 12 }}>
@@ -229,7 +229,7 @@ function TypeRow({ entry }) {
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
       }}>
-        다람쥐 헌 쳇바퀴에 타고파 The quick brown fox
+        함께 성장하는 습관 소셜 핀테크. 아임인
       </div>
     </div>
   );
