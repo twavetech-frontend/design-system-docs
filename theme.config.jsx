@@ -1,8 +1,10 @@
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default {
     darkMode: false,
     logo: (
         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <img src="/logo.png" alt="Logo" style={{ height: 28, width: 28, borderRadius: '50%' }} />
+            <img src={`${basePath}/logo.png`} alt="Logo" style={{ height: 28, width: 28, borderRadius: '50%' }} />
             <strong>JuLee Design System</strong>
         </span>
     ),
