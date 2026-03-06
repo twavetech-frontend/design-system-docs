@@ -257,34 +257,66 @@ function SemanticGroup({ label, colors }) {
   );
 }
 
-// --- Shared token cache (fetched once, reused across all instances) ---
-let tokenCache = null;
-let tokenPromise = null;
+// --- Shared token cache (fetched once per mode, reused across all instances) ---
+const tokenCaches = {};
+const tokenPromises = {};
 
-function fetchTokens() {
-  if (tokenCache) return Promise.resolve(tokenCache);
-  if (tokenPromise) return tokenPromise;
+function fetchTokens(mode = 'light') {
+  if (tokenCaches[mode]) return Promise.resolve(tokenCaches[mode]);
+  if (tokenPromises[mode]) return tokenPromises[mode];
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-  tokenPromise = fetch(`${basePath}/tokens.css`)
+  const file = mode === 'dark' ? 'tokens-dark.css' : 'tokens.css';
+  tokenPromises[mode] = fetch(`${basePath}/${file}`)
     .then((r) => r.text())
     .then((text) => {
-      tokenCache = parseCSSText(text);
-      return tokenCache;
+      tokenCaches[mode] = parseCSSText(text);
+      return tokenCaches[mode];
     });
-  return tokenPromise;
+  return tokenPromises[mode];
 }
+
+// --- Tab styles ---
+const modeTabBar = {
+  display: 'inline-flex',
+  gap: 0,
+  marginBottom: 20,
+  borderRadius: 8,
+  border: '1px solid #e5e7eb',
+  overflow: 'hidden',
+};
+
+const modeTabBase = {
+  padding: '8px 20px',
+  fontSize: 14,
+  fontWeight: 500,
+  cursor: 'pointer',
+  background: '#fff',
+  border: 'none',
+  color: '#667085',
+  transition: 'background 0.15s, color 0.15s',
+};
+
+const modeTabActive = {
+  ...modeTabBase,
+  background: '#344054',
+  color: '#fff',
+  fontWeight: 600,
+};
 
 // --- Main Export ---
 export function ColorPalette({ type = 'primitive' }) {
+  const hasModeToggle = type === 'semantic' || type === 'component';
+  const [mode, setMode] = useState('light');
   const [groups, setGroups] = useState([]);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetchTokens().then((allVars) => {
+    const fetchMode = hasModeToggle ? mode : 'light';
+    fetchTokens(fetchMode).then((allVars) => {
       const defs = type === 'primitive' ? PRIMITIVE_GROUPS : type === 'semantic' ? SEMANTIC_GROUPS : COMPONENT_GROUPS;
       setGroups(classifyVars(allVars, defs));
     });
-  }, [type]);
+  }, [type, mode]);
 
   if (groups.length === 0) {
     return <div style={{ padding: 20, color: '#999', textAlign: 'center' }}>Loading colors...</div>;
@@ -305,6 +337,16 @@ export function ColorPalette({ type = 'primitive' }) {
 
   return (
     <div>
+      {hasModeToggle && (
+        <div style={modeTabBar}>
+          <button style={mode === 'light' ? modeTabActive : modeTabBase} onClick={() => setMode('light')}>
+            Light
+          </button>
+          <button style={mode === 'dark' ? modeTabActive : modeTabBase} onClick={() => setMode('dark')}>
+            Dark
+          </button>
+        </div>
+      )}
       <input
         type="text"
         placeholder="Search tokens... (e.g. brand, #7f56d9)"
