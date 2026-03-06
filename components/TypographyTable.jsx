@@ -41,9 +41,13 @@ export function TypographyTable() {
   const sizeKeys = Object.keys(tokens).filter(k => k.startsWith('--fontSize-'));
   for (const key of sizeKeys) {
     const name = key.replace('--fontSize-', '');
-    const fontSize = tokens[key];
+    // Only include semantic tokens (display* or text*), skip primitives (numbers)
+    if (!name.startsWith('display') && !name.startsWith('text')) continue;
+    const rawSize = tokens[key];
+    const fontSize = String(rawSize).replace('px', '');
     const lhKey = `--lineHeight-${name}`;
-    const lineHeight = tokens[lhKey] || '—';
+    const rawLh = tokens[lhKey];
+    const lineHeight = rawLh ? String(rawLh).replace('px', '') : '—';
 
     const entry = { name, fontSize, lineHeight, cssVar: key };
     if (name.startsWith('text')) {
