@@ -303,8 +303,22 @@ const modeTabActive = {
   fontWeight: 600,
 };
 
+// --- Sticky header style ---
+const stickyHeader = {
+  position: 'sticky',
+  top: 64,
+  zIndex: 10,
+  background: '#fff',
+  paddingTop: 16,
+  paddingBottom: 8,
+  marginLeft: -4,
+  marginRight: -4,
+  paddingLeft: 4,
+  paddingRight: 4,
+};
+
 // --- Main Export ---
-export function ColorPalette({ type = 'primitive' }) {
+export function ColorPalette({ type = 'primitive', title, description }) {
   const hasModeToggle = type === 'semantic' || type === 'component';
   const [mode, setMode] = useState('light');
   const [groups, setGroups] = useState([]);
@@ -337,36 +351,42 @@ export function ColorPalette({ type = 'primitive' }) {
 
   return (
     <div>
-      {hasModeToggle && (
-        <div style={modeTabBar}>
-          <button style={mode === 'light' ? modeTabActive : modeTabBase} onClick={() => setMode('light')}>
-            Light
-          </button>
-          <button style={mode === 'dark' ? modeTabActive : modeTabBase} onClick={() => setMode('dark')}>
-            Dark
-          </button>
-        </div>
-      )}
-      <input
-        type="text"
-        placeholder="Search tokens... (e.g. brand, #7f56d9)"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        style={{
-          width: '100%',
-          padding: '10px 14px',
-          marginBottom: 24,
-          border: '1px solid #ddd',
-          borderRadius: 8,
-          fontSize: 14,
-          outline: 'none',
-          boxSizing: 'border-box',
-        }}
-      />
-      {filtered.length === 0 && <div style={{ padding: 20, color: '#999', textAlign: 'center' }}>No matching tokens found.</div>}
-      {filtered.map((g) => (
-        <GroupComponent key={g.label} label={g.label} colors={g.colors} />
-      ))}
+      <div style={stickyHeader}>
+        {title && <h2 style={{ margin: '0 0 4px', fontSize: 22, fontWeight: 700, color: '#111' }}>{title}</h2>}
+        {description && <p style={{ margin: '0 0 12px', fontSize: 14, color: '#666' }}>{description}</p>}
+        {hasModeToggle && (
+          <div style={{ ...modeTabBar, marginBottom: 12 }}>
+            <button style={mode === 'light' ? modeTabActive : modeTabBase} onClick={() => setMode('light')}>
+              Light
+            </button>
+            <button style={mode === 'dark' ? modeTabActive : modeTabBase} onClick={() => setMode('dark')}>
+              Dark
+            </button>
+          </div>
+        )}
+        <input
+          type="text"
+          placeholder="Search tokens... (e.g. brand, #7f56d9)"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          style={{
+            width: '100%',
+            padding: '10px 14px',
+            marginBottom: 0,
+            border: '1px solid #ddd',
+            borderRadius: 8,
+            fontSize: 14,
+            outline: 'none',
+            boxSizing: 'border-box',
+          }}
+        />
+      </div>
+      <div style={{ paddingTop: 16 }}>
+        {filtered.length === 0 && <div style={{ padding: 20, color: '#999', textAlign: 'center' }}>No matching tokens found.</div>}
+        {filtered.map((g) => (
+          <GroupComponent key={g.label} label={g.label} colors={g.colors} />
+        ))}
+      </div>
     </div>
   );
 }
