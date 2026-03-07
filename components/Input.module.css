@@ -15,7 +15,7 @@
   gap: 4px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--colors-grayLightMode-700, #344054);
+  color: var(--colors-text-textSecondary-700, #344054);
 }
 
 .required {
@@ -28,7 +28,7 @@
   justify-content: center;
   width: 16px;
   height: 16px;
-  color: var(--colors-grayLightMode-400, #98a2b3);
+  color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
   cursor: help;
 }
 .help-icon svg {
@@ -42,8 +42,8 @@
 .input-container {
   display: flex;
   align-items: center;
-  border: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
-  background: #fff;
+  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
+  background: var(--colors-background-bgPrimary, #fff);
   overflow: hidden;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
@@ -65,12 +65,12 @@
 }
 
 .disabled .input-container {
-  background: var(--colors-grayLightMode-50, #f9fafb);
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
   pointer-events: none;
 }
 .disabled .input-container input,
 .disabled .input-container textarea {
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-text-textPlaceholder, #667085);
 }
 
 .destructive .input-container {
@@ -91,7 +91,7 @@
   background: transparent;
   font-size: 16px;
   font-family: inherit;
-  color: var(--colors-grayLightMode-900, #101828);
+  color: var(--colors-text-textPrimary-900, #101828);
   min-width: 0;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .input::placeholder {
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-text-textPlaceholder, #667085);
 }
 
 /* ===========================
@@ -118,7 +118,7 @@
   align-items: center;
   justify-content: center;
   padding-left: 14px;
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-foreground-fgQuaternary-400, #667085);
   flex-shrink: 0;
 }
 .leading-icon svg {
@@ -135,7 +135,7 @@
   align-items: center;
   justify-content: center;
   padding-right: 14px;
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-foreground-fgQuaternary-400, #667085);
   flex-shrink: 0;
 }
 .trailing-icon svg {
@@ -153,9 +153,9 @@
   align-items: center;
   padding: 0 12px;
   font-size: 16px;
-  color: var(--colors-grayLightMode-600, #475467);
-  background: var(--colors-grayLightMode-50, #f9fafb);
-  border-right: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  color: var(--colors-text-textTertiary-600, #475467);
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
+  border-right: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   white-space: nowrap;
   align-self: stretch;
 }
@@ -171,8 +171,8 @@
   padding: 0 12px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--colors-grayLightMode-900, #101828);
-  border-right: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  color: var(--colors-text-textPrimary-900, #101828);
+  border-right: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   cursor: pointer;
   white-space: nowrap;
   align-self: stretch;
@@ -185,7 +185,7 @@
 .leading-dropdown svg {
   width: 16px;
   height: 16px;
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-foreground-fgQuaternary-400, #667085);
 }
 
 /* Trailing dropdown */
@@ -196,8 +196,8 @@
   padding: 0 12px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--colors-grayLightMode-900, #101828);
-  border-left: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  color: var(--colors-text-textPrimary-900, #101828);
+  border-left: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   cursor: pointer;
   white-space: nowrap;
   align-self: stretch;
@@ -210,7 +210,7 @@
 .trailing-dropdown svg {
   width: 16px;
   height: 16px;
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-foreground-fgQuaternary-400, #667085);
 }
 
 /* Trailing button */
@@ -221,8 +221,8 @@
   padding: 0 16px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--colors-grayLightMode-700, #344054);
-  border-left: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  color: var(--colors-text-textSecondary-700, #344054);
+  border-left: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   background: transparent;
   cursor: pointer;
   white-space: nowrap;
@@ -233,7 +233,7 @@
   font-family: inherit;
 }
 .trailing-button:hover {
-  background: var(--colors-grayLightMode-50, #f9fafb);
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
 }
 
 /* Payment icon */
@@ -274,9 +274,9 @@
   border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--colors-grayLightMode-700, #344054);
-  background: var(--colors-grayLightMode-100, #f2f4f7);
-  border: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  color: var(--colors-text-textSecondary-700, #344054);
+  background: var(--colors-background-bgSecondary, #f2f4f7);
+  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   white-space: nowrap;
 }
 
@@ -295,7 +295,7 @@
   width: 14px;
   height: 14px;
   cursor: pointer;
-  color: var(--colors-grayLightMode-400, #98a2b3);
+  color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
 }
 .tag-close svg {
   width: 12px;
@@ -308,13 +308,13 @@
   background: transparent;
   font-size: 14px;
   font-family: inherit;
-  color: var(--colors-grayLightMode-900, #101828);
+  color: var(--colors-text-textPrimary-900, #101828);
   min-width: 60px;
   flex: 1;
   padding: 2px 4px;
 }
 .tags-input::placeholder {
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-text-textPlaceholder, #667085);
 }
 
 /* ===========================
@@ -322,7 +322,7 @@
    =========================== */
 .hint {
   font-size: 14px;
-  color: var(--colors-grayLightMode-600, #475467);
+  color: var(--colors-text-textTertiary-600, #475467);
 }
 
 .destructive .hint {
@@ -335,9 +335,9 @@
 .textarea-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--colors-grayLightMode-300, #d0d5dd);
+  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   border-radius: 8px;
-  background: #fff;
+  background: var(--colors-background-bgPrimary, #fff);
   overflow: hidden;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
@@ -348,7 +348,7 @@
 }
 
 .disabled .textarea-container {
-  background: var(--colors-grayLightMode-50, #f9fafb);
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
   pointer-events: none;
 }
 
@@ -367,11 +367,11 @@
   background: transparent;
   font-size: 16px;
   font-family: inherit;
-  color: var(--colors-grayLightMode-900, #101828);
+  color: var(--colors-text-textPrimary-900, #101828);
   padding: 12px 14px;
   resize: vertical;
   min-height: 128px;
 }
 .textarea::placeholder {
-  color: var(--colors-grayLightMode-500, #667085);
+  color: var(--colors-text-textPlaceholder, #667085);
 }

@@ -4,9 +4,9 @@
   align-items: center;
   gap: 6px;
   border-radius: 6px;
-  border: 1px solid #d0d5dd;
-  background: #fff;
-  color: #344054;
+  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
+  background: var(--colors-background-bgPrimary, #fff);
+  color: var(--colors-text-textSecondary-700, #344054);
   font-weight: 500;
   font-family: 'Pretendard', sans-serif;
   white-space: nowrap;
@@ -35,7 +35,7 @@
 
 /* Hover on tag */
 .tag:hover {
-  background: #f9fafb;
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
 }
 
 /* ---- Close (X) button ---- */
@@ -48,14 +48,14 @@
   padding: 0;
   margin-left: 2px;
   cursor: pointer;
-  color: #98a2b3;
+  color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
   border-radius: 4px;
   transition: color 0.15s, background 0.15s;
 }
 
 .close:hover {
-  color: #344054;
-  background: #f2f4f7;
+  color: var(--colors-text-textSecondary-700, #344054);
+  background: var(--colors-background-bgSecondary, #f2f4f7);
 }
 
 .close svg {
@@ -68,8 +68,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #f2f4f7;
-  color: #344054;
+  background: var(--colors-background-bgSecondary, #f2f4f7);
+  color: var(--colors-text-textSecondary-700, #344054);
   font-size: 11px;
   font-weight: 500;
   line-height: 1;
@@ -83,14 +83,14 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #17b26a;
+  background: var(--colors-foreground-fgSuccessPrimary, #17b26a);
   flex-shrink: 0;
 }
 
 /* ---- Avatar placeholder ---- */
 .avatar {
   border-radius: 50%;
-  background: #e4e7ec;
+  background: var(--colors-border-borderSecondary, #e4e7ec);
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -113,7 +113,7 @@
 /* ---- Country flag placeholder ---- */
 .country {
   border-radius: 50%;
-  background: #e4e7ec;
+  background: var(--colors-border-borderSecondary, #e4e7ec);
   flex-shrink: 0;
   overflow: hidden;
   display: inline-flex;
@@ -143,8 +143,8 @@
   width: 14px;
   height: 14px;
   border-radius: 4px;
-  border: 1.5px solid #d0d5dd;
-  background: #fff;
+  border: 1.5px solid var(--colors-border-borderPrimary, #d0d5dd);
+  background: var(--colors-background-bgPrimary, #fff);
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -154,8 +154,8 @@
 }
 
 .checkbox.checked {
-  background: #7f56d9;
-  border-color: #7f56d9;
+  background: var(--colors-background-bgBrandSolid, #7f56d9);
+  border-color: var(--colors-background-bgBrandSolid, #7f56d9);
 }
 
 .checkbox.checked svg {

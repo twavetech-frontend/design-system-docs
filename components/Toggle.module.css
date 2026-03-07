@@ -23,7 +23,7 @@
 .label {
   font-size: 14px;
   font-weight: 500;
-  color: var(--colors-grayLightMode-700, #344054);
+  color: var(--colors-text-textSecondary-700, #344054);
 }
 .size-sm .label {
   font-size: 14px;
@@ -31,7 +31,7 @@
 
 .description {
   font-size: 14px;
-  color: var(--colors-grayLightMode-600, #475467);
+  color: var(--colors-text-textTertiary-600, #475467);
 }
 
 /* ===========================
@@ -40,7 +40,7 @@
 .track {
   position: relative;
   border-radius: 9999px;
-  background: var(--colors-grayLightMode-100, #f2f4f7);
+  background: var(--colors-background-bgSecondary, #f2f4f7);
   transition: background 0.2s, box-shadow 0.2s;
   flex-shrink: 0;
   cursor: pointer;
@@ -63,7 +63,7 @@
 
 /* Hover */
 .hover .track {
-  background: var(--colors-grayLightMode-200, #eaecf0);
+  background: var(--colors-border-borderSecondary, #eaecf0);
 }
 .hover.pressed .track {
   background: var(--colors-brand-700, #6941c6);
@@ -71,7 +71,7 @@
 
 /* Focus */
 .focus .track {
-  box-shadow: 0 0 0 4px var(--colors-grayLightMode-100, #f2f4f7);
+  box-shadow: 0 0 0 4px var(--colors-background-bgSecondary, #f2f4f7);
 }
 .focus.pressed .track {
   box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
@@ -79,11 +79,11 @@
 
 /* Disabled */
 .disabled .track {
-  background: var(--colors-grayLightMode-100, #f2f4f7);
+  background: var(--colors-background-bgSecondary, #f2f4f7);
   cursor: not-allowed;
 }
 .disabled.pressed .track {
-  background: var(--colors-grayLightMode-100, #f2f4f7);
+  background: var(--colors-background-bgSecondary, #f2f4f7);
 }
 
 /* ===========================
@@ -94,7 +94,7 @@
   top: 2px;
   left: 2px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--colors-foreground-fgWhite, #fff);
   box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
   transition: transform 0.2s;
 }
@@ -120,7 +120,7 @@
    Slim Type
    =========================== */
 .slim .track {
-  background: var(--colors-grayLightMode-300, #d0d5dd);
+  background: var(--colors-border-borderPrimary, #d0d5dd);
 }
 
 .size-sm.slim .track {
@@ -149,25 +149,25 @@
 }
 
 .slim.hover .track {
-  background: var(--colors-grayLightMode-400, #98a2b3);
+  background: var(--colors-foreground-fgQuaternary-400, #98a2b3);
 }
 .slim.hover.pressed .track {
   background: var(--colors-brand-700, #6941c6);
 }
 
 .slim.focus .track {
-  box-shadow: 0 0 0 4px var(--colors-grayLightMode-100, #f2f4f7);
+  box-shadow: 0 0 0 4px var(--colors-background-bgSecondary, #f2f4f7);
 }
 .slim.focus.pressed .track {
   box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
 }
 
 .slim.disabled .track {
-  background: var(--colors-grayLightMode-200, #eaecf0);
+  background: var(--colors-border-borderSecondary, #eaecf0);
   cursor: not-allowed;
 }
 .slim.disabled.pressed .track {
-  background: var(--colors-grayLightMode-200, #eaecf0);
+  background: var(--colors-border-borderSecondary, #eaecf0);
 }
 
 /* Slim pressed → slide right */

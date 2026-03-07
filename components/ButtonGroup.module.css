@@ -13,9 +13,9 @@
   font-weight: 600;
   font-family: 'Pretendard', sans-serif;
   line-height: 20px;
-  background: #fff;
-  color: #344054;
-  border: 1px solid #d0d5dd;
+  background: var(--colors-background-bgPrimary, #fff);
+  color: var(--colors-text-textSecondary-700, #344054);
+  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
   white-space: nowrap;
@@ -40,14 +40,14 @@
 /* Hover */
 .button-group .item:hover,
 .button-group .item.force-hover {
-  background: #f9fafb;
-  color: #1d2939;
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
+  color: var(--colors-text-textPrimary-900, #1d2939);
 }
 
 /* Current / Active */
 .button-group .item.current {
-  background: #f9fafb;
-  color: #1d2939;
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
+  color: var(--colors-text-textPrimary-900, #1d2939);
   z-index: 1;
 }
 
@@ -62,8 +62,8 @@
 /* Disabled */
 .button-group .item:disabled,
 .button-group .item.force-disabled {
-  background: #fff;
-  color: #d0d5dd;
+  background: var(--colors-background-bgPrimary, #fff);
+  color: var(--colors-border-borderPrimary, #d0d5dd);
   cursor: not-allowed;
 }
 
@@ -77,12 +77,12 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #17b26a;
+  background: var(--colors-foreground-fgSuccessPrimary, #17b26a);
   flex-shrink: 0;
 }
 
 .dot-disabled {
-  background: #d0d5dd;
+  background: var(--colors-border-borderPrimary, #d0d5dd);
 }
 
 /* Leading icon circle */
@@ -90,12 +90,12 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1.5px solid #d0d5dd;
+  border: 1.5px solid var(--colors-border-borderPrimary, #d0d5dd);
   flex-shrink: 0;
 }
 
 .current .circle-icon {
-  border-color: #98a2b3;
+  border-color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
 }
 
 /* Arrow icons */
