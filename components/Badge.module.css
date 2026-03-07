@@ -198,16 +198,6 @@
   background: var(--componentColors-utility-pink-utilityPink500, #ee46bc);
 }
 
-/* ─── Color: Rose ─── */
-.rose {
-  background: var(--componentColors-utility-rose-utilityRose50, #fff1f3);
-  color: var(--componentColors-utility-rose-utilityRose700, #c01048);
-}
-
-.rose .dot {
-  background: var(--componentColors-utility-rose-utilityRose500, #f63d68);
-}
-
 /* ─── Color: Orange ─── */
 .orange {
   background: var(--componentColors-utility-orange-utilityOrange50, #fff6ed);
