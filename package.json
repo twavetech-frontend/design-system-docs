@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "fetch-tokens": "mkdir -p styles public && curl -s -o styles/tokens.css https://raw.githubusercontent.com/stresslee/design-system/main/build/css/tokens.css && curl -s -o styles/tokens-dark.css https://raw.githubusercontent.com/stresslee/design-system/main/build/css/tokens-dark.css && cp styles/tokens.css public/tokens.css && cp styles/tokens-dark.css public/tokens-dark.css && echo '✅ 토큰 동기화 완료'",
+    "fetch-tokens": "mkdir -p styles public && curl -s -o styles/tokens.css https://raw.githubusercontent.com/twavetech-frontend/design-system/main/build/css/tokens.css && curl -s -o styles/tokens-dark.css https://raw.githubusercontent.com/twavetech-frontend/design-system/main/build/css/tokens-dark.css && cp styles/tokens.css public/tokens.css && cp styles/tokens-dark.css public/tokens-dark.css && echo '✅ 토큰 동기화 완료'",
     "sync": "npm run fetch-tokens",
     "predev": "npm run fetch-tokens"
   },
