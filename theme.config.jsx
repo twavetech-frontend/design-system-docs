@@ -1,6 +1,8 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default {
+    primaryHue: 259,
+    primarySaturation: 63,
     darkMode: false,
     logo: (
         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

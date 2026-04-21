@@ -1,0 +1,232 @@
+import { Checkbox } from '../../components/Checkbox'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Checkboxes
+
+Checkbox는 사용자가 하나 이상의 항목을 선택하거나 옵션을 켜고 끌 수 있는 컨트롤입니다.
+Radio는 여러 옵션 중 하나만 선택할 수 있는 컨트롤입니다.
+
+Figma 컴포넌트: `Base components/Checkboxes`
+
+---
+
+## Type: Checkbox
+
+### Checkbox Only
+
+<ComponentPreview code={`<Checkbox checked={false} size="sm" />
+<Checkbox checked={true} size="sm" />
+<Checkbox checked={true} indeterminate size="sm" />
+<Checkbox checked={false} size="sm" state="hover" />
+<Checkbox checked={true} size="sm" state="hover" />
+<Checkbox checked={true} indeterminate size="sm" state="hover" />
+<Checkbox checked={false} size="sm" state="focus" />
+<Checkbox checked={true} size="sm" state="focus" />
+<Checkbox checked={true} indeterminate size="sm" state="focus" />
+<Checkbox checked={false} size="sm" state="disabled" />
+<Checkbox checked={true} size="sm" state="disabled" />
+<Checkbox checked={true} indeterminate size="sm" state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, auto)', gap: '20px 16px', justifyContent: 'start' }}>
+    <Checkbox checked={false} size="sm" />
+    <Checkbox checked={true} size="sm" />
+    <Checkbox checked={true} indeterminate size="sm" />
+    <Checkbox checked={false} size="sm" state="hover" />
+    <Checkbox checked={true} size="sm" state="hover" />
+    <Checkbox checked={true} indeterminate size="sm" state="hover" />
+    <Checkbox checked={false} size="sm" state="focus" />
+    <Checkbox checked={true} size="sm" state="focus" />
+    <Checkbox checked={true} indeterminate size="sm" state="focus" />
+    <Checkbox checked={false} size="sm" state="disabled" />
+    <Checkbox checked={true} size="sm" state="disabled" />
+    <Checkbox checked={true} indeterminate size="sm" state="disabled" />
+  </div>
+</ComponentPreview>
+
+### With Label (sm)
+
+<ComponentPreview code={`<Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." />
+<Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." />
+<Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />
+<Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: '16px 24px', alignItems: 'start' }}>
+    <Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." />
+    <Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." />
+    <Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />
+    <Checkbox checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />
+  </div>
+</ComponentPreview>
+
+### With Label (md)
+
+<ComponentPreview code={`<Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." />
+<Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." />
+<Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+<Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: '16px 24px', alignItems: 'start' }}>
+    <Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." />
+    <Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." />
+    <Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox checked={false} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+    <Checkbox checked={true} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Type: Radio
+
+### Radio Only
+
+<ComponentPreview code={`<Checkbox type="radio" checked={false} size="sm" />
+<Checkbox type="radio" checked={true} size="sm" />
+<Checkbox type="radio" checked={false} size="sm" state="hover" />
+<Checkbox type="radio" checked={true} size="sm" state="hover" />
+<Checkbox type="radio" checked={false} size="sm" state="focus" />
+<Checkbox type="radio" checked={true} size="sm" state="focus" />
+<Checkbox type="radio" checked={false} size="sm" state="disabled" />
+<Checkbox type="radio" checked={true} size="sm" state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, auto)', gap: '20px 16px', justifyContent: 'start' }}>
+    <Checkbox type="radio" checked={false} size="sm" />
+    <Checkbox type="radio" checked={true} size="sm" />
+    <Checkbox type="radio" checked={false} size="sm" state="hover" />
+    <Checkbox type="radio" checked={true} size="sm" state="hover" />
+    <Checkbox type="radio" checked={false} size="sm" state="focus" />
+    <Checkbox type="radio" checked={true} size="sm" state="focus" />
+    <Checkbox type="radio" checked={false} size="sm" state="disabled" />
+    <Checkbox type="radio" checked={true} size="sm" state="disabled" />
+  </div>
+</ComponentPreview>
+
+### With Label (sm)
+
+<ComponentPreview code={`<Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." />
+<Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." />
+<Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />
+<Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: '16px 24px', alignItems: 'start' }}>
+    <Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." />
+    <Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." />
+    <Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox type="radio" checked={false} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />
+    <Checkbox type="radio" checked={true} size="sm" label="Remember me" description="Save my login details for next time." state="disabled" />
+  </div>
+</ComponentPreview>
+
+### With Label (md)
+
+<ComponentPreview code={`<Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." />
+<Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." />
+<Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+<Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+<Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+<Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 280px)', gap: '16px 24px', alignItems: 'start' }}>
+    <Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." />
+    <Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." />
+    <Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." state="hover" />
+    <Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." state="focus" />
+    <Checkbox type="radio" checked={false} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+    <Checkbox type="radio" checked={true} size="md" label="Remember me" description="Save my login details for next time." state="disabled" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Size
+
+sm (16px), md (20px) 두 가지 사이즈를 지원합니다.
+
+<ComponentPreview code={`<Checkbox checked={true} size="sm" />
+<Checkbox checked={true} size="md" />
+<Checkbox checked={true} indeterminate size="sm" />
+<Checkbox checked={true} indeterminate size="md" />
+<Checkbox type="radio" checked={true} size="sm" />
+<Checkbox type="radio" checked={true} size="md" />`}>
+  <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+    <Checkbox checked={true} size="sm" />
+    <Checkbox checked={true} size="md" />
+    <Checkbox checked={true} indeterminate size="sm" />
+    <Checkbox checked={true} indeterminate size="md" />
+    <Checkbox type="radio" checked={true} size="sm" />
+    <Checkbox type="radio" checked={true} size="md" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Indeterminate
+
+Checkbox는 `indeterminate` 상태를 지원합니다. 하위 항목 중 일부만 선택된 경우에 사용합니다.
+
+<ComponentPreview code={`<Checkbox checked={true} indeterminate size="sm" />
+<Checkbox checked={true} indeterminate size="md" />
+<Checkbox checked={true} indeterminate size="sm" state="hover" />
+<Checkbox checked={true} indeterminate size="md" state="hover" />
+<Checkbox checked={true} indeterminate size="sm" state="focus" />
+<Checkbox checked={true} indeterminate size="md" state="focus" />
+<Checkbox checked={true} indeterminate size="sm" state="disabled" />
+<Checkbox checked={true} indeterminate size="md" state="disabled" />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, auto)', gap: '20px 16px', justifyContent: 'start' }}>
+    <Checkbox checked={true} indeterminate size="sm" />
+    <Checkbox checked={true} indeterminate size="md" />
+    <Checkbox checked={true} indeterminate size="sm" state="hover" />
+    <Checkbox checked={true} indeterminate size="md" state="hover" />
+    <Checkbox checked={true} indeterminate size="sm" state="focus" />
+    <Checkbox checked={true} indeterminate size="md" state="focus" />
+    <Checkbox checked={true} indeterminate size="sm" state="disabled" />
+    <Checkbox checked={true} indeterminate size="md" state="disabled" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'type', type: "'checkbox' | 'radio'", default: "'checkbox'", description: 'Checkbox 또는 Radio 타입' },
+  { name: 'size', type: "'sm' | 'md'", default: "'sm'", description: '크기 (sm: 16px, md: 20px)' },
+  { name: 'checked', type: 'boolean', default: 'false', description: '선택 상태' },
+  { name: 'indeterminate', type: 'boolean', default: 'false', description: '부분 선택 상태 (Checkbox 타입만)' },
+  { name: 'state', type: "'default' | 'hover' | 'focus' | 'disabled'", default: "'default'", description: '상태 (문서 시각화용)' },
+  { name: 'label', type: 'string', default: '-', description: '레이블 텍스트' },
+  { name: 'description', type: 'string', default: '-', description: '부가 설명 텍스트' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Checked** | `True` `False` |
+| **Indeterminate** | `True` `False` |
+| **Size** | `sm` `md` |
+| **Type** | `Checkbox` `Radio` |
+| **Text** | `True` `False` |
+| **State** | `Default` `Hover` `Focused` `Disabled` |

@@ -1,0 +1,20 @@
+/* ===========================
+   Nextra theme brand color overrides
+   - 토큰 CSS 변수 사용으로 Figma 브랜드 컬러 변경 시 자동 반영
+   =========================== */
+
+/* 좌측 사이드바: 비활성 메뉴 배경 리셋 */
+.nextra-sidebar-container a {
+  background-color: transparent !important;
+}
+
+/* 좌측 사이드바: 활성 메뉴만 브랜드 배경 */
+.nextra-sidebar-container li.active > a {
+  background-color: color-mix(in srgb, var(--colors-brand-600, #7f56d9) 10%, transparent) !important;
+  color: var(--colors-brand-700, #6941c6) !important;
+}
+
+/* 우측 TOC: 활성 링크 */
+.nextra-toc a[class*="nx-text-primary"] {
+  color: var(--colors-brand-700, #6941c6) !important;
+}
