@@ -4,6 +4,10 @@ export default {
     primaryHue: 259,
     primarySaturation: 63,
     darkMode: false,
+    nextThemes: {
+        defaultTheme: 'light',
+        forcedTheme: 'light',
+    },
     logo: (
         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <img src={`${basePath}/logo.webp`} alt="Logo" style={{ height: 28, width: 28, borderRadius: 6 }} />
