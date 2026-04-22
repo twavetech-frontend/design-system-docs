@@ -67,6 +67,23 @@ const SHADOW_DEFS = [
       { colorKey: 'shadow3xl02', x: 0, y: -4, blur: 4, spread: -2 },
     ],
   },
+  {
+    name: 'shadow-4xl',
+    desc: '광범위한 부상. 풀스크린 모달, 시트 등',
+    layers: [
+      { colorKey: 'shadow3xl01', x: 0, y: 21, blur: 120, spread: -12 },
+      { colorKey: 'shadow3xl02', x: 0, y: 14, blur: 60, spread: -2.5 },
+    ],
+  },
+  {
+    name: 'shadow-field',
+    desc: '인풋 필드용. 미세한 깊이감',
+    layers: [
+      { colorKey: 'fieldShadow', x: 0, y: 2, blur: 4, spread: 0 },
+      { colorKey: 'fieldShadow2', x: 0, y: 1, blur: 2, spread: 0 },
+      { colorKey: 'fieldShadow2', x: 0, y: 0, blur: 1, spread: 0 },
+    ],
+  },
 ];
 
 const FOCUS_RING_DEFS = [
@@ -98,6 +115,8 @@ const SHADOW_COLORS = {
   shadow2xl02: '#0a0d120a',
   shadow3xl01: '#0a0d1224',
   shadow3xl02: '#0a0d120a',
+  fieldShadow: '#0000000a',
+  fieldShadow2: '#0000000f',
 };
 
 function hexToRgba(hex) {
@@ -135,7 +154,7 @@ export function EffectsTable() {
       <section style={{ marginBottom: 56 }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>Shadows</h2>
         <p style={{ fontSize: 14, color: '#717680', marginBottom: 24 }}>
-          요소의 깊이감과 계층 구조를 표현합니다. xs에서 3xl까지 7단계로 구성됩니다.
+          요소의 깊이감과 계층 구조를 표현합니다. xs에서 4xl까지 8단계와 인풋 필드용 shadow-field로 구성됩니다.
         </p>
         <div style={{
           display: 'grid',

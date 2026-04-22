@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 function parseCSSText(text) {
   const vars = {};
-  const regex = /--([\w\u00C0-\u024F-]+)\s*:\s*([^;}\n]+)/g;
+  const regex = /--([\w\u00C0-\u024F\u2024-]+)\s*:\s*([^;}\n]+)/g;
   let m;
   while ((m = regex.exec(text)) !== null) {
     vars[`--${m[1]}`] = m[2].trim();
