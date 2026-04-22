@@ -3,3 +3,9 @@ node_modules
 out
 figma-*.json
 .env
+
+# Synced from twavetech-frontend/design-system via npm run fetch-tokens
+public/tokens.css
+public/tokens-dark.css
+styles/tokens.css
+styles/tokens-dark.css
