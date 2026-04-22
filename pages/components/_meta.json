@@ -1,10 +1,20 @@
 {
     "buttons": "Buttons",
     "badges": "Badges",
-    "tags": "Tags",
-    "inputs": "Inputs",
-    "toggles": "Toggles",
-    "tabs": "Tabs",
-    "dropdowns": "Dropdowns",
+    "tags": {
+        "display": "hidden"
+    },
+    "inputs": {
+        "display": "hidden"
+    },
+    "toggles": {
+        "display": "hidden"
+    },
+    "tabs": {
+        "display": "hidden"
+    },
+    "dropdowns": {
+        "display": "hidden"
+    },
     "checkboxes": "Checkboxes"
 }
