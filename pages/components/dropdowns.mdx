@@ -1,4 +1,4 @@
-import { Dropdown, DropdownMenu, DropdownItem, DropdownHeader, DropdownDivider, Select, SelectItem, MailIcon, StarIcon, SettingsIcon, LayersIcon, SearchIcon } from '../../components/Dropdown'
+import { Dropdown, DropdownMenu, DropdownItem, DropdownHeader, DropdownDivider, SettingsIcon, LayersIcon, UserIcon, ZapIcon, HomeIcon, UsersIcon, UserPlusIcon, MessageSmileIcon, HelpIcon, ContainerIcon, LogOutIcon } from '../../components/Dropdown'
 import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
 
 # Dropdowns
@@ -16,10 +16,10 @@ Figma 컴포넌트: `Base components/Dropdowns`
 
 <ComponentPreview code={`<Dropdown trigger="button" label="Account" />
 <Dropdown trigger="icon" />
-<Dropdown trigger="avatar" avatarText="JL" />`}>
+<Dropdown trigger="avatar" avatarSrc="https://i.pravatar.cc/80?img=5" />`}>
   <Dropdown trigger="button" label="Account" />
   <Dropdown trigger="icon" />
-  <Dropdown trigger="avatar" avatarText="JL" />
+  <Dropdown trigger="avatar" avatarSrc="https://i.pravatar.cc/80?img=5" />
 </ComponentPreview>
 
 ---
@@ -29,58 +29,100 @@ Figma 컴포넌트: `Base components/Dropdowns`
 ### 기본 메뉴
 
 <ComponentPreview direction="column" code={`<DropdownMenu>
-  <DropdownItem icon={<MailIcon />}>View profile</DropdownItem>
+  <DropdownItem icon={<UserIcon />}>View profile</DropdownItem>
   <DropdownItem icon={<SettingsIcon />}>Settings</DropdownItem>
-  <DropdownItem icon={<LayersIcon />}>Keyboard shortcuts</DropdownItem>
+  <DropdownItem icon={<ZapIcon />}>Keyboard shortcuts</DropdownItem>
   <DropdownDivider />
-  <DropdownItem icon={<StarIcon />}>Changelog</DropdownItem>
-  <DropdownItem icon={<StarIcon />}>Support</DropdownItem>
+  <DropdownItem icon={<LayersIcon />}>Changelog</DropdownItem>
+  <DropdownItem icon={<HelpIcon />}>Support</DropdownItem>
   <DropdownDivider />
-  <DropdownItem>Sign out</DropdownItem>
+  <DropdownItem icon={<LogOutIcon />}>Sign out</DropdownItem>
 </DropdownMenu>`}>
   <DropdownMenu>
-    <DropdownItem icon={<MailIcon />}>View profile</DropdownItem>
+    <DropdownItem icon={<UserIcon />}>View profile</DropdownItem>
     <DropdownItem icon={<SettingsIcon />}>Settings</DropdownItem>
-    <DropdownItem icon={<LayersIcon />}>Keyboard shortcuts</DropdownItem>
+    <DropdownItem icon={<ZapIcon />}>Keyboard shortcuts</DropdownItem>
     <DropdownDivider />
-    <DropdownItem icon={<StarIcon />}>Changelog</DropdownItem>
-    <DropdownItem icon={<StarIcon />}>Support</DropdownItem>
+    <DropdownItem icon={<LayersIcon />}>Changelog</DropdownItem>
+    <DropdownItem icon={<HelpIcon />}>Support</DropdownItem>
     <DropdownDivider />
-    <DropdownItem>Sign out</DropdownItem>
+    <DropdownItem icon={<LogOutIcon />}>Sign out</DropdownItem>
   </DropdownMenu>
 </ComponentPreview>
 
 ### 단축키 표시
 
 <ComponentPreview direction="column" code={`<DropdownMenu>
-  <DropdownItem icon={<MailIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+  <DropdownItem icon={<UserIcon />} shortcut="⌘K→P">View profile</DropdownItem>
   <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
-  <DropdownItem icon={<LayersIcon />} shortcut="?">Keyboard shortcuts</DropdownItem>
+  <DropdownItem icon={<ZapIcon />} shortcut="?">Keyboard shortcuts</DropdownItem>
 </DropdownMenu>`}>
   <DropdownMenu>
-    <DropdownItem icon={<MailIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+    <DropdownItem icon={<UserIcon />} shortcut="⌘K→P">View profile</DropdownItem>
     <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
-    <DropdownItem icon={<LayersIcon />} shortcut="?">Keyboard shortcuts</DropdownItem>
+    <DropdownItem icon={<ZapIcon />} shortcut="?">Keyboard shortcuts</DropdownItem>
   </DropdownMenu>
 </ComponentPreview>
 
 ### Avatar 헤더
 
 <ComponentPreview direction="column" code={`<DropdownMenu>
-  <DropdownHeader avatar name="Olivia Rhye" email="olivia@julee.design" />
+  <DropdownHeader avatar avatarSrc="https://i.pravatar.cc/100?img=12" name="John Lee" email="john@iminapp.kr" />
   <DropdownDivider />
-  <DropdownItem icon={<MailIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+  <DropdownItem icon={<UserIcon />} shortcut="⌘K→P">View profile</DropdownItem>
   <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
   <DropdownDivider />
-  <DropdownItem>Sign out</DropdownItem>
+  <DropdownItem icon={<LogOutIcon />}>Sign out</DropdownItem>
 </DropdownMenu>`}>
   <DropdownMenu>
-    <DropdownHeader avatar name="Olivia Rhye" email="olivia@julee.design" />
+    <DropdownHeader avatar avatarSrc="https://i.pravatar.cc/100?img=12" name="John Lee" email="john@iminapp.kr" />
     <DropdownDivider />
-    <DropdownItem icon={<MailIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+    <DropdownItem icon={<UserIcon />} shortcut="⌘K→P">View profile</DropdownItem>
     <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
     <DropdownDivider />
-    <DropdownItem>Sign out</DropdownItem>
+    <DropdownItem icon={<LogOutIcon />}>Sign out</DropdownItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### 전체 메뉴 (Figma 레퍼런스)
+
+Figma `Dropdowns` 페이지의 완전한 메뉴 구성입니다. 계정 정보 헤더, 기본 액션(단축키 포함), 조직 관리, 외부 리소스, 로그아웃 섹션으로 구분되어 있습니다.
+
+<ComponentPreview direction="column" code={`<DropdownMenu>
+  <DropdownHeader avatar avatarSrc="https://i.pravatar.cc/100?img=12" name="John Lee" email="john@iminapp.kr" />
+  <DropdownDivider />
+  <DropdownItem icon={<UserIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+  <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
+  <DropdownItem icon={<ZapIcon />} shortcut="?">Keyboard shortcuts</DropdownItem>
+  <DropdownDivider />
+  <DropdownItem icon={<HomeIcon />} shortcut="⌘K→C">Company profile</DropdownItem>
+  <DropdownItem icon={<UsersIcon />} shortcut="⌘K→T">Team</DropdownItem>
+  <DropdownItem icon={<UserPlusIcon />} shortcut="⌘I">Invite colleagues</DropdownItem>
+  <DropdownDivider />
+  <DropdownItem icon={<LayersIcon />}>Changelog</DropdownItem>
+  <DropdownItem icon={<MessageSmileIcon />}>Slack Community</DropdownItem>
+  <DropdownItem icon={<HelpIcon />}>Support</DropdownItem>
+  <DropdownItem icon={<ContainerIcon />}>API</DropdownItem>
+  <DropdownDivider />
+  <DropdownItem icon={<LogOutIcon />} shortcut="⌥⇧Q">Sign out</DropdownItem>
+</DropdownMenu>`}>
+  <DropdownMenu>
+    <DropdownHeader avatar avatarSrc="https://i.pravatar.cc/100?img=12" name="John Lee" email="john@iminapp.kr" />
+    <DropdownDivider />
+    <DropdownItem icon={<UserIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+    <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
+    <DropdownItem icon={<ZapIcon />} shortcut="?">Keyboard shortcuts</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem icon={<HomeIcon />} shortcut="⌘K→C">Company profile</DropdownItem>
+    <DropdownItem icon={<UsersIcon />} shortcut="⌘K→T">Team</DropdownItem>
+    <DropdownItem icon={<UserPlusIcon />} shortcut="⌘I">Invite colleagues</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem icon={<LayersIcon />}>Changelog</DropdownItem>
+    <DropdownItem icon={<MessageSmileIcon />}>Slack Community</DropdownItem>
+    <DropdownItem icon={<HelpIcon />}>Support</DropdownItem>
+    <DropdownItem icon={<ContainerIcon />}>API</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem icon={<LogOutIcon />} shortcut="⌥⇧Q">Sign out</DropdownItem>
   </DropdownMenu>
 </ComponentPreview>
 
@@ -100,97 +142,13 @@ Figma 컴포넌트: `Base components/Dropdowns`
 
 ### 상태
 
-<ComponentPreview direction="column" code={`<DropdownItem icon={<MailIcon />}>Default</DropdownItem>
-<DropdownItem icon={<MailIcon />} state="hover">Hover</DropdownItem>
-<DropdownItem icon={<MailIcon />} disabled>Disabled</DropdownItem>`}>
+<ComponentPreview direction="column" code={`<DropdownItem icon={<UserIcon />}>Default</DropdownItem>
+<DropdownItem icon={<UserIcon />} state="hover">Hover</DropdownItem>
+<DropdownItem icon={<UserIcon />} disabled>Disabled</DropdownItem>`}>
   <DropdownMenu>
-    <DropdownItem icon={<MailIcon />}>Default</DropdownItem>
-    <DropdownItem icon={<MailIcon />} state="hover">Hover</DropdownItem>
-    <DropdownItem icon={<MailIcon />} disabled>Disabled</DropdownItem>
-  </DropdownMenu>
-</ComponentPreview>
-
----
-
-## Select
-
-폼에서 사용하는 선택 입력 컴포넌트입니다.
-
-### 기본 Select
-
-<ComponentPreview direction="column" code={`<Select label="Team member" placeholder="Select team member" />
-<Select label="Team member" value="Olivia Rhye" />`}>
-  <Select label="Team member" placeholder="Select team member" size="md" />
-  <Select label="Team member" value="Olivia Rhye" size="md" />
-</ComponentPreview>
-
-### 사이즈
-
-<ComponentPreview direction="column" code={`<Select label="Size sm" value="Olivia Rhye" size="sm" />
-<Select label="Size md" value="Olivia Rhye" size="md" />`}>
-  <Select label="Size sm" value="Olivia Rhye" size="sm" />
-  <Select label="Size md" value="Olivia Rhye" size="md" />
-</ComponentPreview>
-
-### Leading 변형
-
-<ComponentPreview direction="column" code={`<Select label="Icon" value="Olivia Rhye" leadingIcon={<MailIcon />} />
-<Select label="Avatar" value="Olivia Rhye" leadingAvatar />
-<Select label="Dot" value="Active" leadingDot="#17b26a" />`}>
-  <Select label="Icon" value="Olivia Rhye" leadingIcon={<MailIcon />} />
-  <Select label="Avatar" value="Olivia Rhye" leadingAvatar />
-  <Select label="Dot" value="Active" leadingDot="#17b26a" />
-</ComponentPreview>
-
-### Search & Tags
-
-<ComponentPreview direction="column" code={`<Select label="Search" placeholder="Search..." search />
-<Select label="Tags" tags={["Design", "Product", "Marketing"]} />`}>
-  <Select label="Search" placeholder="Search..." search />
-  <Select label="Tags" tags={["Design", "Product", "Marketing"]} />
-</ComponentPreview>
-
-### 상태
-
-<ComponentPreview direction="column" code={`<Select label="Placeholder" placeholder="Select team member" />
-<Select label="Focused" value="Olivia Rhye" state="focused" />
-<Select label="Disabled" value="Olivia Rhye" state="disabled" />
-<Select label="Open" value="Olivia Rhye" state="open" />`}>
-  <Select label="Placeholder" placeholder="Select team member" state="default" />
-  <Select label="Focused" value="Olivia Rhye" state="focused" />
-  <Select label="Disabled" value="Olivia Rhye" state="disabled" />
-  <Select label="Open" value="Olivia Rhye" state="open" />
-</ComponentPreview>
-
----
-
-## Select Menu Items
-
-### 기본 아이템
-
-<ComponentPreview direction="column" code={`<SelectItem>Olivia Rhye</SelectItem>
-<SelectItem supportingText="olivia@julee.design">Olivia Rhye</SelectItem>
-<SelectItem selected>Phoenix Baker</SelectItem>`}>
-  <DropdownMenu>
-    <SelectItem>Olivia Rhye</SelectItem>
-    <SelectItem supportingText="olivia@julee.design">Olivia Rhye</SelectItem>
-    <SelectItem selected>Phoenix Baker</SelectItem>
-    <SelectItem selected supportingText="phoenix@julee.design">Phoenix Baker</SelectItem>
-  </DropdownMenu>
-</ComponentPreview>
-
-### 아이콘 / 아바타 / Dot
-
-<ComponentPreview direction="column" code={`<SelectItem icon={<MailIcon />}>Olivia Rhye</SelectItem>
-<SelectItem avatar="O" supportingText="olivia@julee.design">Olivia Rhye</SelectItem>
-<SelectItem dot="#17b26a">Active</SelectItem>
-<SelectItem dot="#f04438" selected>Error</SelectItem>`}>
-  <DropdownMenu>
-    <SelectItem icon={<MailIcon />}>Olivia Rhye</SelectItem>
-    <SelectItem icon={<SettingsIcon />} selected>Phoenix Baker</SelectItem>
-    <SelectItem avatar="O" supportingText="olivia@julee.design">Olivia Rhye</SelectItem>
-    <SelectItem dot="#17b26a">Active</SelectItem>
-    <SelectItem dot="#f04438" selected>Error</SelectItem>
+    <DropdownItem icon={<UserIcon />}>Default</DropdownItem>
+    <DropdownItem icon={<UserIcon />} state="hover">Hover</DropdownItem>
+    <DropdownItem icon={<UserIcon />} disabled>Disabled</DropdownItem>
   </DropdownMenu>
 </ComponentPreview>
 
@@ -205,6 +163,7 @@ Figma 컴포넌트: `Base components/Dropdowns`
   { name: 'label', type: 'string', default: "Options", description: '버튼 트리거의 레이블 텍스트' },
   { name: 'open', type: 'boolean', default: 'false', description: '메뉴 열림 여부' },
   { name: 'avatarText', type: 'string', default: '-', description: '아바타 트리거의 이니셜 텍스트' },
+  { name: 'avatarSrc', type: 'string', default: '-', description: '아바타 트리거의 이미지 URL (이니셜보다 우선)' },
 ]} />
 
 ### DropdownItem
@@ -215,32 +174,6 @@ Figma 컴포넌트: `Base components/Dropdowns`
   { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화 여부' },
   { name: 'checked', type: 'boolean', default: '-', description: '체크박스 상태' },
   { name: 'state', type: "default | hover | disabled", default: "default", description: '상태' },
-]} />
-
-### Select
-
-<PropsTable data={[
-  { name: 'label', type: 'string', default: '-', description: '라벨 텍스트' },
-  { name: 'placeholder', type: 'string', default: '-', description: '플레이스홀더' },
-  { name: 'value', type: 'string', default: '-', description: '선택된 값' },
-  { name: 'size', type: "sm | md", default: "md", description: '사이즈' },
-  { name: 'state', type: "default | focused | disabled | open", default: "default", description: '상태' },
-  { name: 'leadingIcon', type: 'ReactNode', default: '-', description: '왼쪽 아이콘' },
-  { name: 'leadingAvatar', type: 'boolean', default: 'false', description: '왼쪽 아바타' },
-  { name: 'leadingDot', type: 'string', default: '-', description: '왼쪽 점 색상' },
-  { name: 'search', type: 'boolean', default: 'false', description: '검색 모드' },
-  { name: 'tags', type: 'string[]', default: '[]', description: '태그 배열' },
-]} />
-
-### SelectItem
-
-<PropsTable data={[
-  { name: 'selected', type: 'boolean', default: 'false', description: '선택 여부' },
-  { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화' },
-  { name: 'icon', type: 'ReactNode', default: '-', description: '왼쪽 아이콘' },
-  { name: 'avatar', type: 'string', default: '-', description: '아바타 이니셜' },
-  { name: 'dot', type: 'string', default: '-', description: '점 색상' },
-  { name: 'supportingText', type: 'string', default: '-', description: '보조 텍스트' },
 ]} />
 
 ---
@@ -254,19 +187,21 @@ Figma 컴포넌트: `Base components/Dropdowns`
 | **Type** | `Button` `Icon` `Avatar` |
 | **Open** | `True` `False` |
 
-### Select
+### _Dropdown list item
+
+Dropdown 메뉴의 개별 항목. 체크박스 변형과 구분선(Divider) 변형을 포함합니다.
 
 | Property | Values |
 | --- | --- |
-| **Size** | `sm` `md` |
-| **Type** | `Default` `Icon leading` `Avatar leading` `Dot leading` `Search` `Tags` |
-| **State** | `Default` `Placeholder` `Focused` `Disabled` `Open` |
+| **Icon** | `True` `False` |
+| **Checkbox** | `True` `False` |
+| **State** | `Default` `Hover/active` `Disabled` |
+| **Divider** | `True` `False` |
 
-### Select Menu Item
+### _Dropdown list header
+
+Dropdown 메뉴 상단에 배치되는 헤더. 사용자 정보(Avatar group) 또는 단순 헤더(Header) 두 가지 타입을 지원합니다.
 
 | Property | Values |
 | --- | --- |
-| **Size** | `sm` `md` |
-| **Selected** | `True` `False` |
-| **Type** | `Default` `Icon leading` `Avatar leading` `Dot leading` |
-| **State** | `Default` `Hover` `Disabled` |
+| **Type** | `Avatar group` `Header` |

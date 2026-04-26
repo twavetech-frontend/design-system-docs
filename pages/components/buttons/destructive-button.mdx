@@ -6,35 +6,46 @@ import { ComponentPreview, PropsTable, StateLabel } from '../../../components/Co
 삭제, 해제, 초기화 등 **되돌리기 어려운 위험한 액션**에 사용하는 버튼입니다.
 사용자에게 주의를 환기시키기 위해 빨간색 계열의 컬러를 사용합니다.
 
-Figma 컴포넌트: `Buttons/Button destructive`
+Figma 컴포넌트: `Buttons/destructive`
 
 ---
 
 ## Hierarchy
 
-<ComponentPreview>
+<ComponentPreview code={`<Button variant="destructive-primary">Primary</Button>
+<Button variant="destructive-secondary">Secondary</Button>
+<Button variant="destructive-tertiary">Tertiary</Button>
+<Button variant="destructive-ghost">Ghost</Button>`}>
   <Button variant="destructive-primary">Primary</Button>
   <Button variant="destructive-secondary">Secondary</Button>
   <Button variant="destructive-tertiary">Tertiary</Button>
-  <Button variant="destructive-link">Link</Button>
+  <Button variant="destructive-ghost">Ghost</Button>
 </ComponentPreview>
 
 | Hierarchy | 용도 |
 | --- | --- |
 | **Primary** | 가장 강한 경고. 삭제 확인 다이얼로그 등 |
-| **Secondary** | 테두리로 위험을 표현. Primary보다 약한 강조 |
-| **Tertiary** | 배경 없는 텍스트 스타일 |
-| **Link** | 인라인 텍스트 링크 스타일 |
+| **Secondary** | 빨간 테두리로 위험을 표현. Primary보다 약한 강조 |
+| **Tertiary** | 배경 없는 텍스트 스타일. 표/카드 내부 액션 |
+| **Ghost** | 최소한의 시각적 무게. 툴바·메뉴 내부 액션 |
 
 ---
 
 ## States
 
+각 Hierarchy별로 6가지 상태를 가집니다: `Default` `Hover` `Active` `Focused` `Disabled` `Loading`.
+
 ### Primary States
 
-<ComponentPreview>
+<ComponentPreview code={`<Button variant="destructive-primary">Default</Button>
+<Button variant="destructive-primary" state="hover">Hover</Button>
+<Button variant="destructive-primary" state="active">Active</Button>
+<Button variant="destructive-primary" state="focused">Focused</Button>
+<Button variant="destructive-primary" state="disabled">Disabled</Button>
+<Button variant="destructive-primary" isLoading={true}>Loading</Button>`}>
   <Button variant="destructive-primary">Default</Button>
   <Button variant="destructive-primary" state="hover">Hover</Button>
+  <Button variant="destructive-primary" state="active">Active</Button>
   <Button variant="destructive-primary" state="focused">Focused</Button>
   <Button variant="destructive-primary" state="disabled">Disabled</Button>
   <Button variant="destructive-primary" isLoading={true}>Loading</Button>
@@ -42,12 +53,50 @@ Figma 컴포넌트: `Buttons/Button destructive`
 
 ### Secondary States
 
-<ComponentPreview>
+<ComponentPreview code={`<Button variant="destructive-secondary">Default</Button>
+<Button variant="destructive-secondary" state="hover">Hover</Button>
+<Button variant="destructive-secondary" state="active">Active</Button>
+<Button variant="destructive-secondary" state="focused">Focused</Button>
+<Button variant="destructive-secondary" state="disabled">Disabled</Button>
+<Button variant="destructive-secondary" isLoading={true}>Loading</Button>`}>
   <Button variant="destructive-secondary">Default</Button>
   <Button variant="destructive-secondary" state="hover">Hover</Button>
+  <Button variant="destructive-secondary" state="active">Active</Button>
   <Button variant="destructive-secondary" state="focused">Focused</Button>
   <Button variant="destructive-secondary" state="disabled">Disabled</Button>
   <Button variant="destructive-secondary" isLoading={true}>Loading</Button>
+</ComponentPreview>
+
+### Tertiary States
+
+<ComponentPreview code={`<Button variant="destructive-tertiary">Default</Button>
+<Button variant="destructive-tertiary" state="hover">Hover</Button>
+<Button variant="destructive-tertiary" state="active">Active</Button>
+<Button variant="destructive-tertiary" state="focused">Focused</Button>
+<Button variant="destructive-tertiary" state="disabled">Disabled</Button>
+<Button variant="destructive-tertiary" isLoading={true}>Loading</Button>`}>
+  <Button variant="destructive-tertiary">Default</Button>
+  <Button variant="destructive-tertiary" state="hover">Hover</Button>
+  <Button variant="destructive-tertiary" state="active">Active</Button>
+  <Button variant="destructive-tertiary" state="focused">Focused</Button>
+  <Button variant="destructive-tertiary" state="disabled">Disabled</Button>
+  <Button variant="destructive-tertiary" isLoading={true}>Loading</Button>
+</ComponentPreview>
+
+### Ghost States
+
+<ComponentPreview code={`<Button variant="destructive-ghost">Default</Button>
+<Button variant="destructive-ghost" state="hover">Hover</Button>
+<Button variant="destructive-ghost" state="active">Active</Button>
+<Button variant="destructive-ghost" state="focused">Focused</Button>
+<Button variant="destructive-ghost" state="disabled">Disabled</Button>
+<Button variant="destructive-ghost" isLoading={true}>Loading</Button>`}>
+  <Button variant="destructive-ghost">Default</Button>
+  <Button variant="destructive-ghost" state="hover">Hover</Button>
+  <Button variant="destructive-ghost" state="active">Active</Button>
+  <Button variant="destructive-ghost" state="focused">Focused</Button>
+  <Button variant="destructive-ghost" state="disabled">Disabled</Button>
+  <Button variant="destructive-ghost" isLoading={true}>Loading</Button>
 </ComponentPreview>
 
 ---
@@ -56,7 +105,10 @@ Figma 컴포넌트: `Buttons/Button destructive`
 
 Action Button과 동일한 4가지 사이즈를 지원합니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Button variant="destructive-primary" size="sm">SM</Button>
+<Button variant="destructive-primary" size="md">MD</Button>
+<Button variant="destructive-primary" size="lg">LG</Button>
+<Button variant="destructive-primary" size="xl">XL</Button>`}>
   <Button variant="destructive-primary" size="sm">SM</Button>
   <Button variant="destructive-primary" size="md">MD</Button>
   <Button variant="destructive-primary" size="lg">LG</Button>
@@ -68,8 +120,9 @@ Action Button과 동일한 4가지 사이즈를 지원합니다.
 ## Props
 
 <PropsTable data={[
-  { name: 'variant', type: "destructive-primary | destructive-secondary | destructive-tertiary | destructive-link", default: "-", description: 'Destructive 버튼의 Hierarchy' },
+  { name: 'variant', type: "destructive-primary | destructive-secondary | destructive-tertiary | destructive-ghost", default: "-", description: 'Destructive 버튼의 Hierarchy' },
   { name: 'size', type: "sm | md | lg | xl", default: "md", description: '버튼 크기' },
+  { name: 'state', type: "default | hover | active | focused | disabled", default: "default", description: '버튼 상태 (문서 시각화용)' },
   { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화 여부' },
   { name: 'isLoading', type: 'boolean', default: 'false', description: '로딩 상태' },
   { name: 'iconOnly', type: 'boolean', default: 'false', description: '아이콘 전용 모드' },
@@ -82,6 +135,6 @@ Action Button과 동일한 4가지 사이즈를 지원합니다.
 | Property | Values |
 | --- | --- |
 | **Size** | `sm` `md` `lg` `xl` |
-| **Hierarchy** | `Primary` `Secondary` `Tertiary` `Link` |
-| **State** | `Default` `Hover` `Focused` `Disabled` `Loading` |
+| **Hierarchy** | `Primary` `Secondary` `Tertiary` `Ghost` |
+| **State** | `Default` `Hover` `Active` `Focused` `Disabled` `Loading` |
 | **Icon only** | `True` `False` |

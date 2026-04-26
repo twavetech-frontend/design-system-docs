@@ -11,8 +11,25 @@ Figma 컴포넌트: `Buttons/Button utility`
 
 ## Hierarchy
 
-<ComponentPreview>
+<ComponentPreview code={`<Button variant="utility-secondary" size="sm" iconOnly={true}>⚙</Button>
+<Button variant="utility-tertiary" size="sm" iconOnly={true}>⋯</Button>`}>
   <Button variant="utility-secondary" size="sm" iconOnly={true}>⚙</Button>
+  <Button variant="utility-tertiary" size="sm" iconOnly={true}>⋯</Button>
+</ComponentPreview>
+
+---
+
+## Size
+
+일반 버튼보다 작은 `xs`, `sm` 두 가지 사이즈만 지원합니다.
+
+<ComponentPreview code={`<Button variant="utility-secondary" size="xs" iconOnly={true}>⚙</Button>
+<Button variant="utility-secondary" size="sm" iconOnly={true}>⚙</Button>
+<Button variant="utility-tertiary" size="xs" iconOnly={true}>⋯</Button>
+<Button variant="utility-tertiary" size="sm" iconOnly={true}>⋯</Button>`}>
+  <Button variant="utility-secondary" size="xs" iconOnly={true}>⚙</Button>
+  <Button variant="utility-secondary" size="sm" iconOnly={true}>⚙</Button>
+  <Button variant="utility-tertiary" size="xs" iconOnly={true}>⋯</Button>
   <Button variant="utility-tertiary" size="sm" iconOnly={true}>⋯</Button>
 </ComponentPreview>
 
@@ -20,7 +37,10 @@ Figma 컴포넌트: `Buttons/Button utility`
 
 ## States - Secondary
 
-<ComponentPreview>
+<ComponentPreview code={`<Button variant="utility-secondary" size="sm" iconOnly={true}>⚙</Button>
+<Button variant="utility-secondary" size="sm" state="hover" iconOnly={true}>⚙</Button>
+<Button variant="utility-secondary" size="sm" state="focused" iconOnly={true}>⚙</Button>
+<Button variant="utility-secondary" size="sm" state="disabled" iconOnly={true}>⚙</Button>`}>
   <Button variant="utility-secondary" size="sm" iconOnly={true}>⚙</Button>
   <Button variant="utility-secondary" size="sm" state="hover" iconOnly={true}>⚙</Button>
   <Button variant="utility-secondary" size="sm" state="focused" iconOnly={true}>⚙</Button>
@@ -29,7 +49,10 @@ Figma 컴포넌트: `Buttons/Button utility`
 
 ## States - Tertiary
 
-<ComponentPreview>
+<ComponentPreview code={`<Button variant="utility-tertiary" size="sm" iconOnly={true}>⋯</Button>
+<Button variant="utility-tertiary" size="sm" state="hover" iconOnly={true}>⋯</Button>
+<Button variant="utility-tertiary" size="sm" state="focused" iconOnly={true}>⋯</Button>
+<Button variant="utility-tertiary" size="sm" state="disabled" iconOnly={true}>⋯</Button>`}>
   <Button variant="utility-tertiary" size="sm" iconOnly={true}>⋯</Button>
   <Button variant="utility-tertiary" size="sm" state="hover" iconOnly={true}>⋯</Button>
   <Button variant="utility-tertiary" size="sm" state="focused" iconOnly={true}>⋯</Button>

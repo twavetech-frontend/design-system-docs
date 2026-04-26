@@ -1,164 +1,294 @@
-/* Tag component */
+/* ===========================
+   Tag base
+   =========================== */
 .tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  border-radius: 6px;
-  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
-  background: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #344054);
-  font-weight: 500;
+  gap: 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  background: var(--colors-grayNeutral-25, #fcfcfd);
+  color: var(--colors-grayNeutral-600, #687079);
   font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
   white-space: nowrap;
   cursor: default;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+/* ===========================
+   Sizes (font + vertical padding)
+   =========================== */
+.sm {
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.md {
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.lg {
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* Horizontal padding: default (no leading/trailing content) */
+.sm { padding-left: 8px; padding-right: 8px; }
+.md { padding-left: 9px; padding-right: 9px; }
+.lg { padding-left: 10px; padding-right: 10px; }
+
+/* Leading-based left padding adjustments */
+.tag.hasCheckbox.sm { padding-left: 3px; }
+.tag.hasCheckbox.md { padding-left: 4px; }
+.tag.hasCheckbox.lg { padding-left: 5px; }
+
+.tag.hasDot.sm { padding-left: 6px; }
+.tag.hasDot.md { padding-left: 7px; }
+.tag.hasDot.lg { padding-left: 8px; }
+
+.tag.hasAvatar.sm,
+.tag.hasCountry.sm { padding-left: 4px; }
+.tag.hasAvatar.md,
+.tag.hasCountry.md { padding-left: 5px; }
+.tag.hasAvatar.lg,
+.tag.hasCountry.lg { padding-left: 6px; }
+
+/* Trailing-based right padding adjustments */
+.tag.hasClose.sm { padding-right: 3px; }
+.tag.hasClose.md { padding-right: 4px; }
+.tag.hasClose.lg { padding-right: 5px; }
+
+.tag.hasCount.sm { padding-right: 2px; }
+.tag.hasCount.md { padding-right: 3px; }
+.tag.hasCount.lg { padding-right: 4px; }
+
+/* ===========================
+   Color variants
+   =========================== */
+
+/* Brand variant — when no checkbox AND action is close/count */
+.tag.brand {
+  background: var(--colors-brand-100, #e6d4ff);
+  color: var(--colors-brand-700, #5200b0);
+  border-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Checkbox variant — when checkbox is present */
+.tag.checkboxVariant {
+  background: var(--colors-grayNeutral-100, #f3f4f6);
+  color: var(--colors-grayNeutral-600, #687079);
+  border-color: var(--colors-grayNeutral-300, #d2d6db);
+}
+
+/* ===========================
+   Checkbox
+   =========================== */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--colors-grayNeutral-100, #f3f4f6);
+  border: 1px solid var(--colors-grayNeutral-300, #d2d6db);
+  flex-shrink: 0;
+  cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
 }
 
-/* Sizes */
-.sm {
-  padding: 3px 8px;
-  font-size: 12px;
-  line-height: 18px;
+.sm .checkbox { width: 14px; height: 14px; }
+.md .checkbox { width: 16px; height: 16px; }
+.lg .checkbox { width: 18px; height: 18px; }
+
+.checkbox.checked {
+  background: var(--colors-brand-500, #7700ff);
+  border-color: var(--colors-brand-500, #7700ff);
 }
 
-.md {
-  padding: 3px 10px;
-  font-size: 14px;
-  line-height: 20px;
+.checkbox svg {
+  width: 12px;
+  height: 12px;
+  color: #fff;
 }
+.sm .checkbox svg { width: 10px; height: 10px; }
+.lg .checkbox svg { width: 14px; height: 14px; }
 
-.lg {
-  padding: 4px 10px;
-  font-size: 14px;
-  line-height: 20px;
+/* ===========================
+   Dot icon
+   =========================== */
+.dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
 }
+.sm .dot { width: 6px; height: 6px; }
+.md .dot { width: 8px; height: 8px; }
+.lg .dot { width: 10px; height: 10px; }
 
-/* Hover on tag */
-.tag:hover {
-  background: var(--colors-background-bgPrimaryHover, #f9fafb);
+.dot::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  background: var(--colors-brand-500, #7700ff);
 }
+.sm .dot::before { inset: 0; }
 
-/* ---- Close (X) button ---- */
+/* ===========================
+   Avatar
+   =========================== */
+.avatar {
+  border-radius: 50%;
+  background: var(--colors-brand-200, #cfaeff);
+  border: 0.667px solid rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.sm .avatar { width: 14px; height: 14px; }
+.md .avatar { width: 16px; height: 16px; }
+.lg .avatar { width: 20px; height: 20px; }
+
+/* ===========================
+   Country flag placeholder
+   =========================== */
+.country {
+  border-radius: 50%;
+  background: var(--colors-grayNeutral-200, #e6e8ea);
+  flex-shrink: 0;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--colors-grayNeutral-600, #687079);
+}
+.sm .country { width: 14px; height: 14px; font-size: 8px; }
+.md .country { width: 16px; height: 16px; font-size: 9px; }
+.lg .country { width: 20px; height: 20px; font-size: 10px; }
+
+/* ===========================
+   Close (X) button
+   =========================== */
 .close {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: none;
   border: none;
-  padding: 0;
-  margin-left: 2px;
+  padding: 2px;
   cursor: pointer;
-  color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
-  border-radius: 4px;
-  transition: color 0.15s, background 0.15s;
+  color: currentColor;
+  border-radius: 3px;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.15s, background 0.15s;
+}
+.close:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.04);
 }
 
-.close:hover {
-  color: var(--colors-text-textSecondary-700, #344054);
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-}
+.sm .close { width: 14px; height: 14px; }
+.md .close { width: 16px; height: 16px; }
+.lg .close { width: 20px; height: 20px; }
 
 .close svg {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
+.sm .close svg { width: 10px; height: 10px; }
+.lg .close svg { width: 14px; height: 14px; }
 
-/* ---- Count badge ---- */
+/* ===========================
+   Count badge
+   =========================== */
 .count {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
-  font-size: 11px;
+  background: var(--colors-grayNeutral-25, #fcfcfd);
+  color: currentColor;
   font-weight: 500;
-  line-height: 1;
-  padding: 1px 6px;
-  border-radius: 10px;
-  min-width: 18px;
-}
-
-/* ---- Dot indicator ---- */
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--colors-foreground-fgSuccessPrimary, #17b26a);
+  padding: 0 5px;
+  border-radius: 3px;
   flex-shrink: 0;
 }
-
-/* ---- Avatar placeholder ---- */
-.avatar {
-  border-radius: 50%;
-  background: var(--colors-border-borderSecondary, #e4e7ec);
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-.avatar.avatar-sm {
-  width: 16px;
+.sm .count {
+  font-size: 11px;
+  line-height: 16px;
   height: 16px;
+  padding: 0 4px;
 }
-
-.avatar.avatar-md {
-  width: 18px;
+.md .count {
+  font-size: 12px;
+  line-height: 18px;
   height: 18px;
+  padding: 0 5px;
 }
-
-.avatar.avatar-lg {
-  width: 20px;
+.lg .count {
+  font-size: 12px;
+  line-height: 20px;
   height: 20px;
+  padding: 0 6px;
 }
 
-/* ---- Country flag placeholder ---- */
-.country {
-  border-radius: 50%;
-  background: var(--colors-border-borderSecondary, #e4e7ec);
-  flex-shrink: 0;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  line-height: 1;
+/* ===========================
+   Dark mode overrides
+   tokens-dark.css 의 semantic 토큰으로 재맵핑. Tag 기본 스타일이
+   raw scale 토큰(grayNeutral-25 등)을 써서 dark 토큰과 값이 동일하므로
+   ComponentPreview 가 data-theme="dark" 를 붙여도 색이 바뀌지 않던 문제를
+   해결하기 위해 명시적으로 오버라이드.
+   =========================== */
+[data-theme='dark'] .tag {
+  background: var(--colors-background-bgSecondary, #13161b);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
-.country.country-sm {
-  width: 16px;
-  height: 16px;
+[data-theme='dark'] .tag.brand {
+  background: var(--colors-background-bgBrandSecondary, #6a00e0);
+  color: var(--colors-text-textBrandSecondary-700, #cecfd2);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
-.country.country-md {
-  width: 18px;
-  height: 18px;
+[data-theme='dark'] .tag.checkboxVariant {
+  background: var(--colors-background-bgTertiary, #22262f);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+  border-color: var(--colors-border-borderPrimary, #373a41);
 }
 
-.country.country-lg {
-  width: 20px;
-  height: 20px;
+[data-theme='dark'] .checkbox {
+  background: var(--colors-background-bgTertiary, #22262f);
+  border-color: var(--colors-border-borderPrimary, #373a41);
 }
 
-/* ---- Checkbox ---- */
-.checkbox {
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  border: 1.5px solid var(--colors-border-borderPrimary, #d0d5dd);
-  background: var(--colors-background-bgPrimary, #fff);
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
+[data-theme='dark'] .checkbox.checked {
+  background: var(--colors-background-bgBrandSolid, #6a00e0);
+  border-color: var(--colors-background-bgBrandSolid, #6a00e0);
 }
 
-.checkbox.checked {
-  background: var(--colors-background-bgBrandSolid, #7f56d9);
-  border-color: var(--colors-background-bgBrandSolid, #7f56d9);
+[data-theme='dark'] .avatar {
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
-.checkbox.checked svg {
-  width: 10px;
-  height: 10px;
+[data-theme='dark'] .country {
+  background: var(--colors-background-bgQuaternary, #373a41);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+
+[data-theme='dark'] .close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .count {
+  background: var(--colors-background-bgPrimary, #0c0e12);
 }

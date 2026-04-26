@@ -10,20 +10,40 @@ export function Tag({
   checked = false,
   onClose,
   onCheck,
-  count,
   countValue,
   avatarSrc,
   countryCode,
+  flagSrc,
   ...props
 }) {
-  const classes = [styles.tag, styles[size]];
+  const hasClose = action === 'close';
+  const hasCount = action === 'count';
+  const hasDot = icon === 'dot';
+  const hasAvatar = icon === 'avatar';
+  const hasCountry = icon === 'country';
 
-  const avatarSize = `avatar-${size}`;
-  const countrySize = `country-${size}`;
+  // Color variant rules:
+  // - Brand: no checkbox AND (close or count action)
+  // - Checkbox variant: checkbox present
+  // - Subtle: default (no checkbox, text-only)
+  const isBrand = !checkbox && (hasClose || hasCount);
+  const isCheckboxVariant = checkbox;
+
+  const classes = [
+    styles.tag,
+    styles[size],
+    isBrand && styles.brand,
+    isCheckboxVariant && styles.checkboxVariant,
+    checkbox && styles.hasCheckbox,
+    hasDot && styles.hasDot,
+    hasAvatar && styles.hasAvatar,
+    hasCountry && styles.hasCountry,
+    hasClose && styles.hasClose,
+    hasCount && styles.hasCount,
+  ].filter(Boolean);
 
   return (
     <span className={classes.join(' ')} {...props}>
-      {/* Checkbox */}
       {checkbox && (
         <span
           className={`${styles.checkbox} ${checked ? styles.checked : ''}`}
@@ -32,45 +52,43 @@ export function Tag({
           aria-checked={checked}
         >
           {checked && (
-            <svg viewBox="0 0 10 10" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M2 5.5L4 7.5L8 3" />
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2.5 6.5L5 9l4.5-5" />
             </svg>
           )}
         </span>
       )}
 
-      {/* Dot icon */}
-      {icon === 'dot' && <span className={styles.dot} />}
+      {hasDot && <span className={styles.dot} />}
 
-      {/* Avatar icon */}
-      {icon === 'avatar' && (
-        <span className={`${styles.avatar} ${styles[avatarSize]}`}>
-          {avatarSrc ? (
+      {hasAvatar && (
+        <span className={styles.avatar}>
+          {avatarSrc && (
             <img src={avatarSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          ) : null}
+          )}
         </span>
       )}
 
-      {/* Country flag icon */}
-      {icon === 'country' && (
-        <span className={`${styles.country} ${styles[countrySize]}`}>
-          {countryCode || ''}
+      {hasCountry && (
+        <span className={styles.country}>
+          {flagSrc ? (
+            <img src={flagSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          ) : (
+            countryCode || ''
+          )}
         </span>
       )}
 
-      {/* Label text */}
       {children}
 
-      {/* Action: count badge */}
-      {action === 'count' && (
+      {hasCount && (
         <span className={styles.count}>{countValue ?? 5}</span>
       )}
 
-      {/* Action: close button */}
-      {action === 'close' && (
-        <button className={styles.close} onClick={onClose} aria-label="Remove">
-          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M10.5 3.5L3.5 10.5M3.5 3.5l7 7" />
+      {hasClose && (
+        <button className={styles.close} onClick={onClose} aria-label="Remove" type="button">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 3L3 9M3 3l6 6" />
           </svg>
         </button>
       )}

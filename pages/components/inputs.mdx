@@ -1,11 +1,11 @@
-import { Input, Textarea, MailIcon, CopyIcon } from '../../components/Input'
+import { Input, Textarea, VerificationCodeInput, MailIcon, CopyIcon } from '../../components/Input'
 import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
 
 # Inputs
 
 사용자에게 텍스트 입력을 받는 필드입니다. 다양한 유형과 상태를 지원합니다.
 
-Figma 컴포넌트: `Input field`, `Textarea input field`
+Figma 컴포넌트: `Input field`, `Textarea input field`, `Verification code input field`
 
 ---
 
@@ -80,12 +80,23 @@ Figma 컴포넌트: `Input field`, `Textarea input field`
 태그를 입력할 수 있는 필드입니다. 사용자, 카테고리 태깅 등에 사용합니다.
 
 <ComponentPreview code={`<Input label="Users" placeholder="Add users" type="tags" tags={[]} size="md" required hint="This is a hint text to help user." />
-<Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="filled" />
-<Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="focused" />`}>
+<Input label="Users" type="tags" tags={[
+  { label: "Olivia", avatarSrc: "https://i.pravatar.cc/80?img=47" },
+  { label: "Phoenix", avatarSrc: "https://i.pravatar.cc/80?img=15" },
+  { label: "Lana", avatarSrc: "https://i.pravatar.cc/80?img=32" },
+]} size="md" required hint="This is a hint text to help user." state="filled" />`}>
   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 320px)', gap: 16 }}>
     <Input label="Users" placeholder="Add users" type="tags" tags={[]} size="md" required hint="This is a hint text to help user." />
-    <Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="filled" />
-    <Input label="Users" type="tags" tags={["Olivia", "Phoenix", "Lana"]} size="md" required hint="This is a hint text to help user." state="focused" />
+    <Input label="Users" type="tags" tags={[
+      { label: "Olivia", avatarSrc: "https://i.pravatar.cc/80?img=47" },
+      { label: "Phoenix", avatarSrc: "https://i.pravatar.cc/80?img=15" },
+      { label: "Lana", avatarSrc: "https://i.pravatar.cc/80?img=32" },
+    ]} size="md" required hint="This is a hint text to help user." state="filled" />
+    <Input label="Users" type="tags" tags={[
+      { label: "Olivia", avatarSrc: "https://i.pravatar.cc/80?img=47" },
+      { label: "Phoenix", avatarSrc: "https://i.pravatar.cc/80?img=15" },
+      { label: "Lana", avatarSrc: "https://i.pravatar.cc/80?img=32" },
+    ]} size="md" required hint="This is a hint text to help user." state="focused" />
   </div>
 </ComponentPreview>
 
@@ -179,6 +190,74 @@ sm, md 두 가지 사이즈를 지원합니다.
 
 ---
 
+## Verification Code Input
+
+인증 코드(OTP, 2FA 등)를 자릿수별로 입력받는 필드입니다. 각 자리마다 독립된 박스를 표시하며, 4자리와 6자리를 지원합니다.
+
+### Size
+
+sm(64px), md(80px), lg(96px) 세 가지 사이즈를 지원합니다.
+
+<ComponentPreview code={`<VerificationCodeInput label="Secure code" size="sm" digits={4} hint="This is a hint text to help user." />
+<VerificationCodeInput label="Secure code" size="md" digits={4} hint="This is a hint text to help user." />
+<VerificationCodeInput label="Secure code" size="lg" digits={4} hint="This is a hint text to help user." />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+    <VerificationCodeInput label="Secure code" size="sm" digits={4} hint="This is a hint text to help user." />
+    <VerificationCodeInput label="Secure code" size="md" digits={4} hint="This is a hint text to help user." />
+    <VerificationCodeInput label="Secure code" size="lg" digits={4} hint="This is a hint text to help user." />
+  </div>
+</ComponentPreview>
+
+### Digits: 4
+
+4자리 인증 코드 입력 필드입니다.
+
+<ComponentPreview code={`<VerificationCodeInput label="Secure code" size="md" digits={4} hint="This is a hint text to help user." />
+<VerificationCodeInput label="Secure code" size="md" digits={4} value="12" state="focused" hint="This is a hint text to help user." />
+<VerificationCodeInput label="Secure code" size="md" digits={4} value="1234" hint="This is a hint text to help user." />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+    <VerificationCodeInput label="Secure code" size="md" digits={4} hint="This is a hint text to help user." />
+    <VerificationCodeInput label="Secure code" size="md" digits={4} value="12" state="focused" hint="This is a hint text to help user." />
+    <VerificationCodeInput label="Secure code" size="md" digits={4} value="1234" hint="This is a hint text to help user." />
+  </div>
+</ComponentPreview>
+
+### Digits: 6
+
+6자리 인증 코드 입력 필드입니다. 3자리씩 그룹화되어 가운데에 구분 기호가 표시됩니다.
+
+<ComponentPreview code={`<VerificationCodeInput label="Secure code" size="md" digits={6} hint="This is a hint text to help user." />
+<VerificationCodeInput label="Secure code" size="md" digits={6} value="123" state="focused" hint="This is a hint text to help user." />
+<VerificationCodeInput label="Secure code" size="md" digits={6} value="123456" hint="This is a hint text to help user." />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+    <VerificationCodeInput label="Secure code" size="md" digits={6} hint="This is a hint text to help user." />
+    <VerificationCodeInput label="Secure code" size="md" digits={6} value="123" state="focused" hint="This is a hint text to help user." />
+    <VerificationCodeInput label="Secure code" size="md" digits={6} value="123456" hint="This is a hint text to help user." />
+  </div>
+</ComponentPreview>
+
+### Destructive
+
+에러 상태의 인증 코드 입력 필드입니다.
+
+<ComponentPreview code={`<VerificationCodeInput label="Secure code" size="md" digits={4} value="1234" destructive hint="This code is invalid." />
+<VerificationCodeInput label="Secure code" size="md" digits={6} value="123456" destructive hint="This code is invalid." />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+    <VerificationCodeInput label="Secure code" size="md" digits={4} value="1234" destructive hint="This code is invalid." />
+    <VerificationCodeInput label="Secure code" size="md" digits={6} value="123456" destructive hint="This code is invalid." />
+  </div>
+</ComponentPreview>
+
+### Disabled
+
+<ComponentPreview code={`<VerificationCodeInput label="Secure code" size="md" digits={4} state="disabled" hint="This field is disabled." />`}>
+  <div>
+    <VerificationCodeInput label="Secure code" size="md" digits={4} state="disabled" hint="This field is disabled." />
+  </div>
+</ComponentPreview>
+
+---
+
 ## Props
 
 ### Input
@@ -198,7 +277,7 @@ sm, md 두 가지 사이즈를 지원합니다.
   { name: 'leadingDropdown', type: 'string', default: '-', description: '왼쪽 드롭다운 텍스트 (type=leading-dropdown)' },
   { name: 'trailingDropdown', type: 'string', default: '-', description: '오른쪽 드롭다운 텍스트 (type=trailing-dropdown)' },
   { name: 'trailingButton', type: 'string', default: '-', description: '오른쪽 버튼 텍스트 (type=trailing-button)' },
-  { name: 'tags', type: 'string[]', default: '[]', description: '태그 목록 (type=tags)' },
+  { name: 'tags', type: 'Array<string | { label: string, avatarSrc?: string }>', default: '[]', description: '태그 목록 (type=tags). 객체 형태로 avatarSrc를 지정하면 아바타 이미지를 렌더링합니다.' },
 ]} />
 
 ### Textarea
@@ -214,6 +293,18 @@ sm, md 두 가지 사이즈를 지원합니다.
   { name: 'helpIcon', type: 'boolean', default: 'false', description: '도움말 아이콘 표시 여부' },
   { name: 'hint', type: 'string', default: '-', description: '힌트 또는 에러 메시지' },
   { name: 'tags', type: 'string[]', default: '[]', description: '태그 목록 (type=tags)' },
+]} />
+
+### VerificationCodeInput
+
+<PropsTable data={[
+  { name: 'label', type: 'string', default: '-', description: '레이블 텍스트' },
+  { name: 'value', type: 'string', default: "''", description: '입력된 코드 값 (문자열)' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: '박스 크기 (64 / 80 / 96 px)' },
+  { name: 'digits', type: '4 | 6', default: '4', description: '입력 자릿수. 6일 경우 3자리씩 그룹화되며 구분 기호가 표시됨' },
+  { name: 'state', type: "'default' | 'focused' | 'disabled'", default: "'default'", description: '컴포넌트 상태. focused일 때 value 다음 박스가 강조됨' },
+  { name: 'destructive', type: 'boolean', default: 'false', description: '에러 상태 여부' },
+  { name: 'hint', type: 'string', default: '-', description: '힌트 또는 에러 메시지' },
 ]} />
 
 ---
@@ -236,3 +327,10 @@ sm, md 두 가지 사이즈를 지원합니다.
 | **Type** | `Default` `Tags` |
 | **Destructive** | `True` `False` |
 | **State** | `Placeholder` `Default` `Focused` `Disabled` |
+
+### Verification Code Input Field
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` `lg` |
+| **Digits** | `4` `6` |

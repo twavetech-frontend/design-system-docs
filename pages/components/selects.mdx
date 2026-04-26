@@ -1,0 +1,245 @@
+import { Select, SelectMenu, SelectItem } from '../../components/Select'
+import { MailIcon, SettingsIcon, UserIcon } from '../../components/Dropdown'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Selects
+
+Select는 사용자가 정해진 목록에서 값을 선택하는 입력 컴포넌트입니다. 라벨, 컨트롤(input), 힌트 텍스트로 구성되며, 펼친 상태에서는 아래에 메뉴 패널이 부착됩니다.
+
+Figma: `Base components/Select` (3281:377673), `Base components/_Select menu item` (3281:380429)
+
+---
+
+## 사이즈
+
+`md`, `sm` 두 사이즈를 제공합니다. 둘 다 동일한 무테두리 alpha-black-3 배경이며, 차이는 좌우 패딩과 chevron 아이콘 크기입니다.
+
+- **md** — `padding: 6px 14px` · chevron 20px
+- **sm** — `padding: 6px 12px` · chevron 16px
+
+<ComponentPreview direction="column" code={`<Select size="md" label="Team member" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
+<Select size="sm" label="Team member" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />`}>
+  <Select size="md" label="Team member" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
+  <Select size="sm" label="Team member" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
+</ComponentPreview>
+
+## 상태
+
+`Default`, `Placeholder`, `Focused`, `Disabled`, `Open` 5가지 상태가 있습니다. Focused/Open 상태는 2px 브랜드 보더와 alpha-black-5 배경을 사용합니다.
+
+<ComponentPreview direction="column" code={`<Select label="Placeholder" required helpIcon placeholder="Select team member" hint="This is a hint text to help user." />
+<Select label="Default" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
+<Select label="Focused" required helpIcon state="focused" value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
+<Select label="Disabled" required helpIcon state="disabled" value="Select team member" hint="This is a hint text to help user." />`}>
+  <Select label="Placeholder" required helpIcon placeholder="Select team member" hint="This is a hint text to help user." />
+  <Select label="Default" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
+  <Select label="Focused" required helpIcon state="focused" value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
+  <Select label="Disabled" required helpIcon state="disabled" value="Select team member" hint="This is a hint text to help user." />
+</ComponentPreview>
+
+### Open 상태
+
+`state="open"`은 컨트롤 하단 모서리를 평평하게 만들어 메뉴 패널이 부착될 자리를 시각적으로 만듭니다. 실제 메뉴는 `<SelectMenu>`로 별도 렌더링합니다.
+
+<ComponentPreview direction="column" code={`<Select label="Team member" required helpIcon state="open" value="John Lee" supportingText="@john" />
+<SelectMenu>
+  <SelectItem>Phoenix Baker</SelectItem>
+  <SelectItem selected supportingText="@john">John Lee</SelectItem>
+  <SelectItem>Lana Steiner</SelectItem>
+  <SelectItem>Demi Wilkinson</SelectItem>
+  <SelectItem>Candice Wu</SelectItem>
+</SelectMenu>`}>
+  <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <Select label="Team member" required helpIcon state="open" value="John Lee" supportingText="@john" />
+    <SelectMenu>
+      <SelectItem>Phoenix Baker</SelectItem>
+      <SelectItem selected supportingText="@john">John Lee</SelectItem>
+      <SelectItem>Lana Steiner</SelectItem>
+      <SelectItem>Demi Wilkinson</SelectItem>
+      <SelectItem>Candice Wu</SelectItem>
+    </SelectMenu>
+  </div>
+</ComponentPreview>
+
+---
+
+## 타입
+
+타입은 `leadingIcon`, `leadingAvatar`, `leadingDot`, `search`, `tags` 프롭에 의해 자동으로 결정됩니다. 리딩 요소가 있는 경우 컨트롤 수직 패딩이 `10px`로 늘어나 충분한 공간을 확보합니다.
+
+### Default
+
+<ComponentPreview direction="column" code={`<Select label="Team member" required helpIcon value="John Lee" supportingText="@john" />`}>
+  <Select label="Team member" required helpIcon value="John Lee" supportingText="@john" />
+</ComponentPreview>
+
+### Icon leading
+
+<ComponentPreview direction="column" code={`<Select label="Team member" required helpIcon value="John Lee" supportingText="@john" leadingIcon={<UserIcon />} />`}>
+  <Select label="Team member" required helpIcon value="John Lee" supportingText="@john" leadingIcon={<UserIcon />} />
+</ComponentPreview>
+
+### Avatar leading
+
+<ComponentPreview direction="column" code={`<Select label="Team member" required helpIcon value="John Lee" supportingText="@john" leadingAvatar="https://i.pravatar.cc/80?img=47" />`}>
+  <Select label="Team member" required helpIcon value="John Lee" supportingText="@john" leadingAvatar="https://i.pravatar.cc/80?img=47" />
+</ComponentPreview>
+
+### Dot leading
+
+<ComponentPreview direction="column" code={`<Select label="Team member" required helpIcon value="John Lee" supportingText="@john" leadingDot="#17b26a" />`}>
+  <Select label="Team member" required helpIcon value="John Lee" supportingText="@john" leadingDot="#17b26a" />
+</ComponentPreview>
+
+### Search
+
+`search` 프롭을 사용하면 검색 아이콘이 표시되고 chevron 대신 input 필드로 동작합니다. 우측에 `shortcut` 으로 키보드 단축키 뱃지를 붙일 수 있습니다.
+
+<ComponentPreview direction="column" code={`<Select label="Search" required helpIcon search placeholder="Search" shortcut="⌘K" />`}>
+  <Select label="Search" required helpIcon search placeholder="Search" shortcut="⌘K" />
+</ComponentPreview>
+
+### Tags
+
+`tags` 배열을 전달하면 검색 아이콘과 함께 브랜드 컬러 칩이 렌더됩니다. 각 항목은 문자열이거나 `{ label, avatar }` 형태입니다.
+
+<ComponentPreview direction="column" code={`<Select
+  label="Search"
+  required
+  helpIcon
+  shortcut="⌘K"
+  tags={[
+    { label: "John", avatar: "https://i.pravatar.cc/80?img=47" },
+    { label: "Phoenix", avatar: "https://i.pravatar.cc/80?img=32" },
+  ]}
+  placeholder="Lana"
+/>`}>
+  <Select
+    label="Search"
+    required
+    helpIcon
+    shortcut="⌘K"
+    tags={[
+      { label: "John", avatar: "https://i.pravatar.cc/80?img=47" },
+      { label: "Phoenix", avatar: "https://i.pravatar.cc/80?img=32" },
+    ]}
+    placeholder="Lana"
+  />
+</ComponentPreview>
+
+---
+
+## Select Menu Item
+
+드롭다운 패널에 사용하는 메뉴 아이템입니다. 값(`label`)과 보조 텍스트(`supportingText`)를 한 줄에 표시하며, `selected`이면 우측에 체크 아이콘이 추가됩니다.
+
+### 기본 / 선택 / 비활성
+
+<ComponentPreview direction="column" code={`<SelectItem>Phoenix Baker</SelectItem>
+<SelectItem supportingText="@john">John Lee</SelectItem>
+<SelectItem selected supportingText="@john">John Lee</SelectItem>
+<SelectItem disabled supportingText="@john">John Lee</SelectItem>`}>
+  <SelectMenu>
+    <SelectItem>Phoenix Baker</SelectItem>
+    <SelectItem supportingText="@john">John Lee</SelectItem>
+    <SelectItem selected supportingText="@john">John Lee</SelectItem>
+    <SelectItem disabled supportingText="@john">John Lee</SelectItem>
+  </SelectMenu>
+</ComponentPreview>
+
+### 아이콘 / 아바타 / Dot
+
+<ComponentPreview direction="column" code={`<SelectItem icon={<MailIcon />} supportingText="@john">John Lee</SelectItem>
+<SelectItem avatarSrc="https://i.pravatar.cc/80?img=47" supportingText="@john">John Lee</SelectItem>
+<SelectItem dot="#17b26a">Active</SelectItem>
+<SelectItem dot="#f04438" selected>Error</SelectItem>`}>
+  <SelectMenu>
+    <SelectItem icon={<MailIcon />} supportingText="@john">John Lee</SelectItem>
+    <SelectItem icon={<SettingsIcon />} selected supportingText="@phoenix">Phoenix Baker</SelectItem>
+    <SelectItem avatarSrc="https://i.pravatar.cc/80?img=47" supportingText="@john">John Lee</SelectItem>
+    <SelectItem avatarSrc="https://i.pravatar.cc/80?img=32" selected supportingText="@phoenix">Phoenix Baker</SelectItem>
+    <SelectItem dot="#17b26a">Active</SelectItem>
+    <SelectItem dot="#f04438" selected>Error</SelectItem>
+  </SelectMenu>
+</ComponentPreview>
+
+### Sm 사이즈
+
+`size="sm"`은 라벨 폰트가 14px로 줄어들고, 아바타 크기가 24px로 작아집니다.
+
+<ComponentPreview direction="column" code={`<SelectItem size="sm" supportingText="@john">John Lee</SelectItem>
+<SelectItem size="sm" selected supportingText="@john">John Lee</SelectItem>
+<SelectItem size="sm" avatarSrc="https://i.pravatar.cc/80?img=47" supportingText="@john">John Lee</SelectItem>
+<SelectItem size="sm" dot="#17b26a">Active</SelectItem>`}>
+  <SelectMenu>
+    <SelectItem size="sm" supportingText="@john">John Lee</SelectItem>
+    <SelectItem size="sm" selected supportingText="@john">John Lee</SelectItem>
+    <SelectItem size="sm" avatarSrc="https://i.pravatar.cc/80?img=47" supportingText="@john">John Lee</SelectItem>
+    <SelectItem size="sm" dot="#17b26a">Active</SelectItem>
+  </SelectMenu>
+</ComponentPreview>
+
+---
+
+## Props
+
+### Select
+
+<PropsTable data={[
+  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '컨트롤 사이즈 — md(px-14, chevron 20) / sm(px-12, chevron 16)' },
+  { name: 'state', type: "'default' | 'placeholder' | 'focused' | 'disabled' | 'open'", default: '자동', description: '명시하지 않으면 value/placeholder/search로부터 자동 계산' },
+  { name: 'label', type: 'string', default: '-', description: '컨트롤 위에 표시되는 라벨' },
+  { name: 'required', type: 'boolean', default: 'false', description: '라벨 옆에 브랜드 컬러 `*` 표시' },
+  { name: 'helpIcon', type: 'boolean', default: 'false', description: '라벨 옆에 16px help-circle 아이콘' },
+  { name: 'hint', type: 'string', default: '-', description: '컨트롤 하단 보조 텍스트' },
+  { name: 'placeholder', type: 'string', default: '-', description: '값이 없을 때 표시되는 placeholder' },
+  { name: 'value', type: 'string', default: '-', description: '선택된 값' },
+  { name: 'supportingText', type: 'string', default: '-', description: '값 오른쪽에 나란히 표시되는 부가 텍스트 (예: @handle)' },
+  { name: 'leadingIcon', type: 'ReactNode', default: '-', description: '왼쪽 20px 아이콘 — 타입 `Icon leading`' },
+  { name: 'leadingAvatar', type: 'string (URL)', default: '-', description: '왼쪽 24px 아바타 — 타입 `Avatar leading`' },
+  { name: 'leadingDot', type: 'string (color)', default: '-', description: '왼쪽 10px 컬러 도트 — 타입 `Dot leading`' },
+  { name: 'search', type: 'boolean', default: 'false', description: '검색 모드 — 검색 아이콘과 input 렌더 (chevron 숨김)' },
+  { name: 'shortcut', type: 'string', default: '-', description: '오른쪽에 키보드 단축키 뱃지 표시 (예: ⌘K)' },
+  { name: 'tags', type: '(string | { label, avatar })[]', default: '-', description: '선택된 태그 칩 목록 — 검색 아이콘과 함께 표시' },
+]} />
+
+### SelectMenu
+
+<PropsTable data={[
+  { name: 'maxHeight', type: 'string | number', default: '320px', description: '메뉴 최대 높이 (스크롤 시작점)' },
+]} />
+
+### SelectItem
+
+<PropsTable data={[
+  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '사이즈 — md(아바타 32px, text 16) / sm(아바타 24px, text 14)' },
+  { name: 'state', type: "'default' | 'hover' | 'disabled'", default: "'default'", description: '강제 상태 (데모용)' },
+  { name: 'selected', type: 'boolean', default: 'false', description: '선택 여부 — 우측에 체크 아이콘' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화' },
+  { name: 'icon', type: 'ReactNode', default: '-', description: '왼쪽 20px 아이콘' },
+  { name: 'avatar', type: 'string', default: '-', description: '아바타 이니셜 (이미지가 없을 때)' },
+  { name: 'avatarSrc', type: 'string', default: '-', description: '아바타 이미지 URL' },
+  { name: 'dot', type: 'string', default: '-', description: '왼쪽 컬러 도트' },
+  { name: 'supportingText', type: 'string', default: '-', description: '라벨 오른쪽에 나란히 표시되는 부가 텍스트' },
+]} />
+
+---
+
+## Figma Variants
+
+### Select
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` |
+| **Type** | `Default` `Icon leading` `Avatar leading` `Dot leading` `Search` `Tags` |
+| **State** | `Default` `Placeholder` `Focused` `Disabled` `Open` |
+
+### Select Menu Item
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` |
+| **Selected** | `True` `False` |
+| **Type** | `Default` `Icon leading` `Avatar leading` `Dot leading` |
+| **State** | `Default` `Hover` `Disabled` |

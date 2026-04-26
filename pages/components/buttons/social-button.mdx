@@ -1,0 +1,208 @@
+import { SocialButton } from '../../../components/SocialButton'
+import { ComponentPreview, PropsTable } from '../../../components/ComponentPreview'
+
+# Social Button
+
+OAuth 소셜 로그인 플로우에 사용하는 버튼입니다. Google, Facebook, Apple, X(Twitter)를 지원합니다.
+
+Figma 컴포넌트: `Social button`
+
+---
+
+## Theme
+
+각 브랜드별로 3가지 테마를 제공합니다: `Brand`, `Color`, `Gray`.
+
+### Brand
+
+각 브랜드의 공식 브랜드 컬러를 그대로 사용하는 테마입니다. 로그인 화면의 메인 CTA에 적합합니다.
+
+<ComponentPreview code={`<SocialButton social="google" theme="brand" />
+<SocialButton social="facebook" theme="brand" />
+<SocialButton social="apple" theme="brand" />
+<SocialButton social="twitter" theme="brand" />`}>
+  <SocialButton social="google" theme="brand" />
+  <SocialButton social="facebook" theme="brand" />
+  <SocialButton social="apple" theme="brand" />
+  <SocialButton social="twitter" theme="brand" />
+</ComponentPreview>
+
+### Color
+
+흰 배경 + 브랜드 컬러 아이콘. 브랜드를 살리면서도 배경과 덜 부딪히는 조합입니다.
+
+<ComponentPreview code={`<SocialButton social="google" theme="color" />
+<SocialButton social="facebook" theme="color" />
+<SocialButton social="apple" theme="color" />
+<SocialButton social="twitter" theme="color" />`}>
+  <SocialButton social="google" theme="color" />
+  <SocialButton social="facebook" theme="color" />
+  <SocialButton social="apple" theme="color" />
+  <SocialButton social="twitter" theme="color" />
+</ComponentPreview>
+
+### Gray
+
+흰 배경 + 모노톤 아이콘. 브랜드를 튀지 않게 표현해야 하는 폼에서 사용합니다.
+
+<ComponentPreview code={`<SocialButton social="google" theme="gray" />
+<SocialButton social="facebook" theme="gray" />
+<SocialButton social="apple" theme="gray" />
+<SocialButton social="twitter" theme="gray" />`}>
+  <SocialButton social="google" theme="gray" />
+  <SocialButton social="facebook" theme="gray" />
+  <SocialButton social="apple" theme="gray" />
+  <SocialButton social="twitter" theme="gray" />
+</ComponentPreview>
+
+---
+
+## Icon Only
+
+`supportingText={false}` 로 설정하면 아이콘만 있는 정사각형 버튼을 사용할 수 있습니다.
+
+<ComponentPreview code={`<SocialButton social="google" theme="brand" supportingText={false} />
+<SocialButton social="facebook" theme="brand" supportingText={false} />
+<SocialButton social="apple" theme="brand" supportingText={false} />
+<SocialButton social="twitter" theme="brand" supportingText={false} />`}>
+  <SocialButton social="google" theme="brand" supportingText={false} />
+  <SocialButton social="facebook" theme="brand" supportingText={false} />
+  <SocialButton social="apple" theme="brand" supportingText={false} />
+  <SocialButton social="twitter" theme="brand" supportingText={false} />
+</ComponentPreview>
+
+<ComponentPreview code={`<SocialButton social="google" theme="color" supportingText={false} />
+<SocialButton social="facebook" theme="color" supportingText={false} />
+<SocialButton social="apple" theme="color" supportingText={false} />
+<SocialButton social="twitter" theme="color" supportingText={false} />`}>
+  <SocialButton social="google" theme="color" supportingText={false} />
+  <SocialButton social="facebook" theme="color" supportingText={false} />
+  <SocialButton social="apple" theme="color" supportingText={false} />
+  <SocialButton social="twitter" theme="color" supportingText={false} />
+</ComponentPreview>
+
+---
+
+## States
+
+<ComponentPreview direction="column" code={`<SocialButton social="google" theme="brand" state="default" />
+<SocialButton social="google" theme="brand" state="hover" />
+<SocialButton social="google" theme="brand" state="focused" />`}>
+  <SocialButton social="google" theme="brand" state="default" />
+  <SocialButton social="google" theme="brand" state="hover" />
+  <SocialButton social="google" theme="brand" state="focused" />
+</ComponentPreview>
+
+<ComponentPreview direction="column" code={`<SocialButton social="facebook" theme="brand" state="default" />
+<SocialButton social="facebook" theme="brand" state="hover" />
+<SocialButton social="facebook" theme="brand" state="focused" />`}>
+  <SocialButton social="facebook" theme="brand" state="default" />
+  <SocialButton social="facebook" theme="brand" state="hover" />
+  <SocialButton social="facebook" theme="brand" state="focused" />
+</ComponentPreview>
+
+---
+
+## Groups
+
+여러 소셜 로그인 옵션을 함께 노출할 때 사용하는 그룹 프리셋입니다. 레이블 포함 버튼을 수직으로 쌓는 `Buttons` 스타일과, 아이콘만 가로로 나열하는 `Icons` 스타일을 제공합니다.
+
+### Buttons
+
+세로로 쌓인 풀-너비 버튼 그룹. 로그인 모달의 기본 레이아웃입니다.
+
+<ComponentPreview direction="column" code={`<SocialButton social="google" theme="brand" />
+<SocialButton social="facebook" theme="brand" />
+<SocialButton social="apple" theme="brand" />
+<SocialButton social="twitter" theme="brand" />`}>
+  <SocialButton social="google" theme="brand" />
+  <SocialButton social="facebook" theme="brand" />
+  <SocialButton social="apple" theme="brand" />
+  <SocialButton social="twitter" theme="brand" />
+</ComponentPreview>
+
+<ComponentPreview direction="column" code={`<SocialButton social="google" theme="color" />
+<SocialButton social="facebook" theme="color" />
+<SocialButton social="apple" theme="color" />
+<SocialButton social="twitter" theme="color" />`}>
+  <SocialButton social="google" theme="color" />
+  <SocialButton social="facebook" theme="color" />
+  <SocialButton social="apple" theme="color" />
+  <SocialButton social="twitter" theme="color" />
+</ComponentPreview>
+
+<ComponentPreview direction="column" code={`<SocialButton social="google" theme="gray" />
+<SocialButton social="facebook" theme="gray" />
+<SocialButton social="apple" theme="gray" />
+<SocialButton social="twitter" theme="gray" />`}>
+  <SocialButton social="google" theme="gray" />
+  <SocialButton social="facebook" theme="gray" />
+  <SocialButton social="apple" theme="gray" />
+  <SocialButton social="twitter" theme="gray" />
+</ComponentPreview>
+
+### Icons
+
+아이콘만 가로로 배치하는 그룹. 이메일 폼 위·아래의 보조 옵션에 적합합니다.
+
+<ComponentPreview code={`<SocialButton social="google" theme="brand" supportingText={false} />
+<SocialButton social="facebook" theme="brand" supportingText={false} />
+<SocialButton social="apple" theme="brand" supportingText={false} />
+<SocialButton social="twitter" theme="brand" supportingText={false} />`}>
+  <SocialButton social="google" theme="brand" supportingText={false} />
+  <SocialButton social="facebook" theme="brand" supportingText={false} />
+  <SocialButton social="apple" theme="brand" supportingText={false} />
+  <SocialButton social="twitter" theme="brand" supportingText={false} />
+</ComponentPreview>
+
+<ComponentPreview code={`<SocialButton social="google" theme="color" supportingText={false} />
+<SocialButton social="facebook" theme="color" supportingText={false} />
+<SocialButton social="apple" theme="color" supportingText={false} />
+<SocialButton social="twitter" theme="color" supportingText={false} />`}>
+  <SocialButton social="google" theme="color" supportingText={false} />
+  <SocialButton social="facebook" theme="color" supportingText={false} />
+  <SocialButton social="apple" theme="color" supportingText={false} />
+  <SocialButton social="twitter" theme="color" supportingText={false} />
+</ComponentPreview>
+
+<ComponentPreview code={`<SocialButton social="google" theme="gray" supportingText={false} />
+<SocialButton social="facebook" theme="gray" supportingText={false} />
+<SocialButton social="apple" theme="gray" supportingText={false} />
+<SocialButton social="twitter" theme="gray" supportingText={false} />`}>
+  <SocialButton social="google" theme="gray" supportingText={false} />
+  <SocialButton social="facebook" theme="gray" supportingText={false} />
+  <SocialButton social="apple" theme="gray" supportingText={false} />
+  <SocialButton social="twitter" theme="gray" supportingText={false} />
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'social', type: "google | facebook | apple | twitter", default: "google", description: '소셜 플랫폼' },
+  { name: 'theme', type: "brand | color | gray", default: "brand", description: '테마 — 브랜드 컬러 / 컬러 아이콘 / 모노톤' },
+  { name: 'supportingText', type: 'boolean', default: 'true', description: '텍스트 레이블 표시 여부. false이면 아이콘만' },
+  { name: 'state', type: "default | hover | focused | disabled", default: "default", description: '상태 (문서 시각화용)' },
+  { name: 'label', type: 'string', default: '-', description: '기본 레이블(예: "Sign in with Google")을 덮어쓰는 사용자 정의 텍스트' },
+]} />
+
+---
+
+## Figma Variants
+
+### Social button
+
+| Property | Values |
+| --- | --- |
+| **Social** | `Google` `Facebook` `Apple` `Twitter` |
+| **Theme** | `Brand` `Color` `Gray` |
+| **Supporting text** | `True` `False` |
+| **State** | `Default` `Hover` `Focused` |
+
+### Social button groups
+
+| Property | Values |
+| --- | --- |
+| **Style** | `Buttons` `Icons` |
+| **Theme** | `Brand` `Color` `Gray` |

@@ -20,8 +20,8 @@ const MailIcon = () => (
 );
 
 const ChevronDown = () => (
-  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M5 7.5l5 5 5-5" />
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 6l4 4 4-4" />
   </svg>
 );
 
@@ -60,7 +60,6 @@ export function Input({
   required = false,
   helpIcon = false,
   leadingIcon,
-  trailingIcon,
   leadingText,
   leadingDropdown,
   trailingDropdown,
@@ -77,19 +76,8 @@ export function Input({
     destructive && styles.destructive,
   ].filter(Boolean).join(' ');
 
-  const renderTrailingIcon = () => {
-    if (destructive && state !== 'disabled') {
-      return (
-        <span className={styles['trailing-icon']}>
-          <AlertCircle />
-        </span>
-      );
-    }
-    if (trailingIcon) {
-      return <span className={styles['trailing-icon']}>{trailingIcon}</span>;
-    }
-    return null;
-  };
+  const showAlertIcon = destructive && state !== 'disabled';
+  const showHelpIcon = helpIcon && !showAlertIcon;
 
   return (
     <div className={wrapperClasses} {...props}>
@@ -97,7 +85,6 @@ export function Input({
         <label className={styles.label}>
           {label}
           {required && <span className={styles.required}>*</span>}
-          {helpIcon && <span className={styles['help-icon']}><HelpCircle /></span>}
         </label>
       )}
 
@@ -109,49 +96,69 @@ export function Input({
             <ChevronDown />
           </button>
         )}
-        {type === 'leading-text' && leadingText && (
-          <span className={styles['leading-text']}>{leadingText}</span>
-        )}
-        {type === 'payment' && (
-          <span className={styles['payment-icon']}>
-            <span style={{ background: paymentBrand || '#f04438', borderRadius: 3 }} />
-          </span>
-        )}
-        {leadingIcon && type === 'default' && (
-          <span className={styles['leading-icon']}>{leadingIcon}</span>
-        )}
 
-        {/* Input or Tags */}
-        {type === 'tags' ? (
-          <div className={styles['tags-container']}>
-            {tags.map((tag, i) => (
-              <span key={i} className={styles.tag}>
-                <span className={styles['tag-dot']} />
-                {tag}
-                <span className={styles['tag-close']}><XIcon /></span>
-              </span>
-            ))}
+        <div className={styles['input-content']}>
+          {type === 'leading-text' && leadingText && (
+            <span className={styles['leading-text']}>{leadingText}</span>
+          )}
+          {type === 'payment' && (
+            <span className={styles['payment-icon']}>
+              <span style={{ background: paymentBrand || '#f04438', borderRadius: 3 }} />
+            </span>
+          )}
+          {type === 'default' && leadingIcon && (
+            <span className={styles['leading-icon']}>{leadingIcon}</span>
+          )}
+
+          {type === 'tags' ? (
+            <div className={styles['tags-container']}>
+              {tags.map((tag, i) => {
+                const isObject = typeof tag === 'object' && tag !== null;
+                const label = isObject ? tag.label : tag;
+                const avatarSrc = isObject ? tag.avatarSrc : undefined;
+                return (
+                  <span key={i} className={styles.tag}>
+                    <span className={styles['tag-avatar']}>
+                      {avatarSrc && (
+                        <img src={avatarSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                      )}
+                    </span>
+                    {label}
+                    <span className={styles['tag-close']}><XIcon /></span>
+                  </span>
+                );
+              })}
+              <input
+                className={styles['tags-input']}
+                type="text"
+                placeholder={tags.length === 0 ? placeholder : ''}
+                disabled={state === 'disabled'}
+                readOnly
+              />
+            </div>
+          ) : (
             <input
-              className={styles['tags-input']}
+              className={styles.input}
               type="text"
-              placeholder={tags.length === 0 ? placeholder : 'Add users'}
+              placeholder={placeholder}
+              value={value}
               disabled={state === 'disabled'}
               readOnly
             />
-          </div>
-        ) : (
-          <input
-            className={styles.input}
-            type="text"
-            placeholder={placeholder}
-            value={value}
-            disabled={state === 'disabled'}
-            readOnly
-          />
-        )}
+          )}
+        </div>
 
         {/* Trailing addons */}
-        {renderTrailingIcon()}
+        {showAlertIcon && (
+          <span className={styles['trailing-icon']}>
+            <AlertCircle />
+          </span>
+        )}
+        {showHelpIcon && (
+          <span className={styles['help-icon']}>
+            <HelpCircle />
+          </span>
+        )}
         {type === 'trailing-dropdown' && trailingDropdown && (
           <button className={styles['trailing-dropdown']} type="button">
             {trailingDropdown}
@@ -206,7 +213,7 @@ export function Textarea({
 
       <div className={styles['textarea-container']}>
         {type === 'tags' ? (
-          <div className={styles['tags-container']} style={{ padding: '10px 14px', minHeight: 128, alignItems: 'flex-start' }}>
+          <div className={styles['textarea-tags']}>
             {tags.map((tag, i) => (
               <span key={i} className={styles.tag}>
                 {tag}
@@ -216,7 +223,7 @@ export function Textarea({
             <input
               className={styles['tags-input']}
               type="text"
-              placeholder={tags.length === 0 ? placeholder : 'Add tags...'}
+              placeholder={tags.length === 0 ? placeholder : ''}
               disabled={state === 'disabled'}
               readOnly
             />
@@ -233,6 +240,68 @@ export function Textarea({
       </div>
 
       {hint && <span className={styles.hint}>{hint}</span>}
+    </div>
+  );
+}
+
+/* ===========================
+   Verification Code Input
+   =========================== */
+
+export function VerificationCodeInput({
+  label,
+  hint,
+  size = 'md',
+  digits = 4,
+  value = '',
+  state = 'default',
+  destructive = false,
+  ...props
+}) {
+  const groupSize = digits === 6 ? 3 : digits;
+  const groups = digits === 6 ? [0, 1] : [0];
+  const valueChars = String(value).split('');
+
+  const wrapperClasses = [
+    styles['verify-wrapper'],
+    styles[`verify-size-${size}`],
+    destructive && styles['verify-destructive'],
+    state === 'disabled' && styles['verify-disabled'],
+  ].filter(Boolean).join(' ');
+
+  const renderBox = (index) => {
+    const char = valueChars[index];
+    const isFilled = char !== undefined && char !== '';
+    const isFocused = state === 'focused' && index === valueChars.length;
+    const boxClasses = [
+      styles['verify-box'],
+      isFilled && styles['verify-box-filled'],
+      isFocused && styles['verify-box-focused'],
+    ].filter(Boolean).join(' ');
+
+    return (
+      <div key={index} className={boxClasses}>
+        <span className={styles['verify-digit']}>{isFilled ? char : '0'}</span>
+      </div>
+    );
+  };
+
+  return (
+    <div className={wrapperClasses} {...props}>
+      {label && <label className={styles['verify-label']}>{label}</label>}
+
+      <div className={styles['verify-boxes']}>
+        {groups.map((g, groupIdx) => (
+          <React.Fragment key={groupIdx}>
+            {Array.from({ length: groupSize }, (_, i) => renderBox(g * groupSize + i))}
+            {digits === 6 && groupIdx === 0 && (
+              <span className={styles['verify-separator']}>-</span>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+
+      {hint && <span className={styles['verify-hint']}>{hint}</span>}
     </div>
   );
 }

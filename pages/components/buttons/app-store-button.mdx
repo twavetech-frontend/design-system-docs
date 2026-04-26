@@ -1,0 +1,105 @@
+import { AppStoreButton } from '../../../components/AppStoreButton'
+import { ComponentPreview, PropsTable } from '../../../components/ComponentPreview'
+
+# App Store Button
+
+모바일 앱 배포 링크에 사용하는 뱃지형 버튼입니다. Google Play, App Store, Mac App Store, Galaxy Store, AppGallery를 지원합니다.
+
+Figma 컴포넌트: `Mobile app store badge`
+
+---
+
+## Store
+
+<ComponentPreview code={`<AppStoreButton store="google-play" />
+<AppStoreButton store="app-store" />
+<AppStoreButton store="mac-app-store" />
+<AppStoreButton store="galaxy-store" />
+<AppStoreButton store="appgallery" />`}>
+  <AppStoreButton store="google-play" />
+  <AppStoreButton store="app-store" />
+  <AppStoreButton store="mac-app-store" />
+  <AppStoreButton store="galaxy-store" />
+  <AppStoreButton store="appgallery" />
+</ComponentPreview>
+
+---
+
+## Style
+
+`Brand` (검은 배경) 또는 `Outline` (흰 배경) 두 가지 스타일을 제공합니다.
+
+### Brand
+
+<ComponentPreview code={`<AppStoreButton store="google-play" style="brand" />
+<AppStoreButton store="app-store" style="brand" />
+<AppStoreButton store="mac-app-store" style="brand" />
+<AppStoreButton store="galaxy-store" style="brand" />
+<AppStoreButton store="appgallery" style="brand" />`}>
+  <AppStoreButton store="google-play" style="brand" />
+  <AppStoreButton store="app-store" style="brand" />
+  <AppStoreButton store="mac-app-store" style="brand" />
+  <AppStoreButton store="galaxy-store" style="brand" />
+  <AppStoreButton store="appgallery" style="brand" />
+</ComponentPreview>
+
+### Outline
+
+<ComponentPreview code={`<AppStoreButton store="google-play" style="outline" />
+<AppStoreButton store="app-store" style="outline" />
+<AppStoreButton store="mac-app-store" style="outline" />
+<AppStoreButton store="galaxy-store" style="outline" />
+<AppStoreButton store="appgallery" style="outline" />`}>
+  <AppStoreButton store="google-play" style="outline" />
+  <AppStoreButton store="app-store" style="outline" />
+  <AppStoreButton store="mac-app-store" style="outline" />
+  <AppStoreButton store="galaxy-store" style="outline" />
+  <AppStoreButton store="appgallery" style="outline" />
+</ComponentPreview>
+
+---
+
+## Size
+
+두 가지 사이즈 — `md` (40px), `lg` (44px).
+
+<ComponentPreview code={`<AppStoreButton store="app-store" size="md" />
+<AppStoreButton store="app-store" size="lg" />
+<AppStoreButton store="google-play" size="md" />
+<AppStoreButton store="google-play" size="lg" />`}>
+  <AppStoreButton store="app-store" size="md" />
+  <AppStoreButton store="app-store" size="lg" />
+  <AppStoreButton store="google-play" size="md" />
+  <AppStoreButton store="google-play" size="lg" />
+</ComponentPreview>
+
+---
+
+## 주의사항
+
+실제 프로덕션에서는 각 스토어의 **공식 브랜드 가이드라인**을 준수해야 합니다. 이 컴포넌트는 디자인 시스템 내 프로토타입/내부 문서에서의 레이아웃 참고용입니다. 프로덕션 배포 페이지에서는 각 스토어에서 제공하는 SVG 뱃지 자산을 사용하세요:
+
+- Google Play — [Brand assets](https://play.google.com/intl/en_us/badges/)
+- App Store / Mac App Store — [Marketing resources](https://developer.apple.com/app-store/marketing/guidelines/)
+- Galaxy Store — [Badge guidelines](https://developer.samsung.com/galaxy-store)
+- AppGallery — [Brand resources](https://developer.huawei.com/consumer/en/huawei-appgallery/)
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'store', type: "google-play | app-store | mac-app-store | galaxy-store | appgallery", default: "google-play", description: '앱 스토어 종류' },
+  { name: 'style', type: "brand | outline", default: "brand", description: '스타일 — 검은 배경(Brand) 또는 흰 배경(Outline)' },
+  { name: 'size', type: "md | lg", default: "md", description: '뱃지 높이 — md(40px) / lg(44px)' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Store** | `Google Play` `App Store` `Mac App Store` `Galaxy Store` `AppGallery` |
+| **Style** | `Brand` `Outline` |
+| **Size** | `md` `lg` |

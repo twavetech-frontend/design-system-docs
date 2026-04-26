@@ -8,6 +8,12 @@ import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
 
 Figma 컴포넌트: `Base components/Tags`
 
+### 색상 규칙
+
+- **Subtle** (기본) — `action`이 없는 텍스트 전용 태그. `#fcfcfd` 배경 + 알파 검정 3% 보더
+- **Brand** — `action="close"` 또는 `action="count"`이고 `checkbox`가 없을 때. `#e6d4ff` 브랜드 연보라 배경 + `#5200b0` 보라 텍스트
+- **Checkbox variant** — `checkbox` prop이 있을 때. `#f3f4f6` 회색 배경 + `#d2d6db` 뚜렷한 보더
+
 ---
 
 ## Basic Tags
@@ -80,12 +86,12 @@ Figma 컴포넌트: `Base components/Tags`
 
 `icon="avatar"` - 아바타 아이콘을 표시합니다.
 
-<ComponentPreview code={`<Tag icon="avatar">Label</Tag>
-<Tag icon="avatar" action="close">Label</Tag>
-<Tag icon="avatar" action="count" countValue={2}>Label</Tag>`}>
-  <Tag icon="avatar">Label</Tag>
-  <Tag icon="avatar" action="close">Label</Tag>
-  <Tag icon="avatar" action="count" countValue={2}>Label</Tag>
+<ComponentPreview code={`<Tag icon="avatar" avatarSrc="https://i.pravatar.cc/80?img=47">Olivia</Tag>
+<Tag icon="avatar" avatarSrc="https://i.pravatar.cc/80?img=15" action="close">Phoenix</Tag>
+<Tag icon="avatar" avatarSrc="https://i.pravatar.cc/80?img=12" action="count" countValue={2}>Lana</Tag>`}>
+  <Tag icon="avatar" avatarSrc="https://i.pravatar.cc/80?img=47">Olivia</Tag>
+  <Tag icon="avatar" avatarSrc="https://i.pravatar.cc/80?img=15" action="close">Phoenix</Tag>
+  <Tag icon="avatar" avatarSrc="https://i.pravatar.cc/80?img=12" action="count" countValue={2}>Lana</Tag>
 </ComponentPreview>
 
 ---
@@ -94,10 +100,10 @@ Figma 컴포넌트: `Base components/Tags`
 
 `icon="country"` - 국기 아이콘을 표시합니다.
 
-<ComponentPreview code={`<Tag icon="country">Label</Tag>
-<Tag icon="country" action="close">Label</Tag>`}>
-  <Tag icon="country">Label</Tag>
-  <Tag icon="country" action="close">Label</Tag>
+<ComponentPreview code={`<Tag icon="country" flagSrc="https://flagcdn.com/w80/kr.png">Korea</Tag>
+<Tag icon="country" flagSrc="https://flagcdn.com/w80/us.png" action="close">United States</Tag>`}>
+  <Tag icon="country" flagSrc="https://flagcdn.com/w80/kr.png">Korea</Tag>
+  <Tag icon="country" flagSrc="https://flagcdn.com/w80/us.png" action="close">United States</Tag>
 </ComponentPreview>
 
 ---
@@ -135,6 +141,8 @@ Figma 컴포넌트: `Base components/Tags`
   { name: 'checkbox', type: 'boolean', default: 'false', description: '체크박스 표시 여부' },
   { name: 'checked', type: 'boolean', default: 'false', description: '체크박스 선택 상태' },
   { name: 'countValue', type: 'number', default: '5', description: 'action="count"일 때 표시할 숫자' },
+  { name: 'avatarSrc', type: 'string', default: '-', description: 'icon="avatar"일 때 표시할 이미지 URL' },
+  { name: 'flagSrc', type: 'string', default: '-', description: 'icon="country"일 때 표시할 국기 이미지 URL' },
   { name: 'onClose', type: '() => void', default: '-', description: '닫기 버튼 클릭 핸들러' },
   { name: 'onCheck', type: '() => void', default: '-', description: '체크박스 클릭 핸들러' },
   { name: 'children', type: 'ReactNode', default: '-', description: '태그 레이블 텍스트' },

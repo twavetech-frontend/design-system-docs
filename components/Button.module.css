@@ -2,14 +2,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
   border: none;
-  font-family: var(--fontFamily-fontFamilyBody, sans-serif);
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   box-sizing: border-box;
   font-weight: 600;
   white-space: nowrap;
+  line-height: 20px;
 }
 
 .button:disabled {
@@ -19,110 +20,134 @@
 
 /* --- Sizes --- */
 .size-sm {
+  padding: 3px 10px;
+  font-size: 12px;
+  min-height: 26px;
+  border-radius: 8px;
+}
+
+.size-md {
   padding: 8px 14px;
   font-size: 14px;
   min-height: 36px;
   border-radius: 8px;
 }
 
-.size-md {
-  padding: 10px 16px;
-  font-size: 14px;
-  min-height: 40px;
-  border-radius: 8px;
-}
-
 .size-lg {
   padding: 10px 18px;
-  font-size: 16px;
+  font-size: 14px;
   min-height: 44px;
   border-radius: 8px;
 }
 
 .size-xl {
-  padding: 12px 20px;
+  padding: 12px 16px;
   font-size: 16px;
   min-height: 48px;
   border-radius: 8px;
+  line-height: 24px;
 }
 
-/* Icon only */
-.icon-only.size-sm { padding: 8px; min-width: 36px; }
-.icon-only.size-md { padding: 10px; min-width: 40px; }
+/* Icon only (square) */
+.icon-only.size-sm { padding: 4px; min-width: 26px; }
+.icon-only.size-md { padding: 8px; min-width: 36px; }
 .icon-only.size-lg { padding: 12px; min-width: 44px; }
 .icon-only.size-xl { padding: 14px; min-width: 48px; }
 
 /* --- Action Button Variants --- */
+
+/* Primary — solid brand (#7700ff) + 가로 padding 2px 줄임 */
+.variant-primary.size-md { padding: 8px 12px; }
+.variant-primary.size-lg { padding: 10px 14px; }
 .variant-primary {
-  background-color: var(--colors-background-bgBrandSolid, #7f56d9);
+  background-color: var(--colors-background-bgBrandSolid, #7700ff);
   color: var(--colors-foreground-fgWhite, #fff);
 }
 .variant-primary:hover:not(:disabled), .variant-primary.force-hover {
-  background-color: var(--colors-background-bgBrandSolidHover, #6941c6);
+  background-color: var(--colors-background-bgBrandSolidHover, #6a00e0);
 }
 .variant-primary:active:not(:disabled), .variant-primary.force-active {
-  background-color: var(--colors-background-bgBrandSolidHover, #53389e);
+  background-color: var(--colors-background-bgBrandSolid, #7700ff);
 }
 .variant-primary.force-focused {
-  background-color: var(--colors-background-bgBrandSolid, #7f56d9);
-  box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingBrand, rgba(158, 119, 237, 0.24));
+  background-color: var(--colors-background-bgBrandSolidHover, #6a00e0);
+  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
 }
 
+/* Secondary — 연보라(#e6d4ff) + 브랜드 텍스트(#6a00e0) */
 .variant-secondary {
-  background-color: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #344054);
-  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
+  background-color: var(--colors-background-bgBrandSecondary, #e6d4ff);
+  color: var(--colors-text-textBrandTertiary-600, #6a00e0);
 }
 .variant-secondary:hover:not(:disabled), .variant-secondary.force-hover {
-  background-color: var(--colors-background-bgPrimaryHover, #f9fafb);
+  background-color: var(--colors-background-bgBrandSecondaryHover, #cfaeff);
 }
 .variant-secondary:active:not(:disabled), .variant-secondary.force-active {
-  background-color: var(--colors-background-bgSecondaryHover, #f2f4f7);
+  background-color: var(--colors-background-bgBrandSecondary, #e6d4ff);
 }
 .variant-secondary.force-focused {
-  box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingGray, rgba(152, 162, 179, 0.14));
+  background-color: var(--colors-background-bgBrandSecondaryHover, #cfaeff);
+  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
 }
 
+/* Tertiary — 연한 알파(rgba(0,0,0,0.03)) + 회색 텍스트(#687079) */
 .variant-tertiary {
-  background-color: transparent;
-  color: var(--colors-text-textTertiary-600, #475467);
+  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--colors-grayNeutral-600, #687079);
 }
 .variant-tertiary:hover:not(:disabled), .variant-tertiary.force-hover {
-  background-color: var(--colors-background-bgPrimaryHover, #f9fafb);
+  background-color: var(--colors-grayNeutral-200, #e6e8ea);
 }
 .variant-tertiary:active:not(:disabled), .variant-tertiary.force-active {
-  background-color: var(--colors-background-bgSecondaryHover, #f2f4f7);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 .variant-tertiary.force-focused {
-  background-color: transparent;
+  background-color: var(--colors-grayNeutral-200, #e6e8ea);
+  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
 }
 
-.variant-link-color {
-  background-color: transparent;
-  color: var(--colors-foreground-fgBrandPrimary-600, #6941c6);
-  padding-left: 0;
-  padding-right: 0;
+/* Outline — 연회색 bg(#f3f4f6) + 회색 텍스트/테두리 */
+.variant-outline {
+  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+  color: var(--colors-grayNeutral-600, #687079);
+  border: 1px solid var(--colors-grayNeutral-200, #e6e8ea);
 }
-.variant-link-color:hover:not(:disabled), .variant-link-color.force-hover {
-  color: var(--colors-foreground-fgBrandPrimaryAlt, #53389e);
+.variant-outline:hover:not(:disabled), .variant-outline.force-hover {
+  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+}
+.variant-outline:active:not(:disabled), .variant-outline.force-active {
+  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+}
+.variant-outline.force-focused {
+  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
 }
 
-.variant-link-gray {
+/* Ghost — 배경 없음, 회색 텍스트(#687079), hover 시 연회색 배경 */
+.variant-ghost {
   background-color: transparent;
-  color: var(--colors-text-textTertiary-600, #475467);
-  padding-left: 0;
-  padding-right: 0;
+  color: var(--colors-grayNeutral-600, #687079);
 }
-.variant-link-gray:hover:not(:disabled), .variant-link-gray.force-hover {
-  color: var(--colors-text-textSecondary-700, #344054);
+.variant-ghost:hover:not(:disabled), .variant-ghost.force-hover {
+  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+}
+.variant-ghost:active:not(:disabled), .variant-ghost.force-active {
+  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+}
+.variant-ghost.force-focused {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
 }
 
 /* --- Destructive Button Variants --- */
+
 .variant-destructive-primary {
   background-color: var(--colors-background-bgErrorSolid, #d92d20);
   color: var(--colors-foreground-fgWhite, #fff);
 }
 .variant-destructive-primary:hover:not(:disabled), .variant-destructive-primary.force-hover {
+  background-color: var(--colors-background-bgErrorSolidHover, #b42318);
+}
+.variant-destructive-primary:active:not(:disabled), .variant-destructive-primary.force-active {
   background-color: var(--colors-background-bgErrorSolidHover, #b42318);
 }
 .variant-destructive-primary.force-focused {
@@ -138,6 +163,9 @@
 .variant-destructive-secondary:hover:not(:disabled), .variant-destructive-secondary.force-hover {
   background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
 }
+.variant-destructive-secondary:active:not(:disabled), .variant-destructive-secondary.force-active {
+  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+}
 .variant-destructive-secondary.force-focused {
   box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingError, rgba(240, 68, 56, 0.24));
 }
@@ -149,26 +177,30 @@
 .variant-destructive-tertiary:hover:not(:disabled), .variant-destructive-tertiary.force-hover {
   background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
 }
+.variant-destructive-tertiary:active:not(:disabled), .variant-destructive-tertiary.force-active {
+  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+}
 
-.variant-destructive-link {
+.variant-destructive-ghost {
   background-color: transparent;
   color: var(--colors-foreground-fgErrorPrimary, #b42318);
-  padding-left: 0;
-  padding-right: 0;
 }
-.variant-destructive-link:hover:not(:disabled), .variant-destructive-link.force-hover {
-  color: var(--colors-text-textErrorPrimaryHover, #912018);
+.variant-destructive-ghost:hover:not(:disabled), .variant-destructive-ghost.force-hover {
+  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+}
+.variant-destructive-ghost:active:not(:disabled), .variant-destructive-ghost.force-active {
+  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
 }
 
 /* --- Close Button --- */
 .variant-close {
   background-color: transparent;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  color: var(--colors-foreground-fgQuaternary-400, #a4a7ae);
   padding: 0;
   border-radius: 8px;
 }
 .variant-close:hover:not(:disabled), .variant-close.force-hover {
-  background-color: var(--colors-background-bgSecondaryHover, #f2f4f7);
+  background-color: var(--colors-background-bgSecondaryHover, #f5f5f5);
   color: var(--colors-foreground-fgSecondary-700, #344054);
 }
 .variant-close.force-focused {
@@ -181,32 +213,32 @@
   border-radius: 8px;
 }
 .variant-close-dark:hover:not(:disabled), .variant-close-dark.force-hover {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
 /* --- Utility Button --- */
 .variant-utility-secondary {
   background-color: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary-700, #414651);
   border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   border-radius: 8px;
 }
 .variant-utility-secondary:hover:not(:disabled), .variant-utility-secondary.force-hover {
-  background-color: var(--colors-background-bgPrimaryHover, #f9fafb);
+  background-color: var(--colors-background-bgPrimaryHover, #fafafa);
 }
 
 .variant-utility-tertiary {
   background-color: transparent;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  color: var(--colors-foreground-fgQuaternary-400, #a4a7ae);
   border-radius: 8px;
 }
 .variant-utility-tertiary:hover:not(:disabled), .variant-utility-tertiary.force-hover {
-  background-color: var(--colors-background-bgPrimaryHover, #f9fafb);
+  background-color: var(--colors-background-bgPrimaryHover, #fafafa);
   color: var(--colors-foreground-fgSecondary-700, #475467);
 }
 
-/* Focused state */
+/* Focused state baseline */
 .force-focused {
   outline: none;
 }

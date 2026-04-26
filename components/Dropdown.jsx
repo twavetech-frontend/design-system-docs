@@ -37,6 +37,12 @@ const XIcon = () => (
   </svg>
 );
 
+const HelpCircleIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6.06 6a2 2 0 0 1 3.886.667c0 1.333-2 2-2 2M8 11.333h.007m6.66-3.333a6.667 6.667 0 1 1-13.333 0 6.667 6.667 0 0 1 13.334 0z" />
+  </svg>
+);
+
 const MailIcon = () => (
   <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round">
     <path d="M1.667 5.833l7.133 4.988c.387.27.58.406.792.458.187.046.383.046.57 0 .212-.052.405-.188.792-.458l7.133-4.988M5.667 16.667h8.666c1.4 0 2.1 0 2.635-.273a2.5 2.5 0 0 0 1.093-1.092c.272-.535.272-1.235.272-2.635V7.333c0-1.4 0-2.1-.272-2.635a2.5 2.5 0 0 0-1.093-1.092c-.535-.273-1.235-.273-2.635-.273H5.667c-1.4 0-2.1 0-2.635.273a2.5 2.5 0 0 0-1.093 1.092c-.272.535-.272 1.235-.272 2.635v5.334c0 1.4 0 2.1.272 2.635a2.5 2.5 0 0 0 1.093 1.092c.535.273 1.235.273 2.635.273z" />
@@ -62,6 +68,60 @@ const LayersIcon = () => (
   </svg>
 );
 
+const UserIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M13.333 14c0-.93 0-1.395-.115-1.773a2.667 2.667 0 0 0-1.778-1.778C11.062 10.333 10.597 10.333 9.667 10.333H6.333c-.93 0-1.395 0-1.773.115a2.667 2.667 0 0 0-1.778 1.778C2.667 12.605 2.667 13.07 2.667 14M11 5.333a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+  </svg>
+);
+
+const ZapIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M8.667 1.333 2.413 8.838c-.245.294-.367.44-.369.564a.333.333 0 0 0 .12.264c.095.08.286.08.668.08h5.168l-.667 5.334 6.254-7.505c.245-.294.367-.441.369-.565a.333.333 0 0 0-.12-.264c-.095-.08-.286-.08-.668-.08H8l.667-5.333z" />
+  </svg>
+);
+
+const HomeIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 12.667h4m-6.735-8.98L2.14 4.571c-.225.175-.338.263-.419.373a1 1 0 0 0-.171.352c-.05.133-.05.276-.05.562v6.475c0 .748 0 1.121.145 1.407a1.333 1.333 0 0 0 .583.583c.286.145.66.145 1.407.145h8.667c.747 0 1.12 0 1.407-.145a1.333 1.333 0 0 0 .583-.583c.146-.286.146-.66.146-1.407V5.858c0-.286 0-.429-.05-.562a1 1 0 0 0-.172-.352c-.08-.11-.193-.198-.418-.373l-1.126-.884M10 11.333a2 2 0 1 0-4 0M10.667 3.333 8.477 1.631c-.171-.133-.257-.2-.351-.225a.5.5 0 0 0-.253 0c-.094.025-.18.092-.351.225L5.333 3.333" />
+  </svg>
+);
+
+const UsersIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14.667 14c0-.93 0-1.395-.115-1.773a2.667 2.667 0 0 0-1.778-1.778C12.395 10.333 11.93 10.333 11 10.333M10.667 5.333a3 3 0 0 1 0 5.667M1.333 14c0-.93 0-1.395.115-1.773a2.667 2.667 0 0 1 1.778-1.778c.378-.115.843-.115 1.773-.115h1.334c.93 0 1.395 0 1.773.115a2.667 2.667 0 0 1 1.778 1.778c.115.378.115.843.115 1.773M9.333 5.333a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+  </svg>
+);
+
+const UserPlusIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M8 10.333H5c-.931 0-1.396 0-1.775.115a2.667 2.667 0 0 0-1.777 1.778C1.333 12.604 1.333 13.07 1.333 14m11.334-4v4m-2-2h4m-3.334-7a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+  </svg>
+);
+
+const MessageSmileIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 9.333s.75 1 2 1 2-1 2-1M9.667 6h.006M6.333 6h.007M8 14c3.313 0 6-2.687 6-6s-2.687-6-6-6-6 2.687-6 6c0 .67.11 1.314.313 1.916.076.226.114.34.12.427a.6.6 0 0 1-.018.188c-.02.084-.068.171-.163.346l-.832 1.526c-.167.306-.25.459-.232.577a.333.333 0 0 0 .14.22c.102.065.275.047.623.011L5.32 13.82c.11-.011.165-.017.214-.014.047.001.081.007.127.019.048.012.107.036.227.082A6 6 0 0 0 8 14z" />
+  </svg>
+);
+
+const HelpIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6.06 6a2 2 0 0 1 3.886.667c0 1.333-2 2-2 2M8 11.333h.007m6.66-3.333a6.667 6.667 0 1 1-13.333 0 6.667 6.667 0 0 1 13.334 0z" />
+  </svg>
+);
+
+const ContainerIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M5.333 11.667V4.333m5.334 7.334V4.333M2 5.733v4.534c0 .746 0 1.12.145 1.406.128.251.332.455.583.583.286.145.66.145 1.406.145h7.733c.747 0 1.12 0 1.407-.145.25-.128.455-.332.583-.583.145-.286.145-.66.145-1.406V5.733c0-.746 0-1.12-.145-1.406a1.333 1.333 0 0 0-.583-.583c-.286-.145-.66-.145-1.407-.145H4.134c-.747 0-1.12 0-1.406.145-.251.128-.455.332-.583.583C2 4.614 2 4.987 2 5.733z" />
+  </svg>
+);
+
+const LogOutIcon = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10.667 11.333 14 8m0 0-3.333-3.333M14 8H6m0-6.667h-.8c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874c-.218.428-.218.988-.218 2.108v7.334c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.428.218.988.218 2.108.218H6" />
+  </svg>
+);
+
 /* ===========================
    Dropdown (container + trigger)
    =========================== */
@@ -72,6 +132,7 @@ export function Dropdown({
   label = 'Options',
   open = false,
   avatarText,
+  avatarSrc,
   ...props
 }) {
   const renderTrigger = () => {
@@ -88,7 +149,11 @@ export function Dropdown({
       return (
         <button className={styles['trigger-avatar']} type="button">
           <span className={styles['avatar-circle']}>
-            {avatarText || 'JL'}
+            {avatarSrc ? (
+              <img src={avatarSrc} alt="" />
+            ) : (
+              avatarText || 'JL'
+            )}
           </span>
         </button>
       );
@@ -164,11 +229,17 @@ export function DropdownItem({
    DropdownHeader
    =========================== */
 
-export function DropdownHeader({ children, avatar = false, name, email }) {
+export function DropdownHeader({ children, avatar = false, name, email, avatarSrc }) {
   if (avatar) {
     return (
       <div className={styles['menu-header-avatar']}>
-        <span className={styles['avatar-circle']}>{name ? name.charAt(0) : 'U'}</span>
+        <span className={styles['avatar-circle']}>
+          {avatarSrc ? (
+            <img src={avatarSrc} alt="" />
+          ) : (
+            name ? name.charAt(0) : 'U'
+          )}
+        </span>
         <div className={styles['header-avatar-info']}>
           <span className={styles['header-avatar-name']}>{name}</span>
           <span className={styles['header-avatar-email']}>{email}</span>
@@ -187,110 +258,20 @@ export function DropdownDivider() {
   return <div className={styles['menu-divider']} />;
 }
 
-/* ===========================
-   Select
-   =========================== */
-
-export function Select({
-  label,
-  hint,
-  placeholder,
-  value,
-  size = 'md',
-  state = 'default',
-  leadingIcon,
-  leadingAvatar,
-  leadingDot,
-  search = false,
-  tags = [],
-  children,
-  ...props
-}) {
-  const controlClasses = [styles['select-control'], styles[size]];
-  if (!value && placeholder) controlClasses.push(styles.placeholder);
-  if (state === 'focused') controlClasses.push(styles.focused);
-  if (state === 'disabled') controlClasses.push(styles.disabled);
-  if (state === 'open') controlClasses.push(styles.open);
-
-  const isDisabled = state === 'disabled';
-
-  return (
-    <div className={styles['select-wrapper']} {...props}>
-      {label && <label className={styles['select-label']}>{label}</label>}
-      <div className={controlClasses.join(' ')}>
-        {leadingIcon && <span className={styles['select-leading-icon']}>{leadingIcon}</span>}
-        {leadingAvatar && <span className={styles['select-leading-avatar']} />}
-        {leadingDot && <span className={styles['select-leading-dot']} style={{ background: leadingDot }} />}
-        {search ? (
-          <input
-            className={styles['select-search']}
-            type="text"
-            placeholder={placeholder || 'Search...'}
-            disabled={isDisabled}
-            defaultValue={value}
-          />
-        ) : tags.length > 0 ? (
-          <span className={styles['select-tags']}>
-            {tags.map((tag, i) => (
-              <span key={i} className={styles['select-tag']}>
-                {tag}
-                <span className={styles['select-tag-remove']}><XIcon /></span>
-              </span>
-            ))}
-          </span>
-        ) : (
-          <span>{value || placeholder}</span>
-        )}
-        <span className={styles['select-chevron']}><ChevronDown /></span>
-      </div>
-      {hint && <span className={styles['select-hint']}>{hint}</span>}
-      {children}
-    </div>
-  );
-}
-
-/* ===========================
-   SelectItem
-   =========================== */
-
-export function SelectItem({
-  children,
-  supportingText,
-  selected = false,
-  disabled = false,
-  state = 'default',
-  size = 'md',
-  icon,
-  avatar,
-  dot,
-  ...props
-}) {
-  const classes = [styles['select-item']];
-  if (size === 'sm') classes.push(styles.sm);
-  if (state === 'hover') classes.push(styles['force-hover']);
-  if (disabled || state === 'disabled') classes.push(styles.disabled);
-
-  return (
-    <button className={classes.join(' ')} disabled={disabled || state === 'disabled'} type="button" {...props}>
-      {icon && <span className={styles['select-item-icon']}>{icon}</span>}
-      {avatar && (
-        <span className={styles['select-item-avatar']}>
-          {typeof avatar === 'string' ? avatar : 'U'}
-        </span>
-      )}
-      {dot && <span className={styles['select-item-dot']} style={{ background: dot }} />}
-      <span className={styles['select-item-content']}>
-        <span className={styles['select-item-label']}>{children}</span>
-        {supportingText && <span className={styles['select-item-supporting']}>{supportingText}</span>}
-      </span>
-      {selected && (
-        <span className={styles['select-item-check']}>
-          <CheckIcon />
-        </span>
-      )}
-    </button>
-  );
-}
-
 /* Re-export icons for MDX usage */
-export { MailIcon, StarIcon, SettingsIcon, LayersIcon, SearchIcon };
+export {
+  MailIcon,
+  StarIcon,
+  SettingsIcon,
+  LayersIcon,
+  SearchIcon,
+  UserIcon,
+  ZapIcon,
+  HomeIcon,
+  UsersIcon,
+  UserPlusIcon,
+  MessageSmileIcon,
+  HelpIcon,
+  ContainerIcon,
+  LogOutIcon,
+};

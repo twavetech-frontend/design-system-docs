@@ -1,0 +1,106 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.button:disabled,
+.button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-only {
+  padding: 10px;
+  gap: 0;
+}
+
+/* ------------------------
+   Theme: Color (white + color logo)
+   Theme: Gray  (white + mono logo)
+   ------------------------ */
+.theme-color,
+.theme-gray {
+  background: var(--colors-background-bgPrimary, #fff);
+  color: var(--colors-text-textSecondary-700, #414651);
+  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
+}
+.theme-color:hover:not(:disabled),
+.theme-color.force-hover,
+.theme-gray:hover:not(:disabled),
+.theme-gray.force-hover {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+  color: var(--colors-text-textSecondaryHover, #252b37);
+}
+.theme-color.force-focused,
+.theme-gray.force-focused {
+  box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingGray, rgba(152, 162, 179, 0.14));
+}
+
+/* ------------------------
+   Theme: Brand (per-social colors)
+   ------------------------ */
+
+/* Google Brand — follows Google's brand: white bg + color logo */
+.social-google.theme-brand {
+  background: var(--colors-background-bgPrimary, #fff);
+  color: var(--colors-text-textSecondary-700, #414651);
+  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
+}
+.social-google.theme-brand:hover:not(:disabled),
+.social-google.theme-brand.force-hover {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+}
+.social-google.theme-brand.force-focused {
+  box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingGray, rgba(152, 162, 179, 0.14));
+}
+
+/* Facebook Brand */
+.social-facebook.theme-brand {
+  background: #1877f2;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+.social-facebook.theme-brand:hover:not(:disabled),
+.social-facebook.theme-brand.force-hover {
+  background: #166fe5;
+}
+.social-facebook.theme-brand.force-focused {
+  box-shadow: 0 0 0 4px rgba(24, 119, 242, 0.24);
+}
+
+/* Apple Brand — black */
+.social-apple.theme-brand,
+.social-twitter.theme-brand {
+  background: #000;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+.social-apple.theme-brand:hover:not(:disabled),
+.social-apple.theme-brand.force-hover,
+.social-twitter.theme-brand:hover:not(:disabled),
+.social-twitter.theme-brand.force-hover {
+  background: #1a1a1a;
+}
+.social-apple.theme-brand.force-focused,
+.social-twitter.theme-brand.force-focused {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.24);
+}

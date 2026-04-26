@@ -12,7 +12,11 @@ Figma 컴포넌트: `Buttons/Button close X`
 
 ## Size
 
-<ComponentPreview>
+3가지 사이즈를 지원합니다: `sm` `md` `lg`.
+
+<ComponentPreview code={`<Button variant="close" size="sm" iconOnly={true}>✕</Button>
+<Button variant="close" size="md" iconOnly={true}>✕</Button>
+<Button variant="close" size="lg" iconOnly={true}>✕</Button>`}>
   <Button variant="close" size="sm" iconOnly={true}>✕</Button>
   <Button variant="close" size="md" iconOnly={true}>✕</Button>
   <Button variant="close" size="lg" iconOnly={true}>✕</Button>
@@ -22,7 +26,9 @@ Figma 컴포넌트: `Buttons/Button close X`
 
 ## States (Light)
 
-<ComponentPreview label="Light background">
+<ComponentPreview label="Light background" code={`<Button variant="close" size="md" iconOnly={true}>✕</Button>
+<Button variant="close" size="md" state="hover" iconOnly={true}>✕</Button>
+<Button variant="close" size="md" state="focused" iconOnly={true}>✕</Button>`}>
   <Button variant="close" size="md" iconOnly={true}>✕</Button>
   <Button variant="close" size="md" state="hover" iconOnly={true}>✕</Button>
   <Button variant="close" size="md" state="focused" iconOnly={true}>✕</Button>
@@ -30,9 +36,12 @@ Figma 컴포넌트: `Buttons/Button close X`
 
 ## States (Dark)
 
-<ComponentPreview dark={true} label="Dark background">
+<ComponentPreview dark={true} label="Dark background" code={`<Button variant="close-dark" size="md" iconOnly={true}>✕</Button>
+<Button variant="close-dark" size="md" state="hover" iconOnly={true}>✕</Button>
+<Button variant="close-dark" size="md" state="focused" iconOnly={true}>✕</Button>`}>
   <Button variant="close-dark" size="md" iconOnly={true}>✕</Button>
   <Button variant="close-dark" size="md" state="hover" iconOnly={true}>✕</Button>
+  <Button variant="close-dark" size="md" state="focused" iconOnly={true}>✕</Button>
 </ComponentPreview>
 
 ---
