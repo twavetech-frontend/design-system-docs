@@ -1,0 +1,304 @@
+/* ===========================
+   Root container
+   =========================== */
+.root {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
+  color: var(--colors-text-textSecondary-700, #687079);
+}
+
+/* "Page" type adds top border + extra padding */
+.pageContainer {
+  border-top: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+  padding-top: 20px;
+}
+
+.sideStart { flex: 1 0 0; min-width: 0; display: flex; justify-content: flex-start; }
+.sideEnd   { flex: 1 0 0; min-width: 0; display: flex; justify-content: flex-end; }
+.spacer    { flex: 1 0 0; }
+
+.justifyStart  { justify-content: flex-start; }
+.justifyCenter { justify-content: center; }
+.justifyEnd    { justify-content: flex-end; }
+
+.threeCol {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+.centerLabel {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===========================
+   Page numbers
+   =========================== */
+.numbers {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.numberCell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--colors-text-textQuaternary-500, #d2d6db);
+  transition: background 0.15s, color 0.15s;
+}
+
+.shapeSquare { border-radius: 10px; }
+.shapeCircle { border-radius: 9999px; }
+
+.numberCell:hover {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+  color: var(--colors-text-textSecondary-700, #687079);
+}
+
+.numberActive,
+.numberActive:hover {
+  background: var(--colors-background-bgPrimaryHover, #e6e8ea);
+  color: var(--colors-text-textSecondary-700, #687079);
+  font-weight: 600;
+}
+
+.ellipsis {
+  cursor: default;
+  color: var(--colors-text-textQuaternary-500, #d2d6db);
+}
+.ellipsis:hover {
+  background: transparent;
+}
+
+/* ===========================
+   Icon arrow button (Page minimal)
+   =========================== */
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
+  color: var(--colors-text-textSecondary-700, #687079);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
+}
+.iconBtn:hover:not(:disabled) {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+}
+.iconBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.iconBtn.shapeSquare { border-radius: 8px; }
+.iconBtn.shapeCircle { border-radius: 9999px; }
+
+/* ===========================
+   Page label (Page X of Y)
+   =========================== */
+.pageLabel {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  white-space: nowrap;
+}
+
+/* ===========================
+   Prev / Next link buttons
+   (used in Page default / Card default)
+   =========================== */
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  transition: color 0.15s, opacity 0.15s;
+}
+.linkBtn:hover {
+  color: var(--colors-text-textPrimary-900, #111927);
+}
+.linkBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   Plain text buttons (Card minimal)
+   =========================== */
+.textBtnGroup {
+  display: inline-flex;
+  gap: 8px;
+}
+.textBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  transition: background 0.15s, border-color 0.15s;
+  box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
+}
+.textBtn:hover:not(:disabled) {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+}
+.textBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   Card button group (joined buttons)
+   =========================== */
+.buttonGroup {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  overflow: hidden;
+  box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
+}
+.groupSquare { border-radius: 8px; }
+.groupCircle { border-radius: 9999px; }
+
+.groupBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--colors-border-borderPrimary, #d2d6db);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.groupBtn:last-child {
+  border-right: none;
+}
+.groupBtn:hover:not(:disabled):not(.ellipsis) {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+}
+.groupBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.groupBtnActive,
+.groupBtnActive:hover {
+  background: var(--colors-background-bgPrimaryHover, #e6e8ea);
+  font-weight: 600;
+  color: var(--colors-text-textSecondary-700, #687079);
+}
+
+/* ===========================
+   Dark mode overrides
+   ComponentPreview wraps preview area with data-theme="dark"
+   =========================== */
+[data-theme='dark'] .root {
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .pageContainer {
+  border-top-color: var(--colors-border-borderSecondary, #373a41);
+}
+[data-theme='dark'] .pageLabel {
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+
+[data-theme='dark'] .numberCell {
+  color: var(--colors-text-textQuaternary-500, #61656c);
+}
+[data-theme='dark'] .numberCell:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .numberActive,
+[data-theme='dark'] .numberActive:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .ellipsis {
+  color: var(--colors-text-textQuaternary-500, #61656c);
+}
+
+[data-theme='dark'] .iconBtn {
+  background: var(--colors-background-bgSecondary, #13161b);
+  border-color: var(--colors-border-borderPrimary, #373a41);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .iconBtn:hover:not(:disabled) {
+  background: var(--colors-background-bgTertiary, #22262f);
+}
+
+[data-theme='dark'] .linkBtn {
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .linkBtn:hover {
+  color: var(--colors-text-textPrimary-900, #f5f5f6);
+}
+
+[data-theme='dark'] .textBtn {
+  background: var(--colors-background-bgSecondary, #13161b);
+  border-color: var(--colors-border-borderPrimary, #373a41);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .textBtn:hover:not(:disabled) {
+  background: var(--colors-background-bgTertiary, #22262f);
+}
+
+[data-theme='dark'] .buttonGroup {
+  background: var(--colors-background-bgSecondary, #13161b);
+  border-color: var(--colors-border-borderPrimary, #373a41);
+}
+[data-theme='dark'] .groupBtn {
+  border-right-color: var(--colors-border-borderPrimary, #373a41);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .groupBtn:hover:not(:disabled):not(.ellipsis) {
+  background: var(--colors-background-bgTertiary, #22262f);
+}
+[data-theme='dark'] .groupBtnActive,
+[data-theme='dark'] .groupBtnActive:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}

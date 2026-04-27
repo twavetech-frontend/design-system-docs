@@ -1,0 +1,293 @@
+/* ─── Common chart palette (CSS variables, dark-mode aware) ─── */
+.chart {
+  --chart-axis: var(--colors-grayNeutral-400, #b1b6be);
+  --chart-grid: var(--colors-grayNeutral-200, #e6e8ea);
+  --chart-text: var(--colors-grayNeutral-400, #b1b6be);
+  --chart-badge-bg: var(--colors-grayNeutral-50, #f9fafb);
+  --chart-badge-border: var(--colors-grayNeutral-200, #e6e8ea);
+  --chart-badge-text: var(--colors-grayNeutral-700, #596069);
+
+  --series-1: var(--colors-brand-700, #5200b0);
+  --series-2: var(--colors-brand-500, #7700ff);
+  --series-3: var(--colors-brand-300, #b685ff);
+  --series-4: var(--colors-brand-200, #cfaeff);
+  --series-5: var(--colors-brand-100, #e6d4ff);
+  --series-6: var(--colors-brand-50, #f4ecff);
+
+  --series-pink: #d946a4;
+  --series-blue: #38b6ff;
+
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+  color: var(--chart-text);
+}
+
+/* Override colors for dark preview */
+:global([data-theme='dark']) .chart {
+  --chart-axis: var(--colors-grayNeutral-500, #8b929c);
+  --chart-grid: rgba(255, 255, 255, 0.08);
+  --chart-text: var(--colors-grayNeutral-300, #d2d6db);
+  --chart-badge-bg: rgba(255, 255, 255, 0.06);
+  --chart-badge-border: rgba(255, 255, 255, 0.12);
+  --chart-badge-text: var(--colors-grayNeutral-200, #e6e8ea);
+
+  --series-1: var(--colors-brand-200, #cfaeff);
+  --series-2: var(--colors-brand-300, #b685ff);
+  --series-3: var(--colors-brand-400, #9b55ff);
+  --series-4: var(--colors-brand-500, #7700ff);
+  --series-5: var(--colors-brand-600, #6a00e0);
+  --series-6: var(--colors-brand-800, #340078);
+
+  --series-pink: #f472b6;
+  --series-blue: #60d0ff;
+}
+
+/* ─── Line / Bar chart wrapper ─── */
+.lineBarChart {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legendRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--chart-text);
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendVerticalBar {
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.chartArea {
+  position: relative;
+  width: 100%;
+}
+
+.lineBarSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.gridLine {
+  stroke: var(--chart-grid);
+  stroke-width: 1;
+}
+
+.axisText {
+  fill: var(--chart-text);
+  font-size: 12px;
+  font-weight: 400;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+.axisLabel {
+  fill: var(--chart-text);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+.linePath {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lineFill {
+  fill-opacity: 0.12;
+  stroke: none;
+}
+
+.barTop {
+  fill: var(--series-1);
+}
+.barMid {
+  fill: var(--series-2);
+}
+.barBottom {
+  fill: var(--series-3);
+}
+
+/* ─── Activity gauge ─── */
+.gauge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.gaugeRow {
+  flex-direction: row;
+  align-items: center;
+}
+
+.gaugeWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.gaugeSvg {
+  display: block;
+  overflow: visible;
+}
+
+.gaugeCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+}
+
+.gaugeCenterLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--chart-text);
+  line-height: 20px;
+}
+
+.gaugeCenterValue {
+  font-family: var(--fontFamily-fontFamilyDisplay, 'Pretendard', sans-serif);
+  font-weight: 600;
+  color: var(--colors-grayNeutral-800, #2c3744);
+  line-height: 1.2;
+}
+
+:global([data-theme='dark']) .gaugeCenterValue {
+  color: var(--colors-grayNeutral-100, #f3f4f6);
+}
+
+.gaugeTrack {
+  fill: none;
+  stroke: var(--chart-grid);
+  stroke-linecap: round;
+}
+
+.gaugeProgress {
+  fill: none;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/* ─── Pie chart ─── */
+.pie {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pieSvg {
+  display: block;
+}
+
+/* ─── Radar chart ─── */
+.radar {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.radarColumn {
+  flex-direction: column;
+}
+
+.radarSvg {
+  display: block;
+  overflow: visible;
+}
+
+.radarGrid {
+  fill: none;
+  stroke: var(--chart-grid);
+  stroke-width: 1;
+}
+
+.radarRay {
+  stroke: var(--chart-grid);
+  stroke-width: 1;
+}
+
+.radarSeries {
+  fill-opacity: 0.32;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.radarLabel {
+  fill: var(--chart-text);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+.radarValueBadge {
+  fill: var(--chart-badge-bg);
+  stroke: var(--chart-badge-border);
+  stroke-width: 1;
+}
+
+.radarValueText {
+  fill: var(--chart-badge-text);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+/* ─── Chart marker ─── */
+.markerWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.markerCol {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.markerSvg {
+  display: block;
+}
+
+.markerLabel {
+  font-size: 12px;
+  color: var(--chart-text);
+}

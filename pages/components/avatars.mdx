@@ -1,0 +1,206 @@
+import { Avatar, AvatarGroup, AvatarLabelGroup } from '../../components/Avatar'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+export const sampleAvatars = [
+  { src: 'https://i.pravatar.cc/120?img=1', name: '김민준' },
+  { src: 'https://i.pravatar.cc/120?img=2', name: '이서연' },
+  { src: 'https://i.pravatar.cc/120?img=3', name: '박지호' },
+  { src: 'https://i.pravatar.cc/120?img=4', name: '최예린' },
+  { src: 'https://i.pravatar.cc/120?img=5', name: '정도윤' },
+  { src: 'https://i.pravatar.cc/120?img=6', name: '한수아' },
+  { src: 'https://i.pravatar.cc/120?img=7', name: '오재현' },
+  { src: 'https://i.pravatar.cc/120?img=8', name: '윤서윤' },
+]
+
+# Avatars
+
+아바타는 사용자나 조직을 시각적으로 식별하는 작은 이미지/이니셜입니다. 프로필, 댓글, 멤버 목록 등에서 사용합니다.
+
+Figma 컴포넌트: `Avatar`, `Avatar group`, `Avatar label group`
+
+---
+
+## Sizes
+
+xs(24px), sm(32px), md(40px), lg(48px), xl(56px), 2xl(64px) 여섯 가지 사이즈를 지원합니다.
+
+<ComponentPreview code={`<Avatar size="md" src="..." name="김민준" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+    <Avatar size="xs" src="https://i.pravatar.cc/120?img=1" name="김민준" />
+    <Avatar size="sm" src="https://i.pravatar.cc/120?img=1" name="김민준" />
+    <Avatar size="md" src="https://i.pravatar.cc/120?img=1" name="김민준" />
+    <Avatar size="lg" src="https://i.pravatar.cc/120?img=1" name="김민준" />
+    <Avatar size="xl" src="https://i.pravatar.cc/120?img=1" name="김민준" />
+    <Avatar size="2xl" src="https://i.pravatar.cc/120?img=1" name="김민준" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Initials
+
+이미지가 없을 때 이름의 이니셜을 자동으로 표시합니다.
+
+<ComponentPreview code={`<Avatar size="md" name="김민준" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+    <Avatar size="xs" name="김민준" />
+    <Avatar size="sm" name="이서연" />
+    <Avatar size="md" name="박지호" />
+    <Avatar size="lg" name="최예린" />
+    <Avatar size="xl" name="정도윤" />
+    <Avatar size="2xl" name="한수아" />
+  </div>
+</ComponentPreview>
+
+또는 `initials` 속성으로 직접 지정할 수 있습니다.
+
+<ComponentPreview code={`<Avatar size="md" initials="KJ" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+    <Avatar size="md" initials="KJ" />
+    <Avatar size="md" initials="LS" />
+    <Avatar size="md" initials="PJ" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Placeholder
+
+이름조차 없는 경우 placeholder 아이콘을 표시합니다.
+
+<ComponentPreview code={`<Avatar size="md" placeholder />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+    <Avatar size="sm" placeholder />
+    <Avatar size="md" placeholder />
+    <Avatar size="lg" placeholder />
+    <Avatar size="xl" placeholder />
+  </div>
+</ComponentPreview>
+
+---
+
+## Status indicator
+
+`status` 속성으로 우측 하단에 상태 아이콘을 표시할 수 있습니다.
+
+### Online
+
+<ComponentPreview code={`<Avatar size="md" src="..." name="김민준" status="online" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+    <Avatar size="sm" src="https://i.pravatar.cc/120?img=2" name="이서연" status="online" />
+    <Avatar size="md" src="https://i.pravatar.cc/120?img=2" name="이서연" status="online" />
+    <Avatar size="lg" src="https://i.pravatar.cc/120?img=2" name="이서연" status="online" />
+    <Avatar size="xl" src="https://i.pravatar.cc/120?img=2" name="이서연" status="online" />
+  </div>
+</ComponentPreview>
+
+### Verified
+
+<ComponentPreview code={`<Avatar size="md" src="..." name="김민준" status="verified" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+    <Avatar size="sm" src="https://i.pravatar.cc/120?img=3" name="박지호" status="verified" />
+    <Avatar size="md" src="https://i.pravatar.cc/120?img=3" name="박지호" status="verified" />
+    <Avatar size="lg" src="https://i.pravatar.cc/120?img=3" name="박지호" status="verified" />
+    <Avatar size="xl" src="https://i.pravatar.cc/120?img=3" name="박지호" status="verified" />
+  </div>
+</ComponentPreview>
+
+### Company
+
+<ComponentPreview code={`<Avatar size="md" src="..." name="김민준" status="company" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+    <Avatar size="sm" src="https://i.pravatar.cc/120?img=4" name="최예린" status="company" />
+    <Avatar size="md" src="https://i.pravatar.cc/120?img=4" name="최예린" status="company" />
+    <Avatar size="lg" src="https://i.pravatar.cc/120?img=4" name="최예린" status="company" />
+    <Avatar size="xl" src="https://i.pravatar.cc/120?img=4" name="최예린" status="company" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Avatar Group
+
+여러 아바타를 겹쳐서 표시합니다. `max`로 표시할 개수를 제한하면 나머지는 `+N`으로 카운트됩니다.
+
+<ComponentPreview code={`<AvatarGroup size="md" max={5} avatars={[...]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'flex-start' }}>
+    <AvatarGroup size="xs" max={5} avatars={sampleAvatars} />
+    <AvatarGroup size="sm" max={5} avatars={sampleAvatars} />
+    <AvatarGroup size="md" max={5} avatars={sampleAvatars} />
+    <AvatarGroup size="lg" max={5} avatars={sampleAvatars} />
+  </div>
+</ComponentPreview>
+
+### With add button
+
+<ComponentPreview code={`<AvatarGroup size="md" max={4} showAddButton avatars={[...]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'flex-start' }}>
+    <AvatarGroup size="sm" max={4} showAddButton avatars={sampleAvatars} />
+    <AvatarGroup size="md" max={4} showAddButton avatars={sampleAvatars} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Avatar Label Group
+
+아바타 옆에 이름과 보조 텍스트(이메일 등)을 함께 보여줍니다.
+
+<ComponentPreview code={`<AvatarLabelGroup size="md" src="..." name="김민준" email="kim@iminapp.kr" status="online" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'flex-start' }}>
+    <AvatarLabelGroup size="sm" src="https://i.pravatar.cc/120?img=5" name="김민준" email="kim@iminapp.kr" />
+    <AvatarLabelGroup size="md" src="https://i.pravatar.cc/120?img=5" name="이서연" email="lee@iminapp.kr" status="verified" />
+    <AvatarLabelGroup size="lg" src="https://i.pravatar.cc/120?img=5" name="박지호" email="park@iminapp.kr" status="online" />
+    <AvatarLabelGroup size="xl" src="https://i.pravatar.cc/120?img=5" name="최예린" email="choi@iminapp.kr" status="company" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+### Avatar
+
+<PropsTable data={[
+  { name: 'src', type: 'string', default: '-', description: '이미지 URL' },
+  { name: 'alt', type: 'string', default: '-', description: '이미지 alt 텍스트' },
+  { name: 'name', type: 'string', default: '-', description: '사용자 이름 (이니셜 자동 생성용)' },
+  { name: 'initials', type: 'string', default: '-', description: '직접 지정할 이니셜 텍스트 (name보다 우선)' },
+  { name: 'size', type: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'", default: "'md'", description: '아바타 크기' },
+  { name: 'status', type: "'online' | 'verified' | 'company'", default: '-', description: '우측 하단 상태 아이콘' },
+  { name: 'placeholder', type: 'boolean', default: 'false', description: 'src/name 없이 placeholder 아이콘 표시' },
+]} />
+
+### AvatarGroup
+
+<PropsTable data={[
+  { name: 'avatars', type: 'AvatarItem[]', default: '[]', description: '아바타 데이터 배열' },
+  { name: 'size', type: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'", default: "'md'", description: '아바타 크기' },
+  { name: 'max', type: 'number', default: '5', description: '표시할 최대 개수 (초과분은 +N으로 표시)' },
+  { name: 'showAddButton', type: 'boolean', default: 'false', description: '우측에 점선 + 버튼 표시' },
+  { name: 'onAdd', type: '() => void', default: '-', description: 'Add 버튼 클릭 핸들러' },
+]} />
+
+### AvatarLabelGroup
+
+<PropsTable data={[
+  { name: 'src', type: 'string', default: '-', description: '아바타 이미지 URL' },
+  { name: 'name', type: 'string', default: '-', description: '주요 텍스트 (이름)' },
+  { name: 'email', type: 'string', default: '-', description: '보조 텍스트 (이메일 등)' },
+  { name: 'initials', type: 'string', default: '-', description: '직접 지정할 이니셜' },
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl' | '2xl'", default: "'md'", description: '크기' },
+  { name: 'status', type: "'online' | 'verified' | 'company'", default: '-', description: '아바타 상태 아이콘' },
+  { name: 'placeholder', type: 'boolean', default: 'false', description: 'placeholder 표시' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Size** | `xs` `sm` `md` `lg` `xl` `2xl` |
+| **Placeholder** | `True` `False` |
+| **Text** | `True` `False` (이니셜 표시 여부) |
+| **Status icon** | `False` `Online indicator` `Company` `Verified` |
+| **Breakpoint** | `Desktop` `Mobile` |

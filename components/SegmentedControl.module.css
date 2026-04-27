@@ -1,0 +1,115 @@
+.container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
+  isolation: isolate;
+}
+
+.container.fill {
+  display: flex;
+  width: 100%;
+}
+.container.fill .segment {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  background: var(--colors-foreground-fgLight, #ffffff);
+  border: 0.5px solid var(--colors-foreground-fgQuaternary-400, #f9fafb);
+  border-radius: 6px;
+  box-shadow: 0 4px 6px 0 rgba(10, 13, 18, 0.08);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+}
+
+.indicator-ready .indicator {
+  opacity: 1;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.segment {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.15s;
+  color: var(--colors-text-textTertiary-600, #b1b6be);
+  white-space: nowrap;
+}
+
+.size-sm .segment {
+  padding: 2px 6px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.size-md .segment {
+  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.segment:hover:not(.current) {
+  color: var(--colors-text-textSecondary-700, #687079);
+}
+
+.segment.current {
+  color: var(--colors-text-textSecondary-700, #687079);
+  background: var(--colors-foreground-fgLight, #ffffff);
+  border: 0.5px solid var(--colors-foreground-fgQuaternary-400, #f9fafb);
+  box-shadow: 0 4px 6px 0 rgba(10, 13, 18, 0.08);
+}
+
+.indicator-ready .segment.current {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* ===========================
+   Dark mode overrides
+   =========================== */
+[data-theme='dark'] .container {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] .indicator {
+  background: #373a41;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .segment {
+  color: #94979c;
+}
+[data-theme='dark'] .segment:hover:not(.current) {
+  color: #f5f5f6;
+}
+[data-theme='dark'] .segment.current {
+  color: #f5f5f6;
+  background: #373a41;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme='dark'] .indicator-ready .segment.current {
+  background: transparent;
+  border: none;
+}

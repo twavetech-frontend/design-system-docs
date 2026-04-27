@@ -1,0 +1,143 @@
+import { useState } from 'react'
+import { Pagination } from '../../components/Pagination'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+export function PaginationDemo({ initial, ...props }) {
+  const [page, setPage] = useState(initial ?? 1)
+  return <Pagination {...props} currentPage={page} onPageChange={setPage} />
+}
+
+# Pagination
+
+Pagination은 긴 목록이나 검색 결과를 여러 페이지로 나눠 탐색하는 네비게이션 컴포넌트입니다.
+
+Figma 컴포넌트: `Pagination`
+
+---
+
+## Page
+
+상단 보더가 있는 풀-와이드 형태로, 테이블이나 콘텐츠 목록 하단에 사용합니다.
+
+### Page default
+
+좌우 끝에 `Previous` / `Next` 링크, 가운데에 페이지 번호를 배치한 기본 형태입니다.
+
+<ComponentPreview code={`<Pagination type="page-default" currentPage={1} totalPages={10} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 32, width: '100%' }}>
+    <PaginationDemo type="page-default" shape="square" totalPages={10} />
+    <PaginationDemo type="page-default" shape="circle" totalPages={10} initial={3} />
+  </div>
+</ComponentPreview>
+
+### Page minimal center aligned
+
+좌우 화살표 버튼과 가운데 `Page X of Y` 라벨로 구성된 미니멀 형태입니다.
+
+<ComponentPreview code={`<Pagination type="page-minimal" currentPage={1} totalPages={10} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 32, width: '100%' }}>
+    <PaginationDemo type="page-minimal" shape="square" totalPages={10} />
+    <PaginationDemo type="page-minimal" shape="circle" totalPages={10} initial={5} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Card
+
+상단 보더 없이 카드/컨테이너 안에서 사용하는 형태입니다.
+
+### Card default
+
+좌측 `← Previous`, 우측 `Next →`, 가운데 페이지 번호로 구성됩니다.
+
+<ComponentPreview code={`<Pagination type="card-default" currentPage={1} totalPages={10} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 32, width: '100%' }}>
+    <PaginationDemo type="card-default" shape="square" totalPages={10} />
+    <PaginationDemo type="card-default" shape="circle" totalPages={10} initial={4} />
+  </div>
+</ComponentPreview>
+
+### Card minimal
+
+`Page X of Y` 라벨과 `Previous` / `Next` 버튼을 좌·중·우로 정렬할 수 있습니다.
+
+<ComponentPreview code={`<Pagination type="card-minimal" align="right" currentPage={1} totalPages={10} />
+<Pagination type="card-minimal" align="left" currentPage={1} totalPages={10} />
+<Pagination type="card-minimal" align="center" currentPage={1} totalPages={10} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: '100%' }}>
+    <PaginationDemo type="card-minimal" align="right" totalPages={10} />
+    <PaginationDemo type="card-minimal" align="left" totalPages={10} />
+    <PaginationDemo type="card-minimal" align="center" totalPages={10} />
+  </div>
+</ComponentPreview>
+
+### Card button group
+
+`Previous`, 페이지 번호들, `Next`가 하나의 보더 그룹으로 묶인 형태입니다.
+
+<ComponentPreview code={`<Pagination type="card-button-group" align="center" currentPage={1} totalPages={10} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: '100%' }}>
+    <PaginationDemo type="card-button-group" align="right" totalPages={10} />
+    <PaginationDemo type="card-button-group" align="left" totalPages={10} />
+    <PaginationDemo type="card-button-group" align="center" totalPages={10} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Shape
+
+페이지 번호와 화살표 버튼의 모양을 `square` (둥근 사각형) 또는 `circle` (원형)로 설정할 수 있습니다.
+
+<ComponentPreview code={`<Pagination type="page-default" shape="square" currentPage={3} totalPages={10} />
+<Pagination type="page-default" shape="circle" currentPage={3} totalPages={10} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 32, width: '100%' }}>
+    <PaginationDemo type="page-default" shape="square" initial={3} totalPages={10} />
+    <PaginationDemo type="page-default" shape="circle" initial={3} totalPages={10} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Interactive
+
+페이지 번호 / 화살표 / Previous·Next 버튼을 클릭하면 현재 페이지가 변경됩니다.
+
+<ComponentPreview code={`function App() {
+  const [page, setPage] = React.useState(1)
+  return (
+    <Pagination
+      type="card-button-group"
+      align="center"
+      currentPage={page}
+      totalPages={10}
+      onPageChange={setPage}
+    />
+  )
+}`}>
+  <PaginationDemo type="card-button-group" align="center" totalPages={10} />
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'type', type: "'page-default' | 'page-minimal' | 'card-default' | 'card-minimal' | 'card-button-group'", default: "'page-default'", description: 'Pagination 형태' },
+  { name: 'align', type: "'left' | 'center' | 'right'", default: "'center'", description: '정렬 (card-minimal, card-button-group에서만 사용)' },
+  { name: 'shape', type: "'square' | 'circle'", default: "'square'", description: '페이지 번호 / 화살표 버튼의 모양' },
+  { name: 'currentPage', type: 'number', default: '1', description: '현재 페이지 (1-based)' },
+  { name: 'totalPages', type: 'number', default: '10', description: '전체 페이지 수' },
+  { name: 'onPageChange', type: '(page: number) => void', default: '-', description: '페이지가 변경될 때 호출되는 콜백' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Page default` `Page minimal center aligned` `Card default` `Card minimal right aligned` `Card minimal left aligned` `Card minimal center aligned` `Card button group right aligned` `Card button group left aligned` `Card button group center aligned` |
+| **Shape** | `Square` `Circle` |
+| **Breakpoint** | `Desktop` `Mobile` |

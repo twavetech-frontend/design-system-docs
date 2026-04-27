@@ -5,8 +5,21 @@
     "tags": "Tags",
     "inputs": "Inputs",
     "toggles": "Toggles",
+    "sliders": "Sliders",
     "tabs": "Tabs",
     "dropdowns": "Dropdowns",
     "selects": "Selects",
-    "checkboxes": "Checkboxes"
+    "checkboxes": "Checkboxes",
+    "radio-group": "Radio Group",
+    "segmented-control": "Segmented Control",
+    "avatars": "Avatars",
+    "tooltip": "Tooltip",
+    "date-pickers": "Date Pickers",
+    "table": "Table",
+    "pagination": "Pagination",
+    "modal": "Modal",
+    "alerts": "Alerts & Notifications",
+    "loading-indicators": "Loading Indicators",
+    "progress-indicators": "Progress Indicators",
+    "charts": "Charts"
 }

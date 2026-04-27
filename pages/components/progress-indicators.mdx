@@ -1,0 +1,185 @@
+import { ProgressBar } from '../../components/ProgressBar'
+import { ProgressCircle } from '../../components/ProgressCircle'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Progress Indicators
+
+진행 상태를 시각적으로 표현하는 컴포넌트입니다. 가로 막대 형태의 `Progress bar`와 원형 형태의 `Progress circle`을 제공합니다.
+
+Figma 컴포넌트: `Progress bar`, `Progress circle`
+
+---
+
+## Progress Bar
+
+### Label variants
+
+라벨 위치를 5가지 형태로 설정할 수 있습니다.
+
+#### No label
+
+라벨 없이 진행바만 표시합니다.
+
+<ComponentPreview code={`<ProgressBar value={0} label={false} />
+<ProgressBar value={40} label={false} />
+<ProgressBar value={80} label={false} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 320 }}>
+    <ProgressBar value={0} label={false} />
+    <ProgressBar value={40} label={false} />
+    <ProgressBar value={80} label={false} />
+  </div>
+</ComponentPreview>
+
+#### Right
+
+진행바 우측에 % 텍스트를 표시합니다.
+
+<ComponentPreview code={`<ProgressBar value={0} label="right" />
+<ProgressBar value={40} label="right" />
+<ProgressBar value={80} label="right" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 320 }}>
+    <ProgressBar value={0} label="right" />
+    <ProgressBar value={40} label="right" />
+    <ProgressBar value={80} label="right" />
+  </div>
+</ComponentPreview>
+
+#### Bottom
+
+진행바 하단에 % 텍스트를 표시합니다.
+
+<ComponentPreview code={`<ProgressBar value={0} label="bottom" />
+<ProgressBar value={40} label="bottom" />
+<ProgressBar value={80} label="bottom" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: 320 }}>
+    <ProgressBar value={0} label="bottom" />
+    <ProgressBar value={40} label="bottom" />
+    <ProgressBar value={80} label="bottom" />
+  </div>
+</ComponentPreview>
+
+#### Top floating
+
+진행률 위치 위에 작은 라운드 박스로 표시합니다.
+
+<ComponentPreview code={`<ProgressBar value={20} label="top-floating" />
+<ProgressBar value={50} label="top-floating" />
+<ProgressBar value={80} label="top-floating" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: 320 }}>
+    <ProgressBar value={20} label="top-floating" />
+    <ProgressBar value={50} label="top-floating" />
+    <ProgressBar value={80} label="top-floating" />
+  </div>
+</ComponentPreview>
+
+#### Bottom floating
+
+진행률 위치 아래에 작은 라운드 박스로 표시합니다.
+
+<ComponentPreview code={`<ProgressBar value={20} label="bottom-floating" />
+<ProgressBar value={50} label="bottom-floating" />
+<ProgressBar value={80} label="bottom-floating" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: 320 }}>
+    <ProgressBar value={20} label="bottom-floating" />
+    <ProgressBar value={50} label="bottom-floating" />
+    <ProgressBar value={80} label="bottom-floating" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Progress Circle
+
+### Circle (전체 원)
+
+전체 원형 트랙 위에 진행 상황을 시계 방향으로 표시합니다.
+
+<ComponentPreview code={`<ProgressCircle size="xxs" value={40} label="Users" />
+<ProgressCircle size="xs" value={40} />
+<ProgressCircle size="sm" value={40} />
+<ProgressCircle size="md" value={40} />
+<ProgressCircle size="lg" value={40} />`}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-end' }}>
+    <ProgressCircle size="xxs" value={40} label="Users" />
+    <ProgressCircle size="xs" value={40} />
+    <ProgressCircle size="sm" value={40} />
+    <ProgressCircle size="md" value={40} />
+    <ProgressCircle size="lg" value={40} />
+  </div>
+</ComponentPreview>
+
+### Half circle (반원)
+
+상단 반원 형태의 게이지로 표시합니다.
+
+<ComponentPreview code={`<ProgressCircle shape="half-circle" size="xxs" value={40} label="Users" />
+<ProgressCircle shape="half-circle" size="xs" value={40} />
+<ProgressCircle shape="half-circle" size="sm" value={40} />
+<ProgressCircle shape="half-circle" size="md" value={40} />
+<ProgressCircle shape="half-circle" size="lg" value={40} />`}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-end' }}>
+    <ProgressCircle shape="half-circle" size="xxs" value={40} label="Users" />
+    <ProgressCircle shape="half-circle" size="xs" value={40} />
+    <ProgressCircle shape="half-circle" size="sm" value={40} />
+    <ProgressCircle shape="half-circle" size="md" value={40} />
+    <ProgressCircle shape="half-circle" size="lg" value={40} />
+  </div>
+</ComponentPreview>
+
+### Progress values
+
+다양한 진행률 표시 예시입니다.
+
+<ComponentPreview code={`<ProgressCircle size="sm" value={0} />
+<ProgressCircle size="sm" value={25} />
+<ProgressCircle size="sm" value={50} />
+<ProgressCircle size="sm" value={75} />
+<ProgressCircle size="sm" value={100} />`}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-end' }}>
+    <ProgressCircle size="sm" value={0} />
+    <ProgressCircle size="sm" value={25} />
+    <ProgressCircle size="sm" value={50} />
+    <ProgressCircle size="sm" value={75} />
+    <ProgressCircle size="sm" value={100} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+### `<ProgressBar />`
+
+<PropsTable data={[
+  { name: 'value', type: 'number', default: '0', description: '진행률 (0–100)' },
+  { name: 'label', type: "'right' | 'bottom' | 'top-floating' | 'bottom-floating' | false", default: "'right'", description: '라벨 위치. false면 라벨 없음' },
+  { name: 'width', type: 'number | string', default: '-', description: '진행바 width (기본 부모 너비를 채움)' },
+]} />
+
+### `<ProgressCircle />`
+
+<PropsTable data={[
+  { name: 'value', type: 'number', default: '40', description: '진행률 (0–100)' },
+  { name: 'size', type: "'xxs' | 'xs' | 'sm' | 'md' | 'lg'", default: "'md'", description: '크기' },
+  { name: 'shape', type: "'circle' | 'half-circle'", default: "'circle'", description: '전체 원 / 반원' },
+  { name: 'label', type: 'string', default: "'Active users'", description: '중앙 보조 라벨' },
+  { name: 'showLabel', type: 'boolean', default: 'true', description: '보조 라벨 표시 여부' },
+]} />
+
+---
+
+## Figma Variants
+
+### Progress bar
+
+| Property | Values |
+| --- | --- |
+| **Progress** | `0%` `10%` `20%` `30%` `40%` `50%` `60%` `70%` `80%` `90%` `100%` |
+| **Label** | `False` `Right` `Bottom` `Top floating` `Bottom floating` |
+
+### Progress circle
+
+| Property | Values |
+| --- | --- |
+| **Shape** | `Circle` `Half circle` |
+| **Size** | `xxs` `xs` `sm` `md` `lg` |

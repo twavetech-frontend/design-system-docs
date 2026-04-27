@@ -1,0 +1,54 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
+}
+
+.svgWrap {
+  position: relative;
+  display: block;
+}
+
+.svg {
+  display: block;
+}
+
+.center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.centerCircle {
+  inset: 0;
+}
+
+/* For half circle, center text in the lower portion of the arc */
+.centerHalf {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 30%;
+}
+
+.value {
+  font-weight: 700;
+  color: var(--colors-text-textPrimary-900, #2c3744);
+}
+
+.label {
+  font-weight: 500;
+  color: var(--colors-text-textTertiary-600, #8b929c);
+}
+
+[data-theme='dark'] .value {
+  color: var(--colors-text-textPrimary-900, #f5f5f6);
+}
+[data-theme='dark'] .label {
+  color: var(--colors-text-textTertiary-600, #94979c);
+}

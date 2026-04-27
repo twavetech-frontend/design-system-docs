@@ -1,0 +1,112 @@
+import { LoadingIndicator } from '../../components/LoadingIndicator'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Loading Indicators
+
+Loading Indicator는 비동기 작업의 진행 상태를 시각적으로 표현하는 컴포넌트입니다. 3가지 스타일과 4가지 사이즈를 제공합니다.
+
+Figma 컴포넌트: `Loading indicator`
+
+---
+
+## Style
+
+### Line simple
+
+회색 트랙 위에 보라색 호가 회전하는 가장 단순한 형태입니다.
+
+<ComponentPreview code={`<LoadingIndicator style="line-simple" size="sm" />
+<LoadingIndicator style="line-simple" size="md" />
+<LoadingIndicator style="line-simple" size="lg" />
+<LoadingIndicator style="line-simple" size="xl" />`}>
+  <div style={{ display: 'flex', gap: 48, alignItems: 'flex-end' }}>
+    <LoadingIndicator style="line-simple" size="sm" />
+    <LoadingIndicator style="line-simple" size="md" />
+    <LoadingIndicator style="line-simple" size="lg" />
+    <LoadingIndicator style="line-simple" size="xl" />
+  </div>
+</ComponentPreview>
+
+### Line spinner
+
+트랙 없이 그라데이션 호만 회전하는 형태입니다.
+
+<ComponentPreview code={`<LoadingIndicator style="line-spinner" size="sm" />
+<LoadingIndicator style="line-spinner" size="md" />
+<LoadingIndicator style="line-spinner" size="lg" />
+<LoadingIndicator style="line-spinner" size="xl" />`}>
+  <div style={{ display: 'flex', gap: 48, alignItems: 'flex-end' }}>
+    <LoadingIndicator style="line-spinner" size="sm" />
+    <LoadingIndicator style="line-spinner" size="md" />
+    <LoadingIndicator style="line-spinner" size="lg" />
+    <LoadingIndicator style="line-spinner" size="xl" />
+  </div>
+</ComponentPreview>
+
+### Dot circle
+
+12개의 점이 원형으로 배치되어 회전하는 형태입니다. 점의 투명도가 점진적으로 변해 회전 방향을 강조합니다.
+
+<ComponentPreview code={`<LoadingIndicator style="dot-circle" size="sm" />
+<LoadingIndicator style="dot-circle" size="md" />
+<LoadingIndicator style="dot-circle" size="lg" />
+<LoadingIndicator style="dot-circle" size="xl" />`}>
+  <div style={{ display: 'flex', gap: 48, alignItems: 'flex-end' }}>
+    <LoadingIndicator style="dot-circle" size="sm" />
+    <LoadingIndicator style="dot-circle" size="md" />
+    <LoadingIndicator style="dot-circle" size="lg" />
+    <LoadingIndicator style="dot-circle" size="xl" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Without supporting text
+
+`supportingText` prop을 비우면 라벨 없이 스피너만 표시됩니다.
+
+<ComponentPreview code={`<LoadingIndicator style="line-simple" size="md" supportingText="" />
+<LoadingIndicator style="line-spinner" size="md" supportingText="" />
+<LoadingIndicator style="dot-circle" size="md" supportingText="" />`}>
+  <div style={{ display: 'flex', gap: 32, alignItems: 'center' }}>
+    <LoadingIndicator style="line-simple" size="md" supportingText="" />
+    <LoadingIndicator style="line-spinner" size="md" supportingText="" />
+    <LoadingIndicator style="dot-circle" size="md" supportingText="" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Custom label
+
+`supportingText`로 라벨을 자유롭게 변경할 수 있습니다.
+
+<ComponentPreview code={`<LoadingIndicator style="line-spinner" size="md" supportingText="Uploading..." />
+<LoadingIndicator style="line-spinner" size="md" supportingText="Saving changes" />
+<LoadingIndicator style="line-spinner" size="md" supportingText="잠시만 기다려주세요" />`}>
+  <div style={{ display: 'flex', gap: 48, alignItems: 'flex-end' }}>
+    <LoadingIndicator style="line-spinner" size="md" supportingText="Uploading..." />
+    <LoadingIndicator style="line-spinner" size="md" supportingText="Saving changes" />
+    <LoadingIndicator style="line-spinner" size="md" supportingText="잠시만 기다려주세요" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'style', type: "'line-simple' | 'line-spinner' | 'dot-circle'", default: "'line-simple'", description: '스피너 스타일' },
+  { name: 'size', type: "'sm' | 'md' | 'lg' | 'xl'", default: "'md'", description: '스피너 크기 (32 / 48 / 64 / 80px)' },
+  { name: 'supportingText', type: 'string', default: "'Loading...'", description: '스피너 아래 표시할 라벨. 빈 문자열이면 숨김' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Style** | `Line simple` `Line spinner` `Dot circle` |
+| **Size** | `sm` `md` `lg` `xl` |
+| **Supporting text** | `True` `False` |

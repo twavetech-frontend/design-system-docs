@@ -1,0 +1,212 @@
+import { Table, StatusBadge, UserCell } from '../../components/Table'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+export const teamColumns = [
+  {
+    key: 'user',
+    header: '이름',
+    sort: 'desc',
+    render: (row) => (
+      <UserCell src={row.avatar} name={row.name} email={row.email} />
+    ),
+  },
+  {
+    key: 'status',
+    header: '상태',
+    render: (row) => (
+      <StatusBadge variant={row.statusVariant}>{row.status}</StatusBadge>
+    ),
+  },
+  { key: 'role', header: '역할' },
+  { key: 'team', header: '팀' },
+]
+
+export const teamData = [
+  { id: 1, name: '김민준', email: 'kim@iminapp.kr', avatar: 'https://i.pravatar.cc/64?img=1', status: '활성', statusVariant: 'success', role: '관리자', team: '디자인' },
+  { id: 2, name: '이서연', email: 'lee@iminapp.kr', avatar: 'https://i.pravatar.cc/64?img=2', status: '활성', statusVariant: 'success', role: '편집자', team: '프로덕트' },
+  { id: 3, name: '박지호', email: 'park@iminapp.kr', avatar: 'https://i.pravatar.cc/64?img=3', status: '대기', statusVariant: 'warning', role: '뷰어', team: '엔지니어링' },
+  { id: 4, name: '최예린', email: 'choi@iminapp.kr', avatar: 'https://i.pravatar.cc/64?img=4', status: '비활성', statusVariant: 'gray', role: '뷰어', team: '마케팅' },
+  { id: 5, name: '정도윤', email: 'jung@iminapp.kr', avatar: 'https://i.pravatar.cc/64?img=5', status: '활성', statusVariant: 'success', role: '편집자', team: '디자인' },
+]
+
+export const fileColumns = [
+  { key: 'name', header: '파일명' },
+  { key: 'size', header: '크기', align: 'right' },
+  {
+    key: 'status',
+    header: '상태',
+    render: (row) => <StatusBadge variant={row.statusVariant}>{row.status}</StatusBadge>,
+  },
+  { key: 'uploaded', header: '업로드일', align: 'right' },
+]
+
+export const fileData = [
+  { id: 1, name: '제품 사양서.pdf', size: '1.2 MB', status: '게시됨', statusVariant: 'success', uploaded: '2026-04-25' },
+  { id: 2, name: '디자인 가이드.fig', size: '3.4 MB', status: '검토중', statusVariant: 'warning', uploaded: '2026-04-22' },
+  { id: 3, name: 'Q1 보고서.xlsx', size: '820 KB', status: '게시됨', statusVariant: 'success', uploaded: '2026-04-15' },
+]
+
+# Table
+
+테이블은 정렬·필터링·선택 가능한 행 형태로 데이터를 표시하는 컴포넌트입니다. 사용자, 회사, 파일, 거래 내역 등 구조화된 데이터를 한눈에 보여줄 때 사용합니다.
+
+Figma 컴포넌트: `Table`, `Table header cell`, `Table cell`
+
+---
+
+## Default
+
+가장 기본적인 형태로, `columns` 배열에 헤더 정보를 정의하고 `data` 배열로 행을 채웁니다.
+
+<ComponentPreview code={`<Table columns={teamColumns} data={teamData} />`}>
+  <Table size="md" columns={teamColumns} data={teamData} />
+</ComponentPreview>
+
+---
+
+## Selectable rows
+
+`selectable` 속성으로 행 선택 체크박스를 추가할 수 있습니다. 헤더 체크박스는 전체 선택 / 전체 해제로 동작합니다.
+
+<ComponentPreview code={`<Table selectable columns={teamColumns} data={teamData} />`}>
+  <Table size="md" selectable columns={teamColumns} data={teamData} />
+</ComponentPreview>
+
+---
+
+## Sizes
+
+`sm`, `md`, `lg` 세 가지 크기를 지원합니다.
+
+<ComponentPreview code={`<Table size="sm" ... />
+<Table size="md" ... />
+<Table size="lg" ... />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+    <Table size="sm" columns={teamColumns} data={teamData.slice(0, 3)} />
+    <Table size="md" columns={teamColumns} data={teamData.slice(0, 3)} />
+    <Table size="lg" columns={teamColumns} data={teamData.slice(0, 3)} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Custom cell render
+
+각 컬럼에 `render` 함수를 두면 셀을 자유롭게 커스터마이즈할 수 있습니다. `UserCell`, `StatusBadge`는 헬퍼 컴포넌트로 함께 export 됩니다.
+
+<ComponentPreview code={`const columns = [
+  { key: 'name', header: '파일명' },
+  { key: 'size', header: '크기', align: 'right' },
+  { key: 'status', header: '상태', render: (row) => <StatusBadge variant={row.statusVariant}>{row.status}</StatusBadge> },
+  { key: 'uploaded', header: '업로드일', align: 'right' },
+]`}>
+  <Table size="md" columns={fileColumns} data={fileData} />
+</ComponentPreview>
+
+---
+
+## Sortable header
+
+컬럼에 `sort` 속성으로 정렬 화살표를 표시할 수 있습니다 (`'asc'`, `'desc'`, `'none'`).
+
+<ComponentPreview code={`const columns = [
+  { key: 'name', header: '이름', sort: 'desc' },
+  { key: 'team', header: '팀', sort: 'none' },
+  { key: 'role', header: '역할' },
+]`}>
+  <Table
+    size="md"
+    columns={[
+      { key: 'name', header: '이름', sort: 'desc', render: (r) => <UserCell src={r.avatar} name={r.name} email={r.email} /> },
+      { key: 'team', header: '팀', sort: 'none' },
+      { key: 'role', header: '역할' },
+    ]}
+    data={teamData.slice(0, 4)}
+  />
+</ComponentPreview>
+
+---
+
+## Empty state
+
+데이터가 없을 때는 `emptyText`로 안내 문구를 표시합니다.
+
+<ComponentPreview code={`<Table columns={teamColumns} data={[]} emptyText="등록된 멤버가 없습니다." />`}>
+  <Table size="md" columns={teamColumns} data={[]} emptyText="등록된 멤버가 없습니다." />
+</ComponentPreview>
+
+---
+
+## StatusBadge
+
+테이블 셀 안에서 자주 사용되는 상태 뱃지입니다. `success`, `warning`, `error`, `gray`, `brand`, `info` 6가지 variant를 지원합니다.
+
+<ComponentPreview code={`<StatusBadge variant="success">활성</StatusBadge>
+<StatusBadge variant="warning">대기</StatusBadge>
+<StatusBadge variant="error">오류</StatusBadge>`}>
+  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+    <StatusBadge variant="success">활성</StatusBadge>
+    <StatusBadge variant="warning">대기</StatusBadge>
+    <StatusBadge variant="error">비활성</StatusBadge>
+    <StatusBadge variant="gray">취소</StatusBadge>
+    <StatusBadge variant="brand">프리미엄</StatusBadge>
+    <StatusBadge variant="info">정보</StatusBadge>
+    <StatusBadge variant="success" dot={false}>점 없음</StatusBadge>
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+### Table
+
+<PropsTable data={[
+  { name: 'columns', type: 'Column[]', default: '[]', description: '컬럼 정의 배열 (Column 구조는 아래 참고)' },
+  { name: 'data', type: 'object[]', default: '[]', description: '행 데이터 배열' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: '테이블 사이즈' },
+  { name: 'selectable', type: 'boolean', default: 'false', description: '행 선택 체크박스 표시' },
+  { name: 'onSelect', type: '(indices: number[]) => void', default: '-', description: '선택 변경 콜백' },
+  { name: 'emptyText', type: 'string', default: "'데이터가 없습니다.'", description: '데이터가 없을 때 표시되는 텍스트' },
+]} />
+
+### Column
+
+<PropsTable data={[
+  { name: 'key', type: 'string', default: '-', description: 'data 객체의 키 (render 미지정 시 row[key]를 표시)' },
+  { name: 'header', type: 'ReactNode', default: '-', description: '헤더 라벨' },
+  { name: 'render', type: '(row, index) => ReactNode', default: '-', description: '커스텀 셀 렌더링 함수' },
+  { name: 'align', type: "'left' | 'center' | 'right'", default: "'left'", description: '셀 정렬' },
+  { name: 'width', type: 'string | number', default: '-', description: '컬럼 너비 (CSS 값)' },
+  { name: 'sort', type: "'asc' | 'desc' | 'none'", default: '-', description: '정렬 화살표 표시' },
+]} />
+
+### StatusBadge
+
+<PropsTable data={[
+  { name: 'variant', type: "'gray' | 'success' | 'warning' | 'error' | 'brand' | 'info'", default: "'gray'", description: '뱃지 색상' },
+  { name: 'dot', type: 'boolean', default: 'true', description: '좌측 점 표시 여부' },
+  { name: 'children', type: 'ReactNode', default: '-', description: '뱃지 텍스트' },
+]} />
+
+### UserCell
+
+<PropsTable data={[
+  { name: 'src', type: 'string', default: '-', description: '아바타 이미지 URL' },
+  { name: 'name', type: 'string', default: '-', description: '주요 텍스트 (이름)' },
+  { name: 'email', type: 'string', default: '-', description: '보조 텍스트 (이메일)' },
+  { name: 'initials', type: 'string', default: '-', description: 'src 없을 때 표시할 이니셜' },
+  { name: 'avatarSize', type: 'number', default: '32', description: '아바타 픽셀 크기' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` `lg` |
+| **Cell type** | `Text` `Avatar` `Badge` `Badges multiple` `Avatar group` `Action buttons` `Action icons` `Trend positive` `Trend negative` `Progress bar` `Star ratings` `Select dropdown` `Calendar` `File type icon` `Payment method` |
+| **Header** | `Text=True/False` `Checkbox=True/False` `Help icon` `Arrow=Up/Down/Chevron` |
+| **Dividers** | `Divider line` `Alternating fills` |
+| **Breakpoint** | `Desktop` `Mobile` |

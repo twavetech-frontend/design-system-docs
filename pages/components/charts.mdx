@@ -1,0 +1,259 @@
+import {
+  LineChart,
+  BarChart,
+  ActivityGauge,
+  PieChart,
+  RadarChart,
+  ChartMarkerSet,
+  ChartLegend,
+} from '../../components/Chart'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Charts
+
+차트는 데이터의 시각적 흐름을 전달하는 컴포넌트입니다. 디자인 시스템은 라인/바, Activity gauge, Pie, Radar 네 가지 차트 스타일과 공용 마커를 제공합니다.
+
+Figma 컴포넌트: `Line and bar chart`, `Activity gauge`, `Pie chart`, `Radar chart`, `Chart marker`
+
+---
+
+## Line chart
+
+선형 차트는 추세를 보여줄 때 사용합니다. 기본 3개 시리즈에 부드러운 곡선과 옅은 면 채움을 제공합니다.
+
+### Without axis labels
+
+<ComponentPreview code={`<LineChart />`}>
+  <LineChart />
+</ComponentPreview>
+
+### With axis labels
+
+<ComponentPreview code={`<LineChart axisLabels />`}>
+  <LineChart axisLabels />
+</ComponentPreview>
+
+### With legend
+
+<ComponentPreview code={`<LineChart axisLabels legend />`}>
+  <LineChart axisLabels legend />
+</ComponentPreview>
+
+### Filled area
+
+<ComponentPreview code={`<LineChart axisLabels filled />`}>
+  <LineChart axisLabels filled />
+</ComponentPreview>
+
+---
+
+## Bar chart
+
+바 차트는 항목 간 비교에 사용합니다. 기본 3개 시리즈를 누적(stacked) 형태로 보여줍니다.
+
+### Without axis labels
+
+<ComponentPreview code={`<BarChart />`}>
+  <BarChart />
+</ComponentPreview>
+
+### With axis labels
+
+<ComponentPreview code={`<BarChart axisLabels />`}>
+  <BarChart axisLabels />
+</ComponentPreview>
+
+### With legend
+
+<ComponentPreview code={`<BarChart axisLabels legend />`}>
+  <BarChart axisLabels legend />
+</ComponentPreview>
+
+---
+
+## Activity gauge
+
+원형 게이지는 진행률이나 비율을 한눈에 보여줄 때 사용합니다. xs(160px), sm(200px), md(240px), lg(280px) 네 가지 사이즈를 제공합니다.
+
+### Sizes
+
+<ComponentPreview code={`<ActivityGauge size="xs" />
+<ActivityGauge size="sm" />
+<ActivityGauge size="md" />
+<ActivityGauge size="lg" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+    <ActivityGauge size="xs" />
+    <ActivityGauge size="sm" />
+    <ActivityGauge size="md" />
+    <ActivityGauge size="lg" />
+  </div>
+</ComponentPreview>
+
+### Legend bottom
+
+<ComponentPreview code={`<ActivityGauge size="md" legend legendPosition="bottom" />`}>
+  <ActivityGauge size="md" legend legendPosition="bottom" />
+</ComponentPreview>
+
+### Legend right
+
+<ComponentPreview code={`<ActivityGauge size="md" legend legendPosition="right" />`}>
+  <ActivityGauge size="md" legend legendPosition="right" />
+</ComponentPreview>
+
+---
+
+## Pie chart
+
+원형 차트는 전체에 대한 비율을 보여줍니다. `hole` 속성으로 도넛 형태를 만들 수 있고, xxs(120px) ~ lg(280px) 다섯 가지 사이즈를 제공합니다.
+
+### Hole variants
+
+<ComponentPreview code={`<PieChart hole="0%" />
+<PieChart hole="25%" />
+<PieChart hole="50%" />
+<PieChart hole="75%" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+    <PieChart size="sm" hole="0%" />
+    <PieChart size="sm" hole="25%" />
+    <PieChart size="sm" hole="50%" />
+    <PieChart size="sm" hole="75%" />
+  </div>
+</ComponentPreview>
+
+### Sizes
+
+<ComponentPreview code={`<PieChart size="xxs" />
+<PieChart size="xs" />
+<PieChart size="sm" />
+<PieChart size="md" />
+<PieChart size="lg" />`}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+    <PieChart size="xxs" />
+    <PieChart size="xs" />
+    <PieChart size="sm" />
+    <PieChart size="md" />
+    <PieChart size="lg" />
+  </div>
+</ComponentPreview>
+
+### With legend
+
+<ComponentPreview code={`<PieChart size="md" hole="50%" legend />`}>
+  <PieChart size="md" hole="50%" legend />
+</ComponentPreview>
+
+---
+
+## Radar chart
+
+레이더 차트는 여러 축을 동시에 비교할 때 사용합니다. 7개 축(요일)과 3개 시리즈(보라/핑크/블루)를 기본으로 제공합니다.
+
+### Without legend
+
+<ComponentPreview code={`<RadarChart legend="none" />`}>
+  <RadarChart legend="none" />
+</ComponentPreview>
+
+### Legend right
+
+<ComponentPreview code={`<RadarChart legend="right" />`}>
+  <RadarChart legend="right" />
+</ComponentPreview>
+
+### Legend bottom
+
+<ComponentPreview code={`<RadarChart legend="bottom" />`}>
+  <RadarChart legend="bottom" />
+</ComponentPreview>
+
+---
+
+## Chart marker
+
+특정 시점이나 임계값을 강조할 때 사용하는 세로 마커입니다.
+
+<ComponentPreview code={`<ChartMarkerSet />`}>
+  <ChartMarkerSet />
+</ComponentPreview>
+
+---
+
+## Props
+
+### LineChart
+
+<PropsTable data={[
+  { name: 'data', type: 'number[][]', default: '3 series sample', description: '시리즈별 데이터 배열 (3개 권장)' },
+  { name: 'labels', type: 'string[]', default: 'Jan ~ Dec', description: 'X축 라벨' },
+  { name: 'axisLabels', type: 'boolean', default: 'false', description: 'Y축 눈금/라벨, X축 라벨 표시' },
+  { name: 'legend', type: 'boolean', default: 'false', description: '범례 표시' },
+  { name: 'filled', type: 'boolean', default: 'false', description: '곡선 아래 영역 옅게 채움' },
+  { name: 'yMax', type: 'number', default: '1000', description: 'Y축 최대값' },
+  { name: 'yStep', type: 'number', default: '200', description: 'Y축 눈금 간격' },
+  { name: 'height', type: 'number', default: '240', description: '차트 높이(px)' },
+]} />
+
+### BarChart
+
+<PropsTable data={[
+  { name: 'data', type: 'number[][]', default: '3 series sample', description: '시리즈별 데이터 (누적 표시)' },
+  { name: 'labels', type: 'string[]', default: 'Jan ~ Dec', description: 'X축 라벨' },
+  { name: 'axisLabels', type: 'boolean', default: 'false', description: '축 라벨 표시' },
+  { name: 'legend', type: 'boolean', default: 'false', description: '범례 표시' },
+  { name: 'yMax', type: 'number', default: '1000', description: 'Y축 최대값' },
+  { name: 'yStep', type: 'number', default: '200', description: 'Y축 눈금 간격' },
+]} />
+
+### ActivityGauge
+
+<PropsTable data={[
+  { name: 'size', type: "'xs' | 'sm' | 'md' | 'lg'", default: "'md'", description: '게이지 크기' },
+  { name: 'values', type: 'number[]', default: '[0.85, 0.66, 0.42]', description: '링별 진행률 (0~1)' },
+  { name: 'label', type: 'string', default: "'Active users'", description: '중앙 라벨' },
+  { name: 'value', type: 'string', default: "'1,000'", description: '중앙 값' },
+  { name: 'legend', type: 'boolean', default: 'false', description: '범례 표시' },
+  { name: 'legendPosition', type: "'bottom' | 'right'", default: "'bottom'", description: '범례 위치' },
+]} />
+
+### PieChart
+
+<PropsTable data={[
+  { name: 'size', type: "'xxs' | 'xs' | 'sm' | 'md' | 'lg'", default: "'md'", description: '차트 크기' },
+  { name: 'hole', type: "'0%' | '25%' | '50%' | '75%'", default: "'50%'", description: '중앙 구멍 비율' },
+  { name: 'data', type: '{ name, value }[]', default: '6 series sample', description: '세그먼트 데이터' },
+  { name: 'legend', type: 'boolean', default: 'false', description: '범례 표시' },
+]} />
+
+### RadarChart
+
+<PropsTable data={[
+  { name: 'data', type: '{ name, color, values }[]', default: '3 series sample', description: '시리즈 데이터 (각 시리즈는 축 개수와 동일한 값 배열)' },
+  { name: 'axes', type: 'string[]', default: "['Mon' ~ 'Sun']", description: '축 라벨' },
+  { name: 'rings', type: 'number[]', default: '[200, 400, 600, 800, 1000]', description: '동심 그리드 값' },
+  { name: 'legend', type: "'right' | 'bottom' | 'none'", default: "'right'", description: '범례 위치' },
+]} />
+
+### ChartMarker
+
+<PropsTable data={[
+  { name: 'type', type: "'line' | 'dash' | 'minimal'", default: "'line'", description: '마커 스타일' },
+]} />
+
+---
+
+## Figma Variants
+
+| Chart | Property | Values |
+| --- | --- | --- |
+| **Line / Bar** | Chart style | `Line` `Bar` |
+| | Axis labels | `True` `False` |
+| | Legend | `False` `Top` `Right` |
+| | Breakpoint | `Desktop` `Mobile` |
+| **Activity gauge** | Size | `xs` `sm` `md` `lg` |
+| | Legend | `False` `Bottom` `Right` |
+| **Pie chart** | Size | `xxs` `xs` `sm` `md` `lg` |
+| | Hole | `False` `25%` `50%` `75%` |
+| | Legend | `False` `True` |
+| **Radar chart** | Legend | `False` `Right` `Bottom` |
+| **Chart marker** | Type | `Line` `Dash` `Minimal` |

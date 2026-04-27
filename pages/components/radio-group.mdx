@@ -1,0 +1,178 @@
+import { RadioGroup } from '../../components/RadioGroup'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+export const planItems = [
+  {
+    value: 'basic',
+    title: '기본 플랜',
+    subTitle: '월 $10',
+    description: '최대 10명의 사용자, 20GB 개인 저장 공간, 모든 기능을 사용할 수 있습니다.',
+    selected: true,
+  },
+  {
+    value: 'business',
+    title: '비즈니스 플랜',
+    subTitle: '월 $20',
+    description: '최대 20명의 사용자, 40GB 개인 저장 공간, 모든 기능을 사용할 수 있습니다.',
+  },
+  {
+    value: 'enterprise',
+    title: '엔터프라이즈 플랜',
+    subTitle: '월 $40',
+    description: '무제한 사용자, 100GB 개인 저장 공간, 모든 기능을 사용할 수 있습니다.',
+  },
+]
+
+export const cardItems = [
+  {
+    value: 'basic',
+    title: '기본 플랜',
+    price: '$10',
+    pricePeriod: '/월',
+    description: '최대 10명의 사용자, 20GB 개인 저장 공간, 모든 기능을 사용할 수 있습니다.',
+    badge: '기간 한정 할인',
+    selected: true,
+  },
+  {
+    value: 'business',
+    title: '비즈니스 플랜',
+    price: '$20',
+    pricePeriod: '/월',
+    description: '최대 20명의 사용자, 40GB 개인 저장 공간, 모든 기능을 사용할 수 있습니다.',
+  },
+]
+
+export const simpleItems = [
+  {
+    value: 'inbox',
+    title: '받은편지함',
+    description: '새로 도착한 메시지를 확인할 수 있습니다.',
+    selected: true,
+  },
+  {
+    value: 'archive',
+    title: '보관함',
+    description: '보관된 메시지를 모아 보세요.',
+  },
+  {
+    value: 'spam',
+    title: '스팸',
+    description: '스팸으로 분류된 메시지입니다.',
+  },
+]
+
+# Radio Group
+
+라디오 그룹은 여러 선택지 중 하나만 고를 수 있는 입력 컴포넌트입니다. 각 옵션은 카드 형태로 제목, 설명, 가격 등 부가 정보를 표시할 수 있습니다.
+
+Figma 컴포넌트: `Radio group`, `Radio group item`
+
+---
+
+## Radio button
+
+가장 기본 형태로, 라디오 버튼 옆에 제목·서브타이틀·설명을 함께 보여줍니다.
+
+<ComponentPreview code={`<RadioGroup type="radio" items={[
+  { value: 'basic', title: '기본 플랜', subTitle: '월 $10', description: '최대 10명...', selected: true },
+  { value: 'business', title: '비즈니스 플랜', subTitle: '월 $20', description: '최대 20명...' },
+]} />`}>
+  <RadioGroup type="radio" size="sm" items={planItems} />
+</ComponentPreview>
+
+### Size md
+
+<ComponentPreview code={`<RadioGroup type="radio" size="md" items={planItems} />`}>
+  <RadioGroup type="radio" size="md" items={planItems} />
+</ComponentPreview>
+
+---
+
+## Icon simple
+
+좌측에 아이콘 박스가 추가된 형태입니다. 카테고리나 옵션 종류를 시각적으로 강조할 때 사용합니다.
+
+<ComponentPreview code={`<RadioGroup type="icon-simple" items={[
+  { value: 'inbox', title: '받은편지함', description: '...', selected: true },
+  { value: 'archive', title: '보관함', description: '...' },
+]} />`}>
+  <RadioGroup type="icon-simple" size="sm" items={simpleItems} />
+</ComponentPreview>
+
+---
+
+## Icon card
+
+상단 헤더에 큰 featured icon이 있고, 하단 본문에 가격/설명/뱃지를 보여주는 확장 카드 형태입니다.
+
+<ComponentPreview code={`<RadioGroup type="icon-card" items={[
+  {
+    value: 'basic',
+    title: '기본 플랜',
+    price: '$10',
+    pricePeriod: '/월',
+    description: '최대 10명...',
+    badge: '기간 한정 할인',
+    selected: true
+  },
+  ...
+]} />`}>
+  <RadioGroup type="icon-card" size="sm" items={cardItems} />
+</ComponentPreview>
+
+---
+
+## Disabled
+
+`disabled: true`로 항목을 비활성화 할 수 있습니다.
+
+<ComponentPreview code={`<RadioGroup type="radio" items={[
+  { value: 'a', title: '사용 가능한 옵션', description: '선택할 수 있습니다.', selected: true },
+  { value: 'b', title: '비활성화된 옵션', description: '선택할 수 없습니다.', disabled: true },
+]} />`}>
+  <RadioGroup type="radio" size="sm" items={[
+    { value: 'a', title: '사용 가능한 옵션', subTitle: '월 $10', description: '선택할 수 있습니다.', selected: true },
+    { value: 'b', title: '비활성화된 옵션', subTitle: '월 $20', description: '선택할 수 없습니다.', disabled: true },
+  ]} />
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'type', type: "'radio' | 'icon-simple' | 'icon-card'", default: "'radio'", description: '라디오 그룹 아이템의 표시 형식' },
+  { name: 'size', type: "'sm' | 'md'", default: "'sm'", description: '아이템 크기' },
+  { name: 'items', type: 'Item[]', default: '[]', description: '라디오 아이템 배열 (Item 구조는 아래 참고)' },
+  { name: 'value', type: 'string', default: '-', description: 'Controlled value (현재 선택된 값)' },
+  { name: 'defaultValue', type: 'string', default: '-', description: 'Uncontrolled 초기 선택 값' },
+  { name: 'onChange', type: '(value, item) => void', default: '-', description: '선택 변경 콜백' },
+  { name: 'name', type: 'string', default: '-', description: 'native radio input의 name (form 사용 시)' },
+]} />
+
+### Item
+
+<PropsTable data={[
+  { name: 'value', type: 'string', default: '-', description: '아이템 식별값 (필수)' },
+  { name: 'title', type: 'string', default: '-', description: '제목' },
+  { name: 'subTitle', type: 'string', default: '-', description: '제목 옆에 표시되는 보조 텍스트 (radio/icon-simple)' },
+  { name: 'description', type: 'string', default: '-', description: '설명 텍스트' },
+  { name: 'icon', type: 'ReactNode', default: '기본 SVG', description: 'icon-simple/icon-card에서 사용할 아이콘' },
+  { name: 'price', type: 'string', default: '-', description: 'icon-card body에 표시할 가격' },
+  { name: 'pricePeriod', type: 'string', default: '-', description: '가격 옆 보조 텍스트 (예: /월)' },
+  { name: 'badge', type: 'string', default: '-', description: 'icon-card body 우측에 표시할 뱃지 텍스트' },
+  { name: 'selected', type: 'boolean', default: 'false', description: '초기 선택 상태 (uncontrolled 모드)' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화 여부' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Radio button` `Checkbox` `Icon simple` `Icon card` `Avatar` `Payment icon` |
+| **Size** | `sm` `md` |
+| **Selected** | `True` `False` |
+| **State** | `Default` `Hover` `Focused` `Disabled` |
+| **Breakpoint** | `Desktop` `Mobile` |

@@ -1,0 +1,180 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
+  padding: 12px 0;
+}
+
+.wrapperBottom {
+  padding-bottom: 32px;
+}
+
+.wrapperTopFloating {
+  padding-top: 36px;
+}
+
+/* ===========================
+   Track + fill
+   =========================== */
+.track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: var(--colors-grayNeutral-100, #f3f4f6);
+  border-radius: 9999px;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: var(--colors-brand-500, #7700ff);
+  border-radius: 9999px;
+}
+
+/* ===========================
+   Handle
+   =========================== */
+.handleWrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  touch-action: none;
+}
+
+.handle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--colors-base-white, #ffffff);
+  border: 2px solid var(--colors-brand-500, #7700ff);
+  border-radius: 9999px;
+  cursor: grab;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
+}
+.handle:hover {
+  box-shadow: 0 0 0 6px rgba(119, 0, 255, 0.12);
+}
+.handle:active,
+.handleWrap:focus-within .handle {
+  box-shadow: 0 0 0 6px rgba(119, 0, 255, 0.18);
+  cursor: grabbing;
+}
+
+.handleText {
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--colors-brand-700, #5200b0);
+  pointer-events: none;
+}
+
+/* ===========================
+   Label variants
+   =========================== */
+.bottomLabel {
+  position: absolute;
+  top: calc(100% + 6px);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.floatingLabel {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 2px 8px;
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  white-space: nowrap;
+  box-shadow: var(--shadows-shadowSm, 0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1));
+  pointer-events: none;
+}
+
+/* ===========================
+   Tooltip handle type
+   =========================== */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 4px 10px;
+  background: var(--colors-grayNeutral-900, #111927);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--colors-base-white, #ffffff);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.tooltipArrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--colors-grayNeutral-900, #111927);
+}
+
+/* ===========================
+   Dark mode
+   =========================== */
+[data-theme='dark'] .track {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .handle {
+  background: var(--colors-background-bgSecondary, #13161b);
+  border-color: var(--colors-brand-400, #9b55ff);
+}
+[data-theme='dark'] .handleText {
+  color: var(--colors-brand-300, #b685ff);
+}
+
+[data-theme='dark'] .bottomLabel {
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+
+[data-theme='dark'] .floatingLabel {
+  background: var(--colors-background-bgSecondary, #13161b);
+  border-color: var(--colors-border-borderPrimary, #373a41);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+
+[data-theme='dark'] .tooltip {
+  background: var(--colors-grayNeutral-100, #f3f4f6);
+  color: var(--colors-grayNeutral-900, #111927);
+}
+[data-theme='dark'] .tooltipArrow {
+  border-top-color: var(--colors-grayNeutral-100, #f3f4f6);
+}

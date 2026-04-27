@@ -1,0 +1,38 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
+}
+
+.label {
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--colors-text-textSecondary-700, #687079);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.spinner {
+  display: block;
+}
+
+.spinnerRotate {
+  animation: spin 0.9s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.dotRotate {
+  animation: spin 1.4s steps(12, end) infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+[data-theme='dark'] .label {
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}

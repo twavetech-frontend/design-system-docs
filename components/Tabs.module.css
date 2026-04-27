@@ -3,13 +3,17 @@
    =========================== */
 .tabs {
   display: inline-flex;
-  gap: 0;
-  font-family: var(--fontFamily-fontFamilyBody, 'Inter', sans-serif);
+  align-items: center;
+  gap: 4px;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
 }
 
 .tabs-full {
   display: flex;
   width: 100%;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
 }
 .tabs-full .tab {
   flex: 1;
@@ -24,7 +28,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   border: none;
   background: transparent;
@@ -32,159 +36,168 @@
   font-family: inherit;
   transition: all 0.15s;
   position: relative;
+  color: var(--colors-text-textSecondary-700, #687079);
+  overflow: hidden;
 }
 
 /* Sizes */
 .size-sm .tab {
+  height: 36px;
   padding: 8px 12px;
   font-size: 14px;
+  line-height: 20px;
 }
 .size-md .tab {
-  padding: 10px 14px;
-  font-size: 14px;
+  height: 44px;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-/* Badge (count) */
+/* ===========================
+   Badge (count)
+   =========================== */
 .tab-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 5px;
+  height: 22px;
+  padding: 2px 8px;
   border-radius: 9999px;
   font-size: 12px;
   font-weight: 500;
+  line-height: 18px;
+  background: var(--componentColors-utility-gray-utilityGray50, #f9fafb);
+  border: 1px solid var(--componentColors-utility-gray-utilityGray200, #e6e8ea);
+  color: var(--componentColors-utility-gray-utilityGray700, #596069);
+  white-space: nowrap;
+}
+.size-md .tab-badge {
+  height: 24px;
+  padding: 2px 10px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 /* ===========================
    Type: Button Brand
    =========================== */
 .type-button-brand .tab {
-  border-radius: 6px;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  border-radius: 24px;
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 .type-button-brand .tab:hover {
-  background: var(--colors-background-bgPrimaryHover, #f9fafb);
-  color: var(--colors-text-textSecondary-700, #344054);
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
 }
 .type-button-brand .tab.current {
-  background: var(--colors-brand-600, #7f56d9);
-  color: var(--colors-foreground-fgWhite, #fff);
-}
-.type-button-brand .tab.current:hover {
-  background: var(--colors-brand-700, #6941c6);
-}
-.type-button-brand .tab-badge {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
+  background: var(--colors-background-bgBrandSecondary, #e6d4ff);
+  color: var(--colors-text-textBrandSecondary-700, #5200b0);
 }
 .type-button-brand .tab.current .tab-badge {
-  background: rgba(255,255,255,0.2);
-  color: var(--colors-foreground-fgWhite, #fff);
+  background: var(--componentColors-utility-brand-utilityBrand50, #f4ecff);
+  border-color: var(--componentColors-utility-brand-utilityBrand200, #cfaeff);
+  color: var(--componentColors-utility-brand-utilityBrand700, #5200b0);
 }
 
 /* ===========================
    Type: Button Gray
    =========================== */
 .type-button-gray .tab {
-  border-radius: 6px;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  border-radius: 24px;
+  color: var(--colors-text-textTertiary-600, #b1b6be);
 }
 .type-button-gray .tab:hover {
-  background: var(--colors-background-bgPrimaryHover, #f9fafb);
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 .type-button-gray .tab.current {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
-}
-.type-button-gray .tab-badge {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
-}
-.type-button-gray .tab.current .tab-badge {
-  background: var(--colors-border-borderSecondary, #eaecf0);
+  background: var(--colors-background-bgActive, #e6e8ea);
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 
 /* ===========================
-   Type: Button White (Border)
+   Type: Button Border (Button white)
    =========================== */
+.type-button-border {
+  background: var(--colors-background-bgSecondaryAlt, #f9fafb);
+  padding: 2px;
+  border-radius: 12px;
+}
+.tabs-full.type-button-border {
+  width: 100%;
+}
 .type-button-border .tab {
-  border-radius: 8px;
-  border: 1px solid var(--colors-border-borderSecondary, #eaecf0);
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
-  background: var(--colors-background-bgPrimary, #fff);
-  margin: 0 -1px;
-}
-.type-button-border .tab:first-child {
-  border-radius: 8px 0 0 8px;
-  margin-left: 0;
-}
-.type-button-border .tab:last-child {
-  border-radius: 0 8px 8px 0;
-  margin-right: 0;
+  border-radius: 10px;
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 .type-button-border .tab:hover {
-  background: var(--colors-background-bgPrimaryHover, #f9fafb);
-  color: var(--colors-text-textSecondary-700, #344054);
+  background: rgba(0, 0, 0, 0.03);
 }
 .type-button-border .tab.current {
-  background: var(--colors-background-bgPrimaryHover, #f9fafb);
-  color: var(--colors-text-textSecondary-700, #344054);
-  z-index: 1;
-}
-.type-button-border .tab-badge {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  box-shadow: var(--shadows-shadowSm, 0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1));
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 
 /* ===========================
    Type: Underline
    =========================== */
 .type-underline {
-  border-bottom: 2px solid var(--colors-border-borderSecondary, #eaecf0);
+  border-bottom: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+  gap: 16px;
+}
+.tabs-full.type-underline {
   gap: 0;
 }
 .type-underline .tab {
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
+  font-weight: 500;
+  height: 32px;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  margin-bottom: -1px;
+  color: var(--colors-text-textSecondary-700, #687079);
+}
+.size-md.type-underline .tab {
+  height: 36px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .type-underline .tab:hover {
-  color: var(--colors-text-textSecondary-700, #344054);
-  border-bottom-color: var(--colors-border-borderPrimary, #d0d5dd);
+  border-bottom-color: var(--colors-border-borderPrimary, #d2d6db);
 }
 .type-underline .tab.current {
-  color: var(--colors-brand-700, #6941c6);
-  border-bottom-color: var(--colors-brand-700, #6941c6);
-}
-.type-underline .tab-badge {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary-700, #687079);
+  border-bottom-color: var(--colors-foreground-fgPrimary-900, #2c3744);
 }
 .type-underline .tab.current .tab-badge {
-  background: var(--colors-brand-50, #f9f5ff);
-  color: var(--colors-brand-700, #6941c6);
+  background: var(--componentColors-utility-brand-utilityBrand50, #f4ecff);
+  border-color: var(--componentColors-utility-brand-utilityBrand200, #cfaeff);
+  color: var(--componentColors-utility-brand-utilityBrand700, #5200b0);
 }
 
 /* ===========================
    Type: Button Minimal
    =========================== */
+.type-button-minimal {
+  background: var(--colors-background-bgSecondaryAlt, #f9fafb);
+  border-radius: 12px;
+  gap: 2px;
+}
+.tabs-full.type-button-minimal {
+  width: 100%;
+  gap: 2px;
+}
 .type-button-minimal .tab {
-  border-radius: 6px;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  border-radius: 10px;
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 .type-button-minimal .tab:hover {
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 .type-button-minimal .tab.current {
-  color: var(--colors-text-textSecondary-700, #344054);
-  background: var(--colors-background-bgPrimaryHover, #f9fafb);
-}
-.type-button-minimal .tab-badge {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
+  box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
+  color: var(--colors-text-textSecondary-700, #687079);
 }
 
 /* ===========================
@@ -193,7 +206,9 @@
 .vertical {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 4px;
+  align-items: stretch;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
 }
 .vertical .tab {
   justify-content: flex-start;
@@ -201,54 +216,76 @@
   text-align: left;
 }
 
-/* Vertical: Button primary (brand) */
+/* Vertical: Button brand */
 .vertical.type-button-brand .tab {
-  border-radius: 6px;
+  border-radius: 24px;
+}
+
+/* Vertical: Button gray */
+.vertical.type-button-gray .tab {
+  border-radius: 24px;
 }
 
 /* Vertical: Line */
 .vertical.type-line {
-  border-left: 2px solid var(--colors-border-borderSecondary, #eaecf0);
+  gap: 8px;
 }
 .vertical.type-line .tab {
-  border-left: 2px solid transparent;
-  margin-left: -2px;
   border-radius: 0;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  border-left: 2px solid transparent;
+  padding: 2px 12px;
+  height: 24px;
+  color: var(--colors-text-textSecondary-700, #687079);
+}
+.size-md.vertical.type-line .tab {
+  height: 32px;
 }
 .vertical.type-line .tab:hover {
-  color: var(--colors-text-textSecondary-700, #344054);
-  border-left-color: var(--colors-border-borderPrimary, #d0d5dd);
+  color: var(--colors-text-textSecondary-700, #687079);
+  border-left-color: var(--colors-border-borderPrimary, #d2d6db);
 }
 .vertical.type-line .tab.current {
-  color: var(--colors-brand-700, #6941c6);
-  border-left-color: var(--colors-brand-700, #6941c6);
-}
-.vertical.type-line .tab-badge {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textBrandSecondary-700, #5200b0);
+  border-left-color: var(--colors-foreground-fgSecondary-700, #687079);
 }
 .vertical.type-line .tab.current .tab-badge {
-  background: var(--colors-brand-50, #f9f5ff);
-  color: var(--colors-brand-700, #6941c6);
+  background: var(--componentColors-utility-brand-utilityBrand50, #f4ecff);
+  border-color: var(--componentColors-utility-brand-utilityBrand200, #cfaeff);
+  color: var(--componentColors-utility-brand-utilityBrand700, #5200b0);
 }
 
 /* Vertical: Button border */
+.vertical.type-button-border {
+  background: var(--colors-background-bgSecondaryAlt, #f9fafb);
+  border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
 .vertical.type-button-border .tab {
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
   margin: 0;
-  border: 1px solid var(--colors-border-borderSecondary, #eaecf0);
-  margin-top: -1px;
 }
-.vertical.type-button-border .tab:first-child {
-  border-radius: 8px 8px 0 0;
-  margin-top: 0;
+.vertical.type-button-border .tab:hover {
+  background: rgba(0, 0, 0, 0.03);
 }
-.vertical.type-button-border .tab:last-child {
-  border-radius: 0 0 8px 8px;
+.vertical.type-button-border .tab.current {
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  box-shadow: var(--shadows-shadowSm, 0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1));
 }
 
 /* Vertical: Button minimal */
+.vertical.type-button-minimal {
+  background: var(--colors-background-bgSecondaryAlt, #f9fafb);
+  border-radius: 12px;
+  gap: 2px;
+}
 .vertical.type-button-minimal .tab {
-  border-radius: 6px;
+  border-radius: 10px;
+}
+.vertical.type-button-minimal .tab.current {
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
+  box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
 }

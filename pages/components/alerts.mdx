@@ -1,0 +1,193 @@
+import { Alert } from '../../components/Alert'
+import { Notification } from '../../components/Notification'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+export const linkActions = (
+  <>
+    <a href="#" style={{ fontSize: 12, fontWeight: 600, color: 'inherit', textDecoration: 'none' }}>
+      닫기
+    </a>
+    <a href="#" style={{ fontSize: 12, fontWeight: 600, color: '#5200b0', textDecoration: 'none' }}>
+      변경 내역 보기
+    </a>
+  </>
+)
+
+export const buttonActions = (
+  <>
+    <button style={{
+      padding: '8px 14px',
+      borderRadius: 8,
+      border: '1px solid #e6e8ea',
+      background: '#fff',
+      color: '#414651',
+      fontSize: 14,
+      fontWeight: 600,
+      cursor: 'pointer',
+    }}>닫기</button>
+    <button style={{
+      padding: '8px 12px',
+      borderRadius: 8,
+      border: '1px solid #6a00e0',
+      background: '#6a00e0',
+      color: '#fff',
+      fontSize: 14,
+      fontWeight: 600,
+      cursor: 'pointer',
+    }}>변경 내역 보기</button>
+  </>
+)
+
+export const notiActions = (
+  <>
+    <a href="#" style={{ fontSize: 12, fontWeight: 600, color: '#cecfd2', textDecoration: 'none' }}>닫기</a>
+    <a href="#" style={{ fontSize: 12, fontWeight: 600, color: '#cfaeff', textDecoration: 'none' }}>업데이트 내역</a>
+  </>
+)
+
+# Alerts & Notifications
+
+알림은 사용자에게 시스템 상태나 작업 결과를 전달하는 컴포넌트입니다. **Alert**는 페이지 안에 인라인으로 배치되어 정보를 알리고, **Notification**은 토스트 카드 형태로 일시적으로 떠 있다가 사라집니다.
+
+Figma 컴포넌트: `Alert`, `Notification`
+
+---
+
+## Alert
+
+### Floating
+
+페이지 안에 인라인으로 배치하는 카드 형태입니다. 6가지 컬러 변형이 있습니다.
+
+<ComponentPreview code={`<Alert color="default" title="새로운 기능이 출시되었습니다" description="최신 업데이트를 확인해보세요." actions={<a href="#">자세히 보기</a>} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: '100%' }}>
+    <Alert color="default" title="새로운 기능이 출시되었습니다" description="대시보드 뷰가 새롭게 개편되었고, 페이지 로딩이 더 빨라졌습니다." actions={linkActions} />
+    <Alert color="brand" title="요금제 업그레이드" description="더 많은 기능을 사용하려면 요금제를 업그레이드 해보세요." actions={linkActions} />
+    <Alert color="success" title="저장이 완료되었습니다" description="변경 사항이 모두 저장되었습니다." actions={linkActions} />
+    <Alert color="warning" title="저장되지 않은 변경 사항" description="변경 사항을 저장하시겠습니까?" actions={linkActions} />
+    <Alert color="error" title="오류가 발생했습니다" description="잠시 후 다시 시도해 주세요." actions={linkActions} />
+    <Alert color="gray" title="안내" description="현재 베타 기능입니다." actions={linkActions} />
+  </div>
+</ComponentPreview>
+
+### Without actions
+
+`actions`를 생략하면 텍스트만 표시됩니다.
+
+<ComponentPreview code={`<Alert color="default" title="..." description="..." />`}>
+  <Alert color="default" title="새로운 기능이 출시되었습니다" description="대시보드 뷰가 새롭게 개편되었고, 페이지 로딩이 더 빨라졌습니다." />
+</ComponentPreview>
+
+### Without dismiss
+
+`dismissible={false}`로 닫기 버튼을 숨길 수 있습니다.
+
+<ComponentPreview code={`<Alert color="brand" dismissible={false} title="..." description="..." />`}>
+  <Alert color="brand" dismissible={false} title="요금제 업그레이드" description="더 많은 기능을 사용하려면 요금제를 업그레이드 해보세요." actions={linkActions} />
+</ComponentPreview>
+
+### Full-width
+
+페이지 상단에 가로 전체로 깔리는 형태입니다. 시스템 안내, 공지에 적합합니다.
+
+<ComponentPreview code={`<Alert size="full-width" color="brand" title="..." description="..." actions={...} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 0, width: '100%' }}>
+    <Alert size="full-width" color="default" title="새로운 기능이 출시되었습니다" description="최신 업데이트를 확인해보세요." actions={buttonActions} />
+    <Alert size="full-width" color="brand" title="새로운 기능이 출시되었습니다" description="최신 업데이트를 확인해보세요." actions={buttonActions} />
+    <Alert size="full-width" color="success" title="저장이 완료되었습니다" description="변경 사항이 저장되었습니다." actions={buttonActions} />
+    <Alert size="full-width" color="warning" title="저장되지 않은 변경 사항" description="변경 사항을 저장하시겠습니까?" actions={buttonActions} />
+    <Alert size="full-width" color="error" title="오류가 발생했습니다" description="잠시 후 다시 시도해 주세요." actions={buttonActions} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Notification
+
+토스트 형태의 카드 알림입니다. 어두운 배경에 흰색 텍스트로 강조하여 표시합니다.
+
+### Type variants
+
+<ComponentPreview code={`<Notification type="primary" title="..." description="..." actions={...} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'flex-start' }}>
+    <Notification type="primary" title="새로운 업데이트가 출시되었습니다" description="대시보드 뷰가 새롭게 개편되었고, 페이지 로딩이 더 빨라졌습니다." actions={notiActions} />
+    <Notification type="success" title="저장이 완료되었습니다" description="모든 변경 사항이 저장되었습니다." actions={notiActions} />
+    <Notification type="warning" title="저장되지 않은 변경 사항" description="현재 작업이 저장되지 않았습니다. 저장하시겠습니까?" actions={notiActions} />
+    <Notification type="error" title="오류가 발생했습니다" description="요청을 처리할 수 없습니다. 잠시 후 다시 시도해 주세요." actions={notiActions} />
+    <Notification type="gray" title="안내" description="이 기능은 현재 베타입니다." actions={notiActions} />
+  </div>
+</ComponentPreview>
+
+### Avatar
+
+`type="avatar"`로 사용자 프로필을 보여줄 수 있습니다.
+
+<ComponentPreview code={`<Notification type="avatar" avatarSrc="..." title="김민준 님이 댓글을 남겼습니다" description="..." />`}>
+  <Notification
+    type="avatar"
+    avatarSrc="https://i.pravatar.cc/120?img=12"
+    title="김민준 님이 댓글을 남겼습니다"
+    description="“이 부분 디자인이 정말 좋네요!”"
+    actions={notiActions}
+  />
+</ComponentPreview>
+
+### No icon
+
+<ComponentPreview code={`<Notification type="no-icon" title="..." description="..." />`}>
+  <Notification
+    type="no-icon"
+    title="알림이 도착했습니다"
+    description="자세한 내용을 확인하려면 클릭하세요."
+    actions={notiActions}
+  />
+</ComponentPreview>
+
+---
+
+## Props
+
+### Alert
+
+<PropsTable data={[
+  { name: 'color', type: "'default' | 'brand' | 'gray' | 'error' | 'warning' | 'success'", default: "'default'", description: '컬러 variant' },
+  { name: 'size', type: "'floating' | 'full-width'", default: "'floating'", description: '카드 형태 (인라인) 또는 가로 전체' },
+  { name: 'title', type: 'string', default: '-', description: '제목' },
+  { name: 'description', type: 'string', default: '-', description: '설명 텍스트' },
+  { name: 'icon', type: 'ReactNode', default: 'color별 기본 SVG', description: 'Featured icon에 표시할 아이콘' },
+  { name: 'actions', type: 'ReactNode', default: '-', description: '하단 액션 영역 (링크 또는 버튼)' },
+  { name: 'dismissible', type: 'boolean', default: 'true', description: '닫기 버튼 표시 여부' },
+  { name: 'onDismiss', type: '() => void', default: '-', description: '닫기 콜백' },
+]} />
+
+### Notification
+
+<PropsTable data={[
+  { name: 'type', type: "'primary' | 'success' | 'warning' | 'error' | 'gray' | 'avatar' | 'no-icon'", default: "'primary'", description: '아이콘/스타일 변형' },
+  { name: 'title', type: 'string', default: '-', description: '제목' },
+  { name: 'description', type: 'string', default: '-', description: '설명 텍스트' },
+  { name: 'icon', type: 'ReactNode', default: 'type별 기본 solid 아이콘', description: '커스텀 아이콘' },
+  { name: 'avatarSrc', type: 'string', default: '-', description: 'type=avatar일 때 사용할 이미지 URL' },
+  { name: 'actions', type: 'ReactNode', default: '-', description: '하단 액션 링크 영역' },
+  { name: 'dismissible', type: 'boolean', default: 'true', description: '닫기 버튼 표시 여부' },
+  { name: 'onDismiss', type: '() => void', default: '-', description: '닫기 콜백' },
+]} />
+
+---
+
+## Figma Variants
+
+### Alert
+
+| Property | Values |
+| --- | --- |
+| **Color** | `Default` `Brand` `Gray` `Error` `Warning` `Success` |
+| **Size** | `Floating` `Full-width` |
+| **Breakpoint** | `Desktop` `Mobile` |
+
+### Notification
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Primary icon` `Success icon` `Warning icon` `Error icon` `Gray icon` `Avatar` `No icon` `Image` `Progress indicator` |
+| **Breakpoint** | `Desktop` `Mobile` |

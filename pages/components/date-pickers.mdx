@@ -1,0 +1,150 @@
+import { DatePicker, DatePickerMenu, CalendarCellPreview } from '../../components/DatePicker'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Date Pickers
+
+날짜 또는 기간을 선택하는 컴포넌트입니다. 단일 날짜 선택과 기간(시작/종료) 선택 두 가지 형태를 제공합니다.
+
+Figma 컴포넌트: `Date pickers`
+
+---
+
+## Single date
+
+하나의 날짜를 선택하는 캘린더입니다. 입력 필드 + Today 버튼 + 캘린더 그리드 + Cancel / Apply 푸터로 구성됩니다.
+
+<ComponentPreview code={`<DatePickerMenu type="single" />`}>
+  <DatePickerMenu type="single" />
+</ComponentPreview>
+
+---
+
+## Dual dates
+
+기간을 선택하는 캘린더입니다. 좌측 프리셋 사이드바, 두 달치 캘린더, 시작일 / 종료일 입력으로 구성됩니다.
+
+<ComponentPreview code={`<DatePickerMenu type="dual" />`}>
+  <DatePickerMenu type="dual" />
+</ComponentPreview>
+
+---
+
+## Trigger (input)
+
+캘린더를 여는 트리거 입력 필드입니다. 클릭하면 드롭다운으로 캘린더가 펼쳐집니다.
+
+<ComponentPreview code={`<DatePicker type="single" />
+<DatePicker type="single" value="Jan 10, 2025" />
+<DatePicker type="dual" />
+<DatePicker type="dual" value="Jan 10 – Jan 16, 2025" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'flex-start' }}>
+    <DatePicker type="single" />
+    <DatePicker type="single" value="Jan 10, 2025" />
+    <DatePicker type="dual" />
+    <DatePicker type="dual" value="Jan 10 – Jan 16, 2025" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Calendar cell variants
+
+캘린더 셀의 상태별 표현입니다.
+
+<ComponentPreview code={`<CalendarCellPreview variant="default" />
+<CalendarCellPreview variant="today" />
+<CalendarCellPreview variant="selected" />
+<CalendarCellPreview variant="active-start" />
+<CalendarCellPreview variant="in-range" />
+<CalendarCellPreview variant="active-end" />
+<CalendarCellPreview variant="default" state="disabled" />`}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <CalendarCellPreview variant="default" />
+      <span style={{ fontSize: 11, color: '#9ca3af' }}>Default</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <CalendarCellPreview variant="today" />
+      <span style={{ fontSize: 11, color: '#9ca3af' }}>Today</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <CalendarCellPreview variant="selected" />
+      <span style={{ fontSize: 11, color: '#9ca3af' }}>Selected</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <CalendarCellPreview variant="active-start" />
+      <span style={{ fontSize: 11, color: '#9ca3af' }}>Range start</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <CalendarCellPreview variant="in-range" />
+      <span style={{ fontSize: 11, color: '#9ca3af' }}>In range</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <CalendarCellPreview variant="active-end" />
+      <span style={{ fontSize: 11, color: '#9ca3af' }}>Range end</span>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <CalendarCellPreview variant="default" state="disabled" />
+      <span style={{ fontSize: 11, color: '#9ca3af' }}>Disabled</span>
+    </div>
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+### `<DatePicker />` (트리거 + 드롭다운)
+
+<PropsTable data={[
+  { name: 'type', type: "'single' | 'dual'", default: "'single'", description: '단일 날짜 / 기간 선택' },
+  { name: 'placeholder', type: 'string', default: "'Select dates'", description: '값이 없을 때 표시할 문구' },
+  { name: 'value', type: 'string', default: '-', description: '선택된 값 표시용 텍스트' },
+  { name: 'defaultOpen', type: 'boolean', default: 'false', description: '초기 열림 상태' },
+]} />
+
+### `<DatePickerMenu />` (always-open 캘린더)
+
+<PropsTable data={[
+  { name: 'type', type: "'single' | 'dual'", default: "'single'", description: '단일 / 기간 형태' },
+  { name: 'initialMonth', type: 'Date', default: 'Jan 2025', description: '초기 표시할 월' },
+  { name: 'initialDate', type: 'Date', default: 'Jan 10, 2025', description: '(single) 초기 선택 날짜' },
+  { name: 'initialRange', type: '[Date, Date]', default: '[Jan 10, Jan 16]', description: '(dual) 초기 기간' },
+  { name: 'selectedPreset', type: 'string', default: "'Last week'", description: '(dual) 초기 선택된 프리셋' },
+  { name: 'today', type: 'Date', default: 'Jan 1, 2025', description: '오늘 날짜 (today indicator 위치 결정)' },
+  { name: 'dotDates', type: 'Date[]', default: '[]', description: '하단 점 indicator 표시할 날짜' },
+]} />
+
+---
+
+## Figma Variants
+
+### Date picker menu
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Single date` `Dual dates` |
+| **Breakpoint** | `Desktop` `Mobile` |
+
+### Date picker dropdown (input trigger)
+
+| Property | Values |
+| --- | --- |
+| **Opened** | `True` `False` |
+| **Type** | `Single date` `Dual dates` |
+| **State** | `Placeholder` `Active` |
+| **Breakpoint** | `Desktop` `Mobile` |
+
+### Calendar cell
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Default` `Today's date` `Selected` `Active` |
+| **State** | `Default` `Hover` `Disabled` |
+
+### Date picker list item (preset)
+
+| Property | Values |
+| --- | --- |
+| **Selected** | `True` `False` |
+| **State** | `Default` `Hover` `Focused` |

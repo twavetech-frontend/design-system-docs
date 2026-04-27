@@ -1,0 +1,157 @@
+import { Tooltip } from '../../components/Tooltip'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+export const triggerStyle = {
+  padding: '10px 16px',
+  borderRadius: 10,
+  border: '1px solid var(--colors-border-borderSecondary, #e6e8ea)',
+  background: 'var(--colors-background-bgPrimary, #ffffff)',
+  color: 'var(--colors-text-textSecondary-700, #687079)',
+  fontSize: 14,
+  fontWeight: 600,
+  cursor: 'pointer',
+  fontFamily: "var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif",
+}
+
+# Tooltip
+
+툴팁은 요소에 마우스를 올리거나 포커스했을 때 짧은 설명을 보여주는 작은 팝오버입니다. 아이콘의 의미, 기능, 단축키 같은 부가 정보를 간결하게 전달할 때 사용합니다.
+
+Figma 컴포넌트: `Tooltip`
+
+> 데모는 마우스를 트리거 위에 올리면 툴팁이 나타납니다.
+
+---
+
+## Default
+
+가장 기본 형태입니다. 짧은 한 줄 텍스트와 화살표가 표시됩니다.
+
+<ComponentPreview code={`<Tooltip title="이것은 툴팁입니다">
+  <button>마우스를 올려보세요</button>
+</Tooltip>`}>
+  <div style={{ padding: '40px 0', display: 'flex', justifyContent: 'center' }}>
+    <Tooltip title="이것은 툴팁입니다" placement="top">
+      <button style={triggerStyle}>마우스를 올려보세요</button>
+    </Tooltip>
+  </div>
+</ComponentPreview>
+
+---
+
+## With supporting text
+
+`description` 속성을 사용하면 제목 아래 보조 설명을 함께 표시할 수 있습니다.
+
+<ComponentPreview code={`<Tooltip
+  title="툴팁이란?"
+  description="툴팁은 요소를 설명하거나 식별하는 데 사용됩니다. 사용자가 의미·기능·대체 텍스트를 이해하도록 돕습니다."
+>
+  <button>자세히 보기</button>
+</Tooltip>`}>
+  <div style={{ padding: '80px 0', display: 'flex', justifyContent: 'center' }}>
+    <Tooltip
+      title="툴팁이란?"
+      description="툴팁은 요소를 설명하거나 식별하는 데 사용됩니다. 사용자가 의미·기능·대체 텍스트를 이해하도록 돕습니다."
+      placement="top"
+    >
+      <button style={triggerStyle}>자세히 보기</button>
+    </Tooltip>
+  </div>
+</ComponentPreview>
+
+---
+
+## Placements
+
+`placement`로 툴팁이 트리거 기준 어느 방향에 표시될지 지정할 수 있습니다. `top`, `bottom`은 `-start`/`-end`로 정렬을 미세 조정할 수 있습니다.
+
+<ComponentPreview code={`<Tooltip placement="top" title="Top">...</Tooltip>
+<Tooltip placement="right" title="Right">...</Tooltip>
+<Tooltip placement="bottom" title="Bottom">...</Tooltip>
+<Tooltip placement="left" title="Left">...</Tooltip>`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', rowGap: 80, columnGap: 24, padding: '60px 0', justifyItems: 'center' }}>
+    <Tooltip title="Top start" placement="top-start">
+      <button style={triggerStyle}>Top start</button>
+    </Tooltip>
+    <Tooltip title="Top" placement="top">
+      <button style={triggerStyle}>Top</button>
+    </Tooltip>
+    <Tooltip title="Top end" placement="top-end">
+      <button style={triggerStyle}>Top end</button>
+    </Tooltip>
+    <Tooltip title="Left" placement="left">
+      <button style={triggerStyle}>Left</button>
+    </Tooltip>
+    <span />
+    <Tooltip title="Right" placement="right">
+      <button style={triggerStyle}>Right</button>
+    </Tooltip>
+    <Tooltip title="Bottom start" placement="bottom-start">
+      <button style={triggerStyle}>Bottom start</button>
+    </Tooltip>
+    <Tooltip title="Bottom" placement="bottom">
+      <button style={triggerStyle}>Bottom</button>
+    </Tooltip>
+    <Tooltip title="Bottom end" placement="bottom-end">
+      <button style={triggerStyle}>Bottom end</button>
+    </Tooltip>
+  </div>
+</ComponentPreview>
+
+---
+
+## Without arrow
+
+`arrow={false}`로 화살표 없이 표시할 수 있습니다.
+
+<ComponentPreview code={`<Tooltip title="화살표 없는 툴팁" arrow={false}>
+  <button>호버</button>
+</Tooltip>`}>
+  <div style={{ padding: '40px 0', display: 'flex', justifyContent: 'center', gap: 24 }}>
+    <Tooltip title="화살표 없는 툴팁" arrow={false} placement="top">
+      <button style={triggerStyle}>화살표 없음</button>
+    </Tooltip>
+    <Tooltip title="화살표 있는 기본" placement="top">
+      <button style={triggerStyle}>화살표 있음</button>
+    </Tooltip>
+  </div>
+</ComponentPreview>
+
+---
+
+## Always open
+
+`open` prop으로 표시 상태를 외부에서 제어할 수 있습니다. (예: 항상 보이게 하거나 onboarding 코치마크 형태로 사용)
+
+<ComponentPreview code={`<Tooltip title="이 툴팁은 항상 열려 있어요" open>
+  <button>고정 툴팁</button>
+</Tooltip>`}>
+  <div style={{ padding: '40px 0', display: 'flex', justifyContent: 'center' }}>
+    <Tooltip title="이 툴팁은 항상 열려 있어요" open placement="top">
+      <button style={triggerStyle}>고정 툴팁</button>
+    </Tooltip>
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'children', type: 'ReactNode', default: '-', description: '툴팁이 부착될 트리거 요소 (필수)' },
+  { name: 'title', type: 'string', default: '-', description: '툴팁 제목 텍스트' },
+  { name: 'description', type: 'string', default: '-', description: '제목 아래 보조 설명 텍스트' },
+  { name: 'placement', type: "'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left' | 'right'", default: "'top'", description: '툴팁 위치' },
+  { name: 'arrow', type: 'boolean', default: 'true', description: '화살표 표시 여부' },
+  { name: 'open', type: 'boolean', default: '-', description: 'Controlled mode — 항상 표시할지 외부에서 제어' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Supporting text** | `True` `False` |
+| **Arrow** | `None` `Top center` `Bottom center` `Top left` `Top right` `Bottom left` `Bottom right` `Left` `Right` |

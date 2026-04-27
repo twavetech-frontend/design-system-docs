@@ -1,0 +1,238 @@
+import { Modal } from '../../components/Modal'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Modal
+
+모달은 사용자에게 중요한 정보를 전달하거나 확인을 요청할 때 사용하는 다이얼로그입니다. 화면 위에 떠 있는 카드 형태로 표시되어 사용자의 주의를 집중시킵니다.
+
+Figma 컴포넌트: `Modal`
+
+---
+
+## Horizontal
+
+아이콘이 텍스트 옆에 배치되어 있는 가로 레이아웃입니다. 가장 일반적으로 사용됩니다.
+
+<ComponentPreview code={`<Modal
+  type="horizontal"
+  variant="default"
+  title="블로그 게시물이 게시되었습니다"
+  description="이 블로그 게시물이 게시되었습니다. 팀원들은 이 게시물을 편집하고 변경 사항을 다시 게시할 수 있습니다."
+  showCheckbox
+/>`}>
+  <Modal
+    type="horizontal"
+    variant="default"
+    title="블로그 게시물이 게시되었습니다"
+    description="이 블로그 게시물이 게시되었습니다. 팀원들은 이 게시물을 편집하고 변경 사항을 다시 게시할 수 있습니다."
+    showCheckbox
+  />
+</ComponentPreview>
+
+### Warning
+
+저장되지 않은 변경 사항이나 주의가 필요한 작업에 사용합니다.
+
+<ComponentPreview code={`<Modal
+  type="horizontal"
+  variant="warning"
+  title="저장되지 않은 변경 사항"
+  description="변경 사항을 저장하시겠습니까, 아니면 취소하시겠습니까?"
+  cancelText="취소"
+  confirmText="저장"
+  showCheckbox
+/>`}>
+  <Modal
+    type="horizontal"
+    variant="warning"
+    title="저장되지 않은 변경 사항"
+    description="변경 사항을 저장하시겠습니까, 아니면 취소하시겠습니까?"
+    cancelText="취소"
+    confirmText="저장"
+    showCheckbox
+  />
+</ComponentPreview>
+
+### Destructive
+
+삭제와 같이 되돌릴 수 없는 파괴적인 액션을 확인할 때 사용합니다.
+
+<ComponentPreview code={`<Modal
+  type="horizontal"
+  variant="destructive"
+  title="블로그 게시물 삭제"
+  description="정말로 이 게시물을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+  cancelText="취소"
+  confirmText="삭제"
+  showCheckbox
+/>`}>
+  <Modal
+    type="horizontal"
+    variant="destructive"
+    title="블로그 게시물 삭제"
+    description="정말로 이 게시물을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+    cancelText="취소"
+    confirmText="삭제"
+    showCheckbox
+  />
+</ComponentPreview>
+
+---
+
+## Stacked
+
+아이콘이 텍스트 위에 배치되는 세로 정렬 레이아웃입니다. 폭이 좁은 모달에 적합합니다.
+
+<ComponentPreview code={`<Modal
+  type="stacked"
+  variant="default"
+  title="블로그 게시물이 게시되었습니다"
+  description="팀원들은 이 게시물을 편집하고 변경 사항을 다시 게시할 수 있습니다."
+/>`}>
+  <Modal
+    type="stacked"
+    variant="default"
+    title="블로그 게시물이 게시되었습니다"
+    description="팀원들은 이 게시물을 편집하고 변경 사항을 다시 게시할 수 있습니다."
+  />
+</ComponentPreview>
+
+### Warning
+
+<ComponentPreview code={`<Modal
+  type="stacked"
+  variant="warning"
+  title="저장되지 않은 변경 사항"
+  description="변경 사항을 저장하시겠습니까, 아니면 취소하시겠습니까?"
+  cancelText="취소"
+  confirmText="저장"
+/>`}>
+  <Modal
+    type="stacked"
+    variant="warning"
+    title="저장되지 않은 변경 사항"
+    description="변경 사항을 저장하시겠습니까, 아니면 취소하시겠습니까?"
+    cancelText="취소"
+    confirmText="저장"
+  />
+</ComponentPreview>
+
+### Destructive
+
+<ComponentPreview code={`<Modal
+  type="stacked"
+  variant="destructive"
+  title="블로그 게시물 삭제"
+  description="정말로 이 게시물을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+  cancelText="취소"
+  confirmText="삭제"
+/>`}>
+  <Modal
+    type="stacked"
+    variant="destructive"
+    title="블로그 게시물 삭제"
+    description="정말로 이 게시물을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+    cancelText="취소"
+    confirmText="삭제"
+  />
+</ComponentPreview>
+
+---
+
+## Centered
+
+아이콘과 텍스트가 모두 중앙 정렬된 레이아웃입니다. 강조가 필요한 상황에 사용합니다.
+
+<ComponentPreview code={`<Modal
+  type="centered"
+  variant="default"
+  title="요청이 완료되었습니다"
+  description="요청하신 작업이 정상적으로 완료되었습니다."
+/>`}>
+  <Modal
+    type="centered"
+    variant="default"
+    title="요청이 완료되었습니다"
+    description="요청하신 작업이 정상적으로 완료되었습니다."
+  />
+</ComponentPreview>
+
+---
+
+## With Overlay
+
+배경 오버레이와 backdrop blur가 적용된 풀 모달 형태입니다. 실제 모달이 띄워졌을 때의 모습입니다.
+
+<ComponentPreview code={`<Modal
+  type="horizontal"
+  variant="default"
+  title="블로그 게시물이 게시되었습니다"
+  description="팀원들은 이 게시물을 편집하고 변경 사항을 다시 게시할 수 있습니다."
+  showOverlay
+/>`}>
+  <Modal
+    type="horizontal"
+    variant="default"
+    title="블로그 게시물이 게시되었습니다"
+    description="팀원들은 이 게시물을 편집하고 변경 사항을 다시 게시할 수 있습니다."
+    showOverlay
+  />
+</ComponentPreview>
+
+---
+
+## Vertical actions
+
+세로로 쌓인 액션 버튼 레이아웃입니다. 모바일이나 좁은 모달에서 사용합니다.
+
+<ComponentPreview code={`<Modal
+  type="stacked"
+  variant="default"
+  title="요금제를 업그레이드 하시겠습니까?"
+  description="더 많은 기능과 사용량을 이용할 수 있습니다."
+  cancelText="나중에"
+  confirmText="업그레이드"
+  actions="vertical"
+/>`}>
+  <Modal
+    type="stacked"
+    variant="default"
+    title="요금제를 업그레이드 하시겠습니까?"
+    description="더 많은 기능과 사용량을 이용할 수 있습니다."
+    cancelText="나중에"
+    confirmText="업그레이드"
+    actions="vertical"
+  />
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'type', type: "'horizontal' | 'stacked' | 'centered'", default: "'horizontal'", description: '아이콘과 텍스트의 정렬 방식' },
+  { name: 'variant', type: "'default' | 'warning' | 'destructive'", default: "'default'", description: '모달 종류 (Featured icon 색상 및 confirm 버튼 컬러)' },
+  { name: 'icon', type: 'ReactNode', default: 'variant별 기본 아이콘', description: 'Featured icon에 사용할 SVG 노드' },
+  { name: 'title', type: 'string', default: "'모달 제목'", description: '제목 텍스트' },
+  { name: 'description', type: 'string', default: '-', description: '설명 텍스트' },
+  { name: 'showClose', type: 'boolean', default: 'true', description: '우상단 닫기(X) 버튼 표시 여부' },
+  { name: 'showCheckbox', type: 'boolean', default: 'false', description: '액션 영역 좌측 체크박스 표시 여부' },
+  { name: 'checkboxLabel', type: 'string', default: "'다시 보지 않기'", description: '체크박스 옆 레이블 텍스트' },
+  { name: 'checkboxChecked', type: 'boolean', default: 'false', description: '체크박스 선택 상태' },
+  { name: 'cancelText', type: 'string', default: "'취소'", description: '취소 버튼 텍스트' },
+  { name: 'confirmText', type: 'string', default: "'확인'", description: '확인 버튼 텍스트' },
+  { name: 'actions', type: "'horizontal' | 'vertical'", default: "'horizontal'", description: '액션 버튼 정렬 방향' },
+  { name: 'showOverlay', type: 'boolean', default: 'false', description: '배경 오버레이/blur 표시 여부 (실제 모달 표현)' },
+  { name: 'onClose', type: '() => void', default: '-', description: '닫기 버튼 클릭 핸들러' },
+  { name: 'onCancel', type: '() => void', default: '-', description: '취소 버튼 클릭 핸들러' },
+  { name: 'onConfirm', type: '() => void', default: '-', description: '확인 버튼 클릭 핸들러' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Horizontal` `Warning horizontal` `Destructive horizontal` `Stacked left aligned` `Warning stacked left aligned` `Destructive stacked left aligned` `Centered ...` |
+| **Breakpoint** | `Desktop` `Mobile` |

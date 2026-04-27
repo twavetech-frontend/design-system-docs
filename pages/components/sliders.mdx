@@ -1,0 +1,176 @@
+import { Slider } from '../../components/Slider'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Sliders
+
+Slider는 최솟값~최댓값 범위에서 단일 값 또는 범위를 선택하는 컴포넌트입니다. 트랙을 클릭하거나 핸들을 드래그해서 값을 조정할 수 있습니다.
+
+Figma 컴포넌트: `Slider`, `_Control handle`
+
+---
+
+## Single value
+
+하나의 핸들로 단일 값을 선택합니다.
+
+<ComponentPreview code={`<Slider defaultValue={25} />
+<Slider defaultValue={50} />
+<Slider defaultValue={75} />
+<Slider defaultValue={100} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: 320 }}>
+    <Slider defaultValue={25} />
+    <Slider defaultValue={50} />
+    <Slider defaultValue={75} />
+    <Slider defaultValue={100} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Range
+
+두 개의 핸들로 범위(시작 ~ 끝)를 선택합니다.
+
+<ComponentPreview code={`<Slider range defaultValue={[0, 50]} />
+<Slider range defaultValue={[25, 75]} />
+<Slider range defaultValue={[50, 100]} />
+<Slider range defaultValue={[25, 100]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: 320 }}>
+    <Slider range defaultValue={[0, 50]} />
+    <Slider range defaultValue={[25, 75]} />
+    <Slider range defaultValue={[50, 100]} />
+    <Slider range defaultValue={[25, 100]} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Label
+
+핸들에 현재 값을 표시하는 방법은 3가지입니다.
+
+### No label (기본)
+
+라벨 없이 핸들만 표시합니다.
+
+<ComponentPreview code={`<Slider defaultValue={25} />
+<Slider range defaultValue={[25, 75]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 320 }}>
+    <Slider defaultValue={25} />
+    <Slider range defaultValue={[25, 75]} />
+  </div>
+</ComponentPreview>
+
+### Bottom
+
+핸들 아래에 값을 텍스트로 표시합니다.
+
+<ComponentPreview code={`<Slider label="bottom" defaultValue={25} />
+<Slider label="bottom" range defaultValue={[25, 75]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 320 }}>
+    <Slider label="bottom" defaultValue={25} />
+    <Slider label="bottom" range defaultValue={[25, 75]} />
+  </div>
+</ComponentPreview>
+
+### Top floating
+
+핸들 위에 라운드 박스로 값을 띄워 표시합니다.
+
+<ComponentPreview code={`<Slider label="top-floating" defaultValue={25} />
+<Slider label="top-floating" range defaultValue={[25, 75]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 320 }}>
+    <Slider label="top-floating" defaultValue={25} />
+    <Slider label="top-floating" range defaultValue={[25, 75]} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Handle types
+
+핸들 자체의 표현 방식을 3가지로 변경할 수 있습니다.
+
+### Plain (기본)
+
+빈 원 형태의 기본 핸들입니다.
+
+<ComponentPreview code={`<Slider handleType="plain" defaultValue={50} />`}>
+  <div style={{ width: 320 }}>
+    <Slider handleType="plain" defaultValue={50} />
+  </div>
+</ComponentPreview>
+
+### Text
+
+핸들 안에 현재 값을 작은 텍스트로 표시합니다.
+
+<ComponentPreview code={`<Slider handleType="text" defaultValue={50} />
+<Slider handleType="text" range defaultValue={[25, 75]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 320 }}>
+    <Slider handleType="text" defaultValue={50} />
+    <Slider handleType="text" range defaultValue={[25, 75]} />
+  </div>
+</ComponentPreview>
+
+### Tooltip
+
+핸들 위에 짙은 색 툴팁(말풍선)으로 값을 표시합니다.
+
+<ComponentPreview code={`<Slider handleType="tooltip" defaultValue={50} />
+<Slider handleType="tooltip" range defaultValue={[25, 75]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16, width: 320 }}>
+    <Slider handleType="tooltip" defaultValue={50} />
+    <Slider handleType="tooltip" range defaultValue={[25, 75]} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Min / Max / Step
+
+`min`, `max`, `step` prop으로 범위와 단위를 조정할 수 있습니다.
+
+<ComponentPreview code={`<Slider min={0} max={1000} step={50} defaultValue={400} label="bottom" />
+<Slider min={-50} max={50} step={5} defaultValue={0} label="top-floating" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: 320 }}>
+    <Slider min={0} max={1000} step={50} defaultValue={400} label="bottom" />
+    <Slider min={-50} max={50} step={5} defaultValue={0} label="top-floating" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'value', type: 'number | [number, number]', default: '-', description: '제어 모드 값' },
+  { name: 'defaultValue', type: 'number | [number, number]', default: '50 / [25, 75]', description: '비제어 모드 초기 값' },
+  { name: 'range', type: 'boolean', default: 'false', description: '범위(두 핸들) 모드' },
+  { name: 'min', type: 'number', default: '0', description: '최솟값' },
+  { name: 'max', type: 'number', default: '100', description: '최댓값' },
+  { name: 'step', type: 'number', default: '1', description: '값 증감 단위' },
+  { name: 'label', type: "false | 'bottom' | 'top-floating'", default: 'false', description: '값 라벨 위치' },
+  { name: 'handleType', type: "'plain' | 'text' | 'tooltip'", default: "'plain'", description: '핸들 표현 방식' },
+  { name: 'width', type: 'number | string', default: '-', description: '슬라이더 너비' },
+  { name: 'onChange', type: '(value) => void', default: '-', description: '값 변경 콜백' },
+]} />
+
+---
+
+## Figma Variants
+
+### Slider
+
+| Property | Values |
+| --- | --- |
+| **Label** | `False` `Bottom` `Top floating` |
+| **Right control** | `25%` `50%` `75%` `100%` |
+| **Left control** | `0%` `25%` `50%` `75%` |
+
+### Control handle
+
+| Property | Values |
+| --- | --- |
+| **Type** | `False` `Text` `Tooltip` |
+| **State** | `Default` `Hover` `Focused` |

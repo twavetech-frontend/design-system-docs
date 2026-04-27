@@ -1,0 +1,113 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
+}
+
+.wrapperRight {
+  flex-direction: row;
+}
+
+.wrapperBottom {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+}
+
+.wrapperTopFloating,
+.wrapperBottomFloating {
+  flex-direction: column;
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: var(--colors-grayNeutral-100, #f3f4f6);
+  border-radius: 9999px;
+  overflow: visible;
+  min-width: 200px;
+}
+
+.wrapperRight .track {
+  flex: 1 1 auto;
+  width: auto;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--colors-brand-500, #7700ff);
+  border-radius: 9999px;
+  min-width: 8px;
+  transition: width 0.2s ease;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  white-space: nowrap;
+}
+
+.wrapperBottom .label {
+  align-self: flex-end;
+}
+
+/* ===========================
+   Floating label badge
+   =========================== */
+.floatingLabel {
+  position: absolute;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 2px 8px;
+  background: var(--colors-background-bgPrimaryAlt, #ffffff);
+  border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--colors-text-textSecondary-700, #687079);
+  white-space: nowrap;
+  box-shadow: var(--shadows-shadowSm, 0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.floatingTop {
+  bottom: calc(100% + 8px);
+}
+
+.floatingBottom {
+  top: calc(100% + 8px);
+}
+
+.wrapperTopFloating {
+  padding-top: 32px;
+}
+.wrapperBottomFloating {
+  padding-bottom: 32px;
+}
+
+/* ===========================
+   Dark mode
+   =========================== */
+[data-theme='dark'] .track {
+  background: rgba(255, 255, 255, 0.08);
+}
+[data-theme='dark'] .label {
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
+[data-theme='dark'] .floatingLabel {
+  background: var(--colors-background-bgSecondary, #13161b);
+  border-color: var(--colors-border-borderPrimary, #373a41);
+  color: var(--colors-text-textSecondary-700, #cecfd2);
+}
