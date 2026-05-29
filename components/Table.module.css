@@ -3,7 +3,7 @@
    =========================== */
 .wrapper {
   width: 100%;
-  background: var(--colors-background-bgQuaternary, #ffffff);
+  background: var(--colors-background-bgPrimary, #ffffff);
   border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
   border-radius: 12px;
   overflow: hidden;
@@ -28,7 +28,7 @@
    Header
    =========================== */
 .thead {
-  background: var(--colors-background-bgQuaternary, #ffffff);
+  background: var(--colors-background-bgPrimary, #ffffff);
 }
 
 .th {
@@ -82,14 +82,14 @@
    Body
    =========================== */
 .tbody {
-  background: var(--colors-background-bgQuaternary, #ffffff);
+  background: var(--colors-background-bgPrimary, #ffffff);
 }
 
 .tr {
   transition: background 0.15s;
 }
 .tr:not(:last-child) > .td {
-  border-bottom: 1px solid var(--component-colors-utility-gray-100, #f3f4f6);
+  border-bottom: 1px solid var(--colors-border-borderSecondary, #e9eaeb);
 }
 .tr:hover {
   background: var(--colors-background-bgPrimaryHover, #fafafa);
