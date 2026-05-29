@@ -28,6 +28,9 @@ const PRIMITIVE_GROUPS = [
   { label: 'Gray (Light Mode)', prefix: '--colors-grayLightMode' },
   { label: 'Gray (Dark Mode Alpha)', prefix: '--colors-grayDarkModeAlpha' },
   { label: 'Gray (Dark Mode)', prefix: '--colors-grayDarkMode' },
+  { label: 'Gray Light', prefix: '--colors-grayLight' },
+  { label: 'Gray Dark Alpha', prefix: '--colors-grayDarkAlpha' },
+  { label: 'Gray Dark', prefix: '--colors-grayDark' },
   { label: 'Gray Blue', prefix: '--colors-grayBlue' },
   { label: 'Gray Cool', prefix: '--colors-grayCool' },
   { label: 'Gray Modern', prefix: '--colors-grayModern' },
@@ -38,7 +41,9 @@ const PRIMITIVE_GROUPS = [
   { label: 'Green Light', prefix: '--colors-greenLight' },
   { label: 'Green', prefix: '--colors-green' },
   { label: 'Moss', prefix: '--colors-moss' },
+  { label: 'Emerald', prefix: '--colors-emerald' },
   { label: 'Teal', prefix: '--colors-teal' },
+  { label: 'Aqua', prefix: '--colors-aqua' },
   { label: 'Cyan', prefix: '--colors-cyan' },
   { label: 'Blue Light', prefix: '--colors-blueLight' },
   { label: 'Blue Dark', prefix: '--colors-blueDark' },
@@ -106,9 +111,29 @@ function classifyVars(allVars, groups) {
     classified.set(group.label, items);
   }
 
-  return groups
+  const result = groups
     .map((g) => ({ label: g.label, colors: classified.get(g.label) || [] }))
     .filter((g) => g.colors.length > 0);
+
+  // --- Safety net: auto-discover any token families not covered by the curated
+  // list above, so newly-added design-system families never silently disappear. ---
+  const leftovers = new Map();
+  for (const [name, value] of Object.entries(allVars)) {
+    if (used.has(name)) continue;
+    const family = name.replace(/-\d.*$/, '');
+    if (!leftovers.has(family)) leftovers.set(family, []);
+    leftovers.get(family).push({
+      name,
+      value,
+      step: name.substring(family.length).replace(/^-+/, ''),
+    });
+  }
+  for (const [family, colors] of leftovers) {
+    const label = humanize(family.replace(/^--(componentColors|colors)-/, ''));
+    result.push({ label: `${label} (auto)`, colors });
+  }
+
+  return result;
 }
 
 // --- Checkerboard for transparent colors ---
