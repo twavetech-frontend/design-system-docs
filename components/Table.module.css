@@ -19,6 +19,7 @@
 
 .table {
   width: 100%;
+  min-width: 880px;
   border-collapse: collapse;
   table-layout: auto;
 }
@@ -36,7 +37,7 @@
   line-height: 18px;
   font-weight: 600;
   letter-spacing: -0.12px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   border-bottom: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
   white-space: nowrap;
   font-family: inherit;
@@ -50,7 +51,15 @@
 .th-label svg {
   width: 12px;
   height: 12px;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
+}
+.th-help {
+  display: inline-flex;
+  color: var(--colors-text-textTertiary, #b1b6be);
+}
+.th-help svg {
+  width: 16px;
+  height: 16px;
 }
 
 .align-center { justify-content: center; }
@@ -93,9 +102,14 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  color: var(--colors-text-textPrimary-900, #596069);
+  color: var(--colors-text-textPrimary, #2c3744);
   vertical-align: middle;
   font-family: inherit;
+  white-space: nowrap;
+}
+.td-muted {
+  color: var(--colors-text-textTertiary, #687079);
+  font-weight: 400;
 }
 
 .size-sm .td {
@@ -220,6 +234,172 @@
   color: #175cd3;
 }
 
+.badge-indigo {
+  background: #eef4ff;
+  border-color: #c7d7fe;
+  color: #3538cd;
+}
+
+/* ===========================
+   Card header
+   =========================== */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+}
+.size-sm .card-header { padding: 16px 20px; }
+
+.card-header-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--colors-text-textPrimary, #2c3744);
+}
+
+.badge-count {
+  border-radius: 9999px;
+  padding: 2px 8px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--colors-text-textTertiary, #b1b6be);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.icon-btn:hover {
+  background: var(--colors-background-bgPrimaryHover, #f5f5f5);
+  color: var(--colors-text-textSecondary, #687079);
+}
+.icon-btn svg { width: 20px; height: 20px; }
+
+/* ===========================
+   Badge group (multi-badge cell)
+   =========================== */
+.badge-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+/* ===========================
+   Row actions
+   =========================== */
+.row-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.row-actions .icon-btn {
+  width: 32px;
+  height: 32px;
+}
+.row-actions .icon-btn svg { width: 18px; height: 18px; }
+
+/* ===========================
+   Pagination footer
+   =========================== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 24px 16px;
+  border-top: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+}
+.size-sm .pagination { padding: 12px 20px 16px; }
+
+.page-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
+  background: var(--colors-background-bgPrimary, #ffffff);
+  color: var(--colors-text-textSecondary, #535862);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
+  transition: background 0.15s, border-color 0.15s;
+}
+.page-nav:hover:not(:disabled) {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+}
+.page-nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.page-nav svg { width: 16px; height: 16px; }
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.page-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 4px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--colors-text-textTertiary, #687079);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.page-num:hover {
+  background: var(--colors-background-bgPrimaryHover, #fafafa);
+}
+.page-num-active {
+  background: var(--colors-brand-50, #f4ecff);
+  color: var(--colors-text-textBrandSecondary, #5200b0);
+  font-weight: 600;
+}
+
+.page-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 36px;
+  color: var(--colors-text-textTertiary, #687079);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .page-numbers { display: none; }
+}
+
 /* ===========================
    UserCell
    =========================== */
@@ -264,8 +444,8 @@
 
 .user-name {
   font-size: 14px;
-  font-weight: 500;
-  color: var(--colors-text-textPrimary-900, #596069);
+  font-weight: 600;
+  color: var(--colors-text-textPrimary, #2c3744);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -274,7 +454,7 @@
 .user-email {
   font-size: 14px;
   font-weight: 400;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -372,5 +552,48 @@
 }
 
 [data-theme='dark'] .user-email {
+  color: #94979c;
+}
+
+[data-theme='dark'] .badge-indigo {
+  background: rgba(53, 56, 205, 0.18);
+  border-color: rgba(84, 138, 247, 0.4);
+  color: #a4bcfd;
+}
+
+[data-theme='dark'] .card-title {
+  color: #f5f5f6;
+}
+
+[data-theme='dark'] .icon-btn:hover {
+  background: #1f242e;
+  color: #cecfd2;
+}
+
+[data-theme='dark'] .pagination {
+  border-top-color: #22262f;
+}
+
+[data-theme='dark'] .page-nav {
+  background: #161b26;
+  border-color: #373a41;
+  color: #cecfd2;
+}
+[data-theme='dark'] .page-nav:hover:not(:disabled) {
+  background: #1f242e;
+}
+
+[data-theme='dark'] .page-num {
+  color: #94979c;
+}
+[data-theme='dark'] .page-num:hover {
+  background: #1f242e;
+}
+[data-theme='dark'] .page-num-active {
+  background: rgba(119, 0, 255, 0.18);
+  color: #cfaeff;
+}
+
+[data-theme='dark'] .page-ellipsis {
   color: #94979c;
 }
