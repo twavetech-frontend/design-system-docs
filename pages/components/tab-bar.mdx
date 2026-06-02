@@ -1,0 +1,96 @@
+import { TabBar, defaultTabBarItems } from '../../components/TabBar'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Tab Bar
+
+탭 바는 앱 화면 하단에 고정되어 주요 메뉴 사이를 이동하는 모바일 내비게이션 컴포넌트입니다. 5개의 최상위 메뉴(홈, 커뮤니티, 스테이지, 라운지, 나)를 한 줄로 보여주며, 현재 위치한 메뉴를 강조합니다.
+
+Figma 컴포넌트: `Tab bar`
+
+---
+
+## Default
+
+기본 탭 바입니다. 선택된 탭은 아이콘과 라벨이 진하게(`text-primary`), 나머지는 흐리게(`text-tertiary`) 표시됩니다.
+
+<ComponentPreview code={`<TabBar items={[
+  { key: 'home', label: '홈', icon: 'home' },
+  { key: 'community', label: '커뮤니티', icon: 'community' },
+  { key: 'stage', label: '스테이지', icon: 'stage' },
+  { key: 'lounge', label: '라운지', icon: 'lounge' },
+  { key: 'my', label: '나', icon: 'my' },
+]} active={0} />`}>
+  <div style={{ width: 393, border: '1px solid #e6e8ea', borderRadius: 12, overflow: 'hidden' }}>
+    <TabBar active={0} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Selected states
+
+탭을 누르면 해당 메뉴가 활성화됩니다. 각 메뉴가 선택됐을 때의 상태입니다. 스테이지 탭은 선택 시 좌상단 사각형에 브랜드 색이 적용됩니다.
+
+<ComponentPreview code={`<TabBar active={0} />  {/* 홈 */}
+<TabBar active={1} />  {/* 커뮤니티 */}
+<TabBar active={2} />  {/* 스테이지 */}
+<TabBar active={3} />  {/* 라운지 */}
+<TabBar active={4} />  {/* 나 */}`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 12, width: 393 }}>
+    {defaultTabBarItems.map((item, i) => (
+      <div key={item.key} style={{ border: '1px solid #e6e8ea', borderRadius: 12, overflow: 'hidden' }}>
+        <TabBar active={i} />
+      </div>
+    ))}
+  </div>
+</ComponentPreview>
+
+---
+
+## In context
+
+실제 화면 하단에 고정되어 사용됩니다. 콘텐츠 영역 아래에 항상 노출되어 어디서든 주요 메뉴로 이동할 수 있습니다.
+
+<ComponentPreview code={`<div className="screen">
+  {/* 콘텐츠 영역 */}
+  <TabBar active={2} />
+</div>`}>
+  <div style={{ width: 393, height: 360, border: '1px solid #e6e8ea', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column', background: '#fcfcfd' }}>
+    <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#b1b6be', fontSize: 13 }}>
+      스테이지 화면
+    </div>
+    <TabBar active={2} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'items', type: '{ key, label, icon }[]', default: 'defaultTabBarItems', description: '탭 항목 배열. icon은 home·community·stage·lounge·my 중 하나' },
+  { name: 'active', type: 'number', default: '0', description: '초기 활성 탭의 인덱스' },
+  { name: 'onChange', type: '(item, index) => void', default: '-', description: '탭 선택 시 호출되는 핸들러' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Selected** | `1. 홈` `2 커뮤니티` `3 스테이지` `4 라운지` `5 나` |
+
+### Tokens
+
+| 역할 | Token |
+| --- | --- |
+| 배경 | `colors/base/white` |
+| 상단 구분선 | `colors/border/borderSecondary` |
+| 선택 라벨·아이콘 | `colors/text/textPrimary` |
+| 비선택 라벨·아이콘 | `colors/text/textTertiary` |
+| 스테이지 강조 | `colors/brand/500` |
+| 좌우 패딩 | `spacing/lg` (12px) |
+| 상단 패딩 | `spacing/md` (8px) |
+| 하단 패딩 | `spacing/3xl` (24px) |
+| 아이콘·라벨 간격 | `spacing/xxs` (2px) |

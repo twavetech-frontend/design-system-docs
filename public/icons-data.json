@@ -4728,5 +4728,47 @@
       "name": "wind-03",
       "file": "/icons/wind-03.svg"
     }
+  ],
+  "Tab Bar": [
+    {
+      "name": "tab-bar-home",
+      "file": "/icons/tab-bar-home.svg"
+    },
+    {
+      "name": "tab-bar-home-selected",
+      "file": "/icons/tab-bar-home-selected.svg"
+    },
+    {
+      "name": "tab-bar-community",
+      "file": "/icons/tab-bar-community.svg"
+    },
+    {
+      "name": "tab-bar-community-selected",
+      "file": "/icons/tab-bar-community-selected.svg"
+    },
+    {
+      "name": "tab-bar-stage",
+      "file": "/icons/tab-bar-stage.svg"
+    },
+    {
+      "name": "tab-bar-stage-selected",
+      "file": "/icons/tab-bar-stage-selected.svg"
+    },
+    {
+      "name": "tab-bar-lounge",
+      "file": "/icons/tab-bar-lounge.svg"
+    },
+    {
+      "name": "tab-bar-lounge-selected",
+      "file": "/icons/tab-bar-lounge-selected.svg"
+    },
+    {
+      "name": "tab-bar-my",
+      "file": "/icons/tab-bar-my.svg"
+    },
+    {
+      "name": "tab-bar-my-selected",
+      "file": "/icons/tab-bar-my-selected.svg"
+    }
   ]
 }
