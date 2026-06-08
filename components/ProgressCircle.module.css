@@ -38,17 +38,17 @@
 
 .value {
   font-weight: 700;
-  color: var(--colors-text-textPrimary-900, #2c3744);
+  color: var(--colors-text-textPrimary, #2c3744);
 }
 
 .label {
   font-weight: 500;
-  color: var(--colors-text-textTertiary-600, #8b929c);
+  color: var(--colors-text-textTertiary, #b1b6be);
 }
 
 [data-theme='dark'] .value {
-  color: var(--colors-text-textPrimary-900, #f5f5f6);
+  color: var(--colors-text-textPrimary, #2c3744);
 }
 [data-theme='dark'] .label {
-  color: var(--colors-text-textTertiary-600, #94979c);
+  color: var(--colors-text-textTertiary, #b1b6be);
 }

@@ -14,7 +14,7 @@
   font-family: 'Pretendard', sans-serif;
   line-height: 20px;
   background: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary, #687079);
   border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
@@ -41,13 +41,13 @@
 .button-group .item:hover,
 .button-group .item.force-hover {
   background: var(--colors-background-bgPrimaryHover, #f9fafb);
-  color: var(--colors-text-textPrimary-900, #1d2939);
+  color: var(--colors-text-textPrimary, #2c3744);
 }
 
 /* Current / Active */
 .button-group .item.current {
   background: var(--colors-background-bgPrimaryHover, #f9fafb);
-  color: var(--colors-text-textPrimary-900, #1d2939);
+  color: var(--colors-text-textPrimary, #2c3744);
   z-index: 1;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .current .circle-icon {
-  border-color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
+  border-color: var(--colors-foreground-fgQuaternary, #f9fafb);
 }
 
 /* Arrow icons */

@@ -17,7 +17,7 @@
   font-family: 'Pretendard', sans-serif;
   line-height: 20px;
   background: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary, #687079);
   border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   border-radius: 8px;
   cursor: pointer;
@@ -27,7 +27,7 @@
 
 .trigger:hover {
   background: var(--colors-background-bgPrimaryHover, #f9fafb);
-  color: var(--colors-text-textPrimary-900, #1d2939);
+  color: var(--colors-text-textPrimary, #2c3744);
 }
 
 .trigger:focus-visible {
@@ -41,7 +41,7 @@
   justify-content: center;
   padding: 10px;
   background: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary, #687079);
   border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   border-radius: 8px;
   cursor: pointer;
@@ -74,7 +74,7 @@
   overflow: hidden;
   font-size: 14px;
   font-weight: 600;
-  color: var(--colors-text-textTertiary-600, #475467);
+  color: var(--colors-text-textTertiary, #b1b6be);
 }
 
 .avatar-circle img {
@@ -143,7 +143,7 @@
   font-weight: 500;
   font-family: 'Pretendard', sans-serif;
   line-height: 20px;
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary, #687079);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -172,7 +172,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  color: var(--colors-foreground-fgQuaternary, #f9fafb);
 }
 
 .menu-item.disabled .item-icon {
@@ -185,7 +185,7 @@
 
 .item-shortcut {
   font-size: 12px;
-  color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
+  color: var(--colors-foreground-fgQuaternary, #f9fafb);
   margin-left: auto;
 }
 
@@ -225,7 +225,7 @@
   padding: 10px 14px 4px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--colors-foreground-fgQuaternary-400, #667085);
+  color: var(--colors-foreground-fgQuaternary, #f9fafb);
   font-family: 'Pretendard', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -246,14 +246,14 @@
 .header-avatar-name {
   font-size: 14px;
   font-weight: 600;
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary, #687079);
   line-height: 20px;
 }
 
 .header-avatar-email {
   font-size: 14px;
   font-weight: 400;
-  color: var(--colors-text-textTertiary-600, #475467);
+  color: var(--colors-text-textTertiary, #b1b6be);
   line-height: 20px;
 }
 

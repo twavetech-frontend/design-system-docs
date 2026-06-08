@@ -72,7 +72,7 @@
 .variant-primary.size-lg { padding: 10px 14px; }
 .variant-primary {
   background-color: var(--colors-background-bgBrandSolid, #7700ff);
-  color: var(--colors-foreground-fgWhite, #fff);
+  color: var(--colors-text-textWhite, #ffffff);
 }
 .variant-primary:hover:not(:disabled), .variant-primary.force-hover {
   background-color: var(--colors-background-bgBrandSolidHover, #6a00e0);
@@ -164,7 +164,7 @@
 
 .variant-destructive-primary {
   background-color: var(--colors-background-bgErrorSolid, #d92d20);
-  color: var(--colors-foreground-fgWhite, #fff);
+  color: var(--colors-text-textWhite, #ffffff);
 }
 .variant-destructive-primary:hover:not(:disabled), .variant-destructive-primary.force-hover {
   background-color: var(--colors-background-bgErrorSolidHover, #b42318);
@@ -217,20 +217,20 @@
 /* --- Close Button --- */
 .variant-close {
   background-color: transparent;
-  color: var(--colors-foreground-fgQuaternary-400, #a4a7ae);
+  color: var(--colors-foreground-fgQuaternary, #f9fafb);
   padding: 0;
   border-radius: 8px;
 }
 .variant-close:hover:not(:disabled), .variant-close.force-hover {
   background-color: var(--colors-background-bgSecondaryHover, #f5f5f5);
-  color: var(--colors-foreground-fgSecondary-700, #344054);
+  color: var(--colors-foreground-fgSecondary, #687079);
 }
 .variant-close.force-focused {
   box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingGray, rgba(152, 162, 179, 0.14));
 }
 .variant-close-dark {
   background-color: transparent;
-  color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
+  color: var(--colors-foreground-fgQuaternary, #f9fafb);
   padding: 0;
   border-radius: 8px;
 }
@@ -242,7 +242,7 @@
 /* --- Utility Button --- */
 .variant-utility-secondary {
   background-color: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #414651);
+  color: var(--colors-text-textSecondary, #687079);
   border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
   border-radius: 8px;
 }
@@ -252,12 +252,12 @@
 
 .variant-utility-tertiary {
   background-color: transparent;
-  color: var(--colors-foreground-fgQuaternary-400, #a4a7ae);
+  color: var(--colors-foreground-fgQuaternary, #f9fafb);
   border-radius: 8px;
 }
 .variant-utility-tertiary:hover:not(:disabled), .variant-utility-tertiary.force-hover {
   background-color: var(--colors-background-bgPrimaryHover, #fafafa);
-  color: var(--colors-foreground-fgSecondary-700, #475467);
+  color: var(--colors-foreground-fgSecondary, #687079);
 }
 
 /* Focused state baseline */

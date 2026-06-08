@@ -9,7 +9,7 @@
 .label {
   font-weight: 500;
   line-height: 1.4;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   text-align: center;
   white-space: nowrap;
 }
@@ -34,5 +34,5 @@
 }
 
 [data-theme='dark'] .label {
-  color: var(--colors-text-textSecondary-700, #cecfd2);
+  color: var(--colors-text-textSecondary, #687079);
 }

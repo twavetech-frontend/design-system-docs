@@ -40,7 +40,7 @@
 .theme-color,
 .theme-gray {
   background: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #414651);
+  color: var(--colors-text-textSecondary, #687079);
   border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
 }
 .theme-color:hover:not(:disabled),
@@ -62,7 +62,7 @@
 /* Google Brand — follows Google's brand: white bg + color logo */
 .social-google.theme-brand {
   background: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary-700, #414651);
+  color: var(--colors-text-textSecondary, #687079);
   border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
 }
 .social-google.theme-brand:hover:not(:disabled),

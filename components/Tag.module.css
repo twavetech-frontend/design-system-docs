@@ -250,19 +250,19 @@
    =========================== */
 [data-theme='dark'] .tag {
   background: var(--colors-background-bgSecondary, #13161b);
-  color: var(--colors-text-textSecondary-700, #cecfd2);
+  color: var(--colors-text-textSecondary, #687079);
   border-color: rgba(255, 255, 255, 0.06);
 }
 
 [data-theme='dark'] .tag.brand {
   background: var(--colors-background-bgBrandSecondary, #6a00e0);
-  color: var(--colors-text-textBrandSecondary-700, #cecfd2);
+  color: var(--colors-text-textBrandSecondary, #9b55ff);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme='dark'] .tag.checkboxVariant {
   background: var(--colors-background-bgTertiary, #22262f);
-  color: var(--colors-text-textSecondary-700, #cecfd2);
+  color: var(--colors-text-textSecondary, #687079);
   border-color: var(--colors-border-borderPrimary, #373a41);
 }
 
@@ -282,7 +282,7 @@
 
 [data-theme='dark'] .country {
   background: var(--colors-background-bgQuaternary, #373a41);
-  color: var(--colors-text-textSecondary-700, #cecfd2);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 [data-theme='dark'] .close:hover {

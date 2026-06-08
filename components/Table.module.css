@@ -128,7 +128,7 @@
 .empty {
   padding: 48px 24px;
   text-align: center;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
   font-size: 14px;
   line-height: 20px;
 }
