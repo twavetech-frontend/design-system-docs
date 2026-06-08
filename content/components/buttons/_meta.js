@@ -1,0 +1,9 @@
+export default {
+  "action-button": "Action Button",
+  "destructive-button": "Destructive Button",
+  "close-button": "Close Button",
+  "utility-button": "Utility Button",
+  "social-button": "Social Button",
+  "app-store-button": "App Store Button",
+  "group": "Button Group"
+}

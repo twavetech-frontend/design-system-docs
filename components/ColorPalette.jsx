@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from 'react';
 
 // --- Fetch and parse tokens.css directly (reliable across all environments) ---

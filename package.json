@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "fetch-tokens": "mkdir -p styles public && curl -s -o styles/tokens.css https://raw.githubusercontent.com/twavetech-frontend/design-system/main/web/tokens.css && curl -s -o styles/tokens-dark.css https://raw.githubusercontent.com/twavetech-frontend/design-system/main/web/tokens-dark.css && cp styles/tokens.css public/tokens.css && cp styles/tokens-dark.css public/tokens-dark.css && echo '✅ 토큰 동기화 완료'",
     "sync": "npm run fetch-tokens",
@@ -12,11 +12,14 @@
     "prebuild": "npm run fetch-tokens"
   },
   "dependencies": {
-    "next": "^14.0.0",
-    "nextra": "^2.13.0",
-    "nextra-theme-docs": "^2.13.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "^16.2.7",
+    "nextra": "^4.6.1",
+    "nextra-theme-docs": "^4.6.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-live": "^4.1.8"
+  },
+  "overrides": {
+    "zod": "4.1.13"
   }
 }

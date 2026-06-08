@@ -1,3 +1,4 @@
+'use client';
 import styles from './Chart.module.css';
 
 const cx = (...c) => c.filter(Boolean).join(' ');

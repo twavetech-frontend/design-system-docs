@@ -1,3 +1,4 @@
+'use client';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { useState } from 'react'
 

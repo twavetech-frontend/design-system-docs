@@ -1,0 +1,10 @@
+export default {
+  "colors": "Colors",
+  "gradients": "Gradients",
+  "typography": "Typography",
+  "spacing": "Spacing",
+  "radius": "Radius",
+  "grid": "Grid & Layout",
+  "effects": "Effects",
+  "icons": "Icons"
+}
