@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 function parseCSSText(text) {
   const vars = {};
-  const regex = /--([\w\u00C0-\u024F-]+)\s*:\s*([^;}\n]+)/g;
+  const regex = /--([\wÀ-ɏ-]+)\s*:\s*([^;}\n]+)/g;
   let m;
   while ((m = regex.exec(text)) !== null) {
     vars[`--${m[1]}`] = m[2].trim();
@@ -10,16 +10,87 @@ function parseCSSText(text) {
   return vars;
 }
 
-const FONT_WEIGHT_MAP = {
-  'Regular': 400,
-  'Regular italic': 400,
-  'Medium': 500,
-  'Medium italic': 500,
-  'Semibold': 600,
-  'Semibold italic': 600,
-  'Bold': 700,
-  'Bold italic': 700,
+// Numeric font-weight per variant name. Driven by the token *name* (not its
+// value) so that removed/renamed variants — e.g. italics — never render.
+const WEIGHT_NUMERIC = {
+  regular: 400,
+  regualr: 400, // tolerate typo present in source tokens
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
 };
+
+// Parse a composite font shorthand token like:
+//   "400 36px/44 Pretendard"  ->  { size: 36, lineHeight: 44, family: 'Pretendard' }
+//   "700 32px/40 'Carmen Sans'" -> { size: 32, lineHeight: 40, family: 'Carmen Sans' }
+function parseComposite(value) {
+  if (!value) return null;
+  const m = value.match(/^\d+\s+([\d.]+)px\s*\/\s*([\d.]+)\s+(.+)$/);
+  if (!m) return null;
+  return {
+    size: Number(m[1]),
+    lineHeight: Number(m[2]),
+    family: m[3].trim().replace(/^['"]|['"]$/g, ''),
+  };
+}
+
+// Two typefaces, matching Figma "Typography - UI" and "Typography - Graphic".
+const TYPEFACES = [
+  {
+    title: 'Typography · UI',
+    family: 'Pretendard',
+    fallback: "'Pretendard', sans-serif",
+    description: '제품 UI 전반에 사용하는 본문/제목 서체입니다.',
+    sample: '함께 성장하는 습관 소셜 핀테크. 아임인',
+    weights: ['regular', 'medium', 'semibold', 'bold'],
+    // semantic size token name -> css variable prefix (without weight suffix)
+    sizes: [
+      'headingMd', 'headingSm', 'headingXs',
+      'bodyLg', 'bodyMd', 'bodySm', 'bodyXs', 'bodyXxs',
+    ],
+    tokenFor: (size, weight) => [`--${size}-${weight}`],
+    previewWeight: (size) => (size.startsWith('heading') ? 'semibold' : 'regular'),
+  },
+  {
+    title: 'Typography · Graphic',
+    family: 'Carmen Sans',
+    fallback: "'Carmen Sans', sans-serif",
+    description: '브랜드 그래픽·키비주얼에 사용하는 디스플레이 서체입니다.',
+    sample: 'Grow the habit together. Imin',
+    weights: ['regular', 'bold', 'extrabold'],
+    sizes: [
+      'headingLg', 'headingMd', 'headingSm', 'headingXs',
+      'bodyMd', 'bodySm', 'bodyXs',
+    ],
+    // NOTE: 현재 published web/tokens.css 의 carmenSans-* 시맨틱 토큰은 값이 손상돼
+    // 있습니다(line-height·weight·오타 "regualr"). Figma 텍스트 스타일이 토큰으로
+    // 재추출되기 전까지, 그래픽 스케일은 Figma 기준 정상값으로 고정합니다.
+    // 토큰이 정상화되면 staticScale 을 제거하고 tokenFor 파싱으로 되돌리면 됩니다.
+    staticScale: {
+      headingLg: { size: 40, lineHeight: 48 },
+      headingMd: { size: 32, lineHeight: 40 },
+      headingSm: { size: 24, lineHeight: 32 },
+      headingXs: { size: 20, lineHeight: 28 },
+      bodyMd: { size: 16, lineHeight: 24 },
+      bodySm: { size: 14, lineHeight: 20 },
+      bodyXs: { size: 12, lineHeight: 18 },
+    },
+    tokenFor: (size, weight) => [`--carmenSans-${size}-${weight}`],
+    previewWeight: (size) => (size.startsWith('heading') ? 'bold' : 'regular'),
+  },
+];
+
+function sizeLabel(size) {
+  const m = size.match(/^(heading|body)([A-Za-z]+)$/);
+  if (!m) return size;
+  return `${m[1][0].toUpperCase()}${m[1].slice(1)} ${m[2].toLowerCase()}`;
+}
+
+function weightLabel(weight) {
+  if (weight === 'extrabold') return 'Extrabold';
+  return weight.charAt(0).toUpperCase() + weight.slice(1);
+}
 
 export function TypographyTable() {
   const [tokens, setTokens] = useState(null);
@@ -27,210 +98,178 @@ export function TypographyTable() {
   useEffect(() => {
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     fetch(`${basePath}/tokens.css`)
-      .then(r => r.text())
-      .then(text => setTokens(parseCSSText(text)))
+      .then((r) => r.text())
+      .then((text) => setTokens(parseCSSText(text)))
       .catch(() => {});
   }, []);
 
   if (!tokens) return <p>Loading typography tokens...</p>;
 
-  // Extract font sizes & line heights
-  const textSizes = [];
-  const displaySizes = [];
+  // Resolve a typeface's tokens into structured scale data.
+  const resolve = (tf) => {
+    const lookup = (size, weight) => {
+      for (const key of tf.tokenFor(size, weight)) {
+        if (tokens[key]) {
+          const parsed = parseComposite(tokens[key]);
+          if (parsed) return { cssVar: key, ...parsed };
+        }
+      }
+      return null;
+    };
 
-  const sizeKeys = Object.keys(tokens).filter(k => k.startsWith('--fontSize-'));
-  for (const key of sizeKeys) {
-    const name = key.replace('--fontSize-', '');
-    // Only include semantic tokens (display* or text*), skip primitives (numbers)
-    if (!name.startsWith('display') && !name.startsWith('text')) continue;
-    const rawSize = tokens[key];
-    const fontSize = String(rawSize).replace('px', '');
-    const lhKey = `--lineHeight-${name}`;
-    const rawLh = tokens[lhKey];
-    const lineHeight = rawLh ? String(rawLh).replace('px', '') : '—';
-
-    const entry = { name, fontSize, lineHeight, cssVar: key };
-    if (name.startsWith('text')) {
-      textSizes.push(entry);
-    } else {
-      displaySizes.push(entry);
+    // Graphic(Carmen)처럼 토큰이 손상된 경우엔 Figma 기준 고정 스케일을 사용한다.
+    if (tf.staticScale) {
+      const weights = tf.weights.map((w) => ({ name: w, numeric: WEIGHT_NUMERIC[w] }));
+      const scale = tf.sizes
+        .filter((size) => tf.staticScale[size])
+        .map((size) => {
+          const { size: fontSize, lineHeight } = tf.staticScale[size];
+          const base = { size: fontSize, lineHeight, cssVar: tf.tokenFor(size, 'regular')[0] };
+          const variants = {};
+          for (const w of tf.weights) variants[w] = base;
+          return { size, label: sizeLabel(size), base, variants };
+        });
+      return { weights, scale };
     }
-  }
 
-  // Sort by font size ascending
-  const sortBySize = (a, b) => Number(a.fontSize) - Number(b.fontSize);
-  textSizes.sort(sortBySize);
-  displaySizes.sort(sortBySize);
+    const weights = tf.weights
+      .filter((w) => tf.sizes.some((s) => lookup(s, w)))
+      .map((w) => ({ name: w, numeric: WEIGHT_NUMERIC[w] }));
 
-  // Font weights
-  const weightKeys = Object.keys(tokens).filter(k => k.startsWith('--fontWeight-'));
-  const weights = weightKeys.map(k => ({
-    name: k.replace('--fontWeight-', ''),
-    value: tokens[k],
-    numeric: FONT_WEIGHT_MAP[tokens[k]] || '—',
-    cssVar: k,
-  }));
+    const scale = tf.sizes
+      .map((size) => {
+        const variants = {};
+        for (const w of tf.weights) {
+          const r = lookup(size, w);
+          if (r) variants[w] = r;
+        }
+        const base = variants[tf.previewWeight(size)] || Object.values(variants)[0];
+        if (!base) return null;
+        return { size, label: sizeLabel(size), base, variants };
+      })
+      .filter(Boolean);
 
-  // Font families
-  const familyKeys = Object.keys(tokens).filter(k => k.startsWith('--fontFamily-'));
-  const families = familyKeys.map(k => ({
-    name: k.replace('--fontFamily-', ''),
-    value: tokens[k],
-    cssVar: k,
-  }));
+    return { weights, scale };
+  };
 
   return (
     <div>
-      {/* Font Family */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Font Family</h2>
-        <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-          {families.map(f => (
-            <div key={f.name} style={{
-              flex: '1 1 280px',
+      {TYPEFACES.map((tf) => {
+        const { weights, scale } = resolve(tf);
+        if (!scale.length) return null;
+        return (
+          <section key={tf.family} style={{ marginBottom: 64 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 4 }}>{tf.title}</h2>
+            <p style={{ fontSize: 14, color: '#717680', marginBottom: 24 }}>{tf.description}</p>
+
+            {/* Typeface specimen + weights */}
+            <div style={{
+              display: 'flex',
+              gap: 32,
+              flexWrap: 'wrap',
+              alignItems: 'flex-start',
               padding: 24,
               borderRadius: 12,
               border: '1px solid #e5e7eb',
               background: '#fafafa',
+              marginBottom: 32,
             }}>
-              <div style={{ fontSize: 32, fontWeight: 600, marginBottom: 8, fontFamily: f.value }}>
-                {f.value}
+              <div style={{ flex: '1 1 320px', minWidth: 280 }}>
+                <div style={{ fontSize: 13, color: '#717680', marginBottom: 8 }}>{tf.family}</div>
+                <div style={{ fontFamily: tf.fallback, fontSize: 72, fontWeight: 400, lineHeight: 1, marginBottom: 16 }}>
+                  Ag
+                </div>
+                <div style={{ fontFamily: tf.fallback, fontSize: 20, lineHeight: 1.5, color: '#181d27' }}>
+                  ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+                  abcdefghijklmnopqrstuvwxyz<br />
+                  0123456789 !@#$%^&amp;*()
+                </div>
               </div>
-              <div style={{ fontSize: 13, color: '#717680' }}>
-                <code style={{ background: '#f0f0f0', padding: '2px 6px', borderRadius: 4 }}>
-                  var({f.cssVar})
-                </code>
-              </div>
-              <div style={{ fontSize: 12, color: '#a0a0a0', marginTop: 4 }}>
-                {f.name === 'fontFamilyDisplay' ? 'Display' : 'Body'}
+              <div style={{ flex: '0 0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
+                {weights.map((w) => (
+                  <div key={w.name} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                    <div style={{ fontFamily: tf.fallback, fontSize: 28, fontWeight: w.numeric, width: 48 }}>
+                      Aa
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: '#181d27' }}>{weightLabel(w.name)}</div>
+                      <div style={{ fontSize: 12, color: '#a4a7ae' }}>Font weight: {w.numeric}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Font Weight */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Font Weight</h2>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
-          <thead>
-            <tr style={{ borderBottom: '2px solid #e5e7eb', textAlign: 'left' }}>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Name</th>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Value</th>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Numeric</th>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Preview</th>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>CSS Variable</th>
-            </tr>
-          </thead>
-          <tbody>
-            {weights.map(w => (
-              <tr key={w.name} style={{ borderBottom: '1px solid #f0f0f0' }}>
-                <td style={{ padding: '12px' }}>{w.name}</td>
-                <td style={{ padding: '12px' }}>{w.value}</td>
-                <td style={{ padding: '12px' }}>{w.numeric}</td>
-                <td style={{ padding: '12px', fontWeight: w.numeric, fontFamily: 'Pretendard', fontSize: 16, fontStyle: w.value.includes('italic') ? 'italic' : 'normal' }}>
-                  함께 성장하는 습관 소셜 핀테크. 아임인
-                </td>
-                <td style={{ padding: '12px' }}>
-                  <code style={{ background: '#f0f0f0', padding: '2px 6px', borderRadius: 4, fontSize: 12 }}>
-                    {w.cssVar}
-                  </code>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
+            {/* Type scale */}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {scale.map((row) => (
+                <div
+                  key={row.size}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'baseline',
+                    gap: 24,
+                    padding: '20px 0',
+                    borderBottom: '1px solid #f0f0f0',
+                  }}
+                >
+                  <div style={{ minWidth: 150, flexShrink: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: '#181d27' }}>{row.label}</div>
+                    <div style={{ fontSize: 12, color: '#a4a7ae', marginTop: 2 }}>
+                      {row.base.size}px / {row.base.lineHeight}px
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      flex: 1,
+                      fontFamily: tf.fallback,
+                      fontSize: row.base.size,
+                      lineHeight: `${row.base.lineHeight}px`,
+                      fontWeight: WEIGHT_NUMERIC[tf.previewWeight(row.size)],
+                      color: '#181d27',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {tf.sample}
+                  </div>
+                </div>
+              ))}
+            </div>
 
-      {/* Display Sizes */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Display</h2>
-        <p style={{ fontSize: 14, color: '#717680', marginBottom: 20 }}>
-          큰 제목, 히어로 텍스트, 숫자 강조 등에 사용합니다.
-        </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-          {[...displaySizes].reverse().map(s => (
-            <TypeRow key={s.name} entry={s} />
-          ))}
-        </div>
-      </section>
-
-      {/* Text Sizes */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Text</h2>
-        <p style={{ fontSize: 14, color: '#717680', marginBottom: 20 }}>
-          본문, 캡션, 라벨 등 일반 텍스트에 사용합니다.
-        </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-          {[...textSizes].reverse().map(s => (
-            <TypeRow key={s.name} entry={s} />
-          ))}
-        </div>
-      </section>
-
-      {/* Scale Overview */}
-      <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Type Scale Overview</h2>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
-          <thead>
-            <tr style={{ borderBottom: '2px solid #e5e7eb', textAlign: 'left' }}>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Token</th>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Font Size</th>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Line Height</th>
-              <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>CSS Variable</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[...displaySizes].reverse().concat([...textSizes].reverse()).map(s => (
-              <tr key={s.name} style={{ borderBottom: '1px solid #f0f0f0' }}>
-                <td style={{ padding: '10px 12px', fontWeight: 500 }}>{s.name}</td>
-                <td style={{ padding: '10px 12px' }}>{s.fontSize}px</td>
-                <td style={{ padding: '10px 12px' }}>{s.lineHeight}px</td>
-                <td style={{ padding: '10px 12px' }}>
-                  <code style={{ background: '#f0f0f0', padding: '2px 6px', borderRadius: 4, fontSize: 12 }}>
-                    {s.cssVar}
-                  </code>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-    </div>
-  );
-}
-
-function TypeRow({ entry }) {
-  const { name, fontSize, lineHeight } = entry;
-  const size = Number(fontSize);
-
-  return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'baseline',
-      gap: 24,
-      padding: '20px 0',
-      borderBottom: '1px solid #f0f0f0',
-    }}>
-      <div style={{ minWidth: 140, flexShrink: 0 }}>
-        <div style={{ fontSize: 13, fontWeight: 600, color: '#181d27' }}>{name}</div>
-        <div style={{ fontSize: 12, color: '#a4a7ae', marginTop: 2 }}>
-          {fontSize}px / {lineHeight}px
-        </div>
-      </div>
-      <div style={{
-        flex: 1,
-        fontFamily: 'Pretendard, sans-serif',
-        fontSize: size,
-        lineHeight: `${lineHeight}px`,
-        fontWeight: size >= 24 ? 700 : 400,
-        color: '#181d27',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-      }}>
-        함께 성장하는 습관 소셜 핀테크. 아임인
-      </div>
+            {/* Token reference table */}
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14, marginTop: 24 }}>
+              <thead>
+                <tr style={{ borderBottom: '2px solid #e5e7eb', textAlign: 'left' }}>
+                  <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Style</th>
+                  <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Size</th>
+                  <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Line height</th>
+                  <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>Weights</th>
+                  <th style={{ padding: '10px 12px', color: '#717680', fontWeight: 500 }}>CSS Variable</th>
+                </tr>
+              </thead>
+              <tbody>
+                {scale.map((row) => (
+                  <tr key={row.size} style={{ borderBottom: '1px solid #f0f0f0' }}>
+                    <td style={{ padding: '10px 12px', fontWeight: 500 }}>{row.label}</td>
+                    <td style={{ padding: '10px 12px' }}>{row.base.size}px</td>
+                    <td style={{ padding: '10px 12px' }}>{row.base.lineHeight}px</td>
+                    <td style={{ padding: '10px 12px' }}>
+                      {Object.keys(row.variants).map((w) => `${WEIGHT_NUMERIC[w]}`).join(' / ')}
+                    </td>
+                    <td style={{ padding: '10px 12px' }}>
+                      <code style={{ background: '#f0f0f0', padding: '2px 6px', borderRadius: 4, fontSize: 12 }}>
+                        {row.base.cssVar.replace(/-(regular|regualr|medium|semibold|bold|extrabold)$/, '-{weight}')}
+                      </code>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        );
+      })}
     </div>
   );
 }

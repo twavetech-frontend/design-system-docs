@@ -2,10 +2,13 @@ import { TypographyTable } from '../../components/TypographyTable'
 
 # Typography
 
-아임인의 타이포그래피 시스템은 **Pretendard** 폰트를 기반으로 하며,
-Display(24\~72px)와 Text(12\~20px) 두 가지 스케일로 구성됩니다.
+아임인의 타이포그래피는 두 가지 서체로 구성됩니다.
 
-Figma Token Studio에서 정의한 Font Size, Line Height, Font Weight, Font Family 토큰이
+- **UI — Pretendard** : 제품 UI 전반의 본문·제목에 사용합니다. Regular·Medium·Semibold·Bold 4가지 굵기를 지원합니다.
+- **Graphic — Carmen Sans** : 브랜드 그래픽·키비주얼에 사용하는 디스플레이 서체입니다. Regular·Bold·Extrabold 굵기를 지원합니다.
+
+각 서체는 **Heading**(제목)과 **Body**(본문) 스케일로 나뉘며,
+Font Size · Line Height · Font Weight 변수를 묶은 텍스트 스타일 토큰이
 CSS 변수로 자동 빌드됩니다.
 
 <TypographyTable />
