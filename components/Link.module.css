@@ -49,7 +49,7 @@
 
 /* --- Color: brand (Link color) --- */
 .color-brand {
-  color: var(--colors-text-textBrandSecondary-700, #5200b0);
+  color: var(--colors-text-textBrandSecondary, #9b55ff);
 }
 .color-brand:hover,
 .color-brand.force-hover {
@@ -75,7 +75,7 @@
 
 /* --- Color: destructive (Link/destructive) — always underlined --- */
 .color-destructive {
-  color: var(--colors-text-textErrorPrimary-600, #d92d20);
+  color: var(--colors-text-textErrorPrimary, #d92d20);
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }

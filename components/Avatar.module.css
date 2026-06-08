@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
   user-select: none;
 }
 
@@ -39,7 +39,7 @@
   justify-content: center;
   width: 60%;
   height: 60%;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
 }
 .placeholder svg {
   width: 100%;
@@ -170,13 +170,13 @@
   border-radius: 9999px;
   background: var(--colors-background-bgPrimary, #ffffff);
   border: 1px dashed var(--colors-border-borderPrimary, #d2d6db);
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
   padding: 0;
 }
 .add-button:hover {
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   background: var(--colors-background-bgPrimaryHover, #fafafa);
 }
 
@@ -211,7 +211,7 @@
 
 .label-name {
   font-weight: 600;
-  color: var(--colors-text-textPrimary-900, #181d27);
+  color: var(--colors-text-textPrimary, #2c3744);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -219,7 +219,7 @@
 
 .label-email {
   font-weight: 400;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

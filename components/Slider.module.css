@@ -89,7 +89,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   white-space: nowrap;
   pointer-events: none;
 }
@@ -108,7 +108,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   white-space: nowrap;
   box-shadow: var(--shadows-shadowSm, 0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1));
   pointer-events: none;
@@ -162,13 +162,13 @@
 }
 
 [data-theme='dark'] .bottomLabel {
-  color: var(--colors-text-textSecondary-700, #cecfd2);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 [data-theme='dark'] .floatingLabel {
   background: var(--colors-background-bgSecondary, #13161b);
   border-color: var(--colors-border-borderPrimary, #373a41);
-  color: var(--colors-text-textSecondary-700, #cecfd2);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 [data-theme='dark'] .tooltip {

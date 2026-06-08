@@ -23,12 +23,12 @@
 .label {
   font-size: 14px;
   font-weight: 500;
-  color: var(--colors-text-textSecondary-700, #344054);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 .description {
   font-size: 14px;
-  color: var(--colors-text-textTertiary-600, #475467);
+  color: var(--colors-text-textTertiary, #b1b6be);
 }
 
 /* ===========================
@@ -79,7 +79,7 @@
 }
 
 .checked .icon {
-  color: var(--colors-foreground-fgWhite, #fff);
+  color: var(--colors-text-textWhite, #ffffff);
 }
 
 /* Radio checked: white bg with brand dot */
@@ -93,7 +93,7 @@
    =========================== */
 .radioDot {
   border-radius: 50%;
-  background: var(--colors-foreground-fgWhite, #fff);
+  background: var(--colors-text-textWhite, #ffffff);
 }
 
 .size-sm .radioDot {
@@ -174,9 +174,9 @@
 }
 
 .disabled.checked .icon {
-  color: var(--colors-foreground-fgQuaternary-400, #98a2b3);
+  color: var(--colors-foreground-fgQuaternary, #f9fafb);
 }
 
 .disabled.checked .radioDot {
-  background: var(--colors-foreground-fgQuaternary-400, #98a2b3);
+  background: var(--colors-foreground-fgQuaternary, #f9fafb);
 }

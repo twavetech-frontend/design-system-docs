@@ -25,7 +25,7 @@
   bottom: 4px;
   left: 0;
   background: var(--colors-foreground-fgLight, #ffffff);
-  border: 0.5px solid var(--colors-foreground-fgQuaternary-400, #f9fafb);
+  border: 0.5px solid var(--colors-foreground-fgQuaternary, #f9fafb);
   border-radius: 6px;
   box-shadow: 0 4px 6px 0 rgba(10, 13, 18, 0.08);
   pointer-events: none;
@@ -52,7 +52,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: color 0.15s;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
   white-space: nowrap;
 }
 
@@ -69,13 +69,13 @@
 }
 
 .segment:hover:not(.current) {
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 .segment.current {
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   background: var(--colors-foreground-fgLight, #ffffff);
-  border: 0.5px solid var(--colors-foreground-fgQuaternary-400, #f9fafb);
+  border: 0.5px solid var(--colors-foreground-fgQuaternary, #f9fafb);
   box-shadow: 0 4px 6px 0 rgba(10, 13, 18, 0.08);
 }
 

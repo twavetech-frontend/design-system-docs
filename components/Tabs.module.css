@@ -36,7 +36,7 @@
   font-family: inherit;
   transition: all 0.15s;
   position: relative;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   overflow: hidden;
 }
 
@@ -84,14 +84,14 @@
    =========================== */
 .type-button-brand .tab {
   border-radius: 24px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .type-button-brand .tab:hover {
   background: var(--colors-background-bgPrimaryHover, #fafafa);
 }
 .type-button-brand .tab.current {
   background: var(--colors-background-bgBrandSecondary, #e6d4ff);
-  color: var(--colors-text-textBrandSecondary-700, #5200b0);
+  color: var(--colors-text-textBrandSecondary, #9b55ff);
 }
 .type-button-brand .tab.current .tab-badge {
   background: var(--componentColors-utility-brand-utilityBrand50, #f4ecff);
@@ -104,14 +104,14 @@
    =========================== */
 .type-button-gray .tab {
   border-radius: 24px;
-  color: var(--colors-text-textTertiary-600, #b1b6be);
+  color: var(--colors-text-textTertiary, #b1b6be);
 }
 .type-button-gray .tab:hover {
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .type-button-gray .tab.current {
   background: var(--colors-background-bgActive, #e6e8ea);
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 /* ===========================
@@ -127,7 +127,7 @@
 }
 .type-button-border .tab {
   border-radius: 10px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .type-button-border .tab:hover {
   background: rgba(0, 0, 0, 0.03);
@@ -135,7 +135,7 @@
 .type-button-border .tab.current {
   background: var(--colors-background-bgPrimaryAlt, #ffffff);
   box-shadow: var(--shadows-shadowSm, 0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1));
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 /* ===========================
@@ -154,7 +154,7 @@
   padding: 4px 0;
   border-bottom: 1px solid transparent;
   margin-bottom: -1px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .size-md.type-underline .tab {
   height: 36px;
@@ -165,8 +165,8 @@
   border-bottom-color: var(--colors-border-borderPrimary, #d2d6db);
 }
 .type-underline .tab.current {
-  color: var(--colors-text-textSecondary-700, #687079);
-  border-bottom-color: var(--colors-foreground-fgPrimary-900, #2c3744);
+  color: var(--colors-text-textSecondary, #687079);
+  border-bottom-color: var(--colors-foreground-fgPrimary, #2c3744);
 }
 .type-underline .tab.current .tab-badge {
   background: var(--componentColors-utility-brand-utilityBrand50, #f4ecff);
@@ -188,16 +188,16 @@
 }
 .type-button-minimal .tab {
   border-radius: 10px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .type-button-minimal .tab:hover {
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .type-button-minimal .tab.current {
   background: var(--colors-background-bgPrimaryAlt, #ffffff);
   border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
   box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 /* ===========================
@@ -235,18 +235,18 @@
   border-left: 2px solid transparent;
   padding: 2px 12px;
   height: 24px;
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .size-md.vertical.type-line .tab {
   height: 32px;
 }
 .vertical.type-line .tab:hover {
-  color: var(--colors-text-textSecondary-700, #687079);
+  color: var(--colors-text-textSecondary, #687079);
   border-left-color: var(--colors-border-borderPrimary, #d2d6db);
 }
 .vertical.type-line .tab.current {
-  color: var(--colors-text-textBrandSecondary-700, #5200b0);
-  border-left-color: var(--colors-foreground-fgSecondary-700, #687079);
+  color: var(--colors-text-textBrandSecondary, #9b55ff);
+  border-left-color: var(--colors-foreground-fgSecondary, #687079);
 }
 .vertical.type-line .tab.current .tab-badge {
   background: var(--componentColors-utility-brand-utilityBrand50, #f4ecff);
