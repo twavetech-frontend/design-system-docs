@@ -108,11 +108,29 @@ export function TypographyTable() {
 
   // Resolve a typeface's tokens into structured scale data.
   const resolve = (tf) => {
+    // The primitive --fontSize-*/--lineHeight-* tokens are the reliable source
+    // for size & line-height; some composite shorthand tokens are mis-generated
+    // upstream (e.g. bodyXxs/bodyXs ship the wrong px in the shorthand). Prefer
+    // primitives when present so the scale stays token-driven yet correct.
+    const num = (v) => (v == null ? undefined : Number(String(v).replace('px', '')));
+    const primitive = (size) => ({
+      size: num(tokens[`--fontSize-${size}`]),
+      lineHeight: num(tokens[`--lineHeight-${size}`]),
+    });
+
     const lookup = (size, weight) => {
       for (const key of tf.tokenFor(size, weight)) {
         if (tokens[key]) {
           const parsed = parseComposite(tokens[key]);
-          if (parsed) return { cssVar: key, ...parsed };
+          if (parsed) {
+            const p = primitive(size);
+            return {
+              cssVar: key,
+              ...parsed,
+              ...(p.size != null && { size: p.size }),
+              ...(p.lineHeight != null && { lineHeight: p.lineHeight }),
+            };
+          }
         }
       }
       return null;
