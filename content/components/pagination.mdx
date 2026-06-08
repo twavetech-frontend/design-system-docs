@@ -1,11 +1,6 @@
-import { useState } from 'react'
 import { Pagination } from '../../components/Pagination'
+import { PaginationDemo } from '../../components/PaginationDemo'
 import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
-
-export function PaginationDemo({ initial, ...props }) {
-  const [page, setPage] = useState(initial ?? 1)
-  return <Pagination {...props} currentPage={page} onPageChange={setPage} />
-}
 
 # Pagination
 

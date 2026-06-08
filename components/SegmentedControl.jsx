@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './SegmentedControl.module.css';
 

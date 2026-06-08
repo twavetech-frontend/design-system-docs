@@ -1,5 +1,7 @@
+'use client';
 import React, { useState } from 'react';
 import styles from './TabBar.module.css';
+import { defaultTabBarItems } from './tabBarItems';
 
 /* ── Tab icons — vector paths exported from Figma `Tab bar` ──
    stroke = currentColor (탭의 활성/비활성 색을 따름),
@@ -114,14 +116,6 @@ const ICONS = {
   lounge: LoungeIcon,
   my: MyIcon,
 };
-
-export const defaultTabBarItems = [
-  { key: 'home', label: '홈', icon: 'home' },
-  { key: 'community', label: '커뮤니티', icon: 'community' },
-  { key: 'stage', label: '스테이지', icon: 'stage' },
-  { key: 'lounge', label: '라운지', icon: 'lounge' },
-  { key: 'my', label: '나', icon: 'my' },
-];
 
 export function TabBar({
   items = defaultTabBarItems,

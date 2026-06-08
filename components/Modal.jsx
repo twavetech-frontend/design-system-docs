@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import styles from './Modal.module.css';
 
@@ -70,6 +71,14 @@ export function Modal({
     actions === 'vertical' && styles['actions-vertical'],
   ].filter(Boolean).join(' ');
 
+  // Stacked / centered modals use equal-width "fill container" buttons,
+  // while horizontal modals keep right-aligned auto-width buttons.
+  const fillButtons = (type === 'stacked' || type === 'centered') && actions !== 'vertical';
+  const actionButtonsClasses = [
+    styles['action-buttons'],
+    fillButtons && styles['action-buttons-fill'],
+  ].filter(Boolean).join(' ');
+
   const featuredIcon = icon || DEFAULT_ICONS[variant] || DEFAULT_ICONS.default;
   const isDestructive = variant === 'destructive';
 
@@ -121,7 +130,7 @@ export function Modal({
               </div>
             )}
 
-            <div className={styles['action-buttons']}>
+            <div className={actionButtonsClasses}>
               <button type="button" className={styles['btn-secondary']} onClick={onCancel}>
                 {cancelText}
               </button>

@@ -1,0 +1,5 @@
+export default {
+  "index": "환영합니다",
+  "foundation": "Foundation",
+  "components": "컴포넌트"
+}
