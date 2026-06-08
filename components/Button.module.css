@@ -15,7 +15,7 @@
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.4;
+  opacity: 0.5; /* Figma diabledOpacity token = 50% (Primary는 아래에서 20%로 override) */
 }
 
 /* --- Sizes --- */
@@ -56,6 +56,17 @@
 
 /* --- Action Button Variants --- */
 
+/* 공통 focus ring (Figma focusRingShadowXsSkeuomorphic): 흰색 갭 + 브랜드 링 */
+.variant-primary.force-focused,
+.variant-secondary.force-focused,
+.variant-tertiary.force-focused,
+.variant-outline.force-focused,
+.variant-ghost.force-focused {
+  box-shadow:
+    0 0 0 2px var(--colors-background-bgPrimary, #fcfcfd),
+    0 0 0 4px var(--colors-effects-focusRings-focusRing, #7700ff);
+}
+
 /* Primary — solid brand (#7700ff) + 가로 padding 2px 줄임 */
 .variant-primary.size-md { padding: 8px 12px; }
 .variant-primary.size-lg { padding: 10px 14px; }
@@ -71,13 +82,15 @@
 }
 .variant-primary.force-focused {
   background-color: var(--colors-background-bgBrandSolidHover, #6a00e0);
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
+}
+.variant-primary:disabled {
+  opacity: 0.2; /* Figma: Primary disabled = 20% (solid 버튼은 더 흐리게) */
 }
 
-/* Secondary — 연보라(#e6d4ff) + 브랜드 텍스트(#6a00e0) */
+/* Secondary — 연보라(#e6d4ff) + 브랜드 텍스트(#b685ff) */
 .variant-secondary {
   background-color: var(--colors-background-bgBrandSecondary, #e6d4ff);
-  color: var(--colors-text-textBrandTertiary-600, #6a00e0);
+  color: var(--colors-text-textBrandTertiaryAlt, #b685ff);
 }
 .variant-secondary:hover:not(:disabled), .variant-secondary.force-hover {
   background-color: var(--colors-background-bgBrandSecondaryHover, #cfaeff);
@@ -87,39 +100,47 @@
 }
 .variant-secondary.force-focused {
   background-color: var(--colors-background-bgBrandSecondaryHover, #cfaeff);
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
 }
 
 /* Tertiary — 연한 알파(rgba(0,0,0,0.03)) + 회색 텍스트(#687079) */
 .variant-tertiary {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: var(--componentColors-alpha-alphaBlack3, rgba(0, 0, 0, 0.03));
   color: var(--colors-grayNeutral-600, #687079);
 }
 .variant-tertiary:hover:not(:disabled), .variant-tertiary.force-hover {
-  background-color: var(--colors-grayNeutral-200, #e6e8ea);
+  background-color: var(--componentColors-alpha-alphaBlack10, rgba(0, 0, 0, 0.1));
 }
 .variant-tertiary:active:not(:disabled), .variant-tertiary.force-active {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: var(--componentColors-alpha-alphaBlack3, rgba(0, 0, 0, 0.03));
 }
 .variant-tertiary.force-focused {
-  background-color: var(--colors-grayNeutral-200, #e6e8ea);
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
+  background-color: var(--componentColors-alpha-alphaBlack3, rgba(0, 0, 0, 0.03));
+}
+.variant-tertiary:disabled {
+  background-color: var(--componentColors-alpha-alphaBlack5, rgba(0, 0, 0, 0.05));
 }
 
-/* Outline — 연회색 bg(#f3f4f6) + 회색 텍스트/테두리 */
+/* Outline — 흰색 bg(#fcfcfd) + 회색 텍스트/테두리 */
 .variant-outline {
-  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+  background-color: var(--colors-background-bgPrimary, #fcfcfd);
   color: var(--colors-grayNeutral-600, #687079);
-  border: 1px solid var(--colors-grayNeutral-200, #e6e8ea);
+  border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
 }
 .variant-outline:hover:not(:disabled), .variant-outline.force-hover {
-  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
+  color: var(--colors-text-textSecondaryHover, #596069);
 }
 .variant-outline:active:not(:disabled), .variant-outline.force-active {
-  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
+  color: var(--colors-text-textSecondaryHover, #596069);
 }
 .variant-outline.force-focused {
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
+  background-color: var(--colors-background-bgPrimaryHover, #f9fafb);
+  border-color: transparent;
+}
+.variant-outline:disabled {
+  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
+  color: var(--colors-text-textSecondaryHover, #596069);
 }
 
 /* Ghost — 배경 없음, 회색 텍스트(#687079), hover 시 연회색 배경 */
@@ -128,14 +149,15 @@
   color: var(--colors-grayNeutral-600, #687079);
 }
 .variant-ghost:hover:not(:disabled), .variant-ghost.force-hover {
-  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
+  color: var(--colors-text-textSecondaryHover, #596069);
 }
 .variant-ghost:active:not(:disabled), .variant-ghost.force-active {
-  background-color: var(--colors-grayNeutral-100, #f3f4f6);
+  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
+  color: var(--colors-text-textSecondaryHover, #596069);
 }
 .variant-ghost.force-focused {
-  background-color: transparent;
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
+  background-color: var(--colors-background-bgPrimary, #fcfcfd);
 }
 
 /* --- Destructive Button Variants --- */

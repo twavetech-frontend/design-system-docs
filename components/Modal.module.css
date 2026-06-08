@@ -39,7 +39,7 @@
   align-items: center;
   width: 100%;
   max-width: 544px;
-  background: var(--colors-background-bgQuaternary, #ffffff);
+  background: var(--colors-background-bgPrimary, #fcfcfd);
   border-radius: 16px;
   box-shadow:
     0 20px 24px -4px rgba(10, 13, 18, 0.08),
@@ -105,17 +105,17 @@
 
 .modal.variant-default .featured-icon {
   background: var(--colors-background-bgSuccessSecondary, #dcfae6);
-  color: var(--colors-foreground-fgSuccessSecondary, #079455);
+  color: var(--componentColors-components-icons-featuredIcons-featuredIconLightFgSuccess, #079455);
 }
 
 .modal.variant-warning .featured-icon {
   background: var(--colors-background-bgWarningSecondary, #fef0c7);
-  color: var(--colors-foreground-fgWarningSecondary, #dc6803);
+  color: var(--componentColors-components-icons-featuredIcons-featuredIconLightFgWarning, #dc6803);
 }
 
 .modal.variant-destructive .featured-icon {
   background: var(--colors-background-bgErrorSecondary, #fee4e2);
-  color: var(--colors-foreground-fgErrorSecondary, #d92d20);
+  color: var(--componentColors-components-icons-featuredIcons-featuredIconLightFgError, #d92d20);
 }
 
 /* Header text */
@@ -132,7 +132,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  color: var(--colors-text-textPrimary-900, #181d27);
+  color: var(--colors-text-textPrimary, #2c3744);
 }
 
 .description {
@@ -140,7 +140,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: var(--colors-text-textTertiary-600, #535862);
+  color: var(--colors-text-textTertiary, #b1b6be);
 }
 
 /* Close button */
@@ -154,11 +154,11 @@
   align-items: center;
   justify-content: center;
   padding: 8px;
-  background: var(--colors-background-bgTertiary, #fcfcfd);
+  background: var(--colors-background-bgSecondary, #f3f4f6);
   border: none;
   border-radius: 14px;
   cursor: pointer;
-  color: var(--colors-foreground-fgQuaternary-400, #a4a7ae);
+  color: var(--colors-foreground-fgSecondary, #687079);
   transition: background 0.15s, color 0.15s;
 }
 
@@ -168,8 +168,8 @@
 }
 
 .close-button:hover {
-  background: var(--colors-background-bgPrimaryHover, #fafafa);
-  color: var(--colors-foreground-fgSecondary-700, #414651);
+  background: var(--colors-background-bgSecondaryHover, #e6e8ea);
+  color: var(--colors-foreground-fgSecondaryHover, #596069);
 }
 
 /* ===========================
@@ -207,6 +207,12 @@
   gap: 12px;
 }
 
+/* Stacked / centered modals use full-width "fill container" buttons */
+.action-buttons-fill button {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
 .actions-vertical .action-buttons {
   flex-direction: column;
   align-items: stretch;
@@ -237,35 +243,35 @@
 }
 
 .btn-secondary {
-  background: var(--colors-background-bgPrimary, #ffffff);
-  color: var(--colors-text-textSecondary-700, #414651);
-  border: 1px solid var(--colors-border-borderSecondary, #e9eaeb);
+  background: var(--colors-background-bgPrimary, #fcfcfd);
+  color: var(--colors-text-textSecondary, #687079);
+  border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
   box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
 }
 .btn-secondary:hover {
-  background: var(--colors-background-bgPrimaryHover, #fafafa);
+  background: var(--colors-background-bgPrimaryHover, #f9fafb);
 }
 
 .btn-primary {
-  background: var(--colors-background-bgBrandSolid, #6a00e0);
+  background: var(--colors-background-bgBrandSolid, #7700ff);
   color: var(--colors-text-textWhite, #ffffff);
-  border: 1px solid var(--colors-background-bgBrandSolid, #6a00e0);
+  border: 1px solid var(--colors-background-bgBrandSolid, #7700ff);
   box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
 }
 .btn-primary:hover {
-  background: var(--colors-background-bgBrandSolidHover, #5200b0);
-  border-color: var(--colors-background-bgBrandSolidHover, #5200b0);
+  background: var(--colors-background-bgBrandSolidHover, #6a00e0);
+  border-color: var(--colors-background-bgBrandSolidHover, #6a00e0);
 }
 
 .btn-destructive {
-  background: var(--colors-background-bgErrorSolid, #d92d20);
+  background: var(--colors-background-bgErrorSolid, #f04438);
   color: var(--colors-text-textWhite, #ffffff);
-  border: 1px solid var(--colors-background-bgErrorSolid, #d92d20);
+  border: 1px solid var(--colors-background-bgErrorSolid, #f04438);
   box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
 }
 .btn-destructive:hover {
-  background: var(--colors-background-bgErrorSolidHover, #b42318);
-  border-color: var(--colors-background-bgErrorSolidHover, #b42318);
+  background: var(--colors-background-bgErrorSolidHover, #d92d20);
+  border-color: var(--colors-background-bgErrorSolidHover, #d92d20);
 }
 
 /* ===========================
@@ -284,7 +290,7 @@
   height: 16px;
   border-radius: 4px;
   border: 1px solid var(--colors-border-borderPrimary, #d2d6db);
-  background: var(--colors-background-bgPrimary, #ffffff);
+  background: var(--colors-background-bgPrimary, #fcfcfd);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -293,8 +299,8 @@
 }
 
 .checkbox-input.checkbox-checked {
-  background: var(--colors-background-bgBrandSolid, #6a00e0);
-  border-color: var(--colors-background-bgBrandSolid, #6a00e0);
+  background: var(--colors-background-bgBrandSolid, #7700ff);
+  border-color: var(--colors-background-bgBrandSolid, #7700ff);
 }
 
 .checkbox-input svg {
@@ -306,7 +312,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  color: var(--colors-text-textSecondary-700, #414651);
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 /* ===========================
