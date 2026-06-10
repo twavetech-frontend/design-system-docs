@@ -77,6 +77,14 @@ const SHADOW_DEFS = [
     ],
   },
   {
+    name: 'shadow-basic',
+    desc: '컨텐츠 기본 그림자 타입',
+    layers: [
+      { colorKey: 'shadowBasicInner', x: 0, y: 0, blur: 0, spread: 1, inset: true },
+      { colorKey: 'shadowBasicDrop', x: 0, y: 10, blur: 24, spread: 0 },
+    ],
+  },
+  {
     name: 'shadow-field',
     desc: '인풋 필드용. 미세한 깊이감',
     layers: [
@@ -116,6 +124,8 @@ const SHADOW_COLORS = {
   shadow2xl02: '#0a0d120a',
   shadow3xl01: '#0a0d1224',
   shadow3xl02: '#0a0d120a',
+  shadowBasicInner: '#0a0d1214',
+  shadowBasicDrop: '#0a0d120a',
   fieldShadow: '#0000000a',
   fieldShadow2: '#0000000f',
 };
@@ -132,7 +142,7 @@ function hexToRgba(hex) {
 function buildBoxShadow(layers) {
   return layers.map(l => {
     const color = hexToRgba(SHADOW_COLORS[l.colorKey] || '#0a0d1214');
-    return `${l.x}px ${l.y}px ${l.blur}px ${l.spread}px ${color}`;
+    return `${l.inset ? 'inset ' : ''}${l.x}px ${l.y}px ${l.blur}px ${l.spread}px ${color}`;
   }).join(', ');
 }
 
@@ -155,7 +165,7 @@ export function EffectsTable() {
       <section style={{ marginBottom: 56 }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>Shadows</h2>
         <p style={{ fontSize: 14, color: '#717680', marginBottom: 24 }}>
-          요소의 깊이감과 계층 구조를 표현합니다. xs에서 4xl까지 8단계와 인풋 필드용 shadow-field로 구성됩니다.
+          요소의 깊이감과 계층 구조를 표현합니다. xs에서 4xl까지 8단계, 컨텐츠 기본 그림자 shadow-basic, 인풋 필드용 shadow-field로 구성됩니다.
         </p>
         <div style={{
           display: 'grid',
@@ -203,14 +213,14 @@ export function EffectsTable() {
                 <td style={{ padding: '10px 12px' }}>
                   {s.layers.map((l, i) => (
                     <div key={i} style={{ fontSize: 12, color: '#535862' }}>
-                      {l.x} {l.y} {l.blur} {l.spread}
+                      {l.inset ? 'inset ' : ''}{l.x} {l.y} {l.blur} {l.spread}
                     </div>
                   ))}
                 </td>
                 <td style={{ padding: '10px 12px' }}>
                   {s.layers.map((l, i) => {
                     const colorVar = `--colors-effects-shadows-${l.colorKey}`;
-                    const color = tokens[colorVar] || '—';
+                    const color = tokens[colorVar] || hexToRgba(SHADOW_COLORS[l.colorKey]) || '—';
                     return (
                       <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 2 }}>
                         <span style={{
