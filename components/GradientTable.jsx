@@ -11,10 +11,10 @@ function parseCSSText(text) {
   return vars;
 }
 
+// 2026-06 개편: Linear(데코레이티브) 그라데이션 토큰은 삭제되어 Gray/Brand 만 남음.
 const GROUPS = [
   { label: 'Gray', test: (k) => k.startsWith('--gradient-gray') },
   { label: 'Brand', test: (k) => k.startsWith('--gradient-brand') },
-  { label: 'Linear', test: (k) => k.startsWith('--gradient-linear') },
 ];
 
 function extractNumber(name) {
@@ -155,7 +155,7 @@ export function GradientTable() {
     <div>
       <input
         type="text"
-        placeholder="Search gradients... (e.g. brand, linear-30)"
+        placeholder="Search gradients... (e.g. brand, gray-800)"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         style={{

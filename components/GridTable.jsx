@@ -11,30 +11,31 @@ function parseCSSText(text) {
   return vars;
 }
 
+// Figma "Spacing, radius & grids" 페이지의 layout grid 정의(2026-06 개편)와 동일.
 const GRID_SPECS = [
   {
     name: 'Desktop',
-    width: 1200,
+    width: 1280,
     columns: 12,
-    gutter: 24,
+    gutter: 32,
     margin: 32,
-    color: '#7f56d9',
+    color: '#7700ff',
   },
   {
     name: 'Tablet',
     width: 768,
-    columns: 8,
-    gutter: 16,
-    margin: 24,
-    color: '#9e77ed',
+    columns: 6,
+    gutter: 32,
+    margin: 32,
+    color: '#9b55ff',
   },
   {
     name: 'Phone',
     width: 375,
-    columns: 6,
-    gutter: 12,
+    columns: 4,
+    gutter: 16,
     margin: 16,
-    color: '#b692f6',
+    color: '#b685ff',
   },
 ];
 

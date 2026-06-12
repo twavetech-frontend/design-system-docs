@@ -22,34 +22,34 @@ const SHADOW_DEFS = [
     name: 'shadow-sm',
     desc: '약한 부상. 카드, 드롭다운 등',
     layers: [
-      { colorKey: 'shadowSm01', x: 0, y: 1, blur: 2, spread: 0 },
-      { colorKey: 'shadowSm02', x: 0, y: 1, blur: 3, spread: 0 },
+      { colorKey: 'shadowSm01', x: 0, y: 1, blur: 3, spread: 0 },
+      { colorKey: 'shadowSm02', x: 0, y: 1, blur: 2, spread: -1 },
     ],
   },
   {
     name: 'shadow-md',
     desc: '중간 부상. 팝오버, 호버 카드 등',
     layers: [
-      { colorKey: 'shadowMd01', x: 0, y: 2, blur: 4, spread: -2 },
-      { colorKey: 'shadowMd02', x: 0, y: 4, blur: 8, spread: -2 },
+      { colorKey: 'shadowMd01', x: 0, y: 4, blur: 6, spread: -1 },
+      { colorKey: 'shadowMd02', x: 0, y: 2, blur: 4, spread: -2 },
     ],
   },
   {
     name: 'shadow-lg',
     desc: '높은 부상. 모달 부분, 플로팅 카드 등',
     layers: [
-      { colorKey: 'shadowLg01', x: 0, y: 4, blur: 6, spread: -2 },
-      { colorKey: 'shadowLg02', x: 0, y: 12, blur: 16, spread: -4 },
-      { colorKey: 'shadowLg03', x: 0, y: -4, blur: 4, spread: -2 },
+      { colorKey: 'shadowLg01', x: 0, y: 12, blur: 16, spread: -4 },
+      { colorKey: 'shadowLg02', x: 0, y: 4, blur: 6, spread: -2 },
+      { colorKey: 'shadowLg03', x: 0, y: 2, blur: 2, spread: -1 },
     ],
   },
   {
     name: 'shadow-xl',
     desc: '강한 부상. 모달, 다이얼로그 등',
     layers: [
-      { colorKey: 'shadowXl01', x: 0, y: 8, blur: 8, spread: -4 },
-      { colorKey: 'shadowXl02', x: 0, y: 20, blur: 24, spread: -4 },
-      { colorKey: 'shadowXl03', x: 0, y: -4, blur: 4, spread: -2 },
+      { colorKey: 'shadowXl01', x: 0, y: 20, blur: 24, spread: -4 },
+      { colorKey: 'shadowXl02', x: 0, y: 8, blur: 8, spread: -4 },
+      { colorKey: 'shadowXl03', x: 0, y: 3, blur: 3, spread: -1.5 },
     ],
   },
   {
@@ -57,7 +57,7 @@ const SHADOW_DEFS = [
     desc: '매우 강한 부상. 시트, 토스트 등',
     layers: [
       { colorKey: 'shadow2xl01', x: 0, y: 24, blur: 48, spread: -12 },
-      { colorKey: 'shadow2xl02', x: 0, y: -4, blur: 4, spread: -2 },
+      { colorKey: 'shadow2xl02', x: 0, y: 4, blur: 4, spread: -2 },
     ],
   },
   {
@@ -65,7 +65,7 @@ const SHADOW_DEFS = [
     desc: '최대 부상. 풀스크린 모달 등',
     layers: [
       { colorKey: 'shadow3xl01', x: 0, y: 32, blur: 64, spread: -12 },
-      { colorKey: 'shadow3xl02', x: 0, y: -4, blur: 4, spread: -2 },
+      { colorKey: 'shadow3xl02', x: 0, y: 5, blur: 5, spread: -2.5 },
     ],
   },
   {
@@ -95,16 +95,23 @@ const SHADOW_DEFS = [
   },
 ];
 
+// Figma "Effect styles" 페이지(2026-06 개편)의 7종 구성과 동일.
+// shadow 필드가 있으면 해당 SHADOW_DEFS 의 그림자를 링과 함께 합성한다.
 const FOCUS_RING_DEFS = [
-  { name: 'focus-ring', desc: '기본 포커스 링', colorKey: 'focusRing', width: 4, offset: 1 },
-  { name: 'focus-ring-error', desc: '에러 포커스 링', colorKey: 'focusRingError', width: 4, offset: 1 },
+  { name: 'focus-ring', desc: '기본 포커스 링. 토글, 체크박스 등', colorKey: 'focusRing', width: 4, offset: 1 },
+  { name: 'focus-ring-error', desc: '에러 포커스 링. 파괴적 액션 등', colorKey: 'focusRingError', width: 4, offset: 1 },
+  { name: 'focus-ring-shadow-xs', desc: '포커스 링 + shadow-xs. 버튼, 탭 등', colorKey: 'focusRing', width: 4, offset: 1, shadow: 'shadow-xs' },
+  { name: 'focus-ring-shadow-sm', desc: '포커스 링 + shadow-sm', colorKey: 'focusRing', width: 4, offset: 1, shadow: 'shadow-sm' },
+  { name: 'focus-ring-error-shadow-xs', desc: '에러 포커스 링 + shadow-xs', colorKey: 'focusRingError', width: 4, offset: 1, shadow: 'shadow-xs' },
+  { name: 'focus-ring-shadow-xs-skeumorphic', desc: '포커스 링 + 미세한 이너 섀도', colorKey: 'focusRing', width: 4, offset: 1, shadow: 'shadow-xs' },
+  { name: 'focus-ring-error-shadow-xs-skeumorphic', desc: '에러 포커스 링 + 미세한 이너 섀도', colorKey: 'focusRingError', width: 4, offset: 1, shadow: 'shadow-xs' },
 ];
 
 const BLUR_DEFS = [
-  { name: 'backdrop-blur-sm', value: 4, desc: '미세한 블러' },
-  { name: 'backdrop-blur-md', value: 8, desc: '중간 블러' },
-  { name: 'backdrop-blur-lg', value: 16, desc: '강한 블러' },
-  { name: 'backdrop-blur-xl', value: 24, desc: '매우 강한 블러' },
+  { name: 'backdrop-blur-sm', value: 8, desc: '미세한 블러' },
+  { name: 'backdrop-blur-md', value: 16, desc: '중간 블러' },
+  { name: 'backdrop-blur-lg', value: 24, desc: '강한 블러' },
+  { name: 'backdrop-blur-xl', value: 40, desc: '매우 강한 블러' },
 ];
 
 // Light mode shadow colors from tokens.json (CSS vars resolve to transparent in some builds)
@@ -112,7 +119,7 @@ const SHADOW_COLORS = {
   shadowXs: '#0a0d120d',
   shadowSm01: '#0a0d121a',
   shadowSm02: '#0a0d121a',
-  shadowMd01: '#0a0d121a',
+  shadowMd01: '#0a0d1214',
   shadowMd02: '#0a0d120f',
   shadowLg01: '#0a0d1214',
   shadowLg02: '#0a0d1208',
@@ -255,12 +262,14 @@ export function EffectsTable() {
           {FOCUS_RING_DEFS.map(f => {
             const colorVar = `--colors-effects-focusRings-${f.colorKey}`;
             const color = tokens[colorVar] || '#9e77ed';
+            const shadowDef = f.shadow && SHADOW_DEFS.find(s => s.name === f.shadow);
+            const ringShadow = `0 0 0 ${f.offset}px #fff, 0 0 0 ${f.offset + f.width}px ${color}33`;
             return (
               <div key={f.name} style={{ textAlign: 'center' }}>
                 <div style={{
-                  width: 120, height: 48, background: '#fff', borderRadius: 8,
+                  width: 150, height: 48, background: '#fff', borderRadius: 8,
                   border: '1px solid #d5d7da',
-                  boxShadow: `0 0 0 ${f.offset}px #fff, 0 0 0 ${f.offset + f.width}px ${color}33`,
+                  boxShadow: shadowDef ? `${ringShadow}, ${buildBoxShadow(shadowDef.layers)}` : ringShadow,
                   outline: `2px solid ${color}`,
                   outlineOffset: f.offset,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',

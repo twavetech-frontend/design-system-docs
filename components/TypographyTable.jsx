@@ -46,9 +46,12 @@ const TYPEFACES = [
     sample: '함께 성장하는 습관 소셜 핀테크. 아임인',
     weights: ['regular', 'medium', 'semibold', 'bold'],
     // semantic size token name -> css variable prefix (without weight suffix)
+    // 2026-06 개편: Heading xl/lg/sm/xs + Body xl/md/sm/xs 8단계.
+    // (Heading md, Body lg, Body xxs 텍스트 스타일은 삭제됨 — primitive 토큰이
+    // 남아 있어도 노출하지 않는다.)
     sizes: [
-      'headingMd', 'headingSm', 'headingXs',
-      'bodyLg', 'bodyMd', 'bodySm', 'bodyXs', 'bodyXxs',
+      'headingXl', 'headingLg', 'headingSm', 'headingXs',
+      'bodyXl', 'bodyMd', 'bodySm', 'bodyXs',
     ],
     tokenFor: (size, weight) => [`--${size}-${weight}`],
     previewWeight: (size) => (size.startsWith('heading') ? 'semibold' : 'regular'),
@@ -60,19 +63,23 @@ const TYPEFACES = [
     description: '브랜드 그래픽·키비주얼에 사용하는 디스플레이 서체입니다.',
     sample: 'Grow the habit together. Imin',
     weights: ['regular', 'bold', 'extrabold'],
+    // 2026-06 개편: Graphic 스케일이 UI 와 동일한 8단계(Heading xl/lg/sm/xs +
+    // Body xl/md/sm/xs)·동일 수치로 정렬됨.
     sizes: [
-      'headingLg', 'headingMd', 'headingSm', 'headingXs',
-      'bodyMd', 'bodySm', 'bodyXs',
+      'headingXl', 'headingLg', 'headingSm', 'headingXs',
+      'bodyXl', 'bodyMd', 'bodySm', 'bodyXs',
     ],
     // NOTE: 현재 published web/tokens.css 의 carmenSans-* 시맨틱 토큰은 값이 손상돼
     // 있습니다(line-height·weight·오타 "regualr"). Figma 텍스트 스타일이 토큰으로
-    // 재추출되기 전까지, 그래픽 스케일은 Figma 기준 정상값으로 고정합니다.
-    // 토큰이 정상화되면 staticScale 을 제거하고 tokenFor 파싱으로 되돌리면 됩니다.
+    // 재추출되기 전까지, 그래픽 스케일은 Figma 텍스트 스타일(2026-06) 기준
+    // 정상값으로 고정합니다. 토큰이 정상화되면 staticScale 을 제거하고
+    // tokenFor 파싱으로 되돌리면 됩니다.
     staticScale: {
+      headingXl: { size: 48, lineHeight: 56 },
       headingLg: { size: 40, lineHeight: 48 },
-      headingMd: { size: 32, lineHeight: 40 },
-      headingSm: { size: 24, lineHeight: 32 },
-      headingXs: { size: 20, lineHeight: 28 },
+      headingSm: { size: 32, lineHeight: 40 },
+      headingXs: { size: 24, lineHeight: 32 },
+      bodyXl: { size: 20, lineHeight: 28 },
       bodyMd: { size: 16, lineHeight: 24 },
       bodySm: { size: 14, lineHeight: 20 },
       bodyXs: { size: 12, lineHeight: 18 },
@@ -119,11 +126,11 @@ export function TypographyTable() {
     });
 
     const lookup = (size, weight) => {
+      const p = primitive(size);
       for (const key of tf.tokenFor(size, weight)) {
         if (tokens[key]) {
           const parsed = parseComposite(tokens[key]);
           if (parsed) {
-            const p = primitive(size);
             return {
               cssVar: key,
               ...parsed,
@@ -132,6 +139,16 @@ export function TypographyTable() {
             };
           }
         }
+      }
+      // 신규 스케일(heading xl/lg, body xl 등)은 composite 토큰이 아직 발행되지
+      // 않으므로 primitive 토큰만으로 행을 구성한다.
+      if (p.size != null && p.lineHeight != null) {
+        return {
+          cssVar: `--fontSize-${size}`,
+          size: p.size,
+          lineHeight: p.lineHeight,
+          family: tf.family,
+        };
       }
       return null;
     };
