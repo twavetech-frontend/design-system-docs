@@ -65,6 +65,8 @@ export const simpleItems = [
 
 라디오 그룹은 여러 선택지 중 하나만 고를 수 있는 입력 컴포넌트입니다. 각 옵션은 카드 형태로 제목, 설명, 가격 등 부가 정보를 표시할 수 있습니다.
 
+카드는 `radius-xl`(20px) 모서리에 기본 1px `border-secondary` 보더, 선택 시 **2px `border-brand`(`#7700ff`)** 보더로 강조됩니다. 텍스트는 sm `body-xs`(12px/18px), md `body-sm`(14px/20px)을 사용합니다.
+
 Figma 컴포넌트: `Radio group`, `Radio group item`
 
 ---
@@ -103,7 +105,7 @@ Figma 컴포넌트: `Radio group`, `Radio group item`
 
 ## Icon card
 
-상단 헤더에 큰 featured icon이 있고, 하단 본문에 가격/설명/뱃지를 보여주는 확장 카드 형태입니다.
+상단 헤더에 featured icon(32px)이 있고, 하단 본문에 가격(`heading-xs` 24px)/설명/뱃지를 보여주는 확장 카드 형태입니다. 선택 컨트롤은 원형 라디오가 아닌 **사각 체크박스**(`radius-xs` 4px)를 사용하고, 선택 시 헤더 하단 구분선도 2px 브랜드 컬러로 바뀝니다. 뱃지의 도트는 `utility-success-500`(`#3bbf2e`) 그린입니다.
 
 <ComponentPreview code={`<RadioGroup type="icon-card" items={[
   {
@@ -124,7 +126,7 @@ Figma 컴포넌트: `Radio group`, `Radio group item`
 
 ## Disabled
 
-`disabled: true`로 항목을 비활성화 할 수 있습니다.
+`disabled: true`로 항목을 비활성화 할 수 있습니다. 비활성 카드는 `bg-disabled_subtle`(`#f3f5f7`) 배경과 `border-disabled_subtle` 보더로 표시됩니다.
 
 <ComponentPreview code={`<RadioGroup type="radio" items={[
   { value: 'a', title: '사용 가능한 옵션', description: '선택할 수 있습니다.', selected: true },

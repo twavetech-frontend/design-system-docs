@@ -51,7 +51,7 @@ export function Checkbox({
 
   if (hasText) {
     return (
-      <div className={`${styles.wrapper} ${state === 'disabled' ? styles.wrapperDisabled : ''}`}>
+      <div className={`${styles.wrapper} ${styles[`wrapperSize-${size}`] || ''} ${state === 'disabled' ? styles.wrapperDisabled : ''}`}>
         {control}
         <div className={styles.text}>
           {label && <span className={styles.label}>{label}</span>}

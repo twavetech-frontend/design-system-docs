@@ -22,11 +22,11 @@ Figma 컴포넌트: `Base components → Link`
   <Link destructive>Click to Download</Link>
 </ComponentPreview>
 
-| Color | 용도 |
-| --- | --- |
-| **brand** (`color="brand"`) | 기본 링크. 브랜드 보라(`#5200b0`). 본문 중간 강조 |
-| **gray** (`color="gray"`) | 톤을 죽인 보조 링크. 카드·테이블 내부 등 시각적 무게가 낮아야 할 때 |
-| **destructive** (`destructive`) | 삭제·경고 관련 링크. 항상 **밑줄** 표시(`#d92d20`) |
+| Color | 토큰 | 용도 |
+| --- | --- | --- |
+| **brand** (`color="brand"`) | `text-brand-primary` (`#7700ff`) | 기본 링크. 본문 중간 강조 |
+| **gray** (`color="gray"`) | `text-secondary` (`#687079`) | 톤을 죽인 보조 링크. 카드·테이블 내부 등 시각적 무게가 낮아야 할 때 |
+| **destructive** (`destructive`) | `text-error-primary` (`#df1634`) | 삭제·경고 관련 링크. 항상 **밑줄** 표시 |
 
 ---
 
@@ -44,18 +44,26 @@ Figma 컴포넌트: `Base components → Link`
   <Link color="brand" size="xl">Click to Download</Link>
 </ComponentPreview>
 
-| Size | Font | Line height | Token |
-| --- | --- | --- | --- |
-| **sm** | 12px | 18px | `text-xs` |
-| **md** (기본값) | 14px | 20px | `text-sm` |
-| **lg** | 16px | 24px | `text-md` |
-| **xl** | 18px | 28px | `text-lg` |
+| Size | Font | Line height | Letter spacing | Token |
+| --- | --- | --- | --- | --- |
+| **sm** | 12px | 18px | 0 | `body-xs` |
+| **md** (기본값) | 14px | 20px | -2% | `body-sm` |
+| **lg** | 16px | 24px | -2% | `body-md` |
+| **xl** | 20px | 28px | -2% | `body-xl` |
+
+모든 사이즈는 `Pretendard Semibold(600)`를 사용합니다.
 
 ---
 
 ## States
 
 각 컬러별로 4가지 상태를 가집니다: `Default` `Hover` `Focused` `Disabled`.
+
+| State | 스타일 |
+| --- | --- |
+| **Hover** | 컬러가 한 단계 어두워짐 — brand `#340078`, gray `text-secondary_hover`(`#596069`), destructive `text-error-primary_hover`(`#b9132c`) |
+| **Focused** | 포커스 링 표시 — brand/gray는 `focus-ring`(보라), destructive는 `focus-ring-error`(빨강). 모서리 `radius-xs`(4px) |
+| **Disabled** | 전체 투명도 20% (`disabled_opacity`), 클릭 불가 |
 
 ### Link color (brand)
 

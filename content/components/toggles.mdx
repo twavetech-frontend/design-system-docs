@@ -12,7 +12,15 @@ Figma 컴포넌트: `Toggle`
 
 ## Type: Default
 
-기본 토글 스위치입니다.
+기본 토글 스위치입니다. 트랙 안쪽에 2px 패딩이 있고 흰색 썸에 `shadow-sm` 그림자가 적용됩니다.
+
+| State | 스타일 |
+| --- | --- |
+| **Off** | 트랙 `bg-tertiary` (`#e6e8ea`) |
+| **On** | 트랙 `bg-brand-solid` (`#7700ff`) |
+| **Hover (On)** | 트랙 `bg-brand-solid_hover` (`#6a00e0`) — Off는 변화 없음 |
+| **Focus** | `focus-ring` (2px 흰색 + 4px 브랜드) |
+| **Disabled** | 트랙 `bg-disabled` (`#f3f4f6`), 썸 `toggle-button-fg_disabled` (`#fafafa`) |
 
 ### Toggle Only
 
@@ -62,7 +70,7 @@ Figma 컴포넌트: `Toggle`
 
 ## Type: Slim
 
-더 얇은 형태의 토글입니다.
+더 얇은 형태의 토글입니다. 패딩 없이 썸이 트랙 높이를 가득 채우며, 썸에 1px 보더(`toggle-border`, On일 때 `toggle-slim-border_pressed` 브랜드 컬러)가 있습니다.
 
 ### Toggle Only
 
@@ -105,6 +113,13 @@ Figma 컴포넌트: `Toggle`
 ## Size
 
 sm, md 두 가지 사이즈를 지원합니다.
+
+| Type · Size | Track | Thumb |
+| --- | --- | --- |
+| **Default sm** | 36×20px | 16px |
+| **Default md** | 44×24px | 20px |
+| **Slim sm** | 32×16px | 16px (풀하이트) |
+| **Slim md** | 40×20px | 20px (풀하이트) |
 
 <ComponentPreview code={`<Toggle pressed={true} size="sm" />
 <Toggle pressed={true} size="md" />

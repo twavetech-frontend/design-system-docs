@@ -16,16 +16,24 @@ const DEFAULT_ICON = (
   </svg>
 );
 
-function RadioInput({ checked, disabled }) {
+function RadioInput({ checked, disabled, square = false }) {
   const cls = [
     styles.radio,
+    square && styles['check-square'],
     checked && styles['radio-checked'],
     disabled && styles['radio-disabled'],
   ].filter(Boolean).join(' ');
 
   return (
     <span className={cls} aria-hidden="true">
-      {checked && <span className={styles['radio-dot']} />}
+      {checked && !square && <span className={styles['radio-dot']} />}
+      {checked && square && (
+        <span className={styles['check-icon']}>
+          <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="1.6667" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      )}
     </span>
   );
 }
@@ -88,7 +96,7 @@ export function RadioGroup({
                   <span className={styles['featured-icon']}>{item.icon || DEFAULT_ICON}</span>
                   <span className={styles['card-title']}>{item.title}</span>
                 </div>
-                <RadioInput checked={isSelected} disabled={item.disabled} />
+                <RadioInput checked={isSelected} disabled={item.disabled} square />
               </div>
 
               <div className={styles['card-body']}>

@@ -116,7 +116,12 @@ Figma 컴포넌트: `Input field`, `Textarea input field`, `Verification code in
 
 ## Size
 
-sm, md 두 가지 사이즈를 지원합니다.
+sm, md 두 가지 사이즈를 지원합니다. 입력 텍스트는 두 사이즈 모두 `body-md`(16px/24px)이고, 패딩으로 높이가 달라집니다. 라벨과 힌트는 `body-xs`(12px/18px)입니다.
+
+- **sm** — `padding: 8px 12px` · 높이 40px
+- **md** — `padding: 10px 14px` · 높이 44px
+
+컨테이너는 `alpha-black-4` 배경에 `radius-md`(12px) 모서리입니다.
 
 <ComponentPreview code={`<Input label="Email" placeholder="olivia@julee.design" size="sm" hint="Size SM (40px)" />
 <Input label="Email" placeholder="olivia@julee.design" size="md" hint="Size MD (44px)" />`}>
@@ -130,7 +135,7 @@ sm, md 두 가지 사이즈를 지원합니다.
 
 ## Destructive
 
-에러 상태의 입력 필드입니다. 유효성 검사 실패 시 사용합니다.
+에러 상태의 입력 필드입니다. 유효성 검사 실패 시 사용합니다. 기본은 1px `border-error_subtle` 보더 + 우측 alert-circle 아이콘, 포커스 시 2px `border-error` 보더로 강조되며 힌트가 `text-error-primary` 컬러의 에러 메시지로 바뀝니다.
 
 <ComponentPreview code={`<Input label="Email" value="olivia@julee.design" size="md" destructive hint="This is an error message." required helpIcon />
 <Input label="Email" value="olivia@julee.design" size="md" destructive hint="This is an error message." state="focused" required helpIcon />
@@ -192,11 +197,28 @@ sm, md 두 가지 사이즈를 지원합니다.
 
 ## Verification Code Input
 
-인증 코드(OTP, 2FA 등)를 자릿수별로 입력받는 필드입니다. 각 자리마다 독립된 박스를 표시하며, 4자리와 6자리를 지원합니다.
+인증 코드(OTP, 2FA 등)를 자릿수별로 입력받는 필드입니다. 각 자리마다 독립된 박스(`_Mega input field base`)를 표시하며, 4자리와 6자리를 지원합니다.
+
+박스는 흰색(`bg-primary`) 배경에 `shadow-field` 그림자를 사용하고, 상태별 스타일이 정의되어 있습니다:
+
+| State | 스타일 |
+| --- | --- |
+| **Placeholder** | 플레이스홀더 숫자 `text-placeholder_subtle`(`#e6e8ea`) |
+| **Hover** | 배경 `bg-primary_hover`(`#f3f5f6`) |
+| **Focus** | 2px `border-brand` 보더, 캐럿 `text-placeholder` |
+| **Filled** | 숫자 `text-primary`(`#2c3744`) |
+| **Error** | 2px `border-error` 보더 |
+| **Disabled** | 배경 `bg-disabled`(`#f3f4f6`), 숫자 미표시 |
 
 ### Size
 
 sm(64px), md(80px), lg(96px) 세 가지 사이즈를 지원합니다.
+
+| Size | Box | Radius | Digit |
+| --- | --- | --- | --- |
+| **sm** | 64px | `radius-xl` (20px) | `heading-lg` 40px/48px |
+| **md** | 80px | `radius-2xl` (24px) | `heading-xl` 48px/56px |
+| **lg** | 96px | `radius-3xl` (32px) | `heading-lg` 40px/48px |
 
 <ComponentPreview code={`<VerificationCodeInput label="Secure code" size="sm" digits={4} hint="This is a hint text to help user." />
 <VerificationCodeInput label="Secure code" size="md" digits={4} hint="This is a hint text to help user." />
@@ -334,3 +356,10 @@ sm(64px), md(80px), lg(96px) 세 가지 사이즈를 지원합니다.
 | --- | --- |
 | **Size** | `sm` `md` `lg` |
 | **Digits** | `4` `6` |
+
+### Mega Input Field Base
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` `lg` |
+| **State** | `Placeholder` `Hover` `Focus` `Filled` `Error` `Disabled` |

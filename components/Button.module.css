@@ -15,37 +15,45 @@
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.5; /* Figma diabledOpacity token = 50% (Primary는 아래에서 20%로 override) */
+  opacity: 0.2; /* Figma disabled_opacity = 20% */
 }
 
 /* --- Sizes --- */
+/* sm/md: body-xs(12/18) + radius-sm(8) · lg/xl: body-md(16/24) + radius-md(12) */
 .size-sm {
-  padding: 3px 10px;
+  padding: 4px 10px;
   font-size: 12px;
+  line-height: 18px;
   min-height: 26px;
   border-radius: 8px;
 }
 
 .size-md {
   padding: 8px 14px;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 18px;
   min-height: 36px;
   border-radius: 8px;
 }
 
 .size-lg {
-  padding: 10px 18px;
-  font-size: 14px;
+  padding: 10px 14px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.32px;
   min-height: 44px;
-  border-radius: 8px;
+  border-radius: 12px;
+  gap: 6px;
 }
 
 .size-xl {
   padding: 12px 16px;
   font-size: 16px;
   min-height: 48px;
-  border-radius: 8px;
+  border-radius: 12px;
   line-height: 24px;
+  letter-spacing: -0.32px;
+  gap: 6px;
 }
 
 /* Icon only (square) */
@@ -83,14 +91,10 @@
 .variant-primary.force-focused {
   background-color: var(--colors-background-bgBrandSolidHover, #6a00e0);
 }
-.variant-primary:disabled {
-  opacity: 0.2; /* Figma: Primary disabled = 20% (solid 버튼은 더 흐리게) */
-}
-
-/* Secondary — 연보라(#e6d4ff) + 브랜드 텍스트(#b685ff) */
+/* Secondary — 연보라(#e6d4ff) + 브랜드 텍스트(#7700ff) */
 .variant-secondary {
   background-color: var(--colors-background-bgBrandSecondary, #e6d4ff);
-  color: var(--colors-text-textBrandTertiaryAlt, #b685ff);
+  color: var(--colors-text-textBrandPrimary, #7700ff);
 }
 .variant-secondary:hover:not(:disabled), .variant-secondary.force-hover {
   background-color: var(--colors-background-bgBrandSecondaryHover, #cfaeff);
@@ -102,85 +106,77 @@
   background-color: var(--colors-background-bgBrandSecondaryHover, #cfaeff);
 }
 
-/* Tertiary — 연한 알파(rgba(0,0,0,0.03)) + 회색 텍스트(#687079) */
+/* Tertiary — 알파 배경(alpha-black-4) + 회색 텍스트(text-secondary) */
 .variant-tertiary {
-  background-color: var(--componentColors-alpha-alphaBlack3, rgba(0, 0, 0, 0.03));
-  color: var(--colors-grayNeutral-600, #687079);
+  background-color: rgba(0, 0, 0, 0.04); /* alpha-black-4 */
+  color: var(--colors-text-textSecondary, #6f7e8d);
 }
 .variant-tertiary:hover:not(:disabled), .variant-tertiary.force-hover {
-  background-color: var(--componentColors-alpha-alphaBlack10, rgba(0, 0, 0, 0.1));
+  background-color: rgba(0, 0, 0, 0.12); /* alpha-black-12 */
 }
 .variant-tertiary:active:not(:disabled), .variant-tertiary.force-active {
-  background-color: var(--componentColors-alpha-alphaBlack3, rgba(0, 0, 0, 0.03));
+  background-color: rgba(0, 0, 0, 0.04);
 }
 .variant-tertiary.force-focused {
-  background-color: var(--componentColors-alpha-alphaBlack3, rgba(0, 0, 0, 0.03));
-}
-.variant-tertiary:disabled {
-  background-color: var(--componentColors-alpha-alphaBlack5, rgba(0, 0, 0, 0.05));
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
-/* Outline — 흰색 bg(#fcfcfd) + 회색 텍스트/테두리 */
+/* Outline — 흰색 bg + 회색 텍스트/테두리(border-secondary) */
 .variant-outline {
-  background-color: var(--colors-background-bgPrimary, #fcfcfd);
-  color: var(--colors-grayNeutral-600, #687079);
-  border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+  background-color: var(--colors-background-bgPrimary, #ffffff);
+  color: var(--colors-text-textSecondary, #6f7e8d);
+  border: 1px solid var(--colors-border-borderSecondary, #eceef1);
 }
 .variant-outline:hover:not(:disabled), .variant-outline.force-hover {
-  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
-  color: var(--colors-text-textSecondaryHover, #596069);
+  background-color: var(--colors-background-bgSecondaryHover, #dce0e5);
+  color: var(--colors-text-textSecondaryHover, #566574);
 }
 .variant-outline:active:not(:disabled), .variant-outline.force-active {
-  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
-  color: var(--colors-text-textSecondaryHover, #596069);
+  background-color: var(--colors-background-bgSecondaryHover, #dce0e5);
+  color: var(--colors-text-textSecondaryHover, #566574);
 }
 .variant-outline.force-focused {
-  background-color: var(--colors-background-bgPrimaryHover, #f9fafb);
-  border-color: transparent;
-}
-.variant-outline:disabled {
-  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
-  color: var(--colors-text-textSecondaryHover, #596069);
+  background-color: var(--colors-background-bgPrimary, #ffffff);
 }
 
-/* Ghost — 배경 없음, 회색 텍스트(#687079), hover 시 연회색 배경 */
+/* Ghost — 배경 없음, 회색 텍스트, hover 시 bg-secondary_hover */
 .variant-ghost {
   background-color: transparent;
-  color: var(--colors-grayNeutral-600, #687079);
+  color: var(--colors-text-textSecondary, #6f7e8d);
 }
 .variant-ghost:hover:not(:disabled), .variant-ghost.force-hover {
-  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
-  color: var(--colors-text-textSecondaryHover, #596069);
+  background-color: var(--colors-background-bgSecondaryHover, #dce0e5);
+  color: var(--colors-text-textSecondaryHover, #566574);
 }
 .variant-ghost:active:not(:disabled), .variant-ghost.force-active {
-  background-color: var(--colors-background-bgSecondaryHover, #e6e8ea);
-  color: var(--colors-text-textSecondaryHover, #596069);
+  background-color: var(--colors-background-bgSecondaryHover, #dce0e5);
+  color: var(--colors-text-textSecondaryHover, #566574);
 }
 .variant-ghost.force-focused {
-  background-color: var(--colors-background-bgPrimary, #fcfcfd);
+  background-color: transparent;
 }
 
 /* --- Destructive Button Variants --- */
 
 .variant-destructive-primary {
-  background-color: var(--colors-background-bgErrorSolid, #d92d20);
+  background-color: var(--colors-background-bgErrorSolid, #df1634);
   color: var(--colors-text-textWhite, #ffffff);
 }
 .variant-destructive-primary:hover:not(:disabled), .variant-destructive-primary.force-hover {
-  background-color: var(--colors-background-bgErrorSolidHover, #b42318);
+  background-color: var(--colors-background-bgErrorSolidHover, #b9132c);
 }
 .variant-destructive-primary:active:not(:disabled), .variant-destructive-primary.force-active {
-  background-color: var(--colors-background-bgErrorSolidHover, #b42318);
+  background-color: var(--colors-background-bgErrorSolidHover, #b9132c);
 }
 .variant-destructive-primary.force-focused {
-  background-color: var(--colors-background-bgErrorSolid, #d92d20);
-  box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingError, rgba(240, 68, 56, 0.24));
+  background-color: var(--colors-background-bgErrorSolid, #df1634);
+  box-shadow: var(--focusRings-focusRingError, 0 0 0 2px #fcfcfd, 0 0 0 4px #f04438);
 }
 
 .variant-destructive-secondary {
   background-color: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-foreground-fgErrorPrimary, #b42318);
-  border: 1px solid var(--colors-border-borderError, #fda29b);
+  color: var(--colors-foreground-fgErrorPrimary, #df1634);
+  border: 1px solid var(--colors-border-borderError, #df1634);
 }
 .variant-destructive-secondary:hover:not(:disabled), .variant-destructive-secondary.force-hover {
   background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
@@ -189,12 +185,12 @@
   background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
 }
 .variant-destructive-secondary.force-focused {
-  box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingError, rgba(240, 68, 56, 0.24));
+  box-shadow: var(--focusRings-focusRingError, 0 0 0 2px #fcfcfd, 0 0 0 4px #f04438);
 }
 
 .variant-destructive-tertiary {
   background-color: transparent;
-  color: var(--colors-foreground-fgErrorPrimary, #b42318);
+  color: var(--colors-foreground-fgErrorPrimary, #df1634);
 }
 .variant-destructive-tertiary:hover:not(:disabled), .variant-destructive-tertiary.force-hover {
   background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
@@ -205,7 +201,7 @@
 
 .variant-destructive-ghost {
   background-color: transparent;
-  color: var(--colors-foreground-fgErrorPrimary, #b42318);
+  color: var(--colors-foreground-fgErrorPrimary, #df1634);
 }
 .variant-destructive-ghost:hover:not(:disabled), .variant-destructive-ghost.force-hover {
   background-color: var(--colors-background-bgErrorPrimary, #fef3f2);

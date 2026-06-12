@@ -3,8 +3,9 @@
   display: inline-flex;
   align-items: center;
   gap: 2px;
+  /* spacing-xs — tokens.css의 spacing 값은 단위가 없어 var()로 직접 사용 불가 */
   padding: 4px;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   font-family: var(--fontFamily-fontFamilyBody, 'Pretendard'), sans-serif;
   isolation: isolate;
@@ -26,8 +27,8 @@
   left: 0;
   background: var(--colors-foreground-fgLight, #ffffff);
   border: 0.5px solid var(--colors-foreground-fgQuaternary, #f9fafb);
-  border-radius: 6px;
-  box-shadow: 0 4px 6px 0 rgba(10, 13, 18, 0.08);
+  border-radius: 4px;
+  box-shadow: var(--shadows-shadowMd, 0 4px 6px -1px rgba(10, 13, 18, 0.08), 0 2px 4px -2px rgba(10, 13, 18, 0.06));
   pointer-events: none;
   z-index: 0;
   opacity: 0;
@@ -47,7 +48,7 @@
   justify-content: center;
   border: none;
   background: transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   cursor: pointer;
@@ -64,8 +65,24 @@
 
 .size-md .segment {
   padding: 4px 8px;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.size-lg .segment {
+  padding: 4px 8px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+}
+
+/* 액티브 칩 radius — sm: radius-xs(4px), md/lg: radius-sm(8px) */
+.size-md .indicator,
+.size-md .segment,
+.size-lg .indicator,
+.size-lg .segment {
+  border-radius: 8px;
 }
 
 .segment:hover:not(.current) {
@@ -76,7 +93,7 @@
   color: var(--colors-text-textSecondary, #687079);
   background: var(--colors-foreground-fgLight, #ffffff);
   border: 0.5px solid var(--colors-foreground-fgQuaternary, #f9fafb);
-  box-shadow: 0 4px 6px 0 rgba(10, 13, 18, 0.08);
+  box-shadow: var(--shadows-shadowMd, 0 4px 6px -1px rgba(10, 13, 18, 0.08), 0 2px 4px -2px rgba(10, 13, 18, 0.06));
 }
 
 .indicator-ready .segment.current {

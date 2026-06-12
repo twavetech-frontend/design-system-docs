@@ -2,10 +2,11 @@
    Select
    ---------------------------
    Figma: Base components/Select (3281:377673)
-   - Container is borderless w/ alpha-black-3 fill at rest (md & sm both)
-   - Focused/Open: 2px brand border + alpha-black-5 fill (1px padding compensation)
-   - md: px-14 py-6 (default) / px-14 py-10 (with leading) — chevron 20
-   - sm: px-12 py-6 — chevron 16
+   - Container is borderless w/ alpha-black-4 fill at rest (md & sm both), radius-sm 8
+   - Focused: 2px brand border, fill 유지 (md 높이 32→40으로 커짐)
+   - Open: 트리거는 기본 모습 유지, 메뉴가 4px 아래 분리되어 표시
+   - md: px-14 py-6 (default) / px-14 py-10 (with leading) — text 14, chevron 20
+   - sm: px-12 py-6 — text 12, chevron 16
    =========================== */
 
 .wrapper {
@@ -25,17 +26,17 @@
 }
 
 .label {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 20px;
-  color: #687079;                  /* text-secondary */
+  line-height: 18px;
+  color: var(--colors-text-textSecondary, #687079);
 }
 
 .required {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 20px;
-  color: var(--colors-brand-600, #6a00e0); /* text-brand-tertiary */
+  line-height: 18px;
+  color: var(--colors-text-textBrandTertiary, #b685ff);
 }
 
 .helpIcon {
@@ -56,10 +57,10 @@
 
 /* ---- Hint ----------------------------------------------------- */
 .hint {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 20px;
-  color: #b1b6be;                  /* text-tertiary */
+  line-height: 18px;
+  color: var(--colors-text-textTertiary, #b1b6be);
 }
 
 /* ---- Input control -------------------------------------------- */
@@ -67,8 +68,8 @@
   display: flex;
   align-items: center;
   gap: 8px;                        /* spacing-md */
-  border-radius: 10px;             /* radius-md */
-  background: rgba(0, 0, 0, 0.03); /* alpha-black-3 */
+  border-radius: 8px;              /* radius-sm */
+  background: rgba(0, 0, 0, 0.04); /* alpha-black-4 */
   border: 0 solid transparent;     /* zero by default; replaced on focus */
   cursor: pointer;
   overflow: hidden;
@@ -92,39 +93,28 @@
   padding: 6px 12px;
 }
 .input.size-sm.has-leading {
-  padding: 10px 12px;
+  padding: 6px 12px;
 }
 
-/* state: focused / open  (2px brand border + alpha-black-5 fill) */
-.input.state-focused,
-.input.state-open {
-  background: rgba(0, 0, 0, 0.05); /* alpha-black-5 */
-  border: 2px solid var(--colors-brand-500, #7700ff);
+/* state: focused — 2px brand border, 배경 유지. md는 py 6→8로 높이가 32→40으로 커짐 */
+.input.state-focused {
+  border: 2px solid var(--colors-border-borderBrand, #7700ff);
 }
 
-/* compensate padding by 1px so text doesn't shift when border thickens */
-.input.size-md.state-focused,
-.input.size-md.state-open {
-  padding: 5px 13px;
+.input.size-md.state-focused {
+  padding: 8px 14px;
 }
-.input.size-md.has-leading.state-focused,
-.input.size-md.has-leading.state-open {
-  padding: 9px 13px;
+.input.size-md.has-leading.state-focused {
+  padding: 8px 14px;
 }
-.input.size-sm.state-focused,
-.input.size-sm.state-open {
-  padding: 5px 11px;
+.input.size-sm.state-focused {
+  padding: 4px 12px;
 }
-.input.size-sm.has-leading.state-focused,
-.input.size-sm.has-leading.state-open {
-  padding: 9px 11px;
+.input.size-sm.has-leading.state-focused {
+  padding: 4px 12px;
 }
 
-/* state: open — drop bottom corners flat (visual cue, menu attaches below) */
-.input.state-open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
+/* state: open — 트리거는 기본 모습 유지 (메뉴가 4px 아래 분리되어 표시) */
 
 /* state: disabled */
 .input.state-disabled {
@@ -138,24 +128,26 @@
   display: flex;
   align-items: center;
   gap: 8px;                        /* spacing-md */
-  line-height: 24px;
+  line-height: 20px;
   overflow: hidden;
 }
 
 .value {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
-  color: #596069;                  /* text-primary */
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: var(--colors-text-textPrimary, #2c3744);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .supporting {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #b1b6be;                  /* text-tertiary */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: var(--colors-text-textTertiary, #b1b6be);
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -163,20 +155,30 @@
 .placeholder {
   flex: 1 1 0;
   min-width: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
-  color: #b1b6be;                  /* text-placeholder */
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: var(--colors-text-textPlaceholder, #d2d6db);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* sm — body-xs 12/18 */
+.input.size-sm .value,
+.input.size-sm .supporting,
+.input.size-sm .placeholder {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
 }
 
 /* disabled — text falls back to muted */
 .input.state-disabled .value,
 .input.state-disabled .supporting,
 .input.state-disabled .placeholder {
-  color: #b1b6be;                  /* text-disabled */
+  color: var(--colors-text-textDisabled, #d2d6db);
 }
 
 /* ---- Leading elements ---------------------------------------- */
@@ -270,9 +272,9 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  color: #d2d6db;                  /* text-quaternary */
-  border: 1px solid #e6e8ea;       /* border-secondary */
-  border-radius: 6px;              /* radius-xs */
+  color: var(--colors-text-textQuaternary, #d2d6db);
+  border: 1px solid var(--colors-border-borderSecondary, #e6e8ea);
+  border-radius: 4px;              /* radius-xs */
   background: transparent;
   flex-shrink: 0;
   font-family: 'Pretendard', sans-serif;
@@ -286,21 +288,28 @@
   outline: none;
   padding: 0;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
-  color: #596069;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: var(--colors-text-textPrimary, #2c3744);
   background: transparent;
 }
 
+.input.size-sm .searchInput {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
 .searchInput::placeholder {
-  color: #b1b6be;
+  color: var(--colors-text-textPlaceholder, #d2d6db);
   font-weight: 400;
 }
 
 .searchInput:disabled {
   cursor: not-allowed;
-  color: #b1b6be;
+  color: var(--colors-text-textDisabled, #d2d6db);
 }
 
 /* ---- Tags ---------------------------------------------------- */
@@ -315,10 +324,10 @@
 .tagsPlaceholder {
   flex: 1 1 0;
   min-width: 32px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
-  color: #596069;
+  line-height: 20px;
+  color: var(--colors-text-textPlaceholder, #d2d6db);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -356,7 +365,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  color: var(--colors-brand-700, #5200b0); /* text-brand-secondary */
+  color: var(--colors-text-textBrandSecondary, #9b55ff);
 }
 
 .tagClose {
@@ -368,7 +377,7 @@
   padding: 2px;
   border-radius: 3px;
   cursor: pointer;
-  color: var(--colors-brand-700, #5200b0);
+  color: var(--colors-text-textBrandSecondary, #9b55ff);
   flex-shrink: 0;
 }
 
@@ -386,10 +395,11 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08); /* border-secondary-alt */
-  border-radius: 10px;             /* radius-md */
+  background: var(--colors-background-bgPrimary, #ffffff);
+  border: 1px solid var(--colors-border-borderSecondaryAlt, rgba(0, 0, 0, 0.08));
+  border-radius: 12px;             /* radius-md */
   padding: 4px 0;                  /* py-xs */
+  margin-top: 4px;                 /* 트리거와 4px 분리 (Figma Open state) */
   box-shadow:
     0 12px 16px -4px rgba(10, 13, 18, 0.08),
     0 4px 6px -2px rgba(10, 13, 18, 0.03),
@@ -436,7 +446,12 @@
 
 .item:hover:not(.itemDisabled) .itemContent,
 .item.itemHover .itemContent {
-  background: #f3f4f6;             /* bg-secondary-hover */
+  background: var(--colors-background-bgSecondaryHover, #e6e8ea);
+}
+
+/* sm — content padding 8px 균일 */
+.itemSize-sm .itemContent {
+  padding: 8px;
 }
 
 .itemDisabled {
@@ -449,7 +464,7 @@
   display: flex;
   align-items: center;
   gap: 8px;                        /* spacing-md */
-  line-height: 24px;
+  line-height: 20px;
 }
 
 .itemIcon {
@@ -511,39 +526,43 @@
 }
 
 .itemLabel {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
-  color: #596069;                  /* text-primary */
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: var(--colors-text-textPrimary, #2c3744);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .itemSize-sm .itemLabel {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
 }
 
 .itemDisabled .itemLabel {
-  color: #b1b6be;                  /* text-disabled */
+  color: var(--colors-text-textDisabled, #d2d6db);
 }
 
 .itemSupporting {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #b1b6be;                  /* text-tertiary */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: var(--colors-text-textTertiary, #b1b6be);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .itemSize-sm .itemSupporting {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
 }
 
 .itemDisabled .itemSupporting {
-  color: #b1b6be;
+  color: var(--colors-text-textDisabled, #d2d6db);
 }
 
 .itemCheck {
@@ -553,7 +572,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--colors-brand-600, #6a00e0); /* fg-brand-primary */
+  color: var(--colors-foreground-fgBrandPrimary, #7700ff);
 }
 
 .itemCheck svg {

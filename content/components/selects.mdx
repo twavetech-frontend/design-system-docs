@@ -4,7 +4,7 @@ import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
 
 # Selects
 
-Select는 사용자가 정해진 목록에서 값을 선택하는 입력 컴포넌트입니다. 라벨, 컨트롤(input), 힌트 텍스트로 구성되며, 펼친 상태에서는 아래에 메뉴 패널이 부착됩니다.
+Select는 사용자가 정해진 목록에서 값을 선택하는 입력 컴포넌트입니다. 라벨, 컨트롤(input), 힌트 텍스트로 구성되며, 펼친 상태에서는 아래에 메뉴 패널이 4px 간격으로 분리되어 표시됩니다.
 
 Figma: `Base components/Select` (3281:377673), `Base components/_Select menu item` (3281:380429)
 
@@ -12,10 +12,12 @@ Figma: `Base components/Select` (3281:377673), `Base components/_Select menu ite
 
 ## 사이즈
 
-`md`, `sm` 두 사이즈를 제공합니다. 둘 다 동일한 무테두리 alpha-black-3 배경이며, 차이는 좌우 패딩과 chevron 아이콘 크기입니다.
+`md`, `sm` 두 사이즈를 제공합니다. 둘 다 동일한 무테두리 `alpha-black-4` 배경에 `radius-sm`(8px) 모서리이며, 텍스트·패딩·chevron 크기가 다릅니다.
 
-- **md** — `padding: 6px 14px` · chevron 20px
-- **sm** — `padding: 6px 12px` · chevron 16px
+- **md** — `padding: 6px 14px` · 텍스트 `body-sm`(14px/20px) · chevron 20px
+- **sm** — `padding: 6px 12px` · 텍스트 `body-xs`(12px/18px) · chevron 16px
+
+라벨과 힌트 텍스트는 양쪽 모두 `body-xs`(12px/18px)를 사용합니다.
 
 <ComponentPreview direction="column" code={`<Select size="md" label="Team member" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
 <Select size="sm" label="Team member" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />`}>
@@ -25,7 +27,7 @@ Figma: `Base components/Select` (3281:377673), `Base components/_Select menu ite
 
 ## 상태
 
-`Default`, `Placeholder`, `Focused`, `Disabled`, `Open` 5가지 상태가 있습니다. Focused/Open 상태는 2px 브랜드 보더와 alpha-black-5 배경을 사용합니다.
+`Default`, `Placeholder`, `Focused`, `Disabled`, `Open` 5가지 상태가 있습니다. Focused 상태는 2px `border-brand` 보더가 추가되고 수직 패딩이 늘어나 컨트롤이 약간 높아집니다(md 기준 32→40px). Placeholder 텍스트는 `text-placeholder`(`#d2d6db`) 컬러를 사용합니다.
 
 <ComponentPreview direction="column" code={`<Select label="Placeholder" required helpIcon placeholder="Select team member" hint="This is a hint text to help user." />
 <Select label="Default" required helpIcon value="John Lee" supportingText="@john" hint="This is a hint text to help user." />
@@ -39,7 +41,7 @@ Figma: `Base components/Select` (3281:377673), `Base components/_Select menu ite
 
 ### Open 상태
 
-`state="open"`은 컨트롤 하단 모서리를 평평하게 만들어 메뉴 패널이 부착될 자리를 시각적으로 만듭니다. 실제 메뉴는 `<SelectMenu>`로 별도 렌더링합니다.
+Open 상태에서 트리거는 기본 모습을 유지하고, 메뉴 패널이 **4px 간격으로 분리되어** 아래에 떠 있습니다. 메뉴는 `radius-md`(12px) 모서리에 `shadow-lg` 그림자를 사용하며, `<SelectMenu>`로 별도 렌더링합니다.
 
 <ComponentPreview direction="column" code={`<Select label="Team member" required helpIcon state="open" value="John Lee" supportingText="@john" />
 <SelectMenu>
@@ -165,7 +167,7 @@ Figma: `Base components/Select` (3281:377673), `Base components/_Select menu ite
 
 ### Sm 사이즈
 
-`size="sm"`은 라벨 폰트가 14px로 줄어들고, 아바타 크기가 24px로 작아집니다.
+`size="sm"`은 라벨 폰트가 `body-xs`(12px)로 줄어들고, 콘텐츠 패딩이 8px 균일, 아바타 크기가 24px로 작아집니다.
 
 <ComponentPreview direction="column" code={`<SelectItem size="sm" supportingText="@john">John Lee</SelectItem>
 <SelectItem size="sm" selected supportingText="@john">John Lee</SelectItem>
@@ -186,7 +188,7 @@ Figma: `Base components/Select` (3281:377673), `Base components/_Select menu ite
 ### Select
 
 <PropsTable data={[
-  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '컨트롤 사이즈 — md(px-14, chevron 20) / sm(px-12, chevron 16)' },
+  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '컨트롤 사이즈 — md(text 14, px-14, chevron 20) / sm(text 12, px-12, chevron 16)' },
   { name: 'state', type: "'default' | 'placeholder' | 'focused' | 'disabled' | 'open'", default: '자동', description: '명시하지 않으면 value/placeholder/search로부터 자동 계산' },
   { name: 'label', type: 'string', default: '-', description: '컨트롤 위에 표시되는 라벨' },
   { name: 'required', type: 'boolean', default: 'false', description: '라벨 옆에 브랜드 컬러 `*` 표시' },
@@ -212,7 +214,7 @@ Figma: `Base components/Select` (3281:377673), `Base components/_Select menu ite
 ### SelectItem
 
 <PropsTable data={[
-  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '사이즈 — md(아바타 32px, text 16) / sm(아바타 24px, text 14)' },
+  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '사이즈 — md(아바타 32px, text 14) / sm(아바타 24px, text 12)' },
   { name: 'state', type: "'default' | 'hover' | 'disabled'", default: "'default'", description: '강제 상태 (데모용)' },
   { name: 'selected', type: 'boolean', default: 'false', description: '선택 여부 — 우측에 체크 아이콘' },
   { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화' },

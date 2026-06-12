@@ -29,16 +29,25 @@ Figma 컴포넌트: `Buttons/Button`
 | Hierarchy | 용도 |
 | --- | --- |
 | **Primary** | 화면에서 가장 중요한 액션. 솔리드 브랜드 컬러(`#7700ff`). 한 화면에 1개 권장 |
-| **Secondary** | Primary를 보조하는 액션. 연보라 배경(`#e6d4ff`) + 브랜드 텍스트(`#6a00e0`) |
-| **Tertiary** | 낮은 우선순위 액션. 아주 옅은 알파 배경(`rgba(0,0,0,0.03)`) + 회색 텍스트 |
-| **Outline** | 연회색 배경(`#f3f4f6`) + 옅은 테두리. 표·카드 내부 액션에 적합 |
-| **Ghost** | 기본 배경 없음. 툴바·메뉴 내부 액션에 적합 |
+| **Secondary** | Primary를 보조하는 액션. 연보라 배경(`#e6d4ff`) + 브랜드 텍스트(`text-brand-primary` `#7700ff`) |
+| **Tertiary** | 낮은 우선순위 액션. 옅은 알파 배경(`alpha-black-4`) + 회색 텍스트, hover 시 `alpha-black-12` |
+| **Outline** | 흰색 배경 + `border-secondary` 테두리. 표·카드 내부 액션에 적합 |
+| **Ghost** | 기본 배경 없음, hover 시 `bg-secondary_hover`. 툴바·메뉴 내부 액션에 적합 |
 
 ---
 
 ## Size
 
-4가지 사이즈를 지원합니다.
+4가지 사이즈를 지원합니다. sm/md는 `body-xs`(12px/18px) 텍스트에 `radius-sm`(8px), lg/xl은 `body-md`(16px/24px) 텍스트에 `radius-md`(12px)를 사용합니다.
+
+| Size | Height | Font | Radius | Padding |
+| --- | --- | --- | --- | --- |
+| **sm** | 26px | 12px/18px | 8px | 4px 10px |
+| **md** | 36px | 12px/18px | 8px | 8px 14px |
+| **lg** | 44px | 16px/24px | 12px | 10px 14px |
+| **xl** | 48px | 16px/24px | 12px | 12px 16px |
+
+Disabled 상태는 전체 투명도 20%(`disabled_opacity`)로 처리됩니다.
 
 <ComponentPreview code={`<Button variant="primary" size="sm">SM</Button>
 <Button variant="primary" size="md">MD</Button>

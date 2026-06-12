@@ -4,34 +4,40 @@
 .wrapper {
   display: inline-flex;
   align-items: flex-start;
-  gap: 8px;
-  font-family: var(--fontFamily-fontFamilyBody, 'Inter', sans-serif);
+  gap: 12px;                       /* spacing-lg */
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
   cursor: pointer;
 }
 
 .wrapper.disabled {
   cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 2px;                        /* spacing-xxs */
 }
 
 .label {
   font-size: 14px;
   font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
   color: var(--colors-text-textSecondary, #687079);
-}
-.size-sm .label {
-  font-size: 14px;
 }
 
 .description {
   font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.28px;
   color: var(--colors-text-textTertiary, #b1b6be);
+}
+
+.wrapper.disabled .label,
+.wrapper.disabled .description {
+  color: var(--colors-text-textDisabled, #d2d6db);
 }
 
 /* ===========================
@@ -40,7 +46,7 @@
 .track {
   position: relative;
   border-radius: 9999px;
-  background: var(--colors-background-bgSecondary, #f2f4f7);
+  background: var(--colors-background-bgTertiary, #e6e8ea);
   transition: background 0.2s, box-shadow 0.2s;
   flex-shrink: 0;
   cursor: pointer;
@@ -58,32 +64,30 @@
 
 /* Pressed (on) */
 .pressed .track {
-  background: var(--colors-brand-600, #7f56d9);
+  background: var(--colors-background-bgBrandSolid, #7700ff);
 }
 
-/* Hover */
-.hover .track {
-  background: var(--colors-border-borderSecondary, #eaecf0);
-}
+/* Hover — off는 변화 없음, on은 진한 브랜드 */
 .hover.pressed .track {
-  background: var(--colors-brand-700, #6941c6);
+  background: var(--colors-background-bgBrandSolidHover, #6a00e0);
 }
 
-/* Focus */
-.focus .track {
-  box-shadow: 0 0 0 4px var(--colors-background-bgSecondary, #f2f4f7);
-}
+/* Focus — focus-ring (2px 흰색 + 4px 브랜드) */
+.focus .track,
 .focus.pressed .track {
-  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+  box-shadow: var(--focusRings-focusRing, 0 0 0 2px #fcfcfd, 0 0 0 4px #7700ff);
 }
 
 /* Disabled */
 .disabled .track {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
+  background: var(--colors-background-bgDisabled, #f3f4f6);
   cursor: not-allowed;
 }
 .disabled.pressed .track {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
+  background: var(--colors-background-bgDisabled, #f3f4f6);
+}
+.disabled .thumb {
+  background: var(--componentColors-components-toggles-toggleButtonFgDisabled, #fafafa);
 }
 
 /* ===========================
@@ -94,8 +98,8 @@
   top: 2px;
   left: 2px;
   border-radius: 50%;
-  background: var(--colors-text-textWhite, #ffffff);
-  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
+  background: var(--colors-foreground-fgLight, #ffffff);
+  box-shadow: var(--shadows-shadowSm, 0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1));
   transition: transform 0.2s;
 }
 
@@ -118,9 +122,12 @@
 
 /* ===========================
    Slim Type
+   ---------------------------
+   패딩 없이 썸이 트랙 높이를 가득 채우고, 썸에 1px 보더가 있음
    =========================== */
 .slim .track {
-  background: var(--colors-border-borderPrimary, #d0d5dd);
+  background: var(--colors-background-bgTertiary, #e6e8ea);
+  box-shadow: inset 0 0 0 1px var(--colors-border-borderSecondary, #e6e8ea);
 }
 
 .size-sm.slim .track {
@@ -133,44 +140,55 @@
 }
 
 .slim .thumb {
-  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+  top: 0;
+  left: 0;
+  border: 1px solid var(--componentColors-components-toggles-toggleBorder, #d5d7da);
+  box-sizing: border-box;
+  box-shadow: var(--shadows-shadowXs, 0 1px 2px 0 rgba(10, 13, 18, 0.05));
 }
 .size-sm.slim .thumb {
-  width: 12px;
-  height: 12px;
-}
-.size-md.slim .thumb {
   width: 16px;
   height: 16px;
 }
+.size-md.slim .thumb {
+  width: 20px;
+  height: 20px;
+}
 
 .slim.pressed .track {
-  background: var(--colors-brand-600, #7f56d9);
+  background: var(--colors-background-bgBrandSolid, #7700ff);
+  box-shadow: none;
+}
+.slim.pressed .thumb {
+  border-color: var(--componentColors-components-toggles-toggleSlimBorderPressed, #7700ff);
 }
 
-.slim.hover .track {
-  background: var(--colors-foreground-fgQuaternary, #f9fafb);
-}
 .slim.hover.pressed .track {
-  background: var(--colors-brand-700, #6941c6);
+  background: var(--colors-background-bgBrandSolidHover, #6a00e0);
+}
+.slim.hover.pressed .thumb {
+  border-color: var(--componentColors-components-toggles-toggleSlimBorderPressedHover, #6a00e0);
 }
 
-.slim.focus .track {
-  box-shadow: 0 0 0 4px var(--colors-background-bgSecondary, #f2f4f7);
-}
+.slim.focus .track,
 .slim.focus.pressed .track {
-  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+  box-shadow: var(--focusRings-focusRing, 0 0 0 2px #fcfcfd, 0 0 0 4px #7700ff);
 }
 
 .slim.disabled .track {
-  background: var(--colors-border-borderSecondary, #eaecf0);
+  background: var(--colors-background-bgDisabled, #f3f4f6);
+  box-shadow: inset 0 0 0 1px var(--colors-border-borderDisabledSubtle, #e6e8ea);
   cursor: not-allowed;
 }
 .slim.disabled.pressed .track {
-  background: var(--colors-border-borderSecondary, #eaecf0);
+  background: var(--colors-background-bgDisabled, #f3f4f6);
+}
+.slim.disabled .thumb {
+  background: var(--componentColors-components-toggles-toggleButtonFgDisabled, #fafafa);
+  border-color: var(--colors-border-borderDisabledSubtle, #e6e8ea);
 }
 
-/* Slim pressed → slide right */
+/* Slim pressed → slide right (트랙 너비 - 썸 너비) */
 .size-sm.slim.pressed .thumb {
   transform: translateX(16px);
 }

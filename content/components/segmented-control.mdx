@@ -53,6 +53,7 @@ Figma 컴포넌트: `Segmented_control`
   <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'flex-start' }}>
     <SegmentedControl size="sm" items={threeItems} />
     <SegmentedControl size="md" items={threeItems} />
+    <SegmentedControl size="lg" items={threeItems} />
   </div>
 </ComponentPreview>
 
@@ -71,6 +72,7 @@ Figma 컴포넌트: `Segmented_control`
   <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
     <SegmentedControl size="sm" fullWidth items={fourItems} />
     <SegmentedControl size="md" fullWidth items={fourItems} />
+    <SegmentedControl size="lg" fullWidth items={fourItems} />
   </div>
 </ComponentPreview>
 
@@ -103,15 +105,25 @@ Figma 컴포넌트: `Segmented_control`
 
 ## Sizes
 
-`sm`과 `md` 두 가지 사이즈를 지원합니다.
+`sm` `md` `lg` 세 가지 사이즈를 지원합니다.
 
 <ComponentPreview code={`<SegmentedControl size="sm" items={items} />
-<SegmentedControl size="md" items={items} />`}>
+<SegmentedControl size="md" items={items} />
+<SegmentedControl size="lg" items={items} />`}>
   <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'flex-start' }}>
     <SegmentedControl size="sm" items={fourItems} />
     <SegmentedControl size="md" items={fourItems} />
+    <SegmentedControl size="lg" items={fourItems} />
   </div>
 </ComponentPreview>
+
+| Size | Font | Line height | Segment padding | Active radius | Token |
+| --- | --- | --- | --- | --- | --- |
+| **sm** | 12px | 18px | 2px 6px | `radius-xs` (4px) | `body-xs` |
+| **md** (기본값) | 16px | 24px | 4px 8px | `radius-sm` (8px) | `body-md` |
+| **lg** | 20px | 28px | 4px 8px | `radius-sm` (8px) | `body-xl` |
+
+레이블은 `Pretendard Bold(700)`를 사용하며, md/lg는 letter spacing -2%가 적용됩니다.
 
 ---
 
@@ -119,7 +131,7 @@ Figma 컴포넌트: `Segmented_control`
 
 <PropsTable data={[
   { name: 'items', type: '{ label: string, current?: boolean }[]', default: '[]', description: '세그먼트 항목 배열' },
-  { name: 'size', type: "'sm' | 'md'", default: "'md'", description: '컨트롤 사이즈' },
+  { name: 'size', type: "'sm' | 'md' | 'lg'", default: "'md'", description: '컨트롤 사이즈' },
   { name: 'fullWidth', type: 'boolean', default: 'false', description: '전체 너비 사용 여부 (Fill 스타일)' },
   { name: 'onChange', type: '(item, index) => void', default: '-', description: '세그먼트 클릭 시 호출되는 핸들러' },
 ]} />
@@ -131,5 +143,5 @@ Figma 컴포넌트: `Segmented_control`
 | Property | Values |
 | --- | --- |
 | **Style** | `hug` `fill` |
-| **Size** | `sm` `md` |
+| **Size** | `sm` `md` `lg` |
 | **Active** | `on` `off` |

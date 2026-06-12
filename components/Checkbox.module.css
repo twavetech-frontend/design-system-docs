@@ -4,31 +4,55 @@
 .wrapper {
   display: inline-flex;
   align-items: flex-start;
-  gap: 8px;
-  font-family: var(--fontFamily-fontFamilyBody, 'Inter', sans-serif);
+  gap: 8px;                        /* spacing-md */
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
   cursor: pointer;
+}
+
+.wrapper .control {
+  margin-top: 2px;                 /* 텍스트 첫 줄과 정렬 (Figma pt-xxs) */
 }
 
 .wrapperDisabled {
   cursor: not-allowed;
-  opacity: 0.5;
+}
+
+.wrapperDisabled .label,
+.wrapperDisabled .description {
+  color: var(--colors-text-textDisabled, #d2d6db);
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
 
+/* 라벨 타이포 — sm: body-xs(12/18), md: body-sm(14/20) */
 .label {
   font-size: 14px;
   font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.28px;
   color: var(--colors-text-textSecondary, #687079);
 }
 
 .description {
   font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.28px;
   color: var(--colors-text-textTertiary, #b1b6be);
+}
+
+.wrapperSize-sm .label,
+.wrapperSize-sm .description {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.wrapperSize-md .text {
+  gap: 2px;
 }
 
 /* ===========================
@@ -39,17 +63,21 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
-  background: var(--colors-background-bgPrimary, #fff);
+  border: 1px solid var(--colors-border-borderPrimary, #dce0e5);
+  background: transparent;
   transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 /* ===========================
-   Type: Checkbox (rounded square)
+   Type: Checkbox — radius sm: radius-xs(4px) / md: radius-sm(8px)
    =========================== */
-.checkbox {
+.checkbox.size-sm {
   border-radius: 4px;
+}
+.checkbox.size-md {
+  border-radius: 8px;
 }
 
 /* Type: Radio (circle) */
@@ -74,18 +102,17 @@
    Checked state
    =========================== */
 .checked {
-  background: var(--colors-brand-600, #7f56d9);
-  border-color: var(--colors-brand-600, #7f56d9);
+  background: var(--colors-background-bgBrandSolid, #7700ff);
+  border-color: transparent;
 }
 
 .checked .icon {
-  color: var(--colors-text-textWhite, #ffffff);
+  color: var(--colors-foreground-fgLight, #ffffff);
 }
 
-/* Radio checked: white bg with brand dot */
 .radio.checked {
-  background: var(--colors-brand-600, #7f56d9);
-  border-color: var(--colors-brand-600, #7f56d9);
+  background: var(--colors-background-bgBrandSolid, #7700ff);
+  border-color: transparent;
 }
 
 /* ===========================
@@ -93,7 +120,7 @@
    =========================== */
 .radioDot {
   border-radius: 50%;
-  background: var(--colors-text-textWhite, #ffffff);
+  background: var(--colors-foreground-fgLight, #ffffff);
 }
 
 .size-sm .radioDot {
@@ -135,48 +162,32 @@
    States
    =========================== */
 
-/* Hover - unchecked */
-.hover {
-  border-color: var(--colors-brand-600, #7f56d9);
-  background: var(--colors-brand-50, #f4ebff);
-}
+/* Hover — Figma상 색 변화 없음 (커서만) */
 
-/* Hover - checked */
-.hover.checked {
-  background: var(--colors-brand-700, #6941c6);
-  border-color: var(--colors-brand-700, #6941c6);
-}
-
-/* Focus - unchecked */
+/* Focus — focus-ring (2px 흰색 + 4px 브랜드) */
 .focus {
-  border-color: var(--colors-brand-300, #d6bbfb);
-  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+  box-shadow: var(--focusRings-focusRing, 0 0 0 2px #fcfcfd, 0 0 0 4px #7700ff);
 }
-
-/* Focus - checked */
 .focus.checked {
-  background: var(--colors-brand-600, #7f56d9);
-  border-color: var(--colors-brand-600, #7f56d9);
-  box-shadow: 0 0 0 4px var(--colors-brand-100, #f4ebff);
+  box-shadow: var(--focusRings-focusRing, 0 0 0 2px #fcfcfd, 0 0 0 4px #7700ff);
 }
 
-/* Disabled - unchecked */
+/* Disabled */
 .disabled {
-  border-color: var(--colors-border-borderSecondary, #eaecf0);
-  background: var(--colors-background-bgSecondary, #f2f4f7);
+  border-color: var(--colors-border-borderDisabled, #dce0e5);
+  background: var(--colors-background-bgDisabledSubtle, #f3f5f7);
   cursor: not-allowed;
 }
 
-/* Disabled - checked */
 .disabled.checked {
-  background: var(--colors-background-bgSecondary, #f2f4f7);
-  border-color: var(--colors-border-borderSecondary, #eaecf0);
+  background: var(--colors-background-bgDisabledSubtle, #f3f5f7);
+  border-color: var(--colors-border-borderDisabled, #dce0e5);
 }
 
 .disabled.checked .icon {
-  color: var(--colors-foreground-fgQuaternary, #f9fafb);
+  color: var(--colors-foreground-fgDisabledSubtle, #b3bdc7);
 }
 
 .disabled.checked .radioDot {
-  background: var(--colors-foreground-fgQuaternary, #f9fafb);
+  background: var(--colors-foreground-fgDisabledSubtle, #b3bdc7);
 }

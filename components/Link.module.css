@@ -1,11 +1,12 @@
 .link {
   display: inline-flex;
   align-items: flex-start;
+  /* spacing-xxs — tokens.css의 spacing 값은 단위가 없어 var()로 직접 사용 불가 */
   gap: 2px;
   font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
   font-weight: 600;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   transition: color 0.15s, box-shadow 0.15s, opacity 0.15s;
 }
@@ -32,66 +33,71 @@
 .size-sm .label {
   font-size: 12px;
   line-height: 18px;
-  letter-spacing: -0.12px;
 }
 .size-md .label {
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: -0.28px;
 }
 .size-lg .label {
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: -0.32px;
 }
 .size-xl .label {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
+  letter-spacing: -0.4px;
 }
 
 /* --- Color: brand (Link color) --- */
 .color-brand {
-  color: var(--colors-text-textBrandSecondary, #9b55ff);
+  color: var(--colors-text-textBrandPrimary, #7700ff);
 }
 .color-brand:hover,
 .color-brand.force-hover {
   color: var(--colors-brand-800, #340078);
 }
+.color-brand:focus-visible,
 .color-brand.force-focused {
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
+  box-shadow: var(--focusRings-focusRing, 0 0 0 2px #fcfcfd, 0 0 0 4px #7700ff);
   outline: none;
 }
 
 /* --- Color: gray (Link gray) --- */
 .color-gray {
-  color: var(--colors-grayNeutral-600, #687079);
+  color: var(--colors-text-textSecondary, #687079);
 }
 .color-gray:hover,
 .color-gray.force-hover {
-  color: var(--colors-grayNeutral-600, #687079);
+  color: var(--colors-text-textSecondaryHover, #596069);
 }
+.color-gray:focus-visible,
 .color-gray.force-focused {
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
+  box-shadow: var(--focusRings-focusRing, 0 0 0 2px #fcfcfd, 0 0 0 4px #7700ff);
   outline: none;
 }
 
 /* --- Color: destructive (Link/destructive) — always underlined --- */
 .color-destructive {
-  color: var(--colors-text-textErrorPrimary, #d92d20);
+  color: var(--colors-text-textErrorPrimary, #df1634);
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
 .color-destructive:hover,
 .color-destructive.force-hover {
-  color: var(--colors-text-textErrorPrimaryHover, #b42318);
+  color: var(--colors-text-textErrorPrimaryHover, #b9132c);
 }
+.color-destructive:focus-visible,
 .color-destructive.force-focused {
-  box-shadow: 0 0 0 2px #f3f4f6, 0 0 0 4px #7700ff;
+  box-shadow: var(--focusRings-focusRingError, 0 0 0 2px #fcfcfd, 0 0 0 4px #f04438);
   outline: none;
 }
 
 /* --- Disabled --- */
 .link[aria-disabled='true'],
 .force-disabled {
-  opacity: 0.5;
+  opacity: 0.2;
   cursor: not-allowed;
   pointer-events: none;
 }
