@@ -1,0 +1,112 @@
+/* ===========================
+   Tool Bar
+   ---------------------------
+   Figma: Base components/Tool Bar (17696:32070)
+   - 392 x 56, padding 8px 16px (spacing-md / spacing-xl)
+   - Home: 좌측 로고(94x24) + 우측 버튼 셋
+   - Detail view: 좌측 Back 버튼 + 중앙 타이틀(body-xl Bold) + 우측 버튼 셋
+   =========================== */
+
+.toolbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 392px;
+  max-width: 100%;
+  min-height: 56px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+/* ---- Logo ---- */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.logo svg {
+  width: 24px;
+  height: 24px;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  color: var(--colors-text-textPrimary, #2f3943);
+}
+
+/* ---- Title (Detail view, 중앙 고정) ---- */
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;                 /* body-xl */
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: var(--colors-text-textPrimary, #2f3943);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ---- Buttons ---- */
+.actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;                    /* spacing-md → 40x40 터치 영역 */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--colors-foreground-fgPrimary, #2f3943);
+}
+
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;                 /* body-md */
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  color: var(--colors-text-textPrimary, #2f3943);
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px 8px 0;         /* Figma: pl-0 pr-xl py-md */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--colors-foreground-fgPrimary, #2f3943);
+  flex-shrink: 0;
+}
+
+.icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.icon svg {
+  width: 24px;
+  height: 24px;
+}

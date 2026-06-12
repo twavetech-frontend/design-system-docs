@@ -1,0 +1,148 @@
+/* ===========================
+   Divider
+   ---------------------------
+   Figma: Base components/Divider (1252:126874)
+   - Single line: 1px 라인 + 중앙 콘텐츠, gap 8 (spacing-md)
+   - Dual line:   위/아래 1px 보더, py 12
+   - Background fill: bg-secondary 채움, radius-md(12px), py 8
+   =========================== */
+
+.line {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 1px;
+  background: var(--colors-border-borderSecondary, #eceef1);
+}
+
+.single {
+  display: flex;
+  align-items: center;
+  gap: 8px;                        /* spacing-md */
+  width: 100%;
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+.dual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 0;                 /* spacing-lg */
+  border-top: 1px solid var(--colors-border-borderSecondary, #eceef1);
+  border-bottom: 1px solid var(--colors-border-borderSecondary, #eceef1);
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+.fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0;                  /* spacing-md */
+  background: var(--colors-background-bgSecondary, #f3f5f7);
+  border-radius: 12px;             /* radius-md */
+  font-family: var(--fontFamily-fontFamilyBody, 'Pretendard', sans-serif);
+}
+
+/* ---- 중앙 콘텐츠 ---- */
+
+/* Text — body-xs Medium */
+.text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--colors-text-textTertiary, #8896a4);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Heading — body-md Semibold */
+.heading {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  color: var(--colors-text-textPrimary, #2f3943);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Button — body-xs Semibold */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;               /* py-md, px-14 + 텍스트 패딩 2 */
+  background: var(--colors-background-bgPrimary, #ffffff);
+  border: 1px solid var(--colors-border-borderSecondary, #eceef1);
+  border-radius: 8px;              /* radius-sm */
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--colors-text-textSecondary, #6f7e8d);
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Button icon — 20px 아이콘 단일 버튼 */
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: var(--colors-background-bgPrimary, #ffffff);
+  border: 1px solid var(--colors-border-borderSecondary, #eceef1);
+  border-radius: 8px;              /* radius-sm */
+  color: var(--colors-foreground-fgSecondary, #6f7e8d);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Button group — 세그먼트 버튼 묶음 */
+.button-group {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--colors-border-borderSecondary, #eceef1);
+  border-radius: 12px;             /* radius-md */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.group-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 12px;               /* py-md px-lg */
+  background: var(--colors-background-bgPrimary, #ffffff);
+  border: none;
+  border-right: 1px solid var(--colors-border-borderPrimary, #dce0e5);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--colors-text-textSecondary, #6f7e8d);
+  cursor: pointer;
+}
+
+.group-item:last-child {
+  border-right: none;
+}
+
+.group-item:hover {
+  background: var(--colors-background-bgPrimaryHover, #f3f5f6);
+}
+
+.icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.icon svg {
+  width: 20px;
+  height: 20px;
+}

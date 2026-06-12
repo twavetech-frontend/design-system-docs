@@ -1,0 +1,90 @@
+import { ToolBar } from '../../components/ToolBar'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Tool Bar
+
+모바일 화면 상단에 위치하는 툴 바입니다. 홈 화면에서는 로고와 액션 버튼을, 상세 화면에서는 뒤로 가기 버튼·타이틀·액션 버튼을 표시합니다.
+
+Figma 컴포넌트: `Tool Bar`, `_button top sets`, `_button_type`
+
+크기는 392×56px(패딩 `8px 16px`)이며, 아이콘 버튼은 24px 아이콘 + 8px 패딩으로 40×40px 터치 영역을 가집니다.
+
+---
+
+## Type: Home
+
+좌측에 imin 로고, 우측에 아이콘 액션 버튼을 표시합니다.
+
+<ComponentPreview code={`<ToolBar type="home" actions={[{}, {}]} />`}>
+  <ToolBar type="home" actions={[{}, {}]} />
+</ComponentPreview>
+
+---
+
+## Type: Detail view
+
+좌측에 뒤로 가기 버튼(chevron-left), 중앙에 화면 타이틀(`body-xl` 20px Bold), 우측에 액션 버튼을 표시합니다. 타이틀은 좌우 요소와 무관하게 항상 중앙에 고정됩니다.
+
+<ComponentPreview code={`<ToolBar type="detail" title="내 스케줄" actions={[{}, {}]} />`}>
+  <ToolBar type="detail" title="내 스케줄" actions={[{}, {}]} />
+</ComponentPreview>
+
+---
+
+## Button sets
+
+우측 액션 버튼은 1~3개까지 배치할 수 있습니다 (`1 Symbol` `2 Symbol` `3 Symbol`).
+
+<ComponentPreview code={`<ToolBar type="home" actions={[{}]} />
+<ToolBar type="home" actions={[{}, {}]} />
+<ToolBar type="home" actions={[{}, {}, {}]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <ToolBar type="home" actions={[{}]} />
+    <ToolBar type="home" actions={[{}, {}]} />
+    <ToolBar type="home" actions={[{}, {}, {}]} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Text action
+
+액션에 `label`을 전달하면 아이콘 대신 텍스트 버튼(`body-md` 16px Semibold)으로 렌더링됩니다.
+
+<ComponentPreview code={`<ToolBar type="detail" title="내 스케줄" actions={[{ label: '저장' }]} />`}>
+  <ToolBar type="detail" title="내 스케줄" actions={[{ label: '저장' }]} />
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'type', type: "'home' | 'detail'", default: "'home'", description: 'home: 로고 + 액션 / detail: 뒤로 가기 + 타이틀 + 액션' },
+  { name: 'title', type: 'string', default: '-', description: '중앙 타이틀 (detail 타입)' },
+  { name: 'actions', type: '{ icon?, label?, onClick?, ariaLabel? }[]', default: '[{}, {}]', description: '우측 액션 버튼 목록 (최대 3개). icon 생략 시 기본 chat 아이콘, label 지정 시 텍스트 버튼' },
+  { name: 'logo', type: 'ReactNode', default: 'imin 로고', description: 'home 타입 좌측 로고 교체' },
+  { name: 'onBack', type: '() => void', default: '-', description: '뒤로 가기 버튼 클릭 핸들러 (detail 타입)' },
+]} />
+
+---
+
+## Figma Variants
+
+### Tool Bar
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Home` `Detail view` |
+
+### _button top sets
+
+| Property | Values |
+| --- | --- |
+| **Type** | `1 Symbol` `2 Symbol` `3 Symbol` `Back Button` |
+
+### _button_type
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Icon` `Text` |

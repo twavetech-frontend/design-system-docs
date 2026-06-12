@@ -1,0 +1,99 @@
+import { Divider } from '../../components/Divider'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Dividers
+
+콘텐츠 영역을 구분하는 디바이더입니다. 단순 라인부터 텍스트·헤딩·버튼을 품은 형태까지 지원하며,
+세 가지 스타일(Single line / Dual line / Background fill)로 표시할 수 있습니다.
+
+Figma 컴포넌트: `Divider` (1252:126874)
+
+라인 컬러는 `border-secondary`(`#eceef1`), 라인-콘텐츠 간격은 `spacing-md`(8px)입니다.
+
+---
+
+## Type
+
+### Text / Heading
+
+날짜 구분("Today")처럼 가벼운 라벨은 `text`(`body-xs` 12px Medium, `text-tertiary`),
+섹션 제목은 `heading`(`body-md` 16px Semibold, `text-primary`)을 사용합니다.
+
+<ComponentPreview direction="column" code={`<Divider />
+<Divider type="text" label="Today" />
+<Divider type="heading" label="Notifications" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: '100%' }}>
+    <Divider />
+    <Divider type="text" label="Today" />
+    <Divider type="heading" label="Notifications" />
+  </div>
+</ComponentPreview>
+
+### Button / Button icon / Button group
+
+라인 중앙에 액션을 배치할 수 있습니다. 버튼은 흰 배경 + `border-secondary` 보더에 `radius-sm`(8px),
+버튼 그룹은 `radius-md`(12px) 컨테이너에 세그먼트가 `border-primary` 구분선으로 나뉩니다.
+
+<ComponentPreview direction="column" code={`<Divider type="button" label="Add" />
+<Divider type="button-icon" />
+<Divider type="button-group" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: '100%' }}>
+    <Divider type="button" label="Add" />
+    <Divider type="button-icon" />
+    <Divider type="button-group" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Style
+
+### Dual line
+
+콘텐츠 위아래로 1px 라인이 지나가는 형태입니다 (`padding: 12px 0`).
+
+<ComponentPreview direction="column" code={`<Divider variant="dual" type="heading" label="Notifications" />
+<Divider variant="dual" type="text" label="Today" />
+<Divider variant="dual" type="button" label="Add" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: '100%' }}>
+    <Divider variant="dual" type="heading" label="Notifications" />
+    <Divider variant="dual" type="text" label="Today" />
+    <Divider variant="dual" type="button" label="Add" />
+  </div>
+</ComponentPreview>
+
+### Background fill
+
+`bg-secondary`(`#f3f5f7`) 배경을 `radius-md`(12px)로 채우는 형태입니다 (`padding: 8px 0`).
+
+<ComponentPreview direction="column" code={`<Divider variant="fill" type="heading" label="Notifications" />
+<Divider variant="fill" type="text" label="Today" />
+<Divider variant="fill" type="button" label="Add" />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, width: '100%' }}>
+    <Divider variant="fill" type="heading" label="Notifications" />
+    <Divider variant="fill" type="text" label="Today" />
+    <Divider variant="fill" type="button" label="Add" />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'type', type: "'line' | 'text' | 'heading' | 'button' | 'button-icon' | 'button-group'", default: "'line'", description: '중앙 콘텐츠 형태. line이면 콘텐츠 없는 단순 구분선' },
+  { name: 'variant', type: "'single' | 'dual' | 'fill'", default: "'single'", description: '스타일 — 라인 사이 / 위아래 라인 / 배경 채움' },
+  { name: 'label', type: 'string', default: '-', description: 'text/heading/button의 라벨 텍스트' },
+  { name: 'icon', type: 'ReactNode', default: 'plus', description: 'button-icon의 아이콘 (20px)' },
+  { name: 'items', type: '{ icon?, label?, onClick? }[]', default: '화살표/플러스 3개', description: 'button-group의 세그먼트 목록' },
+  { name: 'onClick', type: '() => void', default: '-', description: 'button/button-icon 클릭 핸들러' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Text` `Heading` `Button` `Button icon` `Button group` `Button group icon` |
+| **Style** | `Single line` `Dual line` `Background fill` |
