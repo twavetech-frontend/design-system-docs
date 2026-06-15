@@ -68,6 +68,23 @@ const COMPONENT_GROUPS = [
   { label: 'Alpha', prefix: '--componentColors-alpha' },
 ];
 
+// --- 타입별 토큰 스코프 ---
+// 각 ColorPalette 인스턴스(primitive/semantic/component)가 자기 타입의 토큰만 보도록
+// 거른다. 이렇게 하지 않으면 분류되지 않은 토큰을 줍는 auto-discovery 안전망이
+// 시맨틱 색상(--colors-text-* 등)을 Primitive 섹션에 "(auto)" 그룹으로 흘려보낸다.
+const SEMANTIC_PREFIXES = SEMANTIC_GROUPS.map((g) => g.prefix); // text/background/border/foreground/effects
+
+function scopeTokens(vars, type) {
+  const isSemantic = (k) => SEMANTIC_PREFIXES.some((p) => k.startsWith(p));
+  const pred =
+    type === 'primitive'
+      ? (k) => k.startsWith('--colors-') && !isSemantic(k)
+      : type === 'semantic'
+      ? isSemantic
+      : (k) => k.startsWith('--componentColors-');
+  return Object.fromEntries(Object.entries(vars).filter(([k]) => pred(k)));
+}
+
 // --- Deprecated 토큰 필터 ---
 // 2026-06 Figma 변수 개편에서 삭제됐지만, 업스트림 tokens.css(Token Studio 빌드
 // 산출물)에는 아직 잔존하는 토큰들. 문서가 Figma 현재 상태를 반영하도록 표시에서
@@ -364,7 +381,7 @@ export function ColorPalette({ type = 'primitive', title, description }) {
   useEffect(() => {
     const fetchMode = hasModeToggle ? mode : 'light';
     fetchTokens(fetchMode).then((allVars) => {
-      const live = dropDeprecated(allVars);
+      const live = scopeTokens(dropDeprecated(allVars), type);
       const defs = type === 'primitive' ? PRIMITIVE_GROUPS : type === 'semantic' ? SEMANTIC_GROUPS : COMPONENT_GROUPS;
       setGroups(classifyVars(live, defs));
     });
