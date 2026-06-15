@@ -252,25 +252,44 @@
   box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingGray, rgba(152, 162, 179, 0.4));
 }
 
-/* --- Utility Button --- */
-.variant-utility-secondary {
-  background-color: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-text-textSecondary, #687079);
-  border: 1px solid var(--colors-border-borderPrimary, #d0d5dd);
+/* --- Utility Button (2026-06 Figma 실측) --- */
+/* 32x32 아이콘 버튼, radius 8, 아이콘 text-secondary(#6f7e8d). xs·sm 동일 치수 */
+.variant-utility-secondary, .variant-utility-tertiary {
+  color: var(--colors-text-textSecondary, #6f7e8d);
   border-radius: 8px;
 }
-.variant-utility-secondary:hover:not(:disabled), .variant-utility-secondary.force-hover {
-  background-color: var(--colors-background-bgPrimaryHover, #fafafa);
+.variant-utility-secondary.size-xs, .variant-utility-secondary.size-sm,
+.variant-utility-tertiary.size-xs, .variant-utility-tertiary.size-sm {
+  min-width: 32px;
+  min-height: 32px;
+  padding: 6px;
+  font-size: 18px;
+  line-height: 1;
 }
 
+/* Secondary — 흰 배경 + border-primary(#dce0e5), hover bg-secondary(#f3f5f7) */
+.variant-utility-secondary {
+  background-color: var(--colors-background-bgPrimary, #ffffff);
+  border: 1px solid var(--colors-border-borderPrimary, #dce0e5);
+}
+.variant-utility-secondary:hover:not(:disabled), .variant-utility-secondary.force-hover {
+  background-color: var(--colors-background-bgSecondary, #f3f5f7);
+}
+.variant-utility-secondary:disabled {
+  border-color: var(--colors-border-borderDisabledSubtle, #eceef1);
+}
+
+/* Tertiary — 배경 없음, hover bg-secondary(#f3f5f7) */
 .variant-utility-tertiary {
   background-color: transparent;
-  color: var(--colors-foreground-fgQuaternary, #f9fafb);
-  border-radius: 8px;
 }
 .variant-utility-tertiary:hover:not(:disabled), .variant-utility-tertiary.force-hover {
-  background-color: var(--colors-background-bgPrimaryHover, #fafafa);
-  color: var(--colors-foreground-fgSecondary, #687079);
+  background-color: var(--colors-background-bgSecondary, #f3f5f7);
+}
+
+/* Utility 공통 포커스 링 (gray) */
+.variant-utility-secondary.force-focused, .variant-utility-tertiary.force-focused {
+  box-shadow: 0 0 0 4px var(--colors-effects-focusRings-focusRingGray, rgba(152, 162, 179, 0.4));
 }
 
 /* Focused state baseline */
