@@ -39,12 +39,8 @@ const PRIMITIVE_GROUPS = [
   { label: 'Red', prefix: '--colors-red' },
   { label: 'Orange', prefix: '--colors-orange' },
   { label: 'Yellow', prefix: '--colors-yellow' },
-  // 아래 팔레트는 토큰으로는 발행되지만 Figma Colors 페이지에는 노출되지 않는 보조 색상.
+  // Figma 변수로는 발행되지만 Colors 페이지에는 노출되지 않는 보조 색상.
   { label: 'Gray Dark Alpha', prefix: '--colors-grayDarkAlpha' },
-  { label: 'Cyan', prefix: '--colors-cyan' },
-  { label: 'Blue Light', prefix: '--colors-blueLight' },
-  { label: 'Orange Dark', prefix: '--colors-orangeDark' },
-  { label: 'Rose', prefix: '--colors-rosé' },
 ];
 
 const SEMANTIC_GROUPS = [
@@ -66,12 +62,44 @@ const COMPONENT_GROUPS = [
   { label: 'Utility Green', prefix: '--componentColors-utility-green' },
   { label: 'Utility Pink', prefix: '--componentColors-utility-pink' },
   { label: 'Utility Purple', prefix: '--componentColors-utility-purple' },
-  { label: 'Utility Orange Dark', prefix: '--componentColors-utility-orangeDark' },
   { label: 'Utility Orange', prefix: '--componentColors-utility-orange' },
   { label: 'Utility Yellow', prefix: '--componentColors-utility-yellow' },
   { label: 'Components', prefix: '--componentColors-components' },
   { label: 'Alpha', prefix: '--componentColors-alpha' },
 ];
+
+// --- Deprecated 토큰 필터 ---
+// 2026-06 Figma 변수 개편에서 삭제됐지만, 업스트림 tokens.css(Token Studio 빌드
+// 산출물)에는 아직 잔존하는 토큰들. 문서가 Figma 현재 상태를 반영하도록 표시에서
+// 제외한다. 업스트림 소스가 정리되면 이 필터는 자동으로 무동작이 된다(토큰이
+// 사라지면 걸러낼 것도 없음). tokens.css 자체는 동기화 산출물이라 수정하지 않는다.
+const DEPRECATED_PREFIXES = [
+  '--colors-blueLight',   // 삭제된 프리미티브 패밀리
+  '--colors-cyan',
+  '--colors-orangeDark',
+  '--colors-rosé',
+  '--componentColors-utility-orangeDark', // 삭제된 유틸리티 패밀리
+];
+// 알파 스케일이 4·8·12·16·24·32·40·48·60·80·100 체계로 변경됨 (옛 10·20·30·50·70·90, black 3·5 제거)
+const VALID_ALPHA_STEPS = new Set([4, 8, 12, 16, 24, 32, 40, 48, 60, 80, 100]);
+
+function isDeprecatedToken(name) {
+  if (DEPRECATED_PREFIXES.some((p) => name.startsWith(p))) return true;
+  // 시맨틱(text/background/border/foreground)의 *Alt 변수는 전부 삭제됨
+  if (/^--colors-(text|background|border|foreground)-.*Alt$/.test(name)) return true;
+  // 알파: 신규 스케일에 없는 옛 스텝 제거
+  const alpha = name.match(/^--componentColors-alpha-alpha(?:White|Black)(\d+)$/);
+  if (alpha && !VALID_ALPHA_STEPS.has(Number(alpha[1]))) return true;
+  return false;
+}
+
+function dropDeprecated(allVars) {
+  const live = {};
+  for (const [k, v] of Object.entries(allVars)) {
+    if (!isDeprecatedToken(k)) live[k] = v;
+  }
+  return live;
+}
 
 // --- Classification (longest prefix first to avoid ambiguity) ---
 function classifyVars(allVars, groups) {
@@ -336,8 +364,9 @@ export function ColorPalette({ type = 'primitive', title, description }) {
   useEffect(() => {
     const fetchMode = hasModeToggle ? mode : 'light';
     fetchTokens(fetchMode).then((allVars) => {
+      const live = dropDeprecated(allVars);
       const defs = type === 'primitive' ? PRIMITIVE_GROUPS : type === 'semantic' ? SEMANTIC_GROUPS : COMPONENT_GROUPS;
-      setGroups(classifyVars(allVars, defs));
+      setGroups(classifyVars(live, defs));
     });
   }, [type, mode]);
 
