@@ -103,16 +103,18 @@ Figma 컴포넌트: `Buttons/destructive`
 
 ## Size
 
-Action Button과 동일한 4가지 사이즈를 지원합니다.
+Action Button과 동일한 5가지 사이즈를 지원합니다 (sm 24px · md 32px · lg 40px · xl 56px · 2xl 64px).
 
 <ComponentPreview code={`<Button variant="destructive-primary" size="sm">SM</Button>
 <Button variant="destructive-primary" size="md">MD</Button>
 <Button variant="destructive-primary" size="lg">LG</Button>
-<Button variant="destructive-primary" size="xl">XL</Button>`}>
+<Button variant="destructive-primary" size="xl">XL</Button>
+<Button variant="destructive-primary" size="2xl">2XL</Button>`}>
   <Button variant="destructive-primary" size="sm">SM</Button>
   <Button variant="destructive-primary" size="md">MD</Button>
   <Button variant="destructive-primary" size="lg">LG</Button>
   <Button variant="destructive-primary" size="xl">XL</Button>
+  <Button variant="destructive-primary" size="2xl">2XL</Button>
 </ComponentPreview>
 
 ---
@@ -121,7 +123,7 @@ Action Button과 동일한 4가지 사이즈를 지원합니다.
 
 <PropsTable data={[
   { name: 'variant', type: "destructive-primary | destructive-secondary | destructive-tertiary | destructive-ghost", default: "-", description: 'Destructive 버튼의 Hierarchy' },
-  { name: 'size', type: "sm | md | lg | xl", default: "md", description: '버튼 크기' },
+  { name: 'size', type: "sm | md | lg | xl | 2xl", default: "md", description: '버튼 크기' },
   { name: 'state', type: "default | hover | active | focused | disabled", default: "default", description: '버튼 상태 (문서 시각화용)' },
   { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화 여부' },
   { name: 'isLoading', type: 'boolean', default: 'false', description: '로딩 상태' },
@@ -134,7 +136,7 @@ Action Button과 동일한 4가지 사이즈를 지원합니다.
 
 | Property | Values |
 | --- | --- |
-| **Size** | `sm` `md` `lg` `xl` |
+| **Size** | `sm` `md` `lg` `xl` `2xl` |
 | **Hierarchy** | `Primary` `Secondary` `Tertiary` `Ghost` |
 | **State** | `Default` `Hover` `Active` `Focused` `Disabled` `Loading` |
 | **Icon only** | `True` `False` |
