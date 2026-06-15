@@ -9,3 +9,6 @@ public/tokens.css
 public/tokens-dark.css
 styles/tokens.css
 styles/tokens-dark.css
+
+# macOS
+.DS_Store

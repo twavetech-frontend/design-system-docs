@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아임인 디자인 시스템 문서 — 설치 및 실행 가이드</title>
+<style>
+  :root {
+    --brand: #7700ff;
+    --brand-50: #f4ecff;
+    --brand-100: #e6d4ff;
+    --ink: #181d27;
+    --gray: #535862;
+    --gray-light: #717680;
+    --line: #e9eaeb;
+    --bg-soft: #fafafa;
+    --code-bg: #1b1530;
+    --warn-bg: #fff8f3;
+    --warn-line: #f6bc8e;
+    --warn-ink: #9a4500;
+    --ok-bg: #f6fcf4;
+    --ok-line: #b7e6a8;
+    --ok-ink: #257a1d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard",
+      "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px 96px; }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #7700ff 0%, #9b55ff 100%);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  header .badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: rgba(255,255,255,0.18);
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  header h1 { font-size: 28px; font-weight: 700; line-height: 1.4; }
+  header p { font-size: 16px; color: #fff; opacity: 0.92; margin-top: 12px; }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 48px 0 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--line);
+  }
+  h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    background: var(--brand);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .lead { color: var(--gray); font-size: 15px; margin: 14px 0 24px; }
+
+  p { color: var(--gray); }
+  strong { color: var(--ink); }
+
+  /* OS tabs */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin: 40px 0 28px;
+    background: var(--bg-soft);
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+  }
+  .tab {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-light);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .tab.active { background: var(--brand); color: #fff; }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* Steps */
+  .step {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 24px 22px;
+    margin-bottom: 18px;
+  }
+  .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .step-num {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: var(--brand-50);
+    color: var(--brand);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-title { font-size: 17px; font-weight: 700; color: var(--ink); }
+  .step-body { font-size: 15px; color: var(--gray); }
+  .step-body p { margin: 8px 0; }
+  .step-body a { color: var(--brand); font-weight: 600; }
+
+  /* Code block */
+  .code {
+    position: relative;
+    background: var(--code-bg);
+    color: #e9e3ff;
+    border-radius: 10px;
+    padding: 16px 56px 16px 18px;
+    font-family: "SF Mono", "Consolas", "D2Coding", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 12px 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .code .prompt { color: #b685ff; user-select: none; }
+  .copy-btn {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .copy-btn:hover { background: rgba(255,255,255,0.24); }
+
+  /* Callouts */
+  .note {
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    margin: 14px 0;
+    border: 1px solid;
+  }
+  .note.warn { background: var(--warn-bg); border-color: var(--warn-line); color: var(--warn-ink); }
+  .note.ok   { background: var(--ok-bg);   border-color: var(--ok-line);   color: var(--ok-ink); }
+  .note.info { background: var(--brand-50); border-color: var(--brand-100); color: #5200b0; }
+  .note strong { color: inherit; }
+
+  .result-url {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--brand-100);
+    color: var(--brand);
+    font-weight: 700;
+    font-family: "SF Mono", "Consolas", monospace;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--gray-light);
+    text-align: center;
+  }
+  ul.simple { margin: 8px 0 8px 20px; color: var(--gray); font-size: 15px; }
+  ul.simple li { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">아임인 디자인 시스템</div>
+  <h1>문서 사이트 설치 &amp; 실행 가이드</h1>
+  <p>처음 받는 분도 따라 할 수 있도록 단계별로 정리했습니다.</p>
+</header>
+
+<div class="wrap">
+
+  <h2><span class="num">?</span>먼저 알아두기</h2>
+  <p class="lead">
+    이 문서 사이트를 내 컴퓨터에서 보려면 <strong>딱 두 가지 프로그램</strong>만 설치하면 됩니다.
+    아래 순서대로 한 번만 설치해 두면, 다음부터는 마지막 “실행” 단계만 반복하면 됩니다.
+  </p>
+  <ul class="simple">
+    <li><strong>Node.js</strong> — 사이트를 실행해 주는 프로그램</li>
+    <li><strong>Git</strong> — 소스 코드를 내려받는 프로그램</li>
+  </ul>
+  <div class="note info">
+    💡 <strong>명령어 입력 창</strong>을 사용합니다. Mac은 <strong>터미널(Terminal)</strong>,
+    Windows는 <strong>명령 프롬프트(cmd)</strong>입니다. 아래 검은색 칸의 명령어를
+    <strong>복사 버튼</strong>으로 복사해 붙여넣고 <strong>Enter</strong>를 누르세요.
+  </div>
+
+  <!-- OS 탭 -->
+  <div class="tabs">
+    <button class="tab active" data-os="mac"> Mac (맥)</button>
+    <button class="tab" data-os="win">⊞ Windows (윈도우)</button>
+  </div>
+
+  <!-- ===================== MAC ===================== -->
+  <div class="panel active" id="mac">
+
+    <h2><span class="num">1</span>Node.js 설치</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">설치 파일 내려받기</span>
+      </div>
+      <div class="step-body">
+        <p><a href="https://nodejs.org/ko" target="_blank">nodejs.org/ko</a> 에 접속해
+        왼쪽의 <strong>“LTS” 버전</strong> 버튼을 눌러 설치 파일(.pkg)을 내려받습니다.</p>
+        <p>내려받은 파일을 더블클릭하고 <strong>“계속”</strong>만 눌러 설치를 끝냅니다.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">2</span>
+        <span class="step-title">터미널 열기</span>
+      </div>
+      <div class="step-body">
+        <p><strong>Launchpad → “터미널” 검색</strong> 또는
+        <strong>Command(⌘) + Space</strong> 를 누르고 <strong>“터미널”</strong> 을 입력해 엽니다.</p>
+        <p>아래 명령어를 붙여넣고 Enter. 버전 번호(예: v20.x.x)가 나오면 설치 성공입니다.</p>
+        <div class="code"><span class="prompt">$ </span>node -v</div>
+      </div>
+    </div>
+
+    <h2><span class="num">2</span>Git 설치</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">설치 확인 &amp; 자동 설치</span>
+      </div>
+      <div class="step-body">
+        <p>Mac에는 Git이 들어있는 경우가 많습니다. 먼저 터미널에 아래를 입력하세요.</p>
+        <div class="code"><span class="prompt">$ </span>git --version</div>
+        <p>버전 번호가 나오면 이미 설치된 것이니 <strong>3단계로 넘어가세요.</strong>
+        만약 설치 안내 창이 뜨면 <strong>“설치”</strong> 버튼을 눌러 설치를 끝냅니다.</p>
+      </div>
+    </div>
+
+    <h2><span class="num">3</span>소스 코드 내려받기</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">원하는 폴더로 이동 후 내려받기</span>
+      </div>
+      <div class="step-body">
+        <p>예를 들어 <strong>바탕화면(Desktop)</strong> 에 받으려면 아래 두 줄을 차례로 입력합니다.</p>
+        <div class="code"><span class="prompt">$ </span>cd ~/Desktop
+<span class="prompt">$ </span>git clone https://github.com/twavetech-frontend/design-system-docs.git</div>
+        <p>그 다음 내려받은 폴더 안으로 들어갑니다.</p>
+        <div class="code"><span class="prompt">$ </span>cd design-system-docs</div>
+      </div>
+    </div>
+
+    <h2><span class="num">4</span>실행하기</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">필요한 부품 설치 (최초 1회)</span>
+      </div>
+      <div class="step-body">
+        <p>아래 명령어를 입력합니다. 인터넷 속도에 따라 1~3분 걸립니다.</p>
+        <div class="code"><span class="prompt">$ </span>npm install</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">2</span>
+        <span class="step-title">사이트 켜기</span>
+      </div>
+      <div class="step-body">
+        <div class="code"><span class="prompt">$ </span>npm run dev</div>
+        <p>잠시 뒤 <strong>“Ready”</strong> 또는 주소가 나타나면, 웹 브라우저(Chrome 등)를 열고
+        주소창에 아래를 입력합니다.</p>
+        <p><span class="result-url">http://localhost:3000</span></p>
+        <div class="note ok">✅ 화면이 보이면 완료입니다!</div>
+        <div class="note warn">
+          ⚠️ 사이트를 보는 동안 <strong>터미널 창은 닫지 마세요.</strong>
+          그만 보려면 터미널에서 <strong>Control + C</strong> 를 누르면 종료됩니다.
+        </div>
+        <p>다음에 다시 볼 때는 터미널에서 폴더로 이동(<code>cd ~/Desktop/design-system-docs</code>)한 뒤
+        <strong>npm run dev</strong> 만 입력하면 됩니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== WINDOWS ===================== -->
+  <div class="panel" id="win">
+
+    <h2><span class="num">1</span>Node.js 설치</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">설치 파일 내려받기</span>
+      </div>
+      <div class="step-body">
+        <p><a href="https://nodejs.org/ko" target="_blank">nodejs.org/ko</a> 에 접속해
+        <strong>“LTS” 버전</strong> 버튼을 눌러 설치 파일(.msi)을 내려받습니다.</p>
+        <p>내려받은 파일을 더블클릭하고, 체크박스·옵션은 그대로 둔 채
+        <strong>“Next”</strong> 와 <strong>“Install”</strong> 만 눌러 설치를 끝냅니다.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">2</span>
+        <span class="step-title">명령 프롬프트 열기</span>
+      </div>
+      <div class="step-body">
+        <p>키보드 <strong>⊞ (윈도우 키)</strong> 를 누르고 <strong>“cmd”</strong> 를 입력한 뒤
+        <strong>명령 프롬프트</strong> 를 엽니다.</p>
+        <p>아래 명령어를 붙여넣고(마우스 오른쪽 클릭으로 붙여넣기) Enter.
+        버전 번호(예: v20.x.x)가 나오면 성공입니다.</p>
+        <div class="code"><span class="prompt">&gt; </span>node -v</div>
+      </div>
+    </div>
+
+    <h2><span class="num">2</span>Git 설치</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">설치 파일 내려받기</span>
+      </div>
+      <div class="step-body">
+        <p><a href="https://git-scm.com/download/win" target="_blank">git-scm.com/download/win</a> 에 접속하면
+        설치 파일이 자동으로 내려받아집니다. (안 되면 “Click here to download” 클릭)</p>
+        <p>내려받은 파일을 더블클릭하고, 모든 옵션을 <strong>그대로 둔 채</strong>
+        <strong>“Next”</strong> 를 계속 눌러 설치를 끝냅니다.</p>
+        <div class="note warn">
+          ⚠️ 설치가 끝나면 <strong>열려 있던 명령 프롬프트 창을 닫고 새로 열어야</strong>
+          Git이 인식됩니다.
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="num">3</span>소스 코드 내려받기</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">원하는 폴더로 이동 후 내려받기</span>
+      </div>
+      <div class="step-body">
+        <p>예를 들어 <strong>바탕화면(Desktop)</strong> 에 받으려면 아래 두 줄을 차례로 입력합니다.</p>
+        <div class="code"><span class="prompt">&gt; </span>cd %USERPROFILE%\Desktop
+<span class="prompt">&gt; </span>git clone https://github.com/twavetech-frontend/design-system-docs.git</div>
+        <p>그 다음 내려받은 폴더 안으로 들어갑니다.</p>
+        <div class="code"><span class="prompt">&gt; </span>cd design-system-docs</div>
+      </div>
+    </div>
+
+    <h2><span class="num">4</span>실행하기</h2>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <span class="step-title">필요한 부품 설치 (최초 1회)</span>
+      </div>
+      <div class="step-body">
+        <p>아래 명령어를 입력합니다. 인터넷 속도에 따라 1~3분 걸립니다.</p>
+        <div class="code"><span class="prompt">&gt; </span>npm install</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-head">
+        <span class="step-num">2</span>
+        <span class="step-title">사이트 켜기</span>
+      </div>
+      <div class="step-body">
+        <div class="code"><span class="prompt">&gt; </span>npm run dev</div>
+        <p>잠시 뒤 <strong>“Ready”</strong> 또는 주소가 나타나면, 웹 브라우저(Chrome 등)를 열고
+        주소창에 아래를 입력합니다.</p>
+        <p><span class="result-url">http://localhost:3000</span></p>
+        <div class="note ok">✅ 화면이 보이면 완료입니다!</div>
+        <div class="note warn">
+          ⚠️ 사이트를 보는 동안 <strong>명령 프롬프트 창은 닫지 마세요.</strong>
+          그만 보려면 명령 프롬프트에서 <strong>Ctrl + C</strong> 를 누르면 종료됩니다.
+        </div>
+        <p>다음에 다시 볼 때는 명령 프롬프트에서 폴더로 이동(<code>cd %USERPROFILE%\Desktop\design-system-docs</code>)한 뒤
+        <strong>npm run dev</strong> 만 입력하면 됩니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="num">!</span>잘 안 될 때</h2>
+  <ul class="simple">
+    <li><strong>‘git’ / ‘node’ / ‘npm’ 을(를) 찾을 수 없습니다</strong> →
+      해당 프로그램이 설치 안 됐거나, 설치 후 명령어 창을 새로 열지 않은 경우입니다. 창을 닫고 다시 열어 보세요.</li>
+    <li><strong>npm install 중 멈춘 것 같을 때</strong> →
+      실제로는 진행 중인 경우가 많습니다. 2~3분 기다려 주세요. (인터넷 연결 필요)</li>
+    <li><strong>localhost:3000 이 안 열릴 때</strong> →
+      <strong>npm run dev</strong> 명령어 창에 “Ready” 가 떴는지 확인하고, 주소를 정확히 입력했는지 보세요.</li>
+  </ul>
+
+  <footer>
+    아임인 디자인 시스템 문서 · 설치 및 실행 가이드<br>
+    저장소: github.com/twavetech-frontend/design-system-docs
+  </footer>
+
+</div>
+
+<script>
+  // OS 탭 전환
+  document.querySelectorAll('.tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.tab').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.os).classList.add('active');
+      window.scrollTo({ top: document.querySelector('.tabs').offsetTop - 20, behavior: 'smooth' });
+    });
+  });
+
+  // 복사 버튼 자동 추가
+  document.querySelectorAll('.code').forEach(function (block) {
+    var btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = '복사';
+    btn.addEventListener('click', function () {
+      // 프롬프트 기호($, >)를 제외한 명령어만 복사
+      var text = '';
+      block.childNodes.forEach(function (node) {
+        if (!(node.nodeType === 1 && node.classList.contains('prompt'))) {
+          text += node.textContent;
+        }
+      });
+      navigator.clipboard.writeText(text.trim()).then(function () {
+        btn.textContent = '복사됨!';
+        setTimeout(function () { btn.textContent = '복사'; }, 1500);
+      });
+    });
+    block.appendChild(btn);
+  });
+</script>
+
+</body>
+</html>
