@@ -3,22 +3,26 @@ import styles from './Chart.module.css';
 
 const cx = (...c) => c.filter(Boolean).join(' ');
 
+// SVG 좌표를 소수점 2자리로 고정한다. 반올림하지 않으면 Node(서버)와 브라우저(클라이언트)의
+// 부동소수점 직렬화 끝자리가 달라져 path d 속성에서 hydration mismatch가 난다.
+const round2 = (n) => Math.round(n * 100) / 100;
+
 /* ─────────────────────────── helpers ─────────────────────────── */
 
 function smoothPath(points) {
   if (points.length < 2) return '';
-  const d = [`M ${points[0][0]} ${points[0][1]}`];
+  const d = [`M ${round2(points[0][0])} ${round2(points[0][1])}`];
   for (let i = 0; i < points.length - 1; i++) {
     const [x0, y0] = points[Math.max(0, i - 1)];
     const [x1, y1] = points[i];
     const [x2, y2] = points[i + 1];
     const [x3, y3] = points[Math.min(points.length - 1, i + 2)];
     const t = 0.18;
-    const cp1x = x1 + (x2 - x0) * t;
-    const cp1y = y1 + (y2 - y0) * t;
-    const cp2x = x2 - (x3 - x1) * t;
-    const cp2y = y2 - (y3 - y1) * t;
-    d.push(`C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${x2} ${y2}`);
+    const cp1x = round2(x1 + (x2 - x0) * t);
+    const cp1y = round2(y1 + (y2 - y0) * t);
+    const cp2x = round2(x2 - (x3 - x1) * t);
+    const cp2y = round2(y2 - (y3 - y1) * t);
+    d.push(`C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${round2(x2)} ${round2(y2)}`);
   }
   return d.join(' ');
 }
@@ -26,10 +30,10 @@ function smoothPath(points) {
 function describeArc(cx, cy, r, startDeg, endDeg) {
   const startRad = ((startDeg - 90) * Math.PI) / 180;
   const endRad = ((endDeg - 90) * Math.PI) / 180;
-  const x1 = cx + r * Math.cos(startRad);
-  const y1 = cy + r * Math.sin(startRad);
-  const x2 = cx + r * Math.cos(endRad);
-  const y2 = cy + r * Math.sin(endRad);
+  const x1 = round2(cx + r * Math.cos(startRad));
+  const y1 = round2(cy + r * Math.sin(startRad));
+  const x2 = round2(cx + r * Math.cos(endRad));
+  const y2 = round2(cy + r * Math.sin(endRad));
   const largeArc = endDeg - startDeg > 180 ? 1 : 0;
   return `M ${x1} ${y1} A ${r} ${r} 0 ${largeArc} 1 ${x2} ${y2}`;
 }
@@ -314,7 +318,8 @@ export function ActivityGauge({
   const rings = values.map((v, i) => {
     const r = (px - stroke) / 2 - i * cfg.ringGap;
     const C = 2 * Math.PI * r;
-    return { r, C, dash: C * v, gap: C * (1 - v), color: ringColors[i] };
+    // dash/gap 은 strokeDasharray 문자열로 그대로 출력되므로 반올림해 hydration mismatch 방지
+    return { r, C, dash: round2(C * v), gap: round2(C * (1 - v)), color: ringColors[i] };
   });
 
   const gauge = (
@@ -412,16 +417,16 @@ export function PieChart({
     const startA = ((start - 90) * Math.PI) / 180;
     const endA = ((end - 90) * Math.PI) / 180;
     const large = end - start > 180 ? 1 : 0;
-    const x1 = r + r * Math.cos(startA);
-    const y1 = r + r * Math.sin(startA);
-    const x2 = r + r * Math.cos(endA);
-    const y2 = r + r * Math.sin(endA);
+    const x1 = round2(r + r * Math.cos(startA));
+    const y1 = round2(r + r * Math.sin(startA));
+    const x2 = round2(r + r * Math.cos(endA));
+    const y2 = round2(r + r * Math.sin(endA));
     let path;
     if (innerR > 0) {
-      const xi1 = r + innerR * Math.cos(endA);
-      const yi1 = r + innerR * Math.sin(endA);
-      const xi2 = r + innerR * Math.cos(startA);
-      const yi2 = r + innerR * Math.sin(startA);
+      const xi1 = round2(r + innerR * Math.cos(endA));
+      const yi1 = round2(r + innerR * Math.sin(endA));
+      const xi2 = round2(r + innerR * Math.cos(startA));
+      const yi2 = round2(r + innerR * Math.sin(startA));
       path = `M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} L ${xi1} ${yi1} A ${innerR} ${innerR} 0 ${large} 0 ${xi2} ${yi2} Z`;
     } else {
       path = `M ${r} ${r} L ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} Z`;
@@ -479,12 +484,13 @@ export function RadarChart({
   const maxR = 150;
   const max = rings[rings.length - 1];
   const angleFor = (i) => ((i / axes.length) * 360 - 90) * (Math.PI / 180);
+  const r = round2; // 부동소수점 hydration mismatch 방지용 (모듈 상단 round2 참고)
 
   const ringPaths = rings.map((v) => {
     const rad = (v / max) * maxR;
     const pts = axes.map((_, i) => {
       const a = angleFor(i);
-      return [cx0 + Math.cos(a) * rad, cy0 + Math.sin(a) * rad];
+      return [r(cx0 + Math.cos(a) * rad), r(cy0 + Math.sin(a) * rad)];
     });
     return pts.map(([x, y], i) => `${i === 0 ? 'M' : 'L'} ${x} ${y}`).join(' ') + ' Z';
   });
@@ -493,7 +499,7 @@ export function RadarChart({
     const pts = s.values.map((v, i) => {
       const a = angleFor(i);
       const rad = (v / max) * maxR;
-      return [cx0 + Math.cos(a) * rad, cy0 + Math.sin(a) * rad];
+      return [r(cx0 + Math.cos(a) * rad), r(cy0 + Math.sin(a) * rad)];
     });
     const d = pts.map(([x, y], i) => `${i === 0 ? 'M' : 'L'} ${x} ${y}`).join(' ') + ' Z';
     return { d, color: s.color };
@@ -502,15 +508,15 @@ export function RadarChart({
   const labelPositions = axes.map((lbl, i) => {
     const a = angleFor(i);
     const rad = maxR + 24;
-    return { lbl, x: cx0 + Math.cos(a) * rad, y: cy0 + Math.sin(a) * rad };
+    return { lbl, x: r(cx0 + Math.cos(a) * rad), y: r(cy0 + Math.sin(a) * rad) };
   });
 
   const radar = (
     <svg className={styles.radarSvg} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
       {axes.map((_, i) => {
         const a = angleFor(i);
-        const x = cx0 + Math.cos(a) * maxR;
-        const y = cy0 + Math.sin(a) * maxR;
+        const x = r(cx0 + Math.cos(a) * maxR);
+        const y = r(cy0 + Math.sin(a) * maxR);
         return <line key={i} className={styles.radarRay} x1={cx0} y1={cy0} x2={x} y2={y} />;
       })}
       {ringPaths.map((d, i) => (
