@@ -362,7 +362,11 @@ const stickyHeader = {
   position: 'sticky',
   top: 64,
   zIndex: 10,
-  background: '#fff',
+  // Nextra 상단 내비바와 동일한 반투명 배경 + 백드롭 블러 (같은 CSS 변수를 써서
+  // 라이트/다크 모드에 자동 대응). 내비바: nextra-bg 70% + blur(--x-blur-md=12px).
+  background: 'color-mix(in oklab, var(--x-color-nextra-bg, #fff) 70%, transparent)',
+  backdropFilter: 'blur(12px)',
+  WebkitBackdropFilter: 'blur(12px)',
   paddingTop: 16,
   paddingBottom: 8,
   marginLeft: -4,
