@@ -172,8 +172,9 @@
   background-color: transparent;
 }
 
-/* --- Destructive Button Variants --- */
+/* --- Destructive Button Variants (2026-06 Figma 실측) --- */
 
+/* Primary — 솔리드 에러(#df1634), hover #b9132c */
 .variant-destructive-primary {
   background-color: var(--colors-background-bgErrorSolid, #df1634);
   color: var(--colors-text-textWhite, #ffffff);
@@ -182,48 +183,54 @@
   background-color: var(--colors-background-bgErrorSolidHover, #b9132c);
 }
 .variant-destructive-primary:active:not(:disabled), .variant-destructive-primary.force-active {
-  background-color: var(--colors-background-bgErrorSolidHover, #b9132c);
-}
-.variant-destructive-primary.force-focused {
   background-color: var(--colors-background-bgErrorSolid, #df1634);
-  box-shadow: var(--focusRings-focusRingError, 0 0 0 2px #fcfcfd, 0 0 0 4px #f04438);
 }
 
+/* Secondary — 연한 에러 배경(#f3cfcf, 테두리 없음) + 에러 텍스트, hover #eca8a8 */
 .variant-destructive-secondary {
-  background-color: var(--colors-background-bgPrimary, #fff);
-  color: var(--colors-foreground-fgErrorPrimary, #df1634);
-  border: 1px solid var(--colors-border-borderError, #df1634);
+  background-color: var(--colors-background-bgErrorSecondary, #f3cfcf);
+  color: var(--colors-text-textErrorPrimary, #df1634);
 }
 .variant-destructive-secondary:hover:not(:disabled), .variant-destructive-secondary.force-hover {
-  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+  background-color: var(--colors-background-bgErrorSecondaryHover, #eca8a8);
 }
 .variant-destructive-secondary:active:not(:disabled), .variant-destructive-secondary.force-active {
-  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
-}
-.variant-destructive-secondary.force-focused {
-  box-shadow: var(--focusRings-focusRingError, 0 0 0 2px #fcfcfd, 0 0 0 4px #f04438);
+  background-color: var(--colors-background-bgErrorSecondary, #f3cfcf);
 }
 
+/* Tertiary — 흰 배경 + 에러 테두리(border-error_subtle #d83f3f), hover bg #f9eaea */
 .variant-destructive-tertiary {
-  background-color: transparent;
-  color: var(--colors-foreground-fgErrorPrimary, #df1634);
+  background-color: var(--colors-background-bgPrimary, #ffffff);
+  color: var(--colors-text-textErrorPrimary, #df1634);
+  border: 1px solid var(--colors-border-borderErrorSubtle, #d83f3f);
 }
 .variant-destructive-tertiary:hover:not(:disabled), .variant-destructive-tertiary.force-hover {
-  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+  background-color: var(--colors-background-bgErrorPrimary, #f9eaea);
 }
 .variant-destructive-tertiary:active:not(:disabled), .variant-destructive-tertiary.force-active {
-  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+  background-color: var(--colors-background-bgPrimary, #ffffff);
 }
 
+/* Ghost — 배경 없음 + 에러 텍스트, hover bg #f9eaea */
 .variant-destructive-ghost {
   background-color: transparent;
-  color: var(--colors-foreground-fgErrorPrimary, #df1634);
+  color: var(--colors-text-textErrorPrimary, #df1634);
 }
 .variant-destructive-ghost:hover:not(:disabled), .variant-destructive-ghost.force-hover {
-  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+  background-color: var(--colors-background-bgErrorPrimary, #f9eaea);
 }
 .variant-destructive-ghost:active:not(:disabled), .variant-destructive-ghost.force-active {
-  background-color: var(--colors-background-bgErrorPrimary, #fef3f2);
+  background-color: var(--colors-background-bgErrorPrimary, #f9eaea);
+}
+
+/* Destructive 공통 에러 포커스 링 */
+.variant-destructive-primary.force-focused,
+.variant-destructive-secondary.force-focused,
+.variant-destructive-tertiary.force-focused,
+.variant-destructive-ghost.force-focused {
+  box-shadow:
+    0 0 0 2px var(--colors-background-bgPrimary, #fcfcfd),
+    0 0 0 4px var(--colors-effects-focusRings-focusRingError, #df1634);
 }
 
 /* --- Close Button --- */
