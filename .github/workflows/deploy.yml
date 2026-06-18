@@ -31,6 +31,11 @@ jobs:
         run: npm ci
 
       - name: Fetch tokens
+        # design-system 레포는 private 이므로 read 권한이 있는 PAT 시크릿이 필요.
+        # 시크릿(DESIGN_SYSTEM_TOKEN)이 없으면 기본 GITHUB_TOKEN 으로 시도 후
+        # 실패 시 커밋된 토큰을 그대로 사용한다(스크립트가 덮어쓰지 않음).
+        env:
+          GH_TOKEN: ${{ secrets.DESIGN_SYSTEM_TOKEN || github.token }}
         run: npm run fetch-tokens
 
       - name: Build
