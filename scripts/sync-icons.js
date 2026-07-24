@@ -3,13 +3,17 @@ const https = require('https');
 const path = require('path');
 
 const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
-const FILE_KEY = '2NMKkf5U1AKDCkkUWqelFl';
+const FILE_KEY = 'SsgiLsXVMkf0wv8OhRGwks';
 const BATCH_SIZE = 80; // Figma API limit ~100 nodes per request
-const ICONS_DIR = path.join(__dirname, '..', 'public', 'icons');
-const DATA_FILE = path.join(__dirname, '..', 'public', 'icons-data.json');
+
+// `node sync-icons.js` → line icons, `node sync-icons.js --solid` → solid icons
+const SOLID = process.argv.includes('--solid');
+const ICONS_DIR = path.join(__dirname, '..', 'public', SOLID ? 'icons-solid' : 'icons');
+const DATA_FILE = path.join(__dirname, '..', 'public', SOLID ? 'icons-solid-data.json' : 'icons-data.json');
 
 // Read icon nodes mapping
-const iconNodes = JSON.parse(fs.readFileSync(path.join(__dirname, 'icon-nodes.json'), 'utf8'));
+const iconNodes = JSON.parse(fs.readFileSync(
+  path.join(__dirname, SOLID ? 'icon-nodes-solid.json' : 'icon-nodes.json'), 'utf8'));
 
 function figmaRequest(urlPath) {
   return new Promise((resolve, reject) => {
@@ -116,7 +120,7 @@ async function main() {
       }
       iconsData[icon.category].push({
         name: icon.name,
-        file: `/icons/${fileName}`,
+        file: `${SOLID ? '/icons-solid' : '/icons'}/${fileName}`,
       });
 
       if (downloaded % 50 === 0) {

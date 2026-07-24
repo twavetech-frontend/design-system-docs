@@ -195,7 +195,7 @@ export function IconGallery() {
       {style === 'solid' && !solidData ? (
         <div style={{ padding: 40, textAlign: 'center', color: '#999' }}>
           Solid 아이콘이 아직 준비되지 않았습니다.<br />
-          <span style={{ fontSize: 13 }}>Figma에서 Solid 아이콘을 SVG로 export 후 <code>public/icons-solid/</code>에 추가하세요.</span>
+          <span style={{ fontSize: 13 }}><code>node scripts/sync-icons.js --solid</code>을 실행해 Figma에서 동기화하세요.</span>
         </div>
       ) : (
         <>

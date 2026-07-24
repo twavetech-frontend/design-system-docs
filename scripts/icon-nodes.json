@@ -1,4732 +1,4740 @@
 {
   "Layout": [
     {
-      "id": "14651:30668",
-      "name": "align-bottom-01"
+      "id": "16519:46155",
+      "name": "ic_align_bottom_01"
     },
     {
-      "id": "14651:30672",
-      "name": "align-bottom-02"
+      "id": "16519:46158",
+      "name": "ic_align_bottom_02"
     },
     {
-      "id": "14651:30676",
-      "name": "align-horizontal-centre-01"
+      "id": "16519:46161",
+      "name": "ic_align_horizontal_centre_01"
     },
     {
-      "id": "14651:30680",
-      "name": "align-horizontal-centre-02"
+      "id": "16519:46164",
+      "name": "ic_align_horizontal_centre_02"
     },
     {
-      "id": "14651:30684",
-      "name": "align-left-01"
+      "id": "16519:46167",
+      "name": "ic_align_left_01"
     },
     {
-      "id": "14651:30688",
-      "name": "align-left-02"
+      "id": "16519:46170",
+      "name": "ic_align_left_02"
     },
     {
-      "id": "14651:30692",
-      "name": "align-right-01"
+      "id": "16519:46173",
+      "name": "ic_align_right_01"
     },
     {
-      "id": "14651:30696",
-      "name": "align-right-02"
+      "id": "16519:46176",
+      "name": "ic_align_right_02"
     },
     {
-      "id": "14651:30700",
-      "name": "align-top-01"
+      "id": "16519:46179",
+      "name": "ic_align_top_01"
     },
     {
-      "id": "14651:30704",
-      "name": "align-top-02"
+      "id": "16519:46182",
+      "name": "ic_align_top_02"
     },
     {
-      "id": "14651:30708",
-      "name": "align-vertical-center-01"
+      "id": "16519:46185",
+      "name": "ic_align_vertical_center_01"
     },
     {
-      "id": "14651:30712",
-      "name": "align-vertical-center-02"
+      "id": "16519:46188",
+      "name": "ic_align_vertical_center_02"
     },
     {
-      "id": "14651:30716",
-      "name": "columns-01"
+      "id": "16519:46191",
+      "name": "ic_columns_01"
     },
     {
-      "id": "14651:30720",
-      "name": "columns-02"
+      "id": "16519:46194",
+      "name": "ic_columns_02"
     },
     {
-      "id": "14651:30724",
-      "name": "columns-03"
+      "id": "16519:46197",
+      "name": "ic_columns_03"
     },
     {
-      "id": "14651:30728",
-      "name": "distribute-spacing-horizontal"
+      "id": "16519:46200",
+      "name": "ic_distribute_spacing_horizontal"
     },
     {
-      "id": "14651:30732",
-      "name": "distribute-spacing-vertical"
+      "id": "16519:46203",
+      "name": "ic_distribute_spacing_vertical"
     },
     {
-      "id": "14651:30736",
-      "name": "divider"
+      "id": "16519:46206",
+      "name": "ic_divider"
     },
     {
-      "id": "14651:30740",
-      "name": "flex-align-bottom"
+      "id": "16519:46209",
+      "name": "ic_flex_align_bottom"
     },
     {
-      "id": "14651:30744",
-      "name": "flex-align-left"
+      "id": "16519:46212",
+      "name": "ic_flex_align_left"
     },
     {
-      "id": "14651:30748",
-      "name": "flex-align-right"
+      "id": "16519:46215",
+      "name": "ic_flex_align_right"
     },
     {
-      "id": "14651:30752",
-      "name": "flex-align-top"
+      "id": "16519:46218",
+      "name": "ic_flex_align_top"
     },
     {
-      "id": "14651:30756",
-      "name": "grid-01"
+      "id": "16519:46221",
+      "name": "ic_grid_01"
     },
     {
-      "id": "14651:30760",
-      "name": "grid-02"
+      "id": "16519:46224",
+      "name": "ic_grid_02"
     },
     {
-      "id": "14651:30764",
-      "name": "grid-03"
+      "id": "16519:46227",
+      "name": "ic_grid_03"
     },
     {
-      "id": "14651:30768",
-      "name": "grid-dots-blank"
+      "id": "16519:46230",
+      "name": "ic_grid_dots_blank"
     },
     {
-      "id": "14651:30772",
-      "name": "grid-dots-bottom"
+      "id": "16519:46233",
+      "name": "ic_grid_dots_bottom"
     },
     {
-      "id": "14651:30776",
-      "name": "grid-dots-horizontal-center"
+      "id": "16519:46236",
+      "name": "ic_grid_dots_horizontal_center"
     },
     {
-      "id": "14651:30780",
-      "name": "grid-dots-left"
+      "id": "16519:46239",
+      "name": "ic_grid_dots_left"
     },
     {
-      "id": "14651:30784",
-      "name": "grid-dots-outer"
+      "id": "16519:46242",
+      "name": "ic_grid_dots_outer"
     },
     {
-      "id": "14651:30788",
-      "name": "grid-dots-right"
+      "id": "16519:46245",
+      "name": "ic_grid_dots_right"
     },
     {
-      "id": "14651:30792",
-      "name": "grid-dots-top"
+      "id": "16519:46248",
+      "name": "ic_grid_dots_top"
     },
     {
-      "id": "14651:30796",
-      "name": "grid-dots-vertical-center"
+      "id": "16519:46251",
+      "name": "ic_grid_dots_vertical_center"
     },
     {
-      "id": "14651:30800",
-      "name": "intersect-circle"
+      "id": "16519:46254",
+      "name": "ic_intersect_circle"
     },
     {
-      "id": "14651:30804",
-      "name": "intersect-square"
+      "id": "16519:46257",
+      "name": "ic_intersect_square"
     },
     {
-      "id": "14651:30809",
-      "name": "layer-single"
+      "id": "16519:46261",
+      "name": "ic_layer_single"
     },
     {
-      "id": "14651:30812",
-      "name": "layers-three-01"
+      "id": "16519:46263",
+      "name": "ic_layers_three_01"
     },
     {
-      "id": "14651:30816",
-      "name": "layers-three-02"
+      "id": "16519:46266",
+      "name": "ic_layers_three_02"
     },
     {
-      "id": "14651:30820",
-      "name": "layers-two-01"
+      "id": "16519:46269",
+      "name": "ic_layers_two_01"
     },
     {
-      "id": "14651:30824",
-      "name": "layers-two-02"
+      "id": "16519:46272",
+      "name": "ic_layers_two_02"
     },
     {
-      "id": "14651:30828",
-      "name": "layout-alt-01"
+      "id": "16519:46275",
+      "name": "ic_layout_alt_01"
     },
     {
-      "id": "14651:30832",
-      "name": "layout-alt-02"
+      "id": "16519:46278",
+      "name": "ic_layout_alt_02"
     },
     {
-      "id": "14651:30836",
-      "name": "layout-alt-03"
+      "id": "16519:46281",
+      "name": "ic_layout_alt_03"
     },
     {
-      "id": "14651:30840",
-      "name": "layout-alt-04"
+      "id": "16519:46284",
+      "name": "ic_layout_alt_04"
     },
     {
-      "id": "14651:30844",
-      "name": "layout-bottom"
+      "id": "16519:46287",
+      "name": "ic_layout_bottom"
     },
     {
-      "id": "14651:30848",
-      "name": "layout-grid-01"
+      "id": "16519:46290",
+      "name": "ic_layout_grid_01"
     },
     {
-      "id": "14651:30852",
-      "name": "layout-grid-02"
+      "id": "16519:46293",
+      "name": "ic_layout_grid_02"
     },
     {
-      "id": "14651:30856",
-      "name": "layout-left"
+      "id": "16519:46296",
+      "name": "ic_layout_left"
     },
     {
-      "id": "14651:30860",
-      "name": "layout-right"
+      "id": "16519:46299",
+      "name": "ic_layout_right"
     },
     {
-      "id": "14651:30864",
-      "name": "layout-top"
+      "id": "16519:46302",
+      "name": "ic_layout_top"
     },
     {
-      "id": "14651:30868",
-      "name": "list"
+      "id": "16519:46305",
+      "name": "ic_list"
     },
     {
-      "id": "14651:30872",
-      "name": "maximize-01"
+      "id": "16519:46308",
+      "name": "ic_maximize_01"
     },
     {
-      "id": "14651:30876",
-      "name": "maximize-02"
+      "id": "16519:46311",
+      "name": "ic_maximize_02"
     },
     {
-      "id": "14651:30880",
-      "name": "minimize-01"
+      "id": "16519:46314",
+      "name": "ic_minimize_01"
     },
     {
-      "id": "14651:30884",
-      "name": "minimize-02"
+      "id": "16519:46317",
+      "name": "ic_minimize_02"
     },
     {
-      "id": "14651:30888",
-      "name": "rows-01"
+      "id": "16519:46320",
+      "name": "ic_rows_01"
     },
     {
-      "id": "14651:30892",
-      "name": "rows-02"
+      "id": "16519:46323",
+      "name": "ic_rows_02"
     },
     {
-      "id": "14651:30896",
-      "name": "rows-03"
+      "id": "16519:46326",
+      "name": "ic_rows_03"
     },
     {
-      "id": "14651:30900",
-      "name": "spacing-height-01"
+      "id": "16519:46329",
+      "name": "ic_spacing_height_01"
     },
     {
-      "id": "14651:30904",
-      "name": "spacing-height-02"
+      "id": "16519:46332",
+      "name": "ic_spacing_height_02"
     },
     {
-      "id": "14651:30908",
-      "name": "spacing-width-01"
+      "id": "16519:46335",
+      "name": "ic_spacing_width_01"
     },
     {
-      "id": "14651:30912",
-      "name": "spacing-width-02"
+      "id": "16519:46338",
+      "name": "ic_spacing_width_02"
     },
     {
-      "id": "14651:30916",
-      "name": "table"
+      "id": "16519:46341",
+      "name": "ic_table"
     }
   ],
   "Charts": [
     {
-      "id": "14651:30922",
-      "name": "bar-chart-01"
+      "id": "16519:46346",
+      "name": "ic_bar_chart_01"
     },
     {
-      "id": "14651:30926",
-      "name": "bar-chart-02"
+      "id": "16519:46349",
+      "name": "ic_bar_chart_02"
     },
     {
-      "id": "14651:30930",
-      "name": "bar-chart-03"
+      "id": "16519:46352",
+      "name": "ic_bar_chart_03"
     },
     {
-      "id": "14651:30934",
-      "name": "bar-chart-04"
+      "id": "16519:46355",
+      "name": "ic_bar_chart_04"
     },
     {
-      "id": "14651:30938",
-      "name": "bar-chart-05"
+      "id": "16519:46358",
+      "name": "ic_bar_chart_05"
     },
     {
-      "id": "14651:30942",
-      "name": "bar-chart-06"
+      "id": "16519:46361",
+      "name": "ic_bar_chart_06"
     },
     {
-      "id": "14651:30946",
-      "name": "bar-chart-07"
+      "id": "16519:46364",
+      "name": "ic_bar_chart_07"
     },
     {
-      "id": "14651:30950",
-      "name": "bar-chart-08"
+      "id": "16519:46367",
+      "name": "ic_bar_chart_08"
     },
     {
-      "id": "14651:30954",
-      "name": "bar-chart-09"
+      "id": "16519:46370",
+      "name": "ic_bar_chart_09"
     },
     {
-      "id": "14651:30958",
-      "name": "bar-chart-10"
+      "id": "16519:46373",
+      "name": "ic_bar_chart_10"
     },
     {
-      "id": "14651:30962",
-      "name": "bar-chart-11"
+      "id": "16519:46376",
+      "name": "ic_bar_chart_11"
     },
     {
-      "id": "14651:30966",
-      "name": "bar-chart-12"
+      "id": "16519:46379",
+      "name": "ic_bar_chart_12"
     },
     {
-      "id": "14651:30970",
-      "name": "bar-chart-circle-01"
+      "id": "16519:46382",
+      "name": "ic_bar_chart_circle_01"
     },
     {
-      "id": "14651:30974",
-      "name": "bar-chart-circle-02"
+      "id": "16519:46385",
+      "name": "ic_bar_chart_circle_02"
     },
     {
-      "id": "14651:30978",
-      "name": "bar-chart-circle-03"
+      "id": "16519:46388",
+      "name": "ic_bar_chart_circle_03"
     },
     {
-      "id": "14651:30982",
-      "name": "bar-chart-square-01"
+      "id": "16519:46391",
+      "name": "ic_bar_chart_square_01"
     },
     {
-      "id": "14651:30986",
-      "name": "bar-chart-square-02"
+      "id": "16519:46394",
+      "name": "ic_bar_chart_square_02"
     },
     {
-      "id": "14651:30990",
-      "name": "bar-chart-square-03"
+      "id": "16519:46397",
+      "name": "ic_bar_chart_square_03"
     },
     {
-      "id": "14651:30994",
-      "name": "bar-chart-square-down"
+      "id": "16519:46400",
+      "name": "ic_bar_chart_square_down"
     },
     {
-      "id": "14651:30998",
-      "name": "bar-chart-square-minus"
+      "id": "16519:46403",
+      "name": "ic_bar_chart_square_minus"
     },
     {
-      "id": "14651:31002",
-      "name": "bar-chart-square-plus"
+      "id": "16519:46406",
+      "name": "ic_bar_chart_square_plus"
     },
     {
-      "id": "14651:31006",
-      "name": "bar-chart-square-up"
+      "id": "16519:46409",
+      "name": "ic_bar_chart_square_up"
     },
     {
-      "id": "14651:31010",
-      "name": "bar-line-chart"
+      "id": "16519:46412",
+      "name": "ic_bar_line_chart"
     },
     {
-      "id": "14651:31014",
-      "name": "chart-breakout-circle"
+      "id": "16519:46415",
+      "name": "ic_chart_breakout_circle"
     },
     {
-      "id": "14651:31018",
-      "name": "chart-breakout-square"
+      "id": "16519:46418",
+      "name": "ic_chart_breakout_square"
     },
     {
-      "id": "14651:31022",
-      "name": "horizontal-bar-chart-01"
+      "id": "16519:46421",
+      "name": "ic_horizontal_bar_chart_01"
     },
     {
-      "id": "14651:31026",
-      "name": "horizontal-bar-chart-02"
+      "id": "16519:46424",
+      "name": "ic_horizontal_bar_chart_02"
     },
     {
-      "id": "14651:31030",
-      "name": "horizontal-bar-chart-03"
+      "id": "16519:46427",
+      "name": "ic_horizontal_bar_chart_03"
     },
     {
-      "id": "14651:31034",
-      "name": "line-chart-down-01"
+      "id": "16519:46430",
+      "name": "ic_line_chart_down_01"
     },
     {
-      "id": "14651:31038",
-      "name": "line-chart-down-02"
+      "id": "16519:46433",
+      "name": "ic_line_chart_down_02"
     },
     {
-      "id": "14651:31042",
-      "name": "line-chart-down-03"
+      "id": "16519:46436",
+      "name": "ic_line_chart_down_03"
     },
     {
-      "id": "14651:31046",
-      "name": "line-chart-down-04"
+      "id": "16519:46439",
+      "name": "ic_line_chart_down_04"
     },
     {
-      "id": "14651:31050",
-      "name": "line-chart-down-05"
+      "id": "16519:46442",
+      "name": "ic_line_chart_down_05"
     },
     {
-      "id": "14651:31054",
-      "name": "line-chart-up-01"
+      "id": "16519:46445",
+      "name": "ic_line_chart_up_01"
     },
     {
-      "id": "14651:31058",
-      "name": "line-chart-up-02"
+      "id": "16519:46448",
+      "name": "ic_line_chart_up_02"
     },
     {
-      "id": "14651:31062",
-      "name": "line-chart-up-03"
+      "id": "16519:46451",
+      "name": "ic_line_chart_up_03"
     },
     {
-      "id": "14651:31066",
-      "name": "line-chart-up-04"
+      "id": "16519:46454",
+      "name": "ic_line_chart_up_04"
     },
     {
-      "id": "14651:31070",
-      "name": "line-chart-up-05"
+      "id": "16519:46457",
+      "name": "ic_line_chart_up_05"
     },
     {
-      "id": "14651:31074",
-      "name": "pie-chart-01"
+      "id": "16519:46460",
+      "name": "ic_pie_chart_01"
     },
     {
-      "id": "14651:31078",
-      "name": "pie-chart-02"
+      "id": "16519:46463",
+      "name": "ic_pie_chart_02"
     },
     {
-      "id": "14651:31082",
-      "name": "pie-chart-03"
+      "id": "16519:46466",
+      "name": "ic_pie_chart_03"
     },
     {
-      "id": "14651:31086",
-      "name": "pie-chart-04"
+      "id": "16519:46469",
+      "name": "ic_pie_chart_04"
     },
     {
-      "id": "14651:31090",
-      "name": "presentation-chart-01"
+      "id": "16519:46472",
+      "name": "ic_presentation_chart_01"
     },
     {
-      "id": "14651:31094",
-      "name": "presentation-chart-02"
+      "id": "16519:46475",
+      "name": "ic_presentation_chart_02"
     },
     {
-      "id": "14651:31098",
-      "name": "presentation-chart-03"
+      "id": "16519:46478",
+      "name": "ic_presentation_chart_03"
     },
     {
-      "id": "14651:31102",
-      "name": "trend-down-01"
+      "id": "16519:46481",
+      "name": "ic_trend_down_01"
     },
     {
-      "id": "14651:31106",
-      "name": "trend-down-02"
+      "id": "16519:46484",
+      "name": "ic_trend_down_02"
     },
     {
-      "id": "14651:31110",
-      "name": "trend-up-01"
+      "id": "16519:46487",
+      "name": "ic_trend_up_01"
     },
     {
-      "id": "14651:31114",
-      "name": "trend-up-02"
+      "id": "16519:46490",
+      "name": "ic_trend_up_02"
     }
   ],
   "Security": [
     {
-      "id": "14651:31120",
-      "name": "face-id"
+      "id": "16519:46495",
+      "name": "ic_face_id"
     },
     {
-      "id": "14651:31124",
-      "name": "face-id-square"
+      "id": "16519:46498",
+      "name": "ic_face_id_square"
     },
     {
-      "id": "14651:31128",
-      "name": "file-lock-01"
+      "id": "16519:46501",
+      "name": "ic_file_lock_01"
     },
     {
-      "id": "14651:31132",
-      "name": "file-lock-02"
+      "id": "16519:46504",
+      "name": "ic_file_lock_02"
     },
     {
-      "id": "14651:31136",
-      "name": "file-lock-03"
+      "id": "16519:46507",
+      "name": "ic_file_lock_03"
     },
     {
-      "id": "14651:31140",
-      "name": "file-shield-01"
+      "id": "16519:46510",
+      "name": "ic_file_shield_01"
     },
     {
-      "id": "14651:31144",
-      "name": "file-shield-02"
+      "id": "16519:46513",
+      "name": "ic_file_shield_02"
     },
     {
-      "id": "14651:31148",
-      "name": "file-shield-03"
+      "id": "16519:46516",
+      "name": "ic_file_shield_03"
     },
     {
-      "id": "14651:31152",
-      "name": "fingerprint-01"
+      "id": "16519:46519",
+      "name": "ic_fingerprint_01"
     },
     {
-      "id": "14651:31156",
-      "name": "fingerprint-02"
+      "id": "16519:46522",
+      "name": "ic_fingerprint_02"
     },
     {
-      "id": "14651:31160",
-      "name": "fingerprint-03"
+      "id": "16519:46525",
+      "name": "ic_fingerprint_03"
     },
     {
-      "id": "14651:31171",
-      "name": "fingerprint-04"
+      "id": "16519:46528",
+      "name": "ic_fingerprint_04"
     },
     {
-      "id": "14651:31175",
-      "name": "folder-shield"
+      "id": "16519:46531",
+      "name": "ic_folder_shield"
     },
     {
-      "id": "14651:31179",
-      "name": "key-01"
+      "id": "16519:46534",
+      "name": "ic_key_01"
     },
     {
-      "id": "14651:31183",
-      "name": "key-02"
+      "id": "16519:46537",
+      "name": "ic_key_02"
     },
     {
-      "id": "14651:31187",
-      "name": "lock-01"
+      "id": "16519:46540",
+      "name": "ic_lock_01"
     },
     {
-      "id": "14651:31191",
-      "name": "lock-02"
+      "id": "16519:46543",
+      "name": "ic_lock_02"
     },
     {
-      "id": "14651:31195",
-      "name": "lock-03"
+      "id": "16519:46546",
+      "name": "ic_lock_03"
     },
     {
-      "id": "14651:31199",
-      "name": "lock-04"
+      "id": "16519:46549",
+      "name": "ic_lock_04"
     },
     {
-      "id": "14651:31203",
-      "name": "lock-keyhole-circle"
+      "id": "16519:46552",
+      "name": "ic_lock_keyhole_circle"
     },
     {
-      "id": "14651:31207",
-      "name": "lock-keyhole-square"
+      "id": "16519:46555",
+      "name": "ic_lock_keyhole_square"
     },
     {
-      "id": "14651:31211",
-      "name": "lock-unlocked-01"
+      "id": "16519:46558",
+      "name": "ic_lock_unlocked_01"
     },
     {
-      "id": "14651:31215",
-      "name": "lock-unlocked-02"
+      "id": "16519:46561",
+      "name": "ic_lock_unlocked_02"
     },
     {
-      "id": "14651:31219",
-      "name": "lock-unlocked-03"
+      "id": "16519:46564",
+      "name": "ic_lock_unlocked_03"
     },
     {
-      "id": "14651:31223",
-      "name": "lock-unlocked-04"
+      "id": "16519:46567",
+      "name": "ic_lock_unlocked_04"
     },
     {
-      "id": "14651:31227",
-      "name": "passcode"
+      "id": "16519:46570",
+      "name": "ic_passcode"
     },
     {
-      "id": "14651:31231",
-      "name": "passcode-lock"
+      "id": "16519:46573",
+      "name": "ic_passcode_lock"
     },
     {
-      "id": "14651:31235",
-      "name": "scan"
+      "id": "16519:46576",
+      "name": "ic_scan"
     },
     {
-      "id": "14651:31239",
-      "name": "shield-03"
+      "id": "16519:46579",
+      "name": "ic_shield_03"
     },
     {
-      "id": "14651:31243",
-      "name": "shield-dollar"
+      "id": "16519:46582",
+      "name": "ic_shield_dollar"
     },
     {
-      "id": "14651:31247",
-      "name": "shield-off"
+      "id": "16519:46585",
+      "name": "ic_shield_off"
     },
     {
-      "id": "14651:31251",
-      "name": "shield-plus"
+      "id": "16519:46588",
+      "name": "ic_shield_plus"
     },
     {
-      "id": "14651:31255",
-      "name": "shield-tick"
+      "id": "16519:46591",
+      "name": "ic_shield_tick"
     },
     {
-      "id": "14651:31259",
-      "name": "shield-zap"
+      "id": "16519:46594",
+      "name": "ic_shield_zap"
     },
     {
-      "id": "14651:31263",
-      "name": "shield-01"
+      "id": "16519:46597",
+      "name": "ic_shield_01"
     },
     {
-      "id": "14651:31267",
-      "name": "shield-02"
+      "id": "16519:46600",
+      "name": "ic_shield_02"
     }
   ],
   "Education": [
     {
-      "id": "14651:31273",
-      "name": "atom-01"
+      "id": "16519:46605",
+      "name": "ic_atom_01"
     },
     {
-      "id": "14651:31277",
-      "name": "atom-02"
+      "id": "16519:46608",
+      "name": "ic_atom_02"
     },
     {
-      "id": "14651:31281",
-      "name": "award-01"
+      "id": "16519:46611",
+      "name": "ic_award_01"
     },
     {
-      "id": "14651:31285",
-      "name": "award-02"
+      "id": "16519:46614",
+      "name": "ic_award_02"
     },
     {
-      "id": "14651:31289",
-      "name": "award-03"
+      "id": "16519:46617",
+      "name": "ic_award_03"
     },
     {
-      "id": "14651:31293",
-      "name": "award-04"
+      "id": "16519:46620",
+      "name": "ic_award_04"
     },
     {
-      "id": "14651:31297",
-      "name": "award-05"
+      "id": "16519:46623",
+      "name": "ic_award_05"
     },
     {
-      "id": "14651:31301",
-      "name": "backpack"
+      "id": "16519:46626",
+      "name": "ic_backpack"
     },
     {
-      "id": "14651:31305",
-      "name": "beaker-01"
+      "id": "16519:46629",
+      "name": "ic_beaker_01"
     },
     {
-      "id": "14651:31309",
-      "name": "beaker-02"
+      "id": "16519:46632",
+      "name": "ic_beaker_02"
     },
     {
-      "id": "14651:31313",
-      "name": "book-closed"
+      "id": "16519:46635",
+      "name": "ic_book_closed"
     },
     {
-      "id": "14651:31317",
-      "name": "book-open-01"
+      "id": "16519:46638",
+      "name": "ic_book_open_01"
     },
     {
-      "id": "14651:31321",
-      "name": "book-open-02"
+      "id": "16519:46641",
+      "name": "ic_book_open_02"
     },
     {
-      "id": "14651:31325",
-      "name": "briefcase-01"
+      "id": "16519:46644",
+      "name": "ic_briefcase_01"
     },
     {
-      "id": "14651:31329",
-      "name": "briefcase-02"
+      "id": "16519:46647",
+      "name": "ic_briefcase_02"
     },
     {
-      "id": "14651:31333",
-      "name": "calculator"
+      "id": "16519:46650",
+      "name": "ic_calculator"
     },
     {
-      "id": "14651:31337",
-      "name": "certificate-01"
+      "id": "16519:46653",
+      "name": "ic_certificate_01"
     },
     {
-      "id": "14651:31341",
-      "name": "certificate-02"
+      "id": "16519:46656",
+      "name": "ic_certificate_02"
     },
     {
-      "id": "14651:31345",
-      "name": "compass"
+      "id": "16519:46659",
+      "name": "ic_compass"
     },
     {
-      "id": "14651:31349",
-      "name": "glasses-01"
+      "id": "16519:46662",
+      "name": "ic_glasses_01"
     },
     {
-      "id": "14651:31353",
-      "name": "glasses-02"
+      "id": "16519:46665",
+      "name": "ic_glasses_02"
     },
     {
-      "id": "14651:31357",
-      "name": "globe-slated-01"
+      "id": "16519:46668",
+      "name": "ic_globe_slated_01"
     },
     {
-      "id": "14651:31361",
-      "name": "globe-slated-02"
+      "id": "16519:46671",
+      "name": "ic_globe_slated_02"
     },
     {
-      "id": "14651:31365",
-      "name": "graduation-hat-01"
+      "id": "16519:46674",
+      "name": "ic_graduation_hat_01"
     },
     {
-      "id": "14651:31369",
-      "name": "graduation-hat-02"
+      "id": "16519:46677",
+      "name": "ic_graduation_hat_02"
     },
     {
-      "id": "14651:31373",
-      "name": "microscope"
+      "id": "16519:46680",
+      "name": "ic_microscope"
     },
     {
-      "id": "14651:31377",
-      "name": "ruler"
+      "id": "16519:46683",
+      "name": "ic_ruler"
     },
     {
-      "id": "14651:31381",
-      "name": "stand"
+      "id": "16519:46686",
+      "name": "ic_stand"
     },
     {
-      "id": "14651:31385",
-      "name": "telescope"
+      "id": "16519:46689",
+      "name": "ic_telescope"
     },
     {
-      "id": "14651:31389",
-      "name": "trophy-01"
+      "id": "16519:46692",
+      "name": "ic_trophy_01"
     },
     {
-      "id": "14651:31393",
-      "name": "trophy-02"
+      "id": "16519:46695",
+      "name": "ic_trophy_02"
     }
   ],
   "Development": [
     {
-      "id": "14651:31399",
-      "name": "brackets"
+      "id": "16519:46700",
+      "name": "ic_brackets"
     },
     {
-      "id": "14651:31403",
-      "name": "brackets-check"
+      "id": "16519:46703",
+      "name": "ic_brackets_check"
     },
     {
-      "id": "14651:31407",
-      "name": "brackets-ellipses"
+      "id": "16519:46706",
+      "name": "ic_brackets_ellipses"
     },
     {
-      "id": "14651:31411",
-      "name": "brackets-minus"
+      "id": "16519:46709",
+      "name": "ic_brackets_minus"
     },
     {
-      "id": "14651:31415",
-      "name": "brackets-plus"
+      "id": "16519:46712",
+      "name": "ic_brackets_plus"
     },
     {
-      "id": "14651:31419",
-      "name": "brackets-slash"
+      "id": "16519:46715",
+      "name": "ic_brackets_slash"
     },
     {
-      "id": "14651:31423",
-      "name": "brackets-x"
+      "id": "16519:46718",
+      "name": "ic_brackets_x"
     },
     {
-      "id": "14651:31427",
-      "name": "browser"
+      "id": "16519:46721",
+      "name": "ic_browser"
     },
     {
-      "id": "14651:31431",
-      "name": "code-01"
+      "id": "16519:46724",
+      "name": "ic_code_01"
     },
     {
-      "id": "14651:31435",
-      "name": "code-02"
+      "id": "16519:46727",
+      "name": "ic_code_02"
     },
     {
-      "id": "14651:31439",
-      "name": "code-browser"
+      "id": "16519:46730",
+      "name": "ic_code_browser"
     },
     {
-      "id": "14651:31443",
-      "name": "code-circle-01"
+      "id": "16519:46733",
+      "name": "ic_code_circle_01"
     },
     {
-      "id": "14651:31447",
-      "name": "code-circle-02"
+      "id": "16519:46736",
+      "name": "ic_code_circle_02"
     },
     {
-      "id": "14651:31451",
-      "name": "code-circle-03"
+      "id": "16519:46739",
+      "name": "ic_code_circle_03"
     },
     {
-      "id": "14651:31455",
-      "name": "code-square-01"
+      "id": "16519:46742",
+      "name": "ic_code_square_01"
     },
     {
-      "id": "14651:31459",
-      "name": "code-square-02"
+      "id": "16519:46745",
+      "name": "ic_code_square_02"
     },
     {
-      "id": "14651:31463",
-      "name": "codepen"
+      "id": "16519:46748",
+      "name": "ic_codepen"
     },
     {
-      "id": "14651:31467",
-      "name": "container"
+      "id": "16519:46751",
+      "name": "ic_container"
     },
     {
-      "id": "14651:31471",
-      "name": "cpu-chip-01"
+      "id": "16519:46754",
+      "name": "ic_cpu_chip_01"
     },
     {
-      "id": "14651:31475",
-      "name": "cpu-chip-02"
+      "id": "16519:46757",
+      "name": "ic_cpu_chip_02"
     },
     {
-      "id": "14651:31479",
-      "name": "data"
+      "id": "16519:46760",
+      "name": "ic_data"
     },
     {
-      "id": "14651:31483",
-      "name": "database-01"
+      "id": "16519:46763",
+      "name": "ic_database_01"
     },
     {
-      "id": "14651:31487",
-      "name": "database-02"
+      "id": "16519:46766",
+      "name": "ic_database_02"
     },
     {
-      "id": "14651:31491",
-      "name": "database-03"
+      "id": "16519:46769",
+      "name": "ic_database_03"
     },
     {
-      "id": "14651:31495",
-      "name": "dataflow-01"
+      "id": "16519:46772",
+      "name": "ic_dataflow_01"
     },
     {
-      "id": "14651:31499",
-      "name": "dataflow-02"
+      "id": "16519:46775",
+      "name": "ic_dataflow_02"
     },
     {
-      "id": "14651:31503",
-      "name": "dataflow-03"
+      "id": "16519:46778",
+      "name": "ic_dataflow_03"
     },
     {
-      "id": "14651:31507",
-      "name": "dataflow-04"
+      "id": "16519:46781",
+      "name": "ic_dataflow_04"
     },
     {
-      "id": "14651:31511",
-      "name": "file-code-01"
+      "id": "16519:46784",
+      "name": "ic_file_code_01"
     },
     {
-      "id": "14651:31515",
-      "name": "file-code-02"
+      "id": "16519:46787",
+      "name": "ic_file_code_02"
     },
     {
-      "id": "14651:31519",
-      "name": "folder-code"
+      "id": "16519:46790",
+      "name": "ic_folder_code"
     },
     {
-      "id": "14651:31523",
-      "name": "git-branch-01"
+      "id": "16519:46793",
+      "name": "ic_git_branch_01"
     },
     {
-      "id": "14651:31527",
-      "name": "git-branch-02"
+      "id": "16519:46796",
+      "name": "ic_git_branch_02"
     },
     {
-      "id": "14651:31531",
-      "name": "git-commit"
+      "id": "16519:46799",
+      "name": "ic_git_commit"
     },
     {
-      "id": "14651:31535",
-      "name": "git-merge"
+      "id": "16519:46802",
+      "name": "ic_git_merge"
     },
     {
-      "id": "14651:31539",
-      "name": "git-pull-request"
+      "id": "16519:46805",
+      "name": "ic_git_pull_request"
     },
     {
-      "id": "14651:31543",
-      "name": "package"
+      "id": "16519:46808",
+      "name": "ic_package"
     },
     {
-      "id": "14651:31548",
-      "name": "package-minus"
+      "id": "16519:46812",
+      "name": "ic_package_minus"
     },
     {
-      "id": "14651:31552",
-      "name": "package-check"
+      "id": "16519:46815",
+      "name": "ic_package_check"
     },
     {
-      "id": "14651:31556",
-      "name": "package-plus"
+      "id": "16519:46818",
+      "name": "ic_package_plus"
     },
     {
-      "id": "14651:31560",
-      "name": "package-search"
+      "id": "16519:46821",
+      "name": "ic_package_search"
     },
     {
-      "id": "14651:31564",
-      "name": "package-x"
+      "id": "16519:46824",
+      "name": "ic_package_x"
     },
     {
-      "id": "14651:31568",
-      "name": "puzzle-piece-01"
+      "id": "16519:46827",
+      "name": "ic_puzzle_piece_01"
     },
     {
-      "id": "14651:31572",
-      "name": "puzzle-piece-02"
+      "id": "16519:46830",
+      "name": "ic_puzzle_piece_02"
     },
     {
-      "id": "14651:31576",
-      "name": "qr-code-01"
+      "id": "16519:46833",
+      "name": "ic_qr_code_01"
     },
     {
-      "id": "14651:31580",
-      "name": "qr-code-02"
+      "id": "16519:46836",
+      "name": "ic_qr_code_02"
     },
     {
-      "id": "14651:31584",
-      "name": "server-01"
+      "id": "16519:46839",
+      "name": "ic_server_01"
     },
     {
-      "id": "14651:31588",
-      "name": "server-02"
+      "id": "16519:46842",
+      "name": "ic_server_02"
     },
     {
-      "id": "14651:31592",
-      "name": "server-03"
+      "id": "16519:46845",
+      "name": "ic_server_03"
     },
     {
-      "id": "14651:31596",
-      "name": "server-04"
+      "id": "16519:46848",
+      "name": "ic_server_04"
     },
     {
-      "id": "14651:31600",
-      "name": "server-05"
+      "id": "16519:46851",
+      "name": "ic_server_05"
     },
     {
-      "id": "14651:31604",
-      "name": "server-06"
+      "id": "16519:46854",
+      "name": "ic_server_06"
     },
     {
-      "id": "14651:31608",
-      "name": "terminal"
+      "id": "16519:46857",
+      "name": "ic_terminal"
     },
     {
-      "id": "14651:31612",
-      "name": "terminal-browser"
+      "id": "16519:46860",
+      "name": "ic_terminal_browser"
     },
     {
-      "id": "14651:31616",
-      "name": "terminal-circle"
+      "id": "16519:46863",
+      "name": "ic_terminal_circle"
     },
     {
-      "id": "14651:31620",
-      "name": "terminal-square"
+      "id": "16519:46866",
+      "name": "ic_terminal_square"
     },
     {
-      "id": "14651:31624",
-      "name": "variable"
+      "id": "16519:46869",
+      "name": "ic_variable"
     }
   ],
   "Arrows": [
     {
-      "id": "14651:31630",
-      "name": "arrow-block-down"
+      "id": "16519:46874",
+      "name": "ic_arrow_block_down"
     },
     {
-      "id": "14651:31634",
-      "name": "arrow-block-left"
+      "id": "16519:46877",
+      "name": "ic_arrow_block_left"
     },
     {
-      "id": "14651:31638",
-      "name": "arrow-block-right"
+      "id": "16519:46880",
+      "name": "ic_arrow_block_right"
     },
     {
-      "id": "14651:31642",
-      "name": "arrow-block-up"
+      "id": "16519:46883",
+      "name": "ic_arrow_block_up"
     },
     {
-      "id": "14651:31646",
-      "name": "arrow-circle-broken-down"
+      "id": "16519:46886",
+      "name": "ic_arrow_circle_broken_down"
     },
     {
-      "id": "14651:31650",
-      "name": "arrow-circle-broken-down-left"
+      "id": "16519:46889",
+      "name": "ic_arrow_circle_broken_down_left"
     },
     {
-      "id": "14651:31654",
-      "name": "arrow-circle-broken-down-right"
+      "id": "16519:46892",
+      "name": "ic_arrow_circle_broken_down_right"
     },
     {
-      "id": "14651:31658",
-      "name": "arrow-circle-broken-left"
+      "id": "16519:46895",
+      "name": "ic_arrow_circle_broken_left"
     },
     {
-      "id": "14651:31662",
-      "name": "arrow-circle-broken-right"
+      "id": "16519:46898",
+      "name": "ic_arrow_circle_broken_right"
     },
     {
-      "id": "14651:31666",
-      "name": "arrow-circle-broken-up"
+      "id": "16519:46901",
+      "name": "ic_arrow_circle_broken_up"
     },
     {
-      "id": "14651:31670",
-      "name": "arrow-circle-broken-up-left"
+      "id": "16519:46904",
+      "name": "ic_arrow_circle_broken_up_left"
     },
     {
-      "id": "14651:31674",
-      "name": "arrow-circle-broken-up-right"
+      "id": "16519:46907",
+      "name": "ic_arrow_circle_broken_up_right"
     },
     {
-      "id": "14651:31678",
-      "name": "arrow-circle-down"
+      "id": "16519:46910",
+      "name": "ic_arrow_circle_down"
     },
     {
-      "id": "14651:31682",
-      "name": "arrow-circle-down-left"
+      "id": "16519:46913",
+      "name": "ic_arrow_circle_down_left"
     },
     {
-      "id": "14651:31686",
-      "name": "arrow-circle-down-right"
+      "id": "16519:46916",
+      "name": "ic_arrow_circle_down_right"
     },
     {
-      "id": "14651:31690",
-      "name": "arrow-circle-left"
+      "id": "16519:46919",
+      "name": "ic_arrow_circle_left"
     },
     {
-      "id": "14651:31694",
-      "name": "arrow-circle-right"
+      "id": "16519:46922",
+      "name": "ic_arrow_circle_right"
     },
     {
-      "id": "14651:31698",
-      "name": "arrow-circle-up"
+      "id": "16519:46925",
+      "name": "ic_arrow_circle_up"
     },
     {
-      "id": "14651:31702",
-      "name": "arrow-circle-up-left"
+      "id": "16519:46928",
+      "name": "ic_arrow_circle_up_left"
     },
     {
-      "id": "14651:31706",
-      "name": "arrow-circle-up-right"
+      "id": "16519:46931",
+      "name": "ic_arrow_circle_up_right"
     },
     {
-      "id": "14651:31710",
-      "name": "arrow-down"
+      "id": "16519:46934",
+      "name": "ic_arrow_down"
     },
     {
-      "id": "14651:31714",
-      "name": "arrow-down-left"
+      "id": "16519:46937",
+      "name": "ic_arrow_down_left"
     },
     {
-      "id": "14651:31718",
-      "name": "arrow-down-right"
+      "id": "16519:46940",
+      "name": "ic_arrow_down_right"
     },
     {
-      "id": "14651:31722",
-      "name": "arrow-left"
+      "id": "16519:46943",
+      "name": "ic_arrow_left"
     },
     {
-      "id": "14651:31726",
-      "name": "arrow-narrow-down"
+      "id": "16519:46946",
+      "name": "ic_arrow_narrow_down"
     },
     {
-      "id": "14651:31730",
-      "name": "arrow-narrow-down-left"
+      "id": "16519:46949",
+      "name": "ic_arrow_narrow_down_left"
     },
     {
-      "id": "14651:31734",
-      "name": "arrow-narrow-down-right"
+      "id": "16519:46952",
+      "name": "ic_arrow_narrow_down_right"
     },
     {
-      "id": "14651:31738",
-      "name": "arrow-narrow-left"
+      "id": "16519:46955",
+      "name": "ic_arrow_narrow_left"
     },
     {
-      "id": "14651:31742",
-      "name": "arrow-narrow-right"
+      "id": "16519:46958",
+      "name": "ic_arrow_narrow_right"
     },
     {
-      "id": "14651:31746",
-      "name": "arrow-narrow-up"
+      "id": "16519:46961",
+      "name": "ic_arrow_narrow_up"
     },
     {
-      "id": "14651:31750",
-      "name": "arrow-narrow-up-left"
+      "id": "16519:46964",
+      "name": "ic_arrow_narrow_up_left"
     },
     {
-      "id": "14651:31754",
-      "name": "arrow-narrow-up-right"
+      "id": "16519:46967",
+      "name": "ic_arrow_narrow_up_right"
     },
     {
-      "id": "14651:31758",
-      "name": "arrow-right"
+      "id": "16519:46970",
+      "name": "ic_arrow_right"
     },
     {
-      "id": "14651:31762",
-      "name": "arrow-square-down"
+      "id": "16519:46973",
+      "name": "ic_arrow_square_down"
     },
     {
-      "id": "14651:31766",
-      "name": "arrow-square-down-left"
+      "id": "16519:46976",
+      "name": "ic_arrow_square_down_left"
     },
     {
-      "id": "14651:31770",
-      "name": "arrow-square-down-right"
+      "id": "16519:46979",
+      "name": "ic_arrow_square_down_right"
     },
     {
-      "id": "14651:31774",
-      "name": "arrow-square-left"
+      "id": "16519:46982",
+      "name": "ic_arrow_square_left"
     },
     {
-      "id": "14651:31778",
-      "name": "arrow-square-right"
+      "id": "16519:46985",
+      "name": "ic_arrow_square_right"
     },
     {
-      "id": "14651:31782",
-      "name": "arrow-square-up"
+      "id": "16519:46988",
+      "name": "ic_arrow_square_up"
     },
     {
-      "id": "14651:31786",
-      "name": "arrow-square-up-left"
+      "id": "16519:46991",
+      "name": "ic_arrow_square_up_left"
     },
     {
-      "id": "14651:31790",
-      "name": "arrow-square-up-right"
+      "id": "16519:46994",
+      "name": "ic_arrow_square_up_right"
     },
     {
-      "id": "14651:31794",
-      "name": "arrow-up"
+      "id": "16519:46997",
+      "name": "ic_arrow_up"
     },
     {
-      "id": "14651:31798",
-      "name": "arrow-up-left"
+      "id": "16519:47000",
+      "name": "ic_arrow_up_left"
     },
     {
-      "id": "14651:31802",
-      "name": "arrow-up-right"
+      "id": "16519:47003",
+      "name": "ic_arrow_up_right"
     },
     {
-      "id": "14651:31806",
-      "name": "arrows-down"
+      "id": "16519:47006",
+      "name": "ic_arrows_down"
     },
     {
-      "id": "14651:31810",
-      "name": "arrows-left"
+      "id": "16519:47009",
+      "name": "ic_arrows_left"
     },
     {
-      "id": "14651:31814",
-      "name": "arrows-right"
+      "id": "16519:47012",
+      "name": "ic_arrows_right"
     },
     {
-      "id": "14651:31818",
-      "name": "arrows-triangle"
+      "id": "16519:47015",
+      "name": "ic_arrows_triangle"
     },
     {
-      "id": "14651:31822",
-      "name": "arrows-up"
+      "id": "16519:47018",
+      "name": "ic_arrows_up"
     },
     {
-      "id": "14651:31826",
-      "name": "chevron-down"
+      "id": "16519:47021",
+      "name": "ic_chevron_down"
     },
     {
-      "id": "14651:31830",
-      "name": "chevron-down-double"
+      "id": "16519:47024",
+      "name": "ic_chevron_down_double"
     },
     {
-      "id": "14651:31834",
-      "name": "chevron-left"
+      "id": "16519:47027",
+      "name": "ic_chevron_left"
     },
     {
-      "id": "14651:31838",
-      "name": "chevron-left-double"
+      "id": "16519:47030",
+      "name": "ic_chevron_left_double"
     },
     {
-      "id": "14651:31842",
-      "name": "chevron-right"
+      "id": "16519:47033",
+      "name": "ic_chevron_right"
     },
     {
-      "id": "14651:31846",
-      "name": "chevron-right-double"
+      "id": "16519:47036",
+      "name": "ic_chevron_right_double"
     },
     {
-      "id": "14651:31850",
-      "name": "chevron-selector-horizontal"
+      "id": "16519:47039",
+      "name": "ic_chevron_selector_horizontal"
     },
     {
-      "id": "14651:31854",
-      "name": "chevron-selector-vertical"
+      "id": "16519:47042",
+      "name": "ic_chevron_selector_vertical"
     },
     {
-      "id": "14651:31858",
-      "name": "chevron-up"
+      "id": "16519:47045",
+      "name": "ic_chevron_up"
     },
     {
-      "id": "14651:31862",
-      "name": "chevron-up-double"
+      "id": "16519:47048",
+      "name": "ic_chevron_up_double"
     },
     {
-      "id": "14651:31866",
-      "name": "corner-down-left"
+      "id": "16519:47051",
+      "name": "ic_corner_down_left"
     },
     {
-      "id": "14651:31870",
-      "name": "corner-down-right"
+      "id": "16519:47054",
+      "name": "ic_corner_down_right"
     },
     {
-      "id": "14651:31874",
-      "name": "corner-left-down"
+      "id": "16519:47057",
+      "name": "ic_corner_left_down"
     },
     {
-      "id": "14651:31878",
-      "name": "corner-left-up"
+      "id": "16519:47060",
+      "name": "ic_corner_left_up"
     },
     {
-      "id": "14651:31882",
-      "name": "corner-right-down"
+      "id": "16519:47063",
+      "name": "ic_corner_right_down"
     },
     {
-      "id": "14651:31886",
-      "name": "corner-right-up"
+      "id": "16519:47066",
+      "name": "ic_corner_right_up"
     },
     {
-      "id": "14651:31890",
-      "name": "corner-up-left"
+      "id": "16519:47069",
+      "name": "ic_corner_up_left"
     },
     {
-      "id": "14651:31894",
-      "name": "corner-up-right"
+      "id": "16519:47072",
+      "name": "ic_corner_up_right"
     },
     {
-      "id": "14651:31898",
-      "name": "expand-01"
+      "id": "16519:47075",
+      "name": "ic_expand_01"
     },
     {
-      "id": "14651:31902",
-      "name": "expand-02"
+      "id": "16519:47078",
+      "name": "ic_expand_02"
     },
     {
-      "id": "14651:31906",
-      "name": "expand-03"
+      "id": "16519:47081",
+      "name": "ic_expand_03"
     },
     {
-      "id": "14651:31910",
-      "name": "expand-04"
+      "id": "16519:47084",
+      "name": "ic_expand_04"
     },
     {
-      "id": "14651:31914",
-      "name": "expand-05"
+      "id": "16519:47087",
+      "name": "ic_expand_05"
     },
     {
-      "id": "14651:31918",
-      "name": "expand-06"
+      "id": "16519:47090",
+      "name": "ic_expand_06"
     },
     {
-      "id": "14651:31922",
-      "name": "flip-backward"
+      "id": "16519:47093",
+      "name": "ic_flip_backward"
     },
     {
-      "id": "14651:31926",
-      "name": "flip-forward"
+      "id": "16519:47096",
+      "name": "ic_flip_forward"
     },
     {
-      "id": "14651:31930",
-      "name": "infinity"
+      "id": "16519:47099",
+      "name": "ic_infinity"
     },
     {
-      "id": "14651:31934",
-      "name": "refresh-ccw-01"
+      "id": "16519:47102",
+      "name": "ic_refresh_ccw_01"
     },
     {
-      "id": "14651:31938",
-      "name": "refresh-ccw-02"
+      "id": "16519:47105",
+      "name": "ic_refresh_ccw_02"
     },
     {
-      "id": "14651:31942",
-      "name": "refresh-ccw-03"
+      "id": "16519:47108",
+      "name": "ic_refresh_ccw_03"
     },
     {
-      "id": "14651:31946",
-      "name": "refresh-ccw-04"
+      "id": "16519:47111",
+      "name": "ic_refresh_ccw_04"
     },
     {
-      "id": "14651:31950",
-      "name": "refresh-ccw-05"
+      "id": "16519:47114",
+      "name": "ic_refresh_ccw_05"
     },
     {
-      "id": "14651:31954",
-      "name": "refresh-cw-01"
+      "id": "16519:47117",
+      "name": "ic_refresh_cw_01"
     },
     {
-      "id": "14651:31958",
-      "name": "refresh-cw-02"
+      "id": "16519:47120",
+      "name": "ic_refresh_cw_02"
     },
     {
-      "id": "14651:31962",
-      "name": "refresh-cw-03"
+      "id": "16519:47123",
+      "name": "ic_refresh_cw_03"
     },
     {
-      "id": "14651:31966",
-      "name": "refresh-cw-04"
+      "id": "16519:47126",
+      "name": "ic_refresh_cw_04"
     },
     {
-      "id": "14651:31970",
-      "name": "refresh-cw-05"
+      "id": "16519:47129",
+      "name": "ic_refresh_cw_05"
     },
     {
-      "id": "14651:31974",
-      "name": "reverse-left"
+      "id": "16519:47132",
+      "name": "ic_reverse_left"
     },
     {
-      "id": "14651:31978",
-      "name": "reverse-right"
+      "id": "16519:47135",
+      "name": "ic_reverse_right"
     },
     {
-      "id": "14651:31982",
-      "name": "switch-horizontal-01"
+      "id": "16519:47138",
+      "name": "ic_switch_horizontal_01"
     },
     {
-      "id": "14651:31986",
-      "name": "switch-horizontal-02"
+      "id": "16519:47141",
+      "name": "ic_switch_horizontal_02"
     },
     {
-      "id": "14651:31990",
-      "name": "switch-vertical-01"
+      "id": "16519:47144",
+      "name": "ic_switch_vertical_01"
     },
     {
-      "id": "14651:31994",
-      "name": "switch-vertical-02"
+      "id": "16519:47147",
+      "name": "ic_switch_vertical_02"
+    },
+    {
+      "id": "16528:52083",
+      "name": "ic_external_link"
     }
   ],
   "Finance & eCommerce": [
     {
-      "id": "14651:32000",
-      "name": "bank"
+      "id": "16519:47152",
+      "name": "ic_bank"
     },
     {
-      "id": "14651:32004",
-      "name": "bank-note-01"
+      "id": "16519:47155",
+      "name": "ic_bank_note_01"
     },
     {
-      "id": "14651:32008",
-      "name": "bank-note-02"
+      "id": "16519:47158",
+      "name": "ic_bank_note_02"
     },
     {
-      "id": "14651:32012",
-      "name": "bank-note-03"
+      "id": "16519:47161",
+      "name": "ic_bank_note_03"
     },
     {
-      "id": "14651:32016",
-      "name": "coins-01"
+      "id": "16519:47164",
+      "name": "ic_coins_01"
     },
     {
-      "id": "14651:32020",
-      "name": "coins-02"
+      "id": "16519:47167",
+      "name": "ic_coins_02"
     },
     {
-      "id": "14651:32024",
-      "name": "coins-03"
+      "id": "16519:47170",
+      "name": "ic_coins_03"
     },
     {
-      "id": "14651:32028",
-      "name": "coins-04"
+      "id": "16519:47173",
+      "name": "ic_coins_04"
     },
     {
-      "id": "14651:32032",
-      "name": "coins-hand"
+      "id": "16519:47176",
+      "name": "ic_coins_hand"
     },
     {
-      "id": "14651:32036",
-      "name": "coins-stacked-01"
+      "id": "16519:47179",
+      "name": "ic_coins_stacked_01"
     },
     {
-      "id": "14651:32040",
-      "name": "coins-stacked-02"
+      "id": "16519:47182",
+      "name": "ic_coins_stacked_02"
     },
     {
-      "id": "14651:32044",
-      "name": "coins-stacked-03"
+      "id": "16519:47185",
+      "name": "ic_coins_stacked_03"
     },
     {
-      "id": "14651:32048",
-      "name": "coins-stacked-04"
+      "id": "16519:47188",
+      "name": "ic_coins_stacked_04"
     },
     {
-      "id": "14651:32052",
-      "name": "coins-swap-01"
+      "id": "16519:47191",
+      "name": "ic_coins_swap_01"
     },
     {
-      "id": "14651:32056",
-      "name": "coins-swap-02"
+      "id": "16519:47194",
+      "name": "ic_coins_swap_02"
     },
     {
-      "id": "14651:32060",
-      "name": "credit-card-01"
+      "id": "16519:47197",
+      "name": "ic_credit_card_01"
     },
     {
-      "id": "14651:32064",
-      "name": "credit-card-02"
+      "id": "16519:47200",
+      "name": "ic_credit_card_02"
     },
     {
-      "id": "14651:32068",
-      "name": "credit-card-check"
+      "id": "16519:47203",
+      "name": "ic_credit_card_check"
     },
     {
-      "id": "14651:32072",
-      "name": "credit-card-down"
+      "id": "16519:47206",
+      "name": "ic_credit_card_down"
     },
     {
-      "id": "14651:32076",
-      "name": "credit-card-download"
+      "id": "16519:47209",
+      "name": "ic_credit_card_download"
     },
     {
-      "id": "14651:32080",
-      "name": "credit-card-edit"
+      "id": "16519:47212",
+      "name": "ic_credit_card_edit"
     },
     {
-      "id": "14651:32084",
-      "name": "credit-card-lock"
+      "id": "16519:47215",
+      "name": "ic_credit_card_lock"
     },
     {
-      "id": "14651:32088",
-      "name": "credit-card-minus"
+      "id": "16519:47218",
+      "name": "ic_credit_card_minus"
     },
     {
-      "id": "14651:32092",
-      "name": "credit-card-plus"
+      "id": "16519:47221",
+      "name": "ic_credit_card_plus"
     },
     {
-      "id": "14651:32096",
-      "name": "credit-card-refresh"
+      "id": "16519:47224",
+      "name": "ic_credit_card_refresh"
     },
     {
-      "id": "14651:32100",
-      "name": "credit-card-search"
+      "id": "16519:47227",
+      "name": "ic_credit_card_search"
     },
     {
-      "id": "14651:32104",
-      "name": "credit-card-shield"
+      "id": "16519:47230",
+      "name": "ic_credit_card_shield"
     },
     {
-      "id": "14651:32108",
-      "name": "credit-card-up"
+      "id": "16519:47233",
+      "name": "ic_credit_card_up"
     },
     {
-      "id": "14651:32112",
-      "name": "credit-card-upload"
+      "id": "16519:47236",
+      "name": "ic_credit_card_upload"
     },
     {
-      "id": "14651:32116",
-      "name": "credit-card-x"
+      "id": "16519:47239",
+      "name": "ic_credit_card_x"
     },
     {
-      "id": "14651:32120",
-      "name": "cryptocurrency-01"
+      "id": "16519:47242",
+      "name": "ic_cryptocurrency_01"
     },
     {
-      "id": "14651:32124",
-      "name": "cryptocurrency-02"
+      "id": "16519:47245",
+      "name": "ic_cryptocurrency_02"
     },
     {
-      "id": "14651:32128",
-      "name": "cryptocurrency-03"
+      "id": "16519:47248",
+      "name": "ic_cryptocurrency_03"
     },
     {
-      "id": "14651:32132",
-      "name": "cryptocurrency-04"
+      "id": "16519:47251",
+      "name": "ic_cryptocurrency_04"
     },
     {
-      "id": "14651:32136",
-      "name": "currency-bitcoin"
+      "id": "16519:47254",
+      "name": "ic_currency_bitcoin"
     },
     {
-      "id": "14651:32140",
-      "name": "currency-bitcoin-circle"
+      "id": "16519:47257",
+      "name": "ic_currency_bitcoin_circle"
     },
     {
-      "id": "14651:32144",
-      "name": "currency-dollar"
+      "id": "16519:47260",
+      "name": "ic_currency_dollar"
     },
     {
-      "id": "14651:32148",
-      "name": "currency-dollar-circle"
+      "id": "16519:47263",
+      "name": "ic_currency_dollar_circle"
     },
     {
-      "id": "14651:32152",
-      "name": "currency-ethereum"
+      "id": "16519:47266",
+      "name": "ic_currency_ethereum"
     },
     {
-      "id": "14651:32156",
-      "name": "currency-ethereum-circle"
+      "id": "16519:47269",
+      "name": "ic_currency_ethereum_circle"
     },
     {
-      "id": "14651:32160",
-      "name": "currency-euro"
+      "id": "16519:47272",
+      "name": "ic_currency_euro"
     },
     {
-      "id": "14651:32164",
-      "name": "currency-euro-circle"
+      "id": "16519:47275",
+      "name": "ic_currency_euro_circle"
     },
     {
-      "id": "14651:32168",
-      "name": "currency-pound"
+      "id": "16519:47278",
+      "name": "ic_currency_pound"
     },
     {
-      "id": "14651:32172",
-      "name": "currency-pound-circle"
+      "id": "16519:47281",
+      "name": "ic_currency_pound_circle"
     },
     {
-      "id": "14651:32176",
-      "name": "currency-ruble"
+      "id": "16519:47284",
+      "name": "ic_currency_ruble"
     },
     {
-      "id": "14651:32180",
-      "name": "currency-ruble-circle"
+      "id": "16519:47287",
+      "name": "ic_currency_ruble_circle"
     },
     {
-      "id": "14651:32184",
-      "name": "currency-rupee-circle"
+      "id": "16519:47290",
+      "name": "ic_currency_rupee_circle"
     },
     {
-      "id": "14651:32188",
-      "name": "currency-rupee"
+      "id": "16519:47293",
+      "name": "ic_currency_rupee"
     },
     {
-      "id": "14651:32192",
-      "name": "currency-yen"
+      "id": "16519:47296",
+      "name": "ic_currency_yen"
     },
     {
-      "id": "14651:32196",
-      "name": "currency-yen-circle"
+      "id": "16519:47299",
+      "name": "ic_currency_yen_circle"
     },
     {
-      "id": "14651:32200",
-      "name": "diamond-01"
+      "id": "16519:47302",
+      "name": "ic_diamond_01"
     },
     {
-      "id": "14651:32204",
-      "name": "diamond-02"
+      "id": "16519:47305",
+      "name": "ic_diamond_02"
     },
     {
-      "id": "14651:32208",
-      "name": "gift-01"
+      "id": "16519:47308",
+      "name": "ic_gift_01"
     },
     {
-      "id": "14651:32212",
-      "name": "gift-02"
+      "id": "16519:47311",
+      "name": "ic_gift_02"
     },
     {
-      "id": "14651:32216",
-      "name": "piggy-bank-01"
+      "id": "16519:47314",
+      "name": "ic_piggy_bank_01"
     },
     {
-      "id": "14651:32220",
-      "name": "piggy-bank-02"
+      "id": "16519:47317",
+      "name": "ic_piggy_bank_02"
     },
     {
-      "id": "14651:32224",
-      "name": "receipt"
+      "id": "16519:47320",
+      "name": "ic_receipt"
     },
     {
-      "id": "14651:32228",
-      "name": "receipt-check"
+      "id": "16519:47323",
+      "name": "ic_receipt_check"
     },
     {
-      "id": "14651:32232",
-      "name": "safe"
+      "id": "16519:47326",
+      "name": "ic_safe"
     },
     {
-      "id": "14651:32236",
-      "name": "sale-01"
+      "id": "16519:47329",
+      "name": "ic_sale_01"
     },
     {
-      "id": "14651:32240",
-      "name": "sale-02"
+      "id": "16519:47332",
+      "name": "ic_sale_02"
     },
     {
-      "id": "14651:32244",
-      "name": "sale-03"
+      "id": "16519:47335",
+      "name": "ic_sale_03"
     },
     {
-      "id": "14651:32248",
-      "name": "sale-04"
+      "id": "16519:47338",
+      "name": "ic_sale_04"
     },
     {
-      "id": "14651:32252",
-      "name": "scales-01"
+      "id": "16519:47341",
+      "name": "ic_scales_01"
     },
     {
-      "id": "14651:32256",
-      "name": "scales-02"
+      "id": "16519:47344",
+      "name": "ic_scales_02"
     },
     {
-      "id": "14651:32260",
-      "name": "shopping-bag-01"
+      "id": "16519:47347",
+      "name": "ic_shopping_bag_01"
     },
     {
-      "id": "14651:32264",
-      "name": "shopping-bag-02"
+      "id": "16519:47350",
+      "name": "ic_shopping_bag_02"
     },
     {
-      "id": "14651:32268",
-      "name": "shopping-bag-03"
+      "id": "16519:47353",
+      "name": "ic_shopping_bag_03"
     },
     {
-      "id": "14651:32272",
-      "name": "shopping-cart-01"
+      "id": "16519:47356",
+      "name": "ic_shopping_cart_01"
     },
     {
-      "id": "14651:32276",
-      "name": "shopping-cart-02"
+      "id": "16519:47359",
+      "name": "ic_shopping_cart_02"
     },
     {
-      "id": "14651:32280",
-      "name": "shopping-cart-03"
+      "id": "16519:47362",
+      "name": "ic_shopping_cart_03"
     },
     {
-      "id": "14651:32284",
-      "name": "tag-01"
+      "id": "16519:47365",
+      "name": "ic_tag_01"
     },
     {
-      "id": "14651:32288",
-      "name": "tag-02"
+      "id": "16519:47368",
+      "name": "ic_tag_02"
     },
     {
-      "id": "14651:32292",
-      "name": "tag-03"
+      "id": "16519:47371",
+      "name": "ic_tag_03"
     },
     {
-      "id": "14651:32296",
-      "name": "wallet-01"
+      "id": "16519:47374",
+      "name": "ic_wallet_01"
     },
     {
-      "id": "14651:32300",
-      "name": "wallet-02"
+      "id": "16519:47377",
+      "name": "ic_wallet_02"
     },
     {
-      "id": "14651:32304",
-      "name": "wallet-03"
+      "id": "16519:47380",
+      "name": "ic_wallet_03"
     },
     {
-      "id": "14651:32308",
-      "name": "wallet-04"
+      "id": "16519:47383",
+      "name": "ic_wallet_04"
     },
     {
-      "id": "14651:32312",
-      "name": "wallet-05"
+      "id": "16519:47386",
+      "name": "ic_wallet_05"
     }
   ],
   "General": [
     {
-      "id": "14651:32319",
-      "name": "activity"
+      "id": "16519:47392",
+      "name": "ic_activity"
     },
     {
-      "id": "14651:32323",
-      "name": "activity-heart"
+      "id": "16519:47395",
+      "name": "ic_activity_heart"
     },
     {
-      "id": "14651:32327",
-      "name": "anchor"
+      "id": "16519:47398",
+      "name": "ic_anchor"
     },
     {
-      "id": "14651:32331",
-      "name": "archive"
+      "id": "16519:47401",
+      "name": "ic_archive"
     },
     {
-      "id": "14651:32335",
-      "name": "asterisk-01"
+      "id": "16519:47404",
+      "name": "ic_asterisk_01"
     },
     {
-      "id": "14651:32339",
-      "name": "asterisk-02"
+      "id": "16519:47407",
+      "name": "ic_asterisk_02"
     },
     {
-      "id": "14651:32343",
-      "name": "at-sign"
+      "id": "16519:47410",
+      "name": "ic_at_sign"
     },
     {
-      "id": "14651:32347",
-      "name": "bookmark"
+      "id": "16519:47413",
+      "name": "ic_bookmark"
     },
     {
-      "id": "14651:32351",
-      "name": "bookmark-add"
+      "id": "16519:47416",
+      "name": "ic_bookmark_add"
     },
     {
-      "id": "14651:32355",
-      "name": "bookmark-check"
+      "id": "16519:47419",
+      "name": "ic_bookmark_check"
     },
     {
-      "id": "14651:32359",
-      "name": "bookmark-minus"
+      "id": "16519:47422",
+      "name": "ic_bookmark_minus"
     },
     {
-      "id": "14651:32363",
-      "name": "bookmark-x"
+      "id": "16519:47425",
+      "name": "ic_bookmark_x"
     },
     {
-      "id": "14651:32367",
-      "name": "building-01"
+      "id": "16519:47428",
+      "name": "ic_building_01"
     },
     {
-      "id": "14651:32371",
-      "name": "building-02"
+      "id": "16519:47431",
+      "name": "ic_building_02"
     },
     {
-      "id": "14651:32375",
-      "name": "building-03"
+      "id": "16519:47434",
+      "name": "ic_building_03"
     },
     {
-      "id": "14651:32379",
-      "name": "building-04"
+      "id": "16519:47437",
+      "name": "ic_building_04"
     },
     {
-      "id": "14651:32383",
-      "name": "building-05"
+      "id": "16519:47440",
+      "name": "ic_building_05"
     },
     {
-      "id": "14651:32387",
-      "name": "building-06"
+      "id": "16519:47443",
+      "name": "ic_building_06"
     },
     {
-      "id": "14651:32391",
-      "name": "building-07"
+      "id": "16519:47446",
+      "name": "ic_building_07"
     },
     {
-      "id": "14651:32395",
-      "name": "building-08"
+      "id": "16519:47449",
+      "name": "ic_building_08"
     },
     {
-      "id": "14651:32399",
-      "name": "check"
+      "id": "16519:47452",
+      "name": "ic_check"
     },
     {
-      "id": "14651:32403",
-      "name": "check-circle"
+      "id": "16519:47455",
+      "name": "ic_check_circle"
     },
     {
-      "id": "14651:32407",
-      "name": "check-circle-broken"
+      "id": "16519:47458",
+      "name": "ic_check_circle_broken"
     },
     {
-      "id": "14651:32411",
-      "name": "check-done-01"
+      "id": "16519:47461",
+      "name": "ic_check_done_01"
     },
     {
-      "id": "14651:32415",
-      "name": "check-done-02"
+      "id": "16519:47464",
+      "name": "ic_check_done_02"
     },
     {
-      "id": "14651:32419",
-      "name": "check-heart"
+      "id": "16519:47467",
+      "name": "ic_check_heart"
     },
     {
-      "id": "14651:32423",
-      "name": "check-square"
+      "id": "16519:47470",
+      "name": "ic_check_square"
     },
     {
-      "id": "14651:32427",
-      "name": "check-square-broken"
+      "id": "16519:47473",
+      "name": "ic_check_square_broken"
     },
     {
-      "id": "14651:32431",
-      "name": "check-verified-01"
+      "id": "16519:47476",
+      "name": "ic_check_verified_01"
     },
     {
-      "id": "14651:32435",
-      "name": "check-verified-02"
+      "id": "16519:47479",
+      "name": "ic_check_verified_02"
     },
     {
-      "id": "14651:32439",
-      "name": "check-verified-03"
+      "id": "16519:47482",
+      "name": "ic_check_verified_03"
     },
     {
-      "id": "14651:32443",
-      "name": "cloud-blank-01"
+      "id": "16519:47485",
+      "name": "ic_cloud_blank_01"
     },
     {
-      "id": "14651:32447",
-      "name": "cloud-blank-02"
+      "id": "16519:47488",
+      "name": "ic_cloud_blank_02"
     },
     {
-      "id": "14651:32451",
-      "name": "copy-01"
+      "id": "16519:47491",
+      "name": "ic_copy_01"
     },
     {
-      "id": "14651:32455",
-      "name": "copy-02"
+      "id": "16519:47494",
+      "name": "ic_copy_02"
     },
     {
-      "id": "14651:32459",
-      "name": "copy-03"
+      "id": "16519:47497",
+      "name": "ic_copy_03"
     },
     {
-      "id": "14651:32463",
-      "name": "copy-04"
+      "id": "16519:47500",
+      "name": "ic_copy_04"
     },
     {
-      "id": "14651:32467",
-      "name": "copy-05"
+      "id": "16519:47503",
+      "name": "ic_copy_05"
     },
     {
-      "id": "14651:32471",
-      "name": "copy-06"
+      "id": "16519:47506",
+      "name": "ic_copy_06"
     },
     {
-      "id": "14651:32475",
-      "name": "copy-07"
+      "id": "16519:47509",
+      "name": "ic_copy_07"
     },
     {
-      "id": "14651:32479",
-      "name": "divide-01"
+      "id": "16519:47512",
+      "name": "ic_divide_01"
     },
     {
-      "id": "14651:32483",
-      "name": "divide-02"
+      "id": "16519:47515",
+      "name": "ic_divide_02"
     },
     {
-      "id": "14651:32487",
-      "name": "divide-03"
+      "id": "16519:47518",
+      "name": "ic_divide_03"
     },
     {
-      "id": "14651:32491",
-      "name": "dots-grid"
+      "id": "16519:47521",
+      "name": "ic_dots_grid"
     },
     {
-      "id": "14651:32495",
-      "name": "dots-horizontal"
+      "id": "16519:47524",
+      "name": "ic_dots_horizontal"
     },
     {
-      "id": "14651:32499",
-      "name": "dots-vertical"
+      "id": "16519:47527",
+      "name": "ic_dots_vertical"
     },
     {
-      "id": "14651:32503",
-      "name": "download-01"
+      "id": "16519:47530",
+      "name": "ic_download_01"
     },
     {
-      "id": "14651:32507",
-      "name": "download-02"
+      "id": "16519:47533",
+      "name": "ic_download_02"
     },
     {
-      "id": "14651:32511",
-      "name": "download-03"
+      "id": "16519:47536",
+      "name": "ic_download_03"
     },
     {
-      "id": "14651:32515",
-      "name": "share-04"
+      "id": "16519:47539",
+      "name": "ic_share_04"
     },
     {
-      "id": "14651:32519",
-      "name": "share-05"
+      "id": "16519:47542",
+      "name": "ic_share_05"
     },
     {
-      "id": "14651:32523",
-      "name": "share-06"
+      "id": "16519:47545",
+      "name": "ic_share_06"
     },
     {
-      "id": "14651:32527",
-      "name": "share-07"
+      "id": "16519:47548",
+      "name": "ic_share_07"
     },
     {
-      "id": "14651:32531",
-      "name": "slash-circle-01"
+      "id": "16519:47551",
+      "name": "ic_slash_circle_01"
     },
     {
-      "id": "14651:32535",
-      "name": "slash-circle-02"
+      "id": "16519:47554",
+      "name": "ic_slash_circle_02"
     },
     {
-      "id": "14651:32539",
-      "name": "slash-divider"
+      "id": "16519:47557",
+      "name": "ic_slash_divider"
     },
     {
-      "id": "14651:32543",
-      "name": "slash-octagon"
+      "id": "16519:47560",
+      "name": "ic_slash_octagon"
     },
     {
-      "id": "14651:32547",
-      "name": "speedometer-01"
+      "id": "16519:47563",
+      "name": "ic_speedometer_01"
     },
     {
-      "id": "14651:32551",
-      "name": "speedometer-02"
+      "id": "16519:47566",
+      "name": "ic_speedometer_02"
     },
     {
-      "id": "14651:32555",
-      "name": "speedometer-03"
+      "id": "16519:47569",
+      "name": "ic_speedometer_03"
     },
     {
-      "id": "14651:32559",
-      "name": "speedometer-04"
+      "id": "16519:47572",
+      "name": "ic_speedometer_04"
     },
     {
-      "id": "14651:32563",
-      "name": "target-01"
+      "id": "16519:47575",
+      "name": "ic_target_01"
     },
     {
-      "id": "14651:32567",
-      "name": "target-02"
+      "id": "16519:47578",
+      "name": "ic_target_02"
     },
     {
-      "id": "14651:32571",
-      "name": "target-03"
+      "id": "16519:47581",
+      "name": "ic_target_03"
     },
     {
-      "id": "14651:32575",
-      "name": "target-04"
+      "id": "16519:47584",
+      "name": "ic_target_04"
     },
     {
-      "id": "14651:32579",
-      "name": "target-05"
+      "id": "16519:47587",
+      "name": "ic_target_05"
     },
     {
-      "id": "14651:32583",
-      "name": "toggle-01-left"
+      "id": "16519:47590",
+      "name": "ic_toggle_01_left"
     },
     {
-      "id": "14651:32587",
-      "name": "toggle-01-right"
+      "id": "16519:47593",
+      "name": "ic_toggle_01_right"
     },
     {
-      "id": "14651:32591",
-      "name": "toggle-02-left"
+      "id": "16519:47596",
+      "name": "ic_toggle_02_left"
     },
     {
-      "id": "14651:32595",
-      "name": "toggle-02-right"
+      "id": "16519:47599",
+      "name": "ic_toggle_02_right"
     },
     {
-      "id": "14651:32599",
-      "name": "toggle-03-left"
+      "id": "16519:47602",
+      "name": "ic_toggle_03_left"
     },
     {
-      "id": "14651:32603",
-      "name": "toggle-03-right"
+      "id": "16519:47605",
+      "name": "ic_toggle_03_right"
     },
     {
-      "id": "14651:32607",
-      "name": "tool-01"
+      "id": "16519:47608",
+      "name": "ic_tool_01"
     },
     {
-      "id": "14651:32611",
-      "name": "tool-02"
+      "id": "16519:47611",
+      "name": "ic_tool_02"
     },
     {
-      "id": "14651:32615",
-      "name": "translate-01"
+      "id": "16519:47614",
+      "name": "ic_translate_01"
     },
     {
-      "id": "14651:32619",
-      "name": "translate-02"
+      "id": "16519:47617",
+      "name": "ic_translate_02"
     },
     {
-      "id": "14651:32623",
-      "name": "trash-01"
+      "id": "16519:47620",
+      "name": "ic_trash_01"
     },
     {
-      "id": "14651:32627",
-      "name": "trash-02"
+      "id": "16519:47623",
+      "name": "ic_trash_02"
     },
     {
-      "id": "14651:32631",
-      "name": "trash-03"
+      "id": "16519:47626",
+      "name": "ic_trash_03"
     },
     {
-      "id": "14651:32635",
-      "name": "trash-04"
+      "id": "16519:47629",
+      "name": "ic_trash_04"
     },
     {
-      "id": "14651:32639",
-      "name": "upload-01"
+      "id": "16519:47632",
+      "name": "ic_upload_01"
     },
     {
-      "id": "14651:32643",
-      "name": "upload-02"
+      "id": "16519:47635",
+      "name": "ic_upload_02"
     },
     {
-      "id": "14651:32647",
-      "name": "upload-03"
+      "id": "16519:47638",
+      "name": "ic_upload_03"
     },
     {
-      "id": "14651:32651",
-      "name": "upload-04"
+      "id": "16519:47641",
+      "name": "ic_upload_04"
     },
     {
-      "id": "14651:32655",
-      "name": "upload-cloud-01"
+      "id": "16519:47644",
+      "name": "ic_upload_cloud_01"
     },
     {
-      "id": "14651:32659",
-      "name": "upload-cloud-02"
+      "id": "16519:47647",
+      "name": "ic_upload_cloud_02"
     },
     {
-      "id": "14651:32663",
-      "name": "virus"
+      "id": "16519:47650",
+      "name": "ic_virus"
     },
     {
-      "id": "14651:32667",
-      "name": "x-circle"
+      "id": "16519:47653",
+      "name": "ic_x_circle"
     },
     {
-      "id": "14651:32671",
-      "name": "x-close"
+      "id": "16519:47656",
+      "name": "ic_x_close"
     },
     {
-      "id": "14651:32675",
-      "name": "x"
+      "id": "16519:47659",
+      "name": "ic_x"
     },
     {
-      "id": "14651:32679",
-      "name": "x-square"
+      "id": "16519:47662",
+      "name": "ic_x_square"
     },
     {
-      "id": "14651:32683",
-      "name": "zap"
+      "id": "16519:47665",
+      "name": "ic_zap"
     },
     {
-      "id": "14651:32687",
-      "name": "zap-circle"
+      "id": "16519:47668",
+      "name": "ic_zap_circle"
     },
     {
-      "id": "14651:32691",
-      "name": "zap-fast"
+      "id": "16519:47671",
+      "name": "ic_zap_fast"
     },
     {
-      "id": "14651:32695",
-      "name": "zap-off"
+      "id": "16519:47674",
+      "name": "ic_zap_off"
     },
     {
-      "id": "14651:32699",
-      "name": "zap-square"
+      "id": "16519:47677",
+      "name": "ic_zap_square"
     },
     {
-      "id": "14651:32703",
-      "name": "link-broken-01"
+      "id": "16519:47680",
+      "name": "ic_link_broken_01"
     },
     {
-      "id": "14651:32707",
-      "name": "link-broken-02"
+      "id": "16519:47683",
+      "name": "ic_link_broken_02"
     },
     {
-      "id": "14651:32711",
-      "name": "link-external-01"
+      "id": "16519:47686",
+      "name": "ic_link_external_01"
     },
     {
-      "id": "14651:32715",
-      "name": "link-external-02"
+      "id": "16519:47689",
+      "name": "ic_link_external_02"
     },
     {
-      "id": "14651:32719",
-      "name": "loading-01"
+      "id": "16519:47692",
+      "name": "ic_loading_01"
     },
     {
-      "id": "14651:32723",
-      "name": "loading-02"
+      "id": "16519:47695",
+      "name": "ic_loading_02"
     },
     {
-      "id": "14651:32727",
-      "name": "loading-03"
+      "id": "16519:47698",
+      "name": "ic_loading_03"
     },
     {
-      "id": "14651:32731",
-      "name": "log-in-01"
+      "id": "16519:47701",
+      "name": "ic_log_in_01"
     },
     {
-      "id": "14651:32735",
-      "name": "log-in-02"
+      "id": "16519:47704",
+      "name": "ic_log_in_02"
     },
     {
-      "id": "14651:32739",
-      "name": "log-in-03"
+      "id": "16519:47707",
+      "name": "ic_log_in_03"
     },
     {
-      "id": "14651:32743",
-      "name": "log-in-04"
+      "id": "16519:47710",
+      "name": "ic_log_in_04"
     },
     {
-      "id": "14651:32747",
-      "name": "log-out-01"
+      "id": "16519:47713",
+      "name": "ic_log_out_01"
     },
     {
-      "id": "14651:32751",
-      "name": "log-out-02"
+      "id": "16519:47716",
+      "name": "ic_log_out_02"
     },
     {
-      "id": "14651:32755",
-      "name": "log-out-03"
+      "id": "16519:47719",
+      "name": "ic_log_out_03"
     },
     {
-      "id": "14651:32759",
-      "name": "log-out-04"
+      "id": "16519:47722",
+      "name": "ic_log_out_04"
     },
     {
-      "id": "14651:32763",
-      "name": "medical-circle"
+      "id": "16519:47725",
+      "name": "ic_medical_circle"
     },
     {
-      "id": "14651:32767",
-      "name": "medical-cross"
+      "id": "16519:47728",
+      "name": "ic_medical_cross"
     },
     {
-      "id": "14651:32771",
-      "name": "medical-square"
+      "id": "16519:47731",
+      "name": "ic_medical_square"
     },
     {
-      "id": "14651:32775",
-      "name": "menu-01"
+      "id": "16519:47734",
+      "name": "ic_menu_01"
     },
     {
-      "id": "14651:32779",
-      "name": "menu-02"
+      "id": "16519:47737",
+      "name": "ic_menu_02"
     },
     {
-      "id": "14651:32783",
-      "name": "menu-03"
+      "id": "16519:47740",
+      "name": "ic_menu_03"
     },
     {
-      "id": "14651:32787",
-      "name": "menu-04"
+      "id": "16519:47743",
+      "name": "ic_menu_04"
     },
     {
-      "id": "14651:32791",
-      "name": "menu-05"
+      "id": "16519:47746",
+      "name": "ic_menu_05"
     },
     {
-      "id": "14651:32795",
-      "name": "minus"
+      "id": "16519:47749",
+      "name": "ic_minus"
     },
     {
-      "id": "14651:32799",
-      "name": "minus-circle"
+      "id": "16519:47752",
+      "name": "ic_minus_circle"
     },
     {
-      "id": "14651:32803",
-      "name": "minus-square"
+      "id": "16519:47755",
+      "name": "ic_minus_square"
     },
     {
-      "id": "14651:32807",
-      "name": "percent-01"
+      "id": "16519:47758",
+      "name": "ic_percent_01"
     },
     {
-      "id": "14651:32811",
-      "name": "percent-02"
+      "id": "16519:47761",
+      "name": "ic_percent_02"
     },
     {
-      "id": "14651:32815",
-      "name": "percent-03"
+      "id": "16519:47764",
+      "name": "ic_percent_03"
     },
     {
-      "id": "14651:32819",
-      "name": "pin-01"
+      "id": "16519:47767",
+      "name": "ic_pin_01"
     },
     {
-      "id": "14651:32823",
-      "name": "pin-02"
+      "id": "16519:47770",
+      "name": "ic_pin_02"
     },
     {
-      "id": "14651:32827",
-      "name": "plus"
+      "id": "16519:47773",
+      "name": "ic_placeholder"
     },
     {
-      "id": "14651:32831",
-      "name": "placeholder"
+      "id": "16519:47776",
+      "name": "ic_plus"
     },
     {
-      "id": "14651:32835",
-      "name": "plus-circle"
+      "id": "16519:47779",
+      "name": "ic_plus_circle"
     },
     {
-      "id": "14651:32839",
-      "name": "plus-square"
+      "id": "16519:47782",
+      "name": "ic_plus_square"
     },
     {
-      "id": "14651:32843",
-      "name": "save-01"
+      "id": "16519:47785",
+      "name": "ic_save_01"
     },
     {
-      "id": "14651:32847",
-      "name": "save-02"
+      "id": "16519:47788",
+      "name": "ic_save_02"
     },
     {
-      "id": "14651:32851",
-      "name": "save-03"
+      "id": "16519:47791",
+      "name": "ic_save_03"
     },
     {
-      "id": "14651:32855",
-      "name": "search-lg"
+      "id": "16519:47794",
+      "name": "ic_search_lg"
     },
     {
-      "id": "14651:32859",
-      "name": "search-md"
+      "id": "16519:47797",
+      "name": "ic_search_md"
     },
     {
-      "id": "14651:32863",
-      "name": "search-refraction"
+      "id": "16519:47800",
+      "name": "ic_search_refraction"
     },
     {
-      "id": "14651:32867",
-      "name": "search-sm"
+      "id": "16519:47803",
+      "name": "ic_search_sm"
     },
     {
-      "id": "14651:32871",
-      "name": "settings-01"
+      "id": "16519:47806",
+      "name": "ic_settings_01"
     },
     {
-      "id": "14651:32875",
-      "name": "settings-02"
+      "id": "16519:47809",
+      "name": "ic_settings_02"
     },
     {
-      "id": "14651:32879",
-      "name": "settings-03"
+      "id": "16519:47812",
+      "name": "ic_settings_03"
     },
     {
-      "id": "14651:32883",
-      "name": "settings-04"
+      "id": "16519:47815",
+      "name": "ic_settings_04"
     },
     {
-      "id": "14651:32887",
-      "name": "share-01"
+      "id": "16519:47818",
+      "name": "ic_share_01"
     },
     {
-      "id": "14651:32891",
-      "name": "share-02"
+      "id": "16519:47821",
+      "name": "ic_share_02"
     },
     {
-      "id": "14651:32895",
-      "name": "share-03"
+      "id": "16519:47824",
+      "name": "ic_share_03"
     },
     {
-      "id": "14651:32899",
-      "name": "download-04"
+      "id": "16519:47827",
+      "name": "ic_download_04"
     },
     {
-      "id": "14651:32903",
-      "name": "download-cloud-01"
+      "id": "16519:47830",
+      "name": "ic_download_cloud_01"
     },
     {
-      "id": "14651:32907",
-      "name": "download-cloud-02"
+      "id": "16519:47833",
+      "name": "ic_download_cloud_02"
     },
     {
-      "id": "14651:32911",
-      "name": "edit-01"
+      "id": "16519:47836",
+      "name": "ic_edit_01"
     },
     {
-      "id": "14651:32915",
-      "name": "edit-02"
+      "id": "16519:47839",
+      "name": "ic_edit_02"
     },
     {
-      "id": "14651:32919",
-      "name": "edit-03"
+      "id": "16519:47842",
+      "name": "ic_edit_03"
     },
     {
-      "id": "14651:32923",
-      "name": "edit-04"
+      "id": "16519:47845",
+      "name": "ic_edit_04"
     },
     {
-      "id": "14651:32927",
-      "name": "edit-05"
+      "id": "16519:47848",
+      "name": "ic_edit_05"
     },
     {
-      "id": "14651:32931",
-      "name": "equal"
+      "id": "16519:47851",
+      "name": "ic_equal"
     },
     {
-      "id": "14651:32935",
-      "name": "equal-not"
+      "id": "16519:47854",
+      "name": "ic_equal_not"
     },
     {
-      "id": "14651:32939",
-      "name": "eye"
+      "id": "16519:47857",
+      "name": "ic_eye"
     },
     {
-      "id": "14651:32943",
-      "name": "eye-off"
+      "id": "16519:47860",
+      "name": "ic_eye_off"
     },
     {
-      "id": "14651:32947",
-      "name": "filter-funnel-01"
+      "id": "16519:47863",
+      "name": "ic_filter_funnel_01"
     },
     {
-      "id": "14651:32951",
-      "name": "filter-funnel-02"
+      "id": "16519:47866",
+      "name": "ic_filter_funnel_02"
     },
     {
-      "id": "14651:32955",
-      "name": "filter-lines"
+      "id": "16519:47869",
+      "name": "ic_filter_lines"
     },
     {
-      "id": "14651:32959",
-      "name": "google-chrome"
+      "id": "16519:47872",
+      "name": "ic_google_chrome"
     },
     {
-      "id": "14651:32963",
-      "name": "hash-01"
+      "id": "16519:47875",
+      "name": "ic_hash_01"
     },
     {
-      "id": "14651:32967",
-      "name": "hash-02"
+      "id": "16519:47878",
+      "name": "ic_hash_02"
     },
     {
-      "id": "14651:32971",
-      "name": "heart"
+      "id": "16519:47881",
+      "name": "ic_heart"
     },
     {
-      "id": "14651:32975",
-      "name": "heart-circle"
+      "id": "16519:47884",
+      "name": "ic_heart_circle"
     },
     {
-      "id": "14651:32979",
-      "name": "heart-hand"
+      "id": "16519:47887",
+      "name": "ic_heart_hand"
     },
     {
-      "id": "14651:32983",
-      "name": "heart-hexagon"
+      "id": "16519:47890",
+      "name": "ic_heart_hexagon"
     },
     {
-      "id": "14651:32987",
-      "name": "heart-octagon"
+      "id": "16519:47893",
+      "name": "ic_heart_octagon"
     },
     {
-      "id": "14651:32991",
-      "name": "heart-rounded"
+      "id": "16519:47896",
+      "name": "ic_heart_rounded"
     },
     {
-      "id": "14651:32995",
-      "name": "heart-square"
+      "id": "16519:47899",
+      "name": "ic_heart_square"
     },
     {
-      "id": "14651:32999",
-      "name": "hearts"
+      "id": "16519:47902",
+      "name": "ic_hearts"
     },
     {
-      "id": "14651:33003",
-      "name": "help-circle"
+      "id": "16519:47905",
+      "name": "ic_help_circle"
     },
     {
-      "id": "14651:33007",
-      "name": "help-hexagon"
+      "id": "16519:47908",
+      "name": "ic_help_hexagon"
     },
     {
-      "id": "14651:33011",
-      "name": "help-octagon"
+      "id": "16519:47911",
+      "name": "ic_help_octagon"
     },
     {
-      "id": "14651:33015",
-      "name": "help-square"
+      "id": "16519:47914",
+      "name": "ic_help_square"
     },
     {
-      "id": "14651:33019",
-      "name": "home-01"
+      "id": "16519:47917",
+      "name": "ic_home_01"
     },
     {
-      "id": "14651:33023",
-      "name": "home-02"
+      "id": "16519:47920",
+      "name": "ic_home_02"
     },
     {
-      "id": "14651:33027",
-      "name": "home-03"
+      "id": "16519:47923",
+      "name": "ic_home_03"
     },
     {
-      "id": "14651:33031",
-      "name": "home-04"
+      "id": "16519:47926",
+      "name": "ic_home_04"
     },
     {
-      "id": "14651:33035",
-      "name": "home-05"
+      "id": "16519:47929",
+      "name": "ic_home_05"
     },
     {
-      "id": "14651:33039",
-      "name": "home-line"
+      "id": "16519:47932",
+      "name": "ic_home_line"
     },
     {
-      "id": "14651:33043",
-      "name": "home-smile"
+      "id": "16519:47935",
+      "name": "ic_home_smile"
     },
     {
-      "id": "14651:33047",
-      "name": "info-circle"
+      "id": "16519:47938",
+      "name": "ic_info_circle"
     },
     {
-      "id": "14651:33051",
-      "name": "info-hexagon"
+      "id": "16519:47941",
+      "name": "ic_info_hexagon"
     },
     {
-      "id": "14651:33055",
-      "name": "info-octagon"
+      "id": "16519:47944",
+      "name": "ic_info_octagon"
     },
     {
-      "id": "14651:33059",
-      "name": "info-square"
+      "id": "16519:47947",
+      "name": "ic_info_square"
     },
     {
-      "id": "14651:33063",
-      "name": "life-buoy-01"
+      "id": "16519:47950",
+      "name": "ic_life_buoy_01"
     },
     {
-      "id": "14651:33067",
-      "name": "life-buoy-02"
+      "id": "16519:47953",
+      "name": "ic_life_buoy_02"
     },
     {
-      "id": "14651:33071",
-      "name": "link-01"
+      "id": "16519:47956",
+      "name": "ic_link_01"
     },
     {
-      "id": "14651:33075",
-      "name": "link-02"
+      "id": "16519:47959",
+      "name": "ic_link_02"
     },
     {
-      "id": "14651:33079",
-      "name": "link-03"
+      "id": "16519:47962",
+      "name": "ic_link_03"
     },
     {
-      "id": "14651:33083",
-      "name": "link-04"
+      "id": "16519:47965",
+      "name": "ic_link_04"
     },
     {
-      "id": "14651:33087",
-      "name": "link-05"
+      "id": "16519:47968",
+      "name": "ic_link_05"
     }
   ],
   "Alerts & feedback": [
     {
-      "id": "14651:33093",
-      "name": "alert-circle"
+      "id": "16519:47973",
+      "name": "ic_alert_circle"
     },
     {
-      "id": "14651:33097",
-      "name": "alert-hexagon"
+      "id": "16519:47976",
+      "name": "ic_alert_hexagon"
     },
     {
-      "id": "14651:33101",
-      "name": "alert-octagon"
+      "id": "16519:47979",
+      "name": "ic_alert_octagon"
     },
     {
-      "id": "14651:33105",
-      "name": "alert-square"
+      "id": "16519:47982",
+      "name": "ic_alert_square"
     },
     {
-      "id": "14651:33109",
-      "name": "alert-triangle"
+      "id": "16519:47985",
+      "name": "ic_alert_triangle"
     },
     {
-      "id": "14651:33113",
-      "name": "announcement-01"
+      "id": "16519:47988",
+      "name": "ic_announcement_01"
     },
     {
-      "id": "14651:33117",
-      "name": "announcement-02"
+      "id": "16519:47991",
+      "name": "ic_announcement_02"
     },
     {
-      "id": "14651:33121",
-      "name": "announcement-03"
+      "id": "16519:47994",
+      "name": "ic_announcement_03"
     },
     {
-      "id": "14651:33125",
-      "name": "bell-01"
+      "id": "16519:47997",
+      "name": "ic_bell_01"
     },
     {
-      "id": "14651:33129",
-      "name": "bell-02"
+      "id": "16519:48000",
+      "name": "ic_bell_02"
     },
     {
-      "id": "14651:33133",
-      "name": "bell-03"
+      "id": "16519:48003",
+      "name": "ic_bell_03"
     },
     {
-      "id": "14651:33137",
-      "name": "bell-04"
+      "id": "16519:48006",
+      "name": "ic_bell_04"
     },
     {
-      "id": "14651:33141",
-      "name": "bell-minus"
+      "id": "16519:48009",
+      "name": "ic_bell_minus"
     },
     {
-      "id": "14651:33145",
-      "name": "bell-off-01"
+      "id": "16519:48012",
+      "name": "ic_bell_off_01"
     },
     {
-      "id": "14651:33149",
-      "name": "bell-off-02"
+      "id": "16519:48015",
+      "name": "ic_bell_off_02"
     },
     {
-      "id": "14651:33153",
-      "name": "bell-off-03"
+      "id": "16519:48018",
+      "name": "ic_bell_off_03"
     },
     {
-      "id": "14651:33157",
-      "name": "bell-plus"
+      "id": "16519:48021",
+      "name": "ic_bell_plus"
     },
     {
-      "id": "14651:33161",
-      "name": "bell-ringing-01"
+      "id": "16519:48024",
+      "name": "ic_bell_ringing_01"
     },
     {
-      "id": "14651:33165",
-      "name": "bell-ringing-02"
+      "id": "16519:48027",
+      "name": "ic_bell_ringing_02"
     },
     {
-      "id": "14651:33169",
-      "name": "bell-ringing-03"
+      "id": "16519:48030",
+      "name": "ic_bell_ringing_03"
     },
     {
-      "id": "14651:33173",
-      "name": "bell-ringing-04"
+      "id": "16519:48033",
+      "name": "ic_bell_ringing_04"
     },
     {
-      "id": "14651:33177",
-      "name": "notification-box"
+      "id": "16519:48036",
+      "name": "ic_notification_box"
     },
     {
-      "id": "14651:33181",
-      "name": "notification-message"
+      "id": "16519:48039",
+      "name": "ic_notification_message"
     },
     {
-      "id": "14651:33185",
-      "name": "notification-text"
+      "id": "16519:48042",
+      "name": "ic_notification_text"
     },
     {
-      "id": "14651:33189",
-      "name": "thumbs-down"
+      "id": "16519:48045",
+      "name": "ic_thumbs_down"
     },
     {
-      "id": "14651:33193",
-      "name": "thumbs-up"
+      "id": "16519:48048",
+      "name": "ic_thumbs_up"
     }
   ],
   "Shapes": [
     {
-      "id": "14651:33199",
-      "name": "circle"
+      "id": "16519:48053",
+      "name": "ic_circle"
     },
     {
-      "id": "14651:33203",
-      "name": "cube-01"
+      "id": "16519:48056",
+      "name": "ic_cube_01"
     },
     {
-      "id": "14651:33207",
-      "name": "cube-02"
+      "id": "16519:48059",
+      "name": "ic_cube_02"
     },
     {
-      "id": "14651:33211",
-      "name": "cube-03"
+      "id": "16519:48062",
+      "name": "ic_cube_03"
     },
     {
-      "id": "14651:33215",
-      "name": "cube-04"
+      "id": "16519:48065",
+      "name": "ic_cube_04"
     },
     {
-      "id": "14651:33219",
-      "name": "cube-outline"
+      "id": "16519:48068",
+      "name": "ic_cube_outline"
     },
     {
-      "id": "14651:33223",
-      "name": "dice-1"
+      "id": "16519:48071",
+      "name": "ic_dice_1"
     },
     {
-      "id": "14651:33227",
-      "name": "dice-2"
+      "id": "16519:48074",
+      "name": "ic_dice_2"
     },
     {
-      "id": "14651:33231",
-      "name": "dice-4"
+      "id": "16519:48077",
+      "name": "ic_dice_4"
     },
     {
-      "id": "14651:33235",
-      "name": "dice-3"
+      "id": "16519:48080",
+      "name": "ic_dice_3"
     },
     {
-      "id": "14651:33239",
-      "name": "dice-5"
+      "id": "16519:48083",
+      "name": "ic_dice_5"
     },
     {
-      "id": "14651:33243",
-      "name": "dice-6"
+      "id": "16519:48086",
+      "name": "ic_dice_6"
     },
     {
-      "id": "14651:33247",
-      "name": "hexagon-01"
+      "id": "16519:48089",
+      "name": "ic_hexagon_01"
     },
     {
-      "id": "14651:33251",
-      "name": "hexagon-02"
+      "id": "16519:48092",
+      "name": "ic_hexagon_02"
     },
     {
-      "id": "14651:33255",
-      "name": "octagon"
+      "id": "16519:48095",
+      "name": "ic_octagon"
     },
     {
-      "id": "14651:33259",
-      "name": "pentagon"
+      "id": "16519:48098",
+      "name": "ic_pentagon"
     },
     {
-      "id": "14651:33263",
-      "name": "square"
+      "id": "16519:48101",
+      "name": "ic_square"
     },
     {
-      "id": "14651:33267",
-      "name": "star-01"
+      "id": "16519:48104",
+      "name": "ic_star_01"
     },
     {
-      "id": "14651:33271",
-      "name": "star-02"
+      "id": "16519:48107",
+      "name": "ic_star_02"
     },
     {
-      "id": "14651:33275",
-      "name": "star-03"
+      "id": "16519:48110",
+      "name": "ic_star_03"
     },
     {
-      "id": "14651:33279",
-      "name": "star-04"
+      "id": "16519:48113",
+      "name": "ic_star_04"
     },
     {
-      "id": "14651:33283",
-      "name": "star-05"
+      "id": "16519:48116",
+      "name": "ic_star_05"
     },
     {
-      "id": "14651:33287",
-      "name": "star-06"
+      "id": "16519:48119",
+      "name": "ic_star_06"
     },
     {
-      "id": "14651:33291",
-      "name": "star-07"
+      "id": "16519:48122",
+      "name": "ic_star_07"
     },
     {
-      "id": "14651:33295",
-      "name": "triangle"
+      "id": "16519:48125",
+      "name": "ic_triangle"
     }
   ],
   "Users": [
     {
-      "id": "14651:33301",
-      "name": "face-content"
+      "id": "16519:48130",
+      "name": "ic_face_content"
     },
     {
-      "id": "14651:33305",
-      "name": "face-frown"
+      "id": "16519:48133",
+      "name": "ic_face_frown"
     },
     {
-      "id": "14651:33309",
-      "name": "face-happy"
+      "id": "16519:48136",
+      "name": "ic_face_happy"
     },
     {
-      "id": "14651:33313",
-      "name": "face-neutral"
+      "id": "16519:48139",
+      "name": "ic_face_neutral"
     },
     {
-      "id": "14651:33317",
-      "name": "face-sad"
+      "id": "16519:48142",
+      "name": "ic_face_sad"
     },
     {
-      "id": "14651:33321",
-      "name": "face-smile"
+      "id": "16519:48145",
+      "name": "ic_face_smile"
     },
     {
-      "id": "14651:33325",
-      "name": "face-wink"
+      "id": "16519:48148",
+      "name": "ic_face_wink"
     },
     {
-      "id": "14651:33329",
-      "name": "user-01"
+      "id": "16519:48151",
+      "name": "ic_user_01"
     },
     {
-      "id": "14651:33333",
-      "name": "user-02"
+      "id": "16519:48154",
+      "name": "ic_user_02"
     },
     {
-      "id": "14651:33337",
-      "name": "users-03"
+      "id": "16519:48157",
+      "name": "ic_users_03"
     },
     {
-      "id": "14651:33341",
-      "name": "user-03"
+      "id": "16519:48160",
+      "name": "ic_user_03"
     },
     {
-      "id": "14651:33345",
-      "name": "users-02"
+      "id": "16519:48163",
+      "name": "ic_users_02"
     },
     {
-      "id": "14651:33349",
-      "name": "user-check-01"
+      "id": "16519:48166",
+      "name": "ic_user_check_01"
     },
     {
-      "id": "14651:33353",
-      "name": "user-check-02"
+      "id": "16519:48169",
+      "name": "ic_user_check_02"
     },
     {
-      "id": "14651:33357",
-      "name": "user-circle"
+      "id": "16519:48172",
+      "name": "ic_user_circle"
     },
     {
-      "id": "14651:33361",
-      "name": "user-down-01"
+      "id": "16519:48175",
+      "name": "ic_user_down_01"
     },
     {
-      "id": "14651:33365",
-      "name": "user-down-02"
+      "id": "16519:48178",
+      "name": "ic_user_down_02"
     },
     {
-      "id": "14651:33369",
-      "name": "user-edit"
+      "id": "16519:48181",
+      "name": "ic_user_edit"
     },
     {
-      "id": "14651:33373",
-      "name": "user-left-01"
+      "id": "16519:48184",
+      "name": "ic_user_left_01"
     },
     {
-      "id": "14651:33377",
-      "name": "user-left-02"
+      "id": "16519:48187",
+      "name": "ic_user_left_02"
     },
     {
-      "id": "14651:33381",
-      "name": "user-minus-01"
+      "id": "16519:48190",
+      "name": "ic_user_minus_01"
     },
     {
-      "id": "14651:33385",
-      "name": "user-minus-02"
+      "id": "16519:48193",
+      "name": "ic_user_minus_02"
     },
     {
-      "id": "14651:33389",
-      "name": "user-plus-01"
+      "id": "16519:48196",
+      "name": "ic_user_plus_01"
     },
     {
-      "id": "14651:33393",
-      "name": "user-plus-02"
+      "id": "16519:48199",
+      "name": "ic_user_plus_02"
     },
     {
-      "id": "14651:33397",
-      "name": "user-right-01"
+      "id": "16519:48202",
+      "name": "ic_user_right_01"
     },
     {
-      "id": "14651:33401",
-      "name": "user-right-02"
+      "id": "16519:48205",
+      "name": "ic_user_right_02"
     },
     {
-      "id": "14651:33405",
-      "name": "user-square"
+      "id": "16519:48208",
+      "name": "ic_user_square"
     },
     {
-      "id": "14651:33409",
-      "name": "user-up-01"
+      "id": "16519:48211",
+      "name": "ic_user_up_01"
     },
     {
-      "id": "14651:33413",
-      "name": "user-up-02"
+      "id": "16519:48214",
+      "name": "ic_user_up_02"
     },
     {
-      "id": "14651:33417",
-      "name": "user-x-01"
+      "id": "16519:48217",
+      "name": "ic_user_x_01"
     },
     {
-      "id": "14651:33421",
-      "name": "user-x-02"
+      "id": "16519:48220",
+      "name": "ic_user_x_02"
     },
     {
-      "id": "14651:33425",
-      "name": "users-01"
+      "id": "16519:48223",
+      "name": "ic_users_01"
     },
     {
-      "id": "14651:33429",
-      "name": "users-check"
+      "id": "16519:48226",
+      "name": "ic_users_check"
     },
     {
-      "id": "14651:33433",
-      "name": "users-down"
+      "id": "16519:48229",
+      "name": "ic_users_down"
     },
     {
-      "id": "14651:33437",
-      "name": "users-edit"
+      "id": "16519:48232",
+      "name": "ic_users_edit"
     },
     {
-      "id": "14651:33441",
-      "name": "users-left"
+      "id": "16519:48235",
+      "name": "ic_users_left"
     },
     {
-      "id": "14651:33445",
-      "name": "users-minus"
+      "id": "16519:48238",
+      "name": "ic_users_minus"
     },
     {
-      "id": "14651:33449",
-      "name": "users-plus"
+      "id": "16519:48241",
+      "name": "ic_users_plus"
     },
     {
-      "id": "14651:33453",
-      "name": "users-right"
+      "id": "16519:48244",
+      "name": "ic_users_right"
     },
     {
-      "id": "14651:33457",
-      "name": "users-up"
+      "id": "16519:48247",
+      "name": "ic_users_up"
     },
     {
-      "id": "14651:33461",
-      "name": "users-x"
+      "id": "16519:48250",
+      "name": "ic_users_x"
     }
   ],
   "Media & devices": [
     {
-      "id": "14651:33467",
-      "name": "airplay"
+      "id": "16519:48255",
+      "name": "ic_airplay"
     },
     {
-      "id": "14651:33471",
-      "name": "airpods"
+      "id": "16519:48258",
+      "name": "ic_airpods"
     },
     {
-      "id": "14651:33475",
-      "name": "battery-charging-01"
+      "id": "16519:48261",
+      "name": "ic_battery_charging_01"
     },
     {
-      "id": "14651:33479",
-      "name": "battery-charging-02"
+      "id": "16519:48264",
+      "name": "ic_battery_charging_02"
     },
     {
-      "id": "14651:33483",
-      "name": "battery-empty"
+      "id": "16519:48267",
+      "name": "ic_battery_empty"
     },
     {
-      "id": "14651:33487",
-      "name": "battery-full"
+      "id": "16519:48270",
+      "name": "ic_battery_full"
     },
     {
-      "id": "14651:33491",
-      "name": "battery-low"
+      "id": "16519:48273",
+      "name": "ic_battery_low"
     },
     {
-      "id": "14651:33495",
-      "name": "battery-mid"
+      "id": "16519:48276",
+      "name": "ic_battery_mid"
     },
     {
-      "id": "14651:33499",
-      "name": "bluetooth-connect"
+      "id": "16519:48279",
+      "name": "ic_bluetooth_connect"
     },
     {
-      "id": "14651:33503",
-      "name": "bluetooth-off"
+      "id": "16519:48282",
+      "name": "ic_bluetooth_off"
     },
     {
-      "id": "14651:33507",
-      "name": "bluetooth-on"
+      "id": "16519:48285",
+      "name": "ic_bluetooth_on"
     },
     {
-      "id": "14651:33511",
-      "name": "bluetooth-signal"
+      "id": "16519:48288",
+      "name": "ic_bluetooth_signal"
     },
     {
-      "id": "14651:33515",
-      "name": "chrome-cast"
+      "id": "16519:48291",
+      "name": "ic_chrome_cast"
     },
     {
-      "id": "14651:33519",
-      "name": "clapperboard"
+      "id": "16519:48294",
+      "name": "ic_clapperboard"
     },
     {
-      "id": "14651:33523",
-      "name": "disc-01"
+      "id": "16519:48297",
+      "name": "ic_disc_01"
     },
     {
-      "id": "14651:33527",
-      "name": "disc-02"
+      "id": "16519:48300",
+      "name": "ic_disc_02"
     },
     {
-      "id": "14651:33531",
-      "name": "fast-backward"
+      "id": "16519:48303",
+      "name": "ic_fast_backward"
     },
     {
-      "id": "14651:33535",
-      "name": "fast-forward"
+      "id": "16519:48306",
+      "name": "ic_fast_forward"
     },
     {
-      "id": "14651:33539",
-      "name": "film-01"
+      "id": "16519:48309",
+      "name": "ic_film_01"
     },
     {
-      "id": "14651:33543",
-      "name": "film-02"
+      "id": "16519:48312",
+      "name": "ic_film_02"
     },
     {
-      "id": "14651:33547",
-      "name": "film-03"
+      "id": "16519:48315",
+      "name": "ic_film_03"
     },
     {
-      "id": "14651:33551",
-      "name": "gaming-pad-01"
+      "id": "16519:48318",
+      "name": "ic_gaming_pad_01"
     },
     {
-      "id": "14651:33555",
-      "name": "gaming-pad-02"
+      "id": "16519:48321",
+      "name": "ic_gaming_pad_02"
     },
     {
-      "id": "14651:33559",
-      "name": "hard-drive"
+      "id": "16519:48324",
+      "name": "ic_hard_drive"
     },
     {
-      "id": "14651:33563",
-      "name": "headphones-01"
+      "id": "16519:48327",
+      "name": "ic_headphones_01"
     },
     {
-      "id": "14651:33567",
-      "name": "headphones-02"
+      "id": "16519:48330",
+      "name": "ic_headphones_02"
     },
     {
-      "id": "14651:33571",
-      "name": "keyboard-01"
+      "id": "16519:48333",
+      "name": "ic_keyboard_01"
     },
     {
-      "id": "14651:33575",
-      "name": "keyboard-02"
+      "id": "16519:48336",
+      "name": "ic_keyboard_02"
     },
     {
-      "id": "14651:33579",
-      "name": "laptop-01"
+      "id": "16519:48339",
+      "name": "ic_laptop_01"
     },
     {
-      "id": "14651:33583",
-      "name": "laptop-02"
+      "id": "16519:48342",
+      "name": "ic_laptop_02"
     },
     {
-      "id": "14651:33587",
-      "name": "lightbulb-01"
+      "id": "16519:48345",
+      "name": "ic_lightbulb_01"
     },
     {
-      "id": "14651:33591",
-      "name": "lightbulb-02"
+      "id": "16519:48348",
+      "name": "ic_lightbulb_02"
     },
     {
-      "id": "14651:33595",
-      "name": "lightbulb-03"
+      "id": "16519:48351",
+      "name": "ic_lightbulb_03"
     },
     {
-      "id": "14651:33599",
-      "name": "lightbulb-04"
+      "id": "16519:48354",
+      "name": "ic_lightbulb_04"
     },
     {
-      "id": "14651:33603",
-      "name": "lightbulb-05"
+      "id": "16519:48357",
+      "name": "ic_lightbulb_05"
     },
     {
-      "id": "14651:33607",
-      "name": "microphone-01"
+      "id": "16519:48360",
+      "name": "ic_microphone_01"
     },
     {
-      "id": "14651:33611",
-      "name": "microphone-02"
+      "id": "16519:48363",
+      "name": "ic_microphone_02"
     },
     {
-      "id": "14651:33615",
-      "name": "microphone-off-01"
+      "id": "16519:48366",
+      "name": "ic_microphone_off_01"
     },
     {
-      "id": "14651:33619",
-      "name": "microphone-off-02"
+      "id": "16519:48369",
+      "name": "ic_microphone_off_02"
     },
     {
-      "id": "14651:33623",
-      "name": "modem-01"
+      "id": "16519:48372",
+      "name": "ic_modem_01"
     },
     {
-      "id": "14651:33627",
-      "name": "modem-02"
+      "id": "16519:48375",
+      "name": "ic_modem_02"
     },
     {
-      "id": "14651:33631",
-      "name": "monitor-01"
+      "id": "16519:48378",
+      "name": "ic_monitor_01"
     },
     {
-      "id": "14651:33635",
-      "name": "monitor-02"
+      "id": "16519:48381",
+      "name": "ic_monitor_02"
     },
     {
-      "id": "14651:33639",
-      "name": "monitor-03"
+      "id": "16519:48384",
+      "name": "ic_monitor_03"
     },
     {
-      "id": "14651:33643",
-      "name": "monitor-04"
+      "id": "16519:48387",
+      "name": "ic_monitor_04"
     },
     {
-      "id": "14651:33647",
-      "name": "monitor-05"
+      "id": "16519:48390",
+      "name": "ic_monitor_05"
     },
     {
-      "id": "14651:33651",
-      "name": "mouse"
+      "id": "16519:48393",
+      "name": "ic_mouse"
     },
     {
-      "id": "14651:33655",
-      "name": "music-note-01"
+      "id": "16519:48396",
+      "name": "ic_music_note_01"
     },
     {
-      "id": "14651:33659",
-      "name": "music-note-02"
+      "id": "16519:48399",
+      "name": "ic_music_note_02"
     },
     {
-      "id": "14651:33663",
-      "name": "music-note-plus"
+      "id": "16519:48402",
+      "name": "ic_music_note_plus"
     },
     {
-      "id": "14651:33667",
-      "name": "pause-circle"
+      "id": "16519:48405",
+      "name": "ic_pause_circle"
     },
     {
-      "id": "14651:33671",
-      "name": "pause-square"
+      "id": "16519:48408",
+      "name": "ic_pause_square"
     },
     {
-      "id": "14651:33675",
-      "name": "phone-01"
+      "id": "16519:48411",
+      "name": "ic_phone_01"
     },
     {
-      "id": "14651:33679",
-      "name": "phone-02"
+      "id": "16519:48414",
+      "name": "ic_phone_02"
     },
     {
-      "id": "14651:33683",
-      "name": "play"
+      "id": "16519:48417",
+      "name": "ic_play"
     },
     {
-      "id": "14651:33687",
-      "name": "play-circle"
+      "id": "16519:48420",
+      "name": "ic_play_circle"
     },
     {
-      "id": "14651:33691",
-      "name": "play-square"
+      "id": "16519:48423",
+      "name": "ic_play_square"
     },
     {
-      "id": "14651:33695",
-      "name": "podcast"
+      "id": "16519:48426",
+      "name": "ic_podcast"
     },
     {
-      "id": "14651:33699",
-      "name": "power-01"
+      "id": "16519:48429",
+      "name": "ic_power_01"
     },
     {
-      "id": "14651:33703",
-      "name": "power-02"
+      "id": "16519:48432",
+      "name": "ic_power_02"
     },
     {
-      "id": "14651:33707",
-      "name": "power-03"
+      "id": "16519:48435",
+      "name": "ic_power_03"
     },
     {
-      "id": "14651:33711",
-      "name": "printer"
+      "id": "16519:48438",
+      "name": "ic_printer"
     },
     {
-      "id": "14651:33715",
-      "name": "recording-01"
+      "id": "16519:48441",
+      "name": "ic_recording_01"
     },
     {
-      "id": "14651:33719",
-      "name": "recording-02"
+      "id": "16519:48444",
+      "name": "ic_recording_02"
     },
     {
-      "id": "14651:33723",
-      "name": "recording-03"
+      "id": "16519:48447",
+      "name": "ic_recording_03"
     },
     {
-      "id": "14651:33727",
-      "name": "repeat-01"
+      "id": "16519:48450",
+      "name": "ic_repeat_01"
     },
     {
-      "id": "14651:33731",
-      "name": "repeat-02"
+      "id": "16519:48453",
+      "name": "ic_repeat_02"
     },
     {
-      "id": "14651:33735",
-      "name": "repeat-03"
+      "id": "16519:48456",
+      "name": "ic_repeat_03"
     },
     {
-      "id": "14651:33739",
-      "name": "repeat-04"
+      "id": "16519:48459",
+      "name": "ic_repeat_04"
     },
     {
-      "id": "14651:33743",
-      "name": "rss-01"
+      "id": "16519:48462",
+      "name": "ic_rss_01"
     },
     {
-      "id": "14651:33747",
-      "name": "rss-02"
+      "id": "16519:48465",
+      "name": "ic_rss_02"
     },
     {
-      "id": "14651:33751",
-      "name": "shuffle-01"
+      "id": "16519:48468",
+      "name": "ic_shuffle_01"
     },
     {
-      "id": "14651:33755",
-      "name": "shuffle-02"
+      "id": "16519:48471",
+      "name": "ic_shuffle_02"
     },
     {
-      "id": "14651:33759",
-      "name": "signal-01"
+      "id": "16519:48474",
+      "name": "ic_signal_01"
     },
     {
-      "id": "14651:33763",
-      "name": "signal-02"
+      "id": "16519:48477",
+      "name": "ic_signal_02"
     },
     {
-      "id": "14651:33767",
-      "name": "signal-03"
+      "id": "16519:48480",
+      "name": "ic_signal_03"
     },
     {
-      "id": "14651:33771",
-      "name": "simcard"
+      "id": "16519:48483",
+      "name": "ic_simcard"
     },
     {
-      "id": "14651:33775",
-      "name": "skip-back"
+      "id": "16519:48486",
+      "name": "ic_skip_back"
     },
     {
-      "id": "14651:33779",
-      "name": "skip-forward"
+      "id": "16519:48489",
+      "name": "ic_skip_forward"
     },
     {
-      "id": "14651:33783",
-      "name": "sliders-01"
+      "id": "16519:48492",
+      "name": "ic_sliders_01"
     },
     {
-      "id": "14651:33787",
-      "name": "sliders-02"
+      "id": "16519:48495",
+      "name": "ic_sliders_02"
     },
     {
-      "id": "14651:33791",
-      "name": "sliders-03"
+      "id": "16519:48498",
+      "name": "ic_sliders_03"
     },
     {
-      "id": "14651:33795",
-      "name": "sliders-04"
+      "id": "16519:48501",
+      "name": "ic_sliders_04"
     },
     {
-      "id": "14651:33799",
-      "name": "speaker-01"
+      "id": "16519:48504",
+      "name": "ic_speaker_01"
     },
     {
-      "id": "14651:33803",
-      "name": "speaker-02"
+      "id": "16519:48507",
+      "name": "ic_speaker_02"
     },
     {
-      "id": "14651:33807",
-      "name": "speaker-03"
+      "id": "16519:48510",
+      "name": "ic_speaker_03"
     },
     {
-      "id": "14651:33811",
-      "name": "stop"
+      "id": "16519:48513",
+      "name": "ic_stop"
     },
     {
-      "id": "14651:33815",
-      "name": "stop-circle"
+      "id": "16519:48516",
+      "name": "ic_stop_circle"
     },
     {
-      "id": "14651:33819",
-      "name": "stop-square"
+      "id": "16519:48519",
+      "name": "ic_stop_square"
     },
     {
-      "id": "14651:33823",
-      "name": "tablet-01"
+      "id": "16519:48522",
+      "name": "ic_tablet_01"
     },
     {
-      "id": "14651:33827",
-      "name": "tablet-02"
+      "id": "16519:48525",
+      "name": "ic_tablet_02"
     },
     {
-      "id": "14651:33831",
-      "name": "tv-01"
+      "id": "16519:48528",
+      "name": "ic_tv_01"
     },
     {
-      "id": "14651:33835",
-      "name": "tv-02"
+      "id": "16519:48531",
+      "name": "ic_tv_02"
     },
     {
-      "id": "14651:33839",
-      "name": "tv-03"
+      "id": "16519:48534",
+      "name": "ic_tv_03"
     },
     {
-      "id": "14651:33843",
-      "name": "usb-flash-drive"
+      "id": "16519:48537",
+      "name": "ic_usb_flash_drive"
     },
     {
-      "id": "14651:33847",
-      "name": "video-recorder"
+      "id": "16519:48540",
+      "name": "ic_video_recorder"
     },
     {
-      "id": "14651:33851",
-      "name": "video-recorder-off"
+      "id": "16519:48543",
+      "name": "ic_video_recorder_off"
     },
     {
-      "id": "14651:33855",
-      "name": "voicemail"
+      "id": "16519:48546",
+      "name": "ic_voicemail"
     },
     {
-      "id": "14651:33859",
-      "name": "volume-max"
+      "id": "16519:48549",
+      "name": "ic_volume_max"
     },
     {
-      "id": "14651:33863",
-      "name": "volume-min"
+      "id": "16519:48552",
+      "name": "ic_volume_min"
     },
     {
-      "id": "14651:33867",
-      "name": "volume-minus"
+      "id": "16519:48555",
+      "name": "ic_volume_minus"
     },
     {
-      "id": "14651:33871",
-      "name": "volume-plus"
+      "id": "16519:48558",
+      "name": "ic_volume_plus"
     },
     {
-      "id": "14651:33875",
-      "name": "volume-x"
+      "id": "16519:48561",
+      "name": "ic_volume_x"
     },
     {
-      "id": "14651:33879",
-      "name": "webcam-01"
+      "id": "16519:48564",
+      "name": "ic_webcam_01"
     },
     {
-      "id": "14651:33883",
-      "name": "webcam-02"
+      "id": "16519:48567",
+      "name": "ic_webcam_02"
     },
     {
-      "id": "14651:33887",
-      "name": "wifi"
+      "id": "16519:48570",
+      "name": "ic_wifi"
     },
     {
-      "id": "14651:33891",
-      "name": "wifi-off"
+      "id": "16519:48573",
+      "name": "ic_wifi_off"
     },
     {
-      "id": "14651:33895",
-      "name": "youtube"
+      "id": "16519:48576",
+      "name": "ic_youtube"
     }
   ],
   "Images": [
     {
-      "id": "14651:33901",
-      "name": "camera-01"
+      "id": "16519:48581",
+      "name": "ic_camera_01"
     },
     {
-      "id": "14651:33905",
-      "name": "camera-02"
+      "id": "16519:48584",
+      "name": "ic_camera_02"
     },
     {
-      "id": "14651:33909",
-      "name": "camera-03"
+      "id": "16519:48587",
+      "name": "ic_camera_03"
     },
     {
-      "id": "14651:33913",
-      "name": "camera-lens"
+      "id": "16519:48590",
+      "name": "ic_camera_lens"
     },
     {
-      "id": "14651:33917",
-      "name": "camera-off"
+      "id": "16519:48593",
+      "name": "ic_camera_off"
     },
     {
-      "id": "14651:33921",
-      "name": "camera-plus"
+      "id": "16519:48596",
+      "name": "ic_camera_plus"
     },
     {
-      "id": "14651:33925",
-      "name": "colors"
+      "id": "16519:48599",
+      "name": "ic_colors"
     },
     {
-      "id": "14651:33929",
-      "name": "flash"
+      "id": "16519:48602",
+      "name": "ic_flash"
     },
     {
-      "id": "14651:33933",
-      "name": "flash-off"
+      "id": "16519:48605",
+      "name": "ic_flash_off"
     },
     {
-      "id": "14651:33937",
-      "name": "image-01"
+      "id": "16519:48608",
+      "name": "ic_image_01"
     },
     {
-      "id": "14651:33941",
-      "name": "image-02"
+      "id": "16519:48611",
+      "name": "ic_image_02"
     },
     {
-      "id": "14651:33945",
-      "name": "image-03"
+      "id": "16519:48614",
+      "name": "ic_image_03"
     },
     {
-      "id": "14651:33949",
-      "name": "image-04"
+      "id": "16519:48617",
+      "name": "ic_image_04"
     },
     {
-      "id": "14651:33953",
-      "name": "image-05"
+      "id": "16519:48620",
+      "name": "ic_image_05"
     },
     {
-      "id": "14651:33957",
-      "name": "image-check"
+      "id": "16519:48623",
+      "name": "ic_image_check"
     },
     {
-      "id": "14651:33961",
-      "name": "image-down"
+      "id": "16519:48626",
+      "name": "ic_image_down"
     },
     {
-      "id": "14651:33965",
-      "name": "image-left"
+      "id": "16519:48629",
+      "name": "ic_image_left"
     },
     {
-      "id": "14651:33969",
-      "name": "image-plus"
+      "id": "16519:48632",
+      "name": "ic_image_plus"
     },
     {
-      "id": "14651:33973",
-      "name": "image-right"
+      "id": "16519:48635",
+      "name": "ic_image_right"
     },
     {
-      "id": "14651:33977",
-      "name": "image-up"
+      "id": "16519:48638",
+      "name": "ic_image_up"
     },
     {
-      "id": "14651:33981",
-      "name": "image-user"
+      "id": "16519:48641",
+      "name": "ic_image_user"
     },
     {
-      "id": "14651:33985",
-      "name": "image-user-check"
+      "id": "16519:48644",
+      "name": "ic_image_user_check"
     },
     {
-      "id": "14651:33989",
-      "name": "image-user-down"
+      "id": "16519:48647",
+      "name": "ic_image_user_down"
     },
     {
-      "id": "14651:33993",
-      "name": "image-user-left"
+      "id": "16519:48650",
+      "name": "ic_image_user_left"
     },
     {
-      "id": "14651:33997",
-      "name": "image-user-plus"
+      "id": "16519:48653",
+      "name": "ic_image_user_plus"
     },
     {
-      "id": "14651:34001",
-      "name": "image-user-right"
+      "id": "16519:48656",
+      "name": "ic_image_user_right"
     },
     {
-      "id": "14651:34005",
-      "name": "image-user-up"
+      "id": "16519:48659",
+      "name": "ic_image_user_up"
     },
     {
-      "id": "14651:34009",
-      "name": "image-user-x"
+      "id": "16519:48662",
+      "name": "ic_image_user_x"
     },
     {
-      "id": "14651:34013",
-      "name": "image-x"
+      "id": "16519:48665",
+      "name": "ic_image_x"
     }
   ],
   "Communication": [
     {
-      "id": "14651:34019",
-      "name": "annotation"
+      "id": "16519:48670",
+      "name": "ic_annotation"
     },
     {
-      "id": "14651:34023",
-      "name": "annotation-alert"
+      "id": "16519:48673",
+      "name": "ic_annotation_alert"
     },
     {
-      "id": "14651:34027",
-      "name": "annotation-check"
+      "id": "16519:48676",
+      "name": "ic_annotation_check"
     },
     {
-      "id": "14651:34031",
-      "name": "annotation-dots"
+      "id": "16519:48679",
+      "name": "ic_annotation_dots"
     },
     {
-      "id": "14651:34035",
-      "name": "annotation-heart"
+      "id": "16519:48682",
+      "name": "ic_annotation_heart"
     },
     {
-      "id": "14651:34039",
-      "name": "annotation-info"
+      "id": "16519:48685",
+      "name": "ic_annotation_info"
     },
     {
-      "id": "14651:34043",
-      "name": "annotation-plus"
+      "id": "16519:48688",
+      "name": "ic_annotation_plus"
     },
     {
-      "id": "14651:34047",
-      "name": "annotation-question"
+      "id": "16519:48691",
+      "name": "ic_annotation_question"
     },
     {
-      "id": "14651:34051",
-      "name": "annotation-x"
+      "id": "16519:48694",
+      "name": "ic_annotation_x"
     },
     {
-      "id": "14651:34055",
-      "name": "inbox-01"
+      "id": "16519:48697",
+      "name": "ic_inbox_01"
     },
     {
-      "id": "14651:34059",
-      "name": "inbox-02"
+      "id": "16519:48700",
+      "name": "ic_inbox_02"
     },
     {
-      "id": "14651:34063",
-      "name": "mail-01"
+      "id": "16519:48706",
+      "name": "ic_mail_02"
     },
     {
-      "id": "14651:34067",
-      "name": "mail-02"
+      "id": "16519:48709",
+      "name": "ic_mail_03"
     },
     {
-      "id": "14651:34071",
-      "name": "mail-03"
+      "id": "16519:48712",
+      "name": "ic_mail_04"
     },
     {
-      "id": "14651:34075",
-      "name": "mail-04"
+      "id": "16519:48715",
+      "name": "ic_mail_05"
     },
     {
-      "id": "14651:34079",
-      "name": "mail-05"
+      "id": "16519:48718",
+      "name": "ic_message_alert_circle"
     },
     {
-      "id": "14651:34083",
-      "name": "message-alert-circle"
+      "id": "16519:48721",
+      "name": "ic_message_alert_square"
     },
     {
-      "id": "14651:34087",
-      "name": "message-alert-square"
+      "id": "16519:48724",
+      "name": "ic_message_chat_circle"
     },
     {
-      "id": "14651:34091",
-      "name": "message-chat-circle"
+      "id": "16519:48727",
+      "name": "ic_message_chat_square"
     },
     {
-      "id": "14651:34095",
-      "name": "message-chat-square"
+      "id": "16519:48730",
+      "name": "ic_message_check_circle"
     },
     {
-      "id": "14651:34099",
-      "name": "message-check-circle"
+      "id": "16519:48733",
+      "name": "ic_message_check_square"
     },
     {
-      "id": "14651:34103",
-      "name": "message-check-square"
+      "id": "16519:48736",
+      "name": "ic_message_circle_01"
     },
     {
-      "id": "14651:34107",
-      "name": "message-circle-01"
+      "id": "16519:48739",
+      "name": "ic_message_circle_02"
     },
     {
-      "id": "14651:34111",
-      "name": "message-circle-02"
+      "id": "16519:48742",
+      "name": "ic_message_dots_circle"
     },
     {
-      "id": "14651:34115",
-      "name": "message-dots-circle"
+      "id": "16519:48745",
+      "name": "ic_message_dots_square"
     },
     {
-      "id": "14651:34119",
-      "name": "message-dots-square"
+      "id": "16519:48748",
+      "name": "ic_message_heart_circle"
     },
     {
-      "id": "14651:34123",
-      "name": "message-heart-circle"
+      "id": "16519:48751",
+      "name": "ic_message_heart_square"
     },
     {
-      "id": "14651:34127",
-      "name": "message-heart-square"
+      "id": "16519:48754",
+      "name": "ic_message_notification_circle"
     },
     {
-      "id": "14651:34131",
-      "name": "message-notification-circle"
+      "id": "16519:48757",
+      "name": "ic_message_notification_square"
     },
     {
-      "id": "14651:34135",
-      "name": "message-notification-square"
+      "id": "16519:48760",
+      "name": "ic_message_plus_circle"
     },
     {
-      "id": "14651:34139",
-      "name": "message-plus-circle"
+      "id": "16519:48763",
+      "name": "ic_message_plus_square"
     },
     {
-      "id": "14651:34143",
-      "name": "message-plus-square"
+      "id": "16519:48766",
+      "name": "ic_message_question_circle"
     },
     {
-      "id": "14651:34147",
-      "name": "message-question-circle"
+      "id": "16519:48769",
+      "name": "ic_message_question_square"
     },
     {
-      "id": "14651:34151",
-      "name": "message-question-square"
+      "id": "16519:48772",
+      "name": "ic_message_smile_circle"
     },
     {
-      "id": "14651:34155",
-      "name": "message-smile-circle"
+      "id": "16519:48775",
+      "name": "ic_message_smile_square"
     },
     {
-      "id": "14651:34159",
-      "name": "message-smile-square"
+      "id": "16519:48778",
+      "name": "ic_message_square_01"
     },
     {
-      "id": "14651:34163",
-      "name": "message-square-01"
+      "id": "16519:48781",
+      "name": "ic_message_square_02"
     },
     {
-      "id": "14651:34167",
-      "name": "message-square-02"
+      "id": "16519:48784",
+      "name": "ic_message_text_circle_01"
     },
     {
-      "id": "14651:34171",
-      "name": "message-text-circle-01"
+      "id": "16519:48787",
+      "name": "ic_message_text_circle_02"
     },
     {
-      "id": "14651:34175",
-      "name": "message-text-circle-02"
+      "id": "16519:48790",
+      "name": "ic_message_text_square_01"
     },
     {
-      "id": "14651:34179",
-      "name": "message-text-square-01"
+      "id": "16519:48793",
+      "name": "ic_message_text_square_02"
     },
     {
-      "id": "14651:34183",
-      "name": "message-text-square-02"
+      "id": "16519:48796",
+      "name": "ic_message_x_circle"
     },
     {
-      "id": "14651:34187",
-      "name": "message-x-circle"
+      "id": "16519:48799",
+      "name": "ic_message_x_square"
     },
     {
-      "id": "14651:34191",
-      "name": "message-x-square"
+      "id": "16519:48802",
+      "name": "ic_phone"
     },
     {
-      "id": "14651:34195",
-      "name": "phone"
+      "id": "16519:48805",
+      "name": "ic_phone_call_01"
     },
     {
-      "id": "14651:34199",
-      "name": "phone-call-01"
+      "id": "16519:48808",
+      "name": "ic_phone_call_02"
     },
     {
-      "id": "14651:34203",
-      "name": "phone-call-02"
+      "id": "16519:48811",
+      "name": "ic_phone_hang_up"
     },
     {
-      "id": "14651:34207",
-      "name": "phone-hang-up"
+      "id": "16519:48814",
+      "name": "ic_phone_incoming_01"
     },
     {
-      "id": "14651:34211",
-      "name": "phone-incoming-01"
+      "id": "16519:48817",
+      "name": "ic_phone_incoming_02"
     },
     {
-      "id": "14651:34215",
-      "name": "phone-incoming-02"
+      "id": "16519:48820",
+      "name": "ic_phone_outgoing_01"
     },
     {
-      "id": "14651:34219",
-      "name": "phone-outgoing-01"
+      "id": "16519:48823",
+      "name": "ic_phone_outgoing_02"
     },
     {
-      "id": "14651:34223",
-      "name": "phone-outgoing-02"
+      "id": "16519:48826",
+      "name": "ic_phone_pause"
     },
     {
-      "id": "14651:34227",
-      "name": "phone-pause"
+      "id": "16519:48829",
+      "name": "ic_phone_plus"
     },
     {
-      "id": "14651:34231",
-      "name": "phone-plus"
+      "id": "16519:48832",
+      "name": "ic_phone_x"
     },
     {
-      "id": "14651:34235",
-      "name": "phone-x"
+      "id": "16519:48835",
+      "name": "ic_send_01"
     },
     {
-      "id": "14651:34239",
-      "name": "send-01"
+      "id": "16519:48838",
+      "name": "ic_send_02"
     },
     {
-      "id": "14651:34243",
-      "name": "send-02"
+      "id": "16519:48841",
+      "name": "ic_send_03"
     },
     {
-      "id": "14651:34247",
-      "name": "send-03"
+      "id": "3463:406209",
+      "name": "ic_mail_01"
+    },
+    {
+      "id": "16545:49493",
+      "name": "ic_ai_chat_01"
     }
   ],
   "Editor": [
     {
-      "id": "14651:34253",
-      "name": "align-center"
+      "id": "16519:48846",
+      "name": "ic_align_center"
     },
     {
-      "id": "14651:34257",
-      "name": "align-justify"
+      "id": "16519:48849",
+      "name": "ic_align_justify"
     },
     {
-      "id": "14651:34261",
-      "name": "align-left"
+      "id": "16519:48852",
+      "name": "ic_align_left"
     },
     {
-      "id": "14651:34265",
-      "name": "align-right"
+      "id": "16519:48855",
+      "name": "ic_align_right"
     },
     {
-      "id": "14651:34269",
-      "name": "attachment-01"
+      "id": "16519:48858",
+      "name": "ic_attachment_01"
     },
     {
-      "id": "14651:34273",
-      "name": "attachment-02"
+      "id": "16519:48861",
+      "name": "ic_attachment_02"
     },
     {
-      "id": "14651:34277",
-      "name": "bezier-curve-01"
+      "id": "16519:48864",
+      "name": "ic_bezier_curve_01"
     },
     {
-      "id": "14651:34281",
-      "name": "bezier-curve-02"
+      "id": "16519:48867",
+      "name": "ic_bezier_curve_02"
     },
     {
-      "id": "14651:34285",
-      "name": "bezier-curve-03"
+      "id": "16519:48870",
+      "name": "ic_bezier_curve_03"
     },
     {
-      "id": "14651:34289",
-      "name": "bold-01"
+      "id": "16519:48873",
+      "name": "ic_bold_01"
     },
     {
-      "id": "14651:34293",
-      "name": "bold-02"
+      "id": "16519:48876",
+      "name": "ic_bold_02"
     },
     {
-      "id": "14651:34297",
-      "name": "bold-square"
+      "id": "16519:48879",
+      "name": "ic_bold_square"
     },
     {
-      "id": "14651:34301",
-      "name": "brush-01"
+      "id": "16519:48882",
+      "name": "ic_brush_01"
     },
     {
-      "id": "14651:34305",
-      "name": "brush-02"
+      "id": "16519:48885",
+      "name": "ic_brush_02"
     },
     {
-      "id": "14651:34309",
-      "name": "brush-03"
+      "id": "16519:48888",
+      "name": "ic_brush_03"
     },
     {
-      "id": "14651:34313",
-      "name": "circle-cut"
+      "id": "16519:48891",
+      "name": "ic_circle_cut"
     },
     {
-      "id": "14651:34317",
-      "name": "code-snippet-01"
+      "id": "16519:48894",
+      "name": "ic_code_snippet_01"
     },
     {
-      "id": "14651:34321",
-      "name": "code-snippet-02"
+      "id": "16519:48897",
+      "name": "ic_code_snippet_02"
     },
     {
-      "id": "14651:34325",
-      "name": "colors"
+      "id": "16519:48900",
+      "name": "ic_colors"
     },
     {
-      "id": "14651:34329",
-      "name": "command"
+      "id": "16519:48903",
+      "name": "ic_command"
     },
     {
-      "id": "14651:34333",
-      "name": "contrast-01"
+      "id": "16519:48906",
+      "name": "ic_contrast_01"
     },
     {
-      "id": "14651:34337",
-      "name": "contrast-02"
+      "id": "16519:48909",
+      "name": "ic_contrast_02"
     },
     {
-      "id": "14651:34341",
-      "name": "contrast-03"
+      "id": "16519:48912",
+      "name": "ic_contrast_03"
     },
     {
-      "id": "14651:34345",
-      "name": "crop-01"
+      "id": "16519:48915",
+      "name": "ic_crop_01"
     },
     {
-      "id": "14651:34349",
-      "name": "crop-02"
+      "id": "16519:48918",
+      "name": "ic_crop_02"
     },
     {
-      "id": "14651:34353",
-      "name": "cursor-01"
+      "id": "16519:48921",
+      "name": "ic_cursor_01"
     },
     {
-      "id": "14651:34357",
-      "name": "cursor-02"
+      "id": "16519:48924",
+      "name": "ic_cursor_02"
     },
     {
-      "id": "14651:34361",
-      "name": "cursor-03"
+      "id": "16519:48927",
+      "name": "ic_cursor_03"
     },
     {
-      "id": "14651:34365",
-      "name": "cursor-04"
+      "id": "16519:48930",
+      "name": "ic_cursor_04"
     },
     {
-      "id": "14651:34369",
-      "name": "cursor-box"
+      "id": "16519:48933",
+      "name": "ic_cursor_box"
     },
     {
-      "id": "14651:34373",
-      "name": "cursor-click-01"
+      "id": "16519:48936",
+      "name": "ic_cursor_click_01"
     },
     {
-      "id": "14651:34377",
-      "name": "cursor-click-02"
+      "id": "16519:48939",
+      "name": "ic_cursor_click_02"
     },
     {
-      "id": "14651:34381",
-      "name": "delete"
+      "id": "16519:48942",
+      "name": "ic_delete"
     },
     {
-      "id": "14651:34385",
-      "name": "dotpoints-01"
+      "id": "16519:48945",
+      "name": "ic_dotpoints_01"
     },
     {
-      "id": "14651:34389",
-      "name": "dotpoints-02"
+      "id": "16519:48948",
+      "name": "ic_dotpoints_02"
     },
     {
-      "id": "14651:34393",
-      "name": "drop"
+      "id": "16519:48951",
+      "name": "ic_drop"
     },
     {
-      "id": "14651:34397",
-      "name": "dropper"
+      "id": "16519:48954",
+      "name": "ic_dropper"
     },
     {
-      "id": "14651:34401",
-      "name": "eraser"
+      "id": "16519:48957",
+      "name": "ic_eraser"
     },
     {
-      "id": "14651:34405",
-      "name": "feather"
+      "id": "16519:48960",
+      "name": "ic_feather"
     },
     {
-      "id": "14651:34409",
-      "name": "figma"
+      "id": "16519:48963",
+      "name": "ic_figma"
     },
     {
-      "id": "14651:34413",
-      "name": "framer"
+      "id": "16519:48966",
+      "name": "ic_framer"
     },
     {
-      "id": "14651:34417",
-      "name": "hand"
+      "id": "16519:48969",
+      "name": "ic_hand"
     },
     {
-      "id": "14651:34421",
-      "name": "heading-01"
+      "id": "16519:48972",
+      "name": "ic_heading_01"
     },
     {
-      "id": "14651:34425",
-      "name": "heading-02"
+      "id": "16519:48975",
+      "name": "ic_heading_02"
     },
     {
-      "id": "14651:34429",
-      "name": "heading-square"
+      "id": "16519:48978",
+      "name": "ic_heading_square"
     },
     {
-      "id": "14651:34433",
-      "name": "image-indent-left"
+      "id": "16519:48981",
+      "name": "ic_image_indent_left"
     },
     {
-      "id": "14651:34437",
-      "name": "image-indent-right"
+      "id": "16519:48984",
+      "name": "ic_image_indent_right"
     },
     {
-      "id": "14651:34441",
-      "name": "italic-01"
+      "id": "16519:48987",
+      "name": "ic_italic_01"
     },
     {
-      "id": "14651:34445",
-      "name": "italic-02"
+      "id": "16519:48990",
+      "name": "ic_italic_02"
     },
     {
-      "id": "14651:34449",
-      "name": "italic-square"
+      "id": "16519:48993",
+      "name": "ic_italic_square"
     },
     {
-      "id": "14651:34453",
-      "name": "left-indent-01"
+      "id": "16519:48996",
+      "name": "ic_left_indent_01"
     },
     {
-      "id": "14651:34457",
-      "name": "left-indent-02"
+      "id": "16519:48999",
+      "name": "ic_left_indent_02"
     },
     {
-      "id": "14651:34461",
-      "name": "letter-spacing-01"
+      "id": "16519:49002",
+      "name": "ic_letter_spacing_01"
     },
     {
-      "id": "14651:34465",
-      "name": "letter-spacing-02"
+      "id": "16519:49005",
+      "name": "ic_letter_spacing_02"
     },
     {
-      "id": "14651:34469",
-      "name": "line-height"
+      "id": "16519:49008",
+      "name": "ic_line_height"
     },
     {
-      "id": "14651:34473",
-      "name": "magic-wand-01"
+      "id": "16519:49011",
+      "name": "ic_magic_wand_01"
     },
     {
-      "id": "14651:34477",
-      "name": "magic-wand-02"
+      "id": "16519:49014",
+      "name": "ic_magic_wand_02"
     },
     {
-      "id": "14651:34481",
-      "name": "move"
+      "id": "16519:49017",
+      "name": "ic_move"
     },
     {
-      "id": "14651:34485",
-      "name": "paint"
+      "id": "16519:49020",
+      "name": "ic_paint"
     },
     {
-      "id": "14651:34489",
-      "name": "paint-pour"
+      "id": "16519:49023",
+      "name": "ic_paint_pour"
     },
     {
-      "id": "14651:34493",
-      "name": "palette"
+      "id": "16519:49026",
+      "name": "ic_palette"
     },
     {
-      "id": "14651:34497",
-      "name": "paragraph-spacing"
+      "id": "16519:49029",
+      "name": "ic_paragraph_spacing"
     },
     {
-      "id": "14651:34501",
-      "name": "paragraph-wrap"
+      "id": "16519:49032",
+      "name": "ic_paragraph_wrap"
     },
     {
-      "id": "14651:34505",
-      "name": "pen-tool-01"
+      "id": "16519:49035",
+      "name": "ic_pen_tool_01"
     },
     {
-      "id": "14651:34509",
-      "name": "pen-tool-02"
+      "id": "16519:49038",
+      "name": "ic_pen_tool_02"
     },
     {
-      "id": "14651:34513",
-      "name": "pen-tool-minus"
+      "id": "16519:49041",
+      "name": "ic_pen_tool_minus"
     },
     {
-      "id": "14651:34517",
-      "name": "pen-tool-plus"
+      "id": "16519:49044",
+      "name": "ic_pen_tool_plus"
     },
     {
-      "id": "14651:34521",
-      "name": "pencil-01"
+      "id": "16519:49047",
+      "name": "ic_pencil_01"
     },
     {
-      "id": "14651:34525",
-      "name": "pencil-02"
+      "id": "16519:49050",
+      "name": "ic_pencil_02"
     },
     {
-      "id": "14651:34529",
-      "name": "pencil-line"
+      "id": "16519:49053",
+      "name": "ic_pencil_line"
     },
     {
-      "id": "14651:34533",
-      "name": "perspective-01"
+      "id": "16519:49056",
+      "name": "ic_perspective_01"
     },
     {
-      "id": "14651:34537",
-      "name": "perspective-02"
+      "id": "16519:49059",
+      "name": "ic_perspective_02"
     },
     {
-      "id": "14651:34541",
-      "name": "pilcrow-01"
+      "id": "16519:49062",
+      "name": "ic_pilcrow_01"
     },
     {
-      "id": "14651:34545",
-      "name": "pilcrow-02"
+      "id": "16519:49065",
+      "name": "ic_pilcrow_02"
     },
     {
-      "id": "14651:34549",
-      "name": "pilcrow-square"
+      "id": "16519:49068",
+      "name": "ic_pilcrow_square"
     },
     {
-      "id": "14651:34553",
-      "name": "reflect-01"
+      "id": "16519:49071",
+      "name": "ic_reflect_01"
     },
     {
-      "id": "14651:34557",
-      "name": "reflect-02"
+      "id": "16519:49074",
+      "name": "ic_reflect_02"
     },
     {
-      "id": "14651:34561",
-      "name": "right-indent-01"
+      "id": "16519:49077",
+      "name": "ic_right_indent_01"
     },
     {
-      "id": "14651:34565",
-      "name": "right-indent-02"
+      "id": "16519:49080",
+      "name": "ic_right_indent_02"
     },
     {
-      "id": "14651:34569",
-      "name": "roller-brush"
+      "id": "16519:49083",
+      "name": "ic_roller_brush"
     },
     {
-      "id": "14651:34573",
-      "name": "scale-01"
+      "id": "16519:49086",
+      "name": "ic_scale_01"
     },
     {
-      "id": "14651:34577",
-      "name": "scale-02"
+      "id": "16519:49089",
+      "name": "ic_scale_02"
     },
     {
-      "id": "14651:34581",
-      "name": "scale-03"
+      "id": "16519:49092",
+      "name": "ic_scale_03"
     },
     {
-      "id": "14651:34585",
-      "name": "scissors-01"
+      "id": "16519:49095",
+      "name": "ic_scissors_01"
     },
     {
-      "id": "14651:34589",
-      "name": "scissors-02"
+      "id": "16519:49098",
+      "name": "ic_scissors_02"
     },
     {
-      "id": "14651:34593",
-      "name": "scissors-cut-01"
+      "id": "16519:49101",
+      "name": "ic_scissors_cut_01"
     },
     {
-      "id": "14651:34597",
-      "name": "scissors-cut-02"
+      "id": "16519:49104",
+      "name": "ic_scissors_cut_02"
     },
     {
-      "id": "14651:34601",
-      "name": "skew"
+      "id": "16519:49107",
+      "name": "ic_skew"
     },
     {
-      "id": "14651:34605",
-      "name": "strikethrough-01"
+      "id": "16519:49110",
+      "name": "ic_strikethrough_01"
     },
     {
-      "id": "14651:34609",
-      "name": "strikethrough-02"
+      "id": "16519:49113",
+      "name": "ic_strikethrough_02"
     },
     {
-      "id": "14651:34613",
-      "name": "strikethrough-square"
+      "id": "16519:49116",
+      "name": "ic_strikethrough_square"
     },
     {
-      "id": "14651:34617",
-      "name": "subscript"
+      "id": "16519:49119",
+      "name": "ic_subscript"
     },
     {
-      "id": "14651:34621",
-      "name": "text-input"
+      "id": "16519:49122",
+      "name": "ic_text_input"
     },
     {
-      "id": "14651:34625",
-      "name": "transform"
+      "id": "16519:49125",
+      "name": "ic_transform"
     },
     {
-      "id": "14651:34629",
-      "name": "type-01"
+      "id": "16519:49128",
+      "name": "ic_type_01"
     },
     {
-      "id": "14651:34633",
-      "name": "type-02"
+      "id": "16519:49131",
+      "name": "ic_type_02"
     },
     {
-      "id": "14651:34637",
-      "name": "type-square"
+      "id": "16519:49134",
+      "name": "ic_type_square"
     },
     {
-      "id": "14651:34641",
-      "name": "type-strikethrough-01"
+      "id": "16519:49137",
+      "name": "ic_type_strikethrough_01"
     },
     {
-      "id": "14651:34645",
-      "name": "type-strikethrough-02"
+      "id": "16519:49140",
+      "name": "ic_type_strikethrough_02"
     },
     {
-      "id": "14651:34649",
-      "name": "underline-01"
+      "id": "16519:49143",
+      "name": "ic_underline_01"
     },
     {
-      "id": "14651:34653",
-      "name": "underline-02"
+      "id": "16519:49146",
+      "name": "ic_underline_02"
     },
     {
-      "id": "14651:34657",
-      "name": "underline-square"
+      "id": "16519:49149",
+      "name": "ic_underline_square"
     },
     {
-      "id": "14651:34661",
-      "name": "zoom-in"
+      "id": "16519:49152",
+      "name": "ic_zoom_in"
     },
     {
-      "id": "14651:34665",
-      "name": "zoom-out"
+      "id": "16519:49155",
+      "name": "ic_zoom_out"
     }
   ],
   "Time": [
     {
-      "id": "14651:34671",
-      "name": "alarm-clock"
+      "id": "16519:49160",
+      "name": "ic_alarm_clock"
     },
     {
-      "id": "14651:34675",
-      "name": "alarm-clock-check"
+      "id": "16519:49163",
+      "name": "ic_alarm_clock_check"
     },
     {
-      "id": "14651:34679",
-      "name": "alarm-clock-minus"
+      "id": "16519:49166",
+      "name": "ic_alarm_clock_minus"
     },
     {
-      "id": "14651:34683",
-      "name": "alarm-clock-off"
+      "id": "16519:49169",
+      "name": "ic_alarm_clock_off"
     },
     {
-      "id": "14651:34687",
-      "name": "alarm-clock-plus"
+      "id": "16519:49172",
+      "name": "ic_alarm_clock_plus"
     },
     {
-      "id": "14651:34691",
-      "name": "calendar"
+      "id": "16519:49175",
+      "name": "ic_calendar"
     },
     {
-      "id": "14651:34695",
-      "name": "calendar-check-01"
+      "id": "16519:49178",
+      "name": "ic_calendar_check_01"
     },
     {
-      "id": "14651:34699",
-      "name": "calendar-check-02"
+      "id": "16519:49181",
+      "name": "ic_calendar_check_02"
     },
     {
-      "id": "14651:34703",
-      "name": "calendar-date"
+      "id": "16519:49184",
+      "name": "ic_calendar_date"
     },
     {
-      "id": "14651:34707",
-      "name": "calendar-heart-01"
+      "id": "16519:49187",
+      "name": "ic_calendar_heart_01"
     },
     {
-      "id": "14651:34711",
-      "name": "calendar-heart-02"
+      "id": "16519:49190",
+      "name": "ic_calendar_heart_02"
     },
     {
-      "id": "14651:34715",
-      "name": "calendar-minus-01"
+      "id": "16519:49193",
+      "name": "ic_calendar_minus_01"
     },
     {
-      "id": "14651:34719",
-      "name": "calendar-minus-02"
+      "id": "16519:49196",
+      "name": "ic_calendar_minus_02"
     },
     {
-      "id": "14651:34723",
-      "name": "calendar-plus-01"
+      "id": "16519:49199",
+      "name": "ic_calendar_plus_01"
     },
     {
-      "id": "14651:34727",
-      "name": "calendar-plus-02"
+      "id": "16519:49202",
+      "name": "ic_calendar_plus_02"
     },
     {
-      "id": "14651:34731",
-      "name": "clock"
+      "id": "16519:49205",
+      "name": "ic_clock"
     },
     {
-      "id": "14651:34735",
-      "name": "clock-check"
+      "id": "16519:49208",
+      "name": "ic_clock_check"
     },
     {
-      "id": "14651:34739",
-      "name": "clock-fast-forward"
+      "id": "16519:49211",
+      "name": "ic_clock_fast_forward"
     },
     {
-      "id": "14651:34743",
-      "name": "clock-plus"
+      "id": "16519:49214",
+      "name": "ic_clock_plus"
     },
     {
-      "id": "14651:34747",
-      "name": "clock-rewind"
+      "id": "16519:49217",
+      "name": "ic_clock_rewind"
     },
     {
-      "id": "14651:34751",
-      "name": "clock-snooze"
+      "id": "16519:49220",
+      "name": "ic_clock_snooze"
     },
     {
-      "id": "14651:34755",
-      "name": "clock-stopwatch"
+      "id": "16519:49223",
+      "name": "ic_clock_stopwatch"
     },
     {
-      "id": "14651:34759",
-      "name": "hourglass-01"
+      "id": "16519:49226",
+      "name": "ic_hourglass_01"
     },
     {
-      "id": "14651:34763",
-      "name": "hourglass-02"
+      "id": "16519:49229",
+      "name": "ic_hourglass_02"
     },
     {
-      "id": "14651:34767",
-      "name": "hourglass-03"
+      "id": "16519:49232",
+      "name": "ic_hourglass_03"
     },
     {
-      "id": "14651:34771",
-      "name": "clock-refresh"
+      "id": "16519:49235",
+      "name": "ic_clock_refresh"
     },
     {
-      "id": "14651:34775",
-      "name": "watch-circle"
+      "id": "16519:49238",
+      "name": "ic_watch_circle"
     },
     {
-      "id": "14651:34779",
-      "name": "watch-square"
+      "id": "16519:49241",
+      "name": "ic_watch_square"
     }
   ],
   "Files": [
     {
-      "id": "14651:34785",
-      "name": "file-01"
+      "id": "16519:49246",
+      "name": "ic_file_01"
     },
     {
-      "id": "14651:34789",
-      "name": "file-02"
+      "id": "16519:49249",
+      "name": "ic_file_02"
     },
     {
-      "id": "14651:34793",
-      "name": "file-03"
+      "id": "16519:49252",
+      "name": "ic_file_03"
     },
     {
-      "id": "14651:34797",
-      "name": "file-04"
+      "id": "16519:49255",
+      "name": "ic_file_04"
     },
     {
-      "id": "14651:34801",
-      "name": "file-05"
+      "id": "16519:49258",
+      "name": "ic_file_05"
     },
     {
-      "id": "14651:34805",
-      "name": "file-06"
+      "id": "16519:49261",
+      "name": "ic_file_06"
     },
     {
-      "id": "14651:34809",
-      "name": "file-07"
+      "id": "16519:49264",
+      "name": "ic_file_07"
     },
     {
-      "id": "14651:34813",
-      "name": "file-attachment-01"
+      "id": "16519:49267",
+      "name": "ic_file_attachment_01"
     },
     {
-      "id": "14651:34817",
-      "name": "file-attachment-02"
+      "id": "16519:49270",
+      "name": "ic_file_attachment_02"
     },
     {
-      "id": "14651:34821",
-      "name": "file-attachment-03"
+      "id": "16519:49273",
+      "name": "ic_file_attachment_03"
     },
     {
-      "id": "14651:34825",
-      "name": "file-attachment-04"
+      "id": "16519:49276",
+      "name": "ic_file_attachment_04"
     },
     {
-      "id": "14651:34829",
-      "name": "file-attachment-05"
+      "id": "16519:49279",
+      "name": "ic_file_attachment_05"
     },
     {
-      "id": "14651:34833",
-      "name": "file-check-01"
+      "id": "16519:49282",
+      "name": "ic_file_check_01"
     },
     {
-      "id": "14651:34837",
-      "name": "file-check-02"
+      "id": "16519:49285",
+      "name": "ic_file_check_02"
     },
     {
-      "id": "14651:34841",
-      "name": "file-check-03"
+      "id": "16519:49288",
+      "name": "ic_file_check_03"
     },
     {
-      "id": "14651:34845",
-      "name": "file-download-01"
+      "id": "16519:49291",
+      "name": "ic_file_download_01"
     },
     {
-      "id": "14651:34849",
-      "name": "file-download-02"
+      "id": "16519:49294",
+      "name": "ic_file_download_02"
     },
     {
-      "id": "14651:34853",
-      "name": "file-download-03"
+      "id": "16519:49297",
+      "name": "ic_file_download_03"
     },
     {
-      "id": "14651:34857",
-      "name": "file-heart-01"
+      "id": "16519:49300",
+      "name": "ic_file_heart_01"
     },
     {
-      "id": "14651:34861",
-      "name": "file-heart-02"
+      "id": "16519:49303",
+      "name": "ic_file_heart_02"
     },
     {
-      "id": "14651:34865",
-      "name": "file-heart-03"
+      "id": "16519:49306",
+      "name": "ic_file_heart_03"
     },
     {
-      "id": "14651:34869",
-      "name": "file-minus-01"
+      "id": "16519:49309",
+      "name": "ic_file_minus_01"
     },
     {
-      "id": "14651:34873",
-      "name": "file-minus-02"
+      "id": "16519:49312",
+      "name": "ic_file_minus_02"
     },
     {
-      "id": "14651:34877",
-      "name": "file-minus-03"
+      "id": "16519:49315",
+      "name": "ic_file_minus_03"
     },
     {
-      "id": "14651:34881",
-      "name": "file-plus-01"
+      "id": "16519:49318",
+      "name": "ic_file_plus_01"
     },
     {
-      "id": "14651:34885",
-      "name": "file-plus-02"
+      "id": "16519:49321",
+      "name": "ic_file_plus_02"
     },
     {
-      "id": "14651:34889",
-      "name": "file-plus-03"
+      "id": "16519:49324",
+      "name": "ic_file_plus_03"
     },
     {
-      "id": "14651:34893",
-      "name": "file-question-01"
+      "id": "16519:49327",
+      "name": "ic_file_question_01"
     },
     {
-      "id": "14651:34897",
-      "name": "file-question-02"
+      "id": "16519:49330",
+      "name": "ic_file_question_02"
     },
     {
-      "id": "14651:34901",
-      "name": "file-question-03"
+      "id": "16519:49333",
+      "name": "ic_file_question_03"
     },
     {
-      "id": "14651:34905",
-      "name": "file-x-01"
+      "id": "16519:49336",
+      "name": "ic_file_x_01"
     },
     {
-      "id": "14651:34909",
-      "name": "file-x-02"
+      "id": "16519:49339",
+      "name": "ic_file_x_02"
     },
     {
-      "id": "14651:34913",
-      "name": "file-x-03"
+      "id": "16519:49342",
+      "name": "ic_file_x_03"
     },
     {
-      "id": "14651:34917",
-      "name": "file-search-01"
+      "id": "16519:49345",
+      "name": "ic_file_search_01"
     },
     {
-      "id": "14651:34921",
-      "name": "file-search-02"
+      "id": "16519:49348",
+      "name": "ic_file_search_02"
     },
     {
-      "id": "14651:34925",
-      "name": "file-search-03"
+      "id": "16519:49351",
+      "name": "ic_file_search_03"
     },
     {
-      "id": "14651:34929",
-      "name": "folder"
+      "id": "16519:49354",
+      "name": "ic_folder"
     },
     {
-      "id": "14651:34933",
-      "name": "folder-check"
+      "id": "16519:49357",
+      "name": "ic_folder_check"
     },
     {
-      "id": "14651:34937",
-      "name": "folder-download"
+      "id": "16519:49360",
+      "name": "ic_folder_download"
     },
     {
-      "id": "14651:34941",
-      "name": "folder-lock"
+      "id": "16519:49363",
+      "name": "ic_folder_lock"
     },
     {
-      "id": "14651:34945",
-      "name": "folder-minus"
+      "id": "16519:49366",
+      "name": "ic_folder_minus"
     },
     {
-      "id": "14651:34949",
-      "name": "folder-plus"
+      "id": "16519:49369",
+      "name": "ic_folder_plus"
     },
     {
-      "id": "14651:34953",
-      "name": "folder-question"
+      "id": "16519:49372",
+      "name": "ic_folder_question"
     },
     {
-      "id": "14651:34957",
-      "name": "folder-search"
+      "id": "16519:49375",
+      "name": "ic_folder_search"
     },
     {
-      "id": "14651:34961",
-      "name": "folder-closed"
+      "id": "16519:49378",
+      "name": "ic_folder_closed"
     },
     {
-      "id": "14651:34965",
-      "name": "folder-x"
+      "id": "16519:49381",
+      "name": "ic_folder_x"
     },
     {
-      "id": "14651:34969",
-      "name": "paperclip"
+      "id": "16519:49384",
+      "name": "ic_paperclip"
     },
     {
-      "id": "14651:34973",
-      "name": "clipboard"
+      "id": "16519:49387",
+      "name": "ic_clipboard"
     },
     {
-      "id": "14651:34977",
-      "name": "clipboard-attachment"
+      "id": "16519:49390",
+      "name": "ic_clipboard_attachment"
     },
     {
-      "id": "14651:34981",
-      "name": "clipboard-download"
+      "id": "16519:49393",
+      "name": "ic_clipboard_download"
     },
     {
-      "id": "14651:34985",
-      "name": "clipboard-check"
+      "id": "16519:49396",
+      "name": "ic_clipboard_check"
     },
     {
-      "id": "14651:34989",
-      "name": "clipboard-x"
+      "id": "16519:49399",
+      "name": "ic_clipboard_x"
     },
     {
-      "id": "14651:34993",
-      "name": "clipboard-plus"
+      "id": "16519:49402",
+      "name": "ic_clipboard_plus"
     },
     {
-      "id": "14651:34997",
-      "name": "clipboard-minus"
+      "id": "16519:49405",
+      "name": "ic_clipboard_minus"
     },
     {
-      "id": "14651:35001",
-      "name": "sticker-square"
+      "id": "16519:49408",
+      "name": "ic_sticker_square"
     },
     {
-      "id": "14651:35005",
-      "name": "sticker-circle"
+      "id": "16519:49411",
+      "name": "ic_sticker_circle"
     },
     {
-      "id": "14651:35009",
-      "name": "box"
+      "id": "16519:49414",
+      "name": "ic_box"
     }
   ],
   "Maps & travel": [
     {
-      "id": "14651:35014",
-      "name": "bus"
+      "id": "16519:49418",
+      "name": "ic_bus"
     },
     {
-      "id": "14651:35018",
-      "name": "car-01"
+      "id": "16519:49421",
+      "name": "ic_car_01"
     },
     {
-      "id": "14651:35022",
-      "name": "car-02"
+      "id": "16519:49424",
+      "name": "ic_car_02"
     },
     {
-      "id": "14651:35026",
-      "name": "compass-01"
+      "id": "16519:49427",
+      "name": "ic_compass_01"
     },
     {
-      "id": "14651:35030",
-      "name": "compass-02"
+      "id": "16519:49430",
+      "name": "ic_compass_02"
     },
     {
-      "id": "14651:35034",
-      "name": "compass-03"
+      "id": "16519:49433",
+      "name": "ic_compass_03"
     },
     {
-      "id": "14651:35038",
-      "name": "flag-01"
+      "id": "16519:49436",
+      "name": "ic_flag_01"
     },
     {
-      "id": "14651:35042",
-      "name": "flag-02"
+      "id": "16519:49439",
+      "name": "ic_flag_02"
     },
     {
-      "id": "14651:35046",
-      "name": "flag-03"
+      "id": "16519:49442",
+      "name": "ic_flag_03"
     },
     {
-      "id": "14651:35050",
-      "name": "flag-04"
+      "id": "16519:49445",
+      "name": "ic_flag_04"
     },
     {
-      "id": "14651:35054",
-      "name": "flag-05"
+      "id": "16519:49448",
+      "name": "ic_flag_05"
     },
     {
-      "id": "14651:35058",
-      "name": "flag-06"
+      "id": "16519:49451",
+      "name": "ic_flag_06"
     },
     {
-      "id": "14651:35062",
-      "name": "globe-01"
+      "id": "16519:49454",
+      "name": "ic_globe_01"
     },
     {
-      "id": "14651:35066",
-      "name": "globe-02"
+      "id": "16519:49457",
+      "name": "ic_globe_02"
     },
     {
-      "id": "14651:35070",
-      "name": "globe-03"
+      "id": "16519:49460",
+      "name": "ic_globe_03"
     },
     {
-      "id": "14651:35074",
-      "name": "globe-04"
+      "id": "16519:49463",
+      "name": "ic_globe_04"
     },
     {
-      "id": "14651:35078",
-      "name": "globe-05"
+      "id": "16519:49466",
+      "name": "ic_globe_05"
     },
     {
-      "id": "14651:35082",
-      "name": "globe-06"
+      "id": "16519:49469",
+      "name": "ic_globe_06"
     },
     {
-      "id": "14651:35086",
-      "name": "luggage-01"
+      "id": "16519:49472",
+      "name": "ic_luggage_01"
     },
     {
-      "id": "14651:35090",
-      "name": "luggage-02"
+      "id": "16519:49475",
+      "name": "ic_luggage_02"
     },
     {
-      "id": "14651:35094",
-      "name": "luggage-03"
+      "id": "16519:49478",
+      "name": "ic_luggage_03"
     },
     {
-      "id": "14651:35098",
-      "name": "map-01"
+      "id": "16519:49481",
+      "name": "ic_map_01"
     },
     {
-      "id": "14651:35102",
-      "name": "map-02"
+      "id": "16519:49484",
+      "name": "ic_map_02"
     },
     {
-      "id": "14651:35106",
-      "name": "mark"
+      "id": "16519:49487",
+      "name": "ic_mark"
     },
     {
-      "id": "14651:35110",
-      "name": "marker-pin-01"
+      "id": "16519:49490",
+      "name": "ic_marker_pin_01"
     },
     {
-      "id": "14651:35114",
-      "name": "marker-pin-02"
+      "id": "16519:49493",
+      "name": "ic_marker_pin_02"
     },
     {
-      "id": "14651:35118",
-      "name": "marker-pin-03"
+      "id": "16519:49496",
+      "name": "ic_marker_pin_03"
     },
     {
-      "id": "14651:35122",
-      "name": "marker-pin-04"
+      "id": "16519:49499",
+      "name": "ic_marker_pin_04"
     },
     {
-      "id": "14651:35126",
-      "name": "marker-pin-05"
+      "id": "16519:49502",
+      "name": "ic_marker_pin_05"
     },
     {
-      "id": "14651:35130",
-      "name": "marker-pin-06"
+      "id": "16519:49505",
+      "name": "ic_marker_pin_06"
     },
     {
-      "id": "14651:35134",
-      "name": "navigation-pointer-01"
+      "id": "16519:49508",
+      "name": "ic_navigation_pointer_01"
     },
     {
-      "id": "14651:35138",
-      "name": "navigation-pointer-02"
+      "id": "16519:49511",
+      "name": "ic_navigation_pointer_02"
     },
     {
-      "id": "14651:35142",
-      "name": "navigation-pointer-off-01"
+      "id": "16519:49514",
+      "name": "ic_navigation_pointer_off_01"
     },
     {
-      "id": "14651:35146",
-      "name": "navigation-pointer-off-02"
+      "id": "16519:49517",
+      "name": "ic_navigation_pointer_off_02"
     },
     {
-      "id": "14651:35150",
-      "name": "passport"
+      "id": "16519:49520",
+      "name": "ic_passport"
     },
     {
-      "id": "14651:35154",
-      "name": "rocket-01"
+      "id": "16519:49523",
+      "name": "ic_rocket_01"
     },
     {
-      "id": "14651:35157",
-      "name": "plane"
+      "id": "16519:49525",
+      "name": "ic_plane"
     },
     {
-      "id": "14651:35162",
-      "name": "rocket-02"
+      "id": "16519:49529",
+      "name": "ic_rocket_02"
     },
     {
-      "id": "14651:35166",
-      "name": "route"
+      "id": "16519:49532",
+      "name": "ic_route"
     },
     {
-      "id": "14651:35170",
-      "name": "ticket-01"
+      "id": "16519:49535",
+      "name": "ic_ticket_01"
     },
     {
-      "id": "14651:35174",
-      "name": "ticket-02"
+      "id": "16519:49538",
+      "name": "ic_ticket_02"
     },
     {
-      "id": "14651:35178",
-      "name": "train"
+      "id": "16519:49541",
+      "name": "ic_train"
     },
     {
-      "id": "14651:35182",
-      "name": "tram"
+      "id": "16519:49544",
+      "name": "ic_tram"
     },
     {
-      "id": "14651:35186",
-      "name": "truck-01"
+      "id": "16519:49547",
+      "name": "ic_truck_01"
     },
     {
-      "id": "14651:35190",
-      "name": "truck-02"
+      "id": "16519:49550",
+      "name": "ic_truck_02"
     }
   ],
   "Weather": [
     {
-      "id": "14651:35197",
-      "name": "cloud-01"
+      "id": "16519:49556",
+      "name": "ic_cloud_01"
     },
     {
-      "id": "14651:35201",
-      "name": "cloud-02"
+      "id": "16519:49559",
+      "name": "ic_cloud_02"
     },
     {
-      "id": "14651:35205",
-      "name": "cloud-03"
+      "id": "16519:49562",
+      "name": "ic_cloud_03"
     },
     {
-      "id": "14651:35209",
-      "name": "cloud-lightning"
+      "id": "16519:49565",
+      "name": "ic_cloud_lightning"
     },
     {
-      "id": "14651:35213",
-      "name": "cloud-moon"
+      "id": "16519:49568",
+      "name": "ic_cloud_moon"
     },
     {
-      "id": "14651:35217",
-      "name": "cloud-off"
+      "id": "16519:49571",
+      "name": "ic_cloud_off"
     },
     {
-      "id": "14651:35221",
-      "name": "cloud-raining-01"
+      "id": "16519:49574",
+      "name": "ic_cloud_raining_01"
     },
     {
-      "id": "14651:35225",
-      "name": "cloud-raining-02"
+      "id": "16519:49577",
+      "name": "ic_cloud_raining_02"
     },
     {
-      "id": "14651:35229",
-      "name": "cloud-raining-03"
+      "id": "16519:49580",
+      "name": "ic_cloud_raining_03"
     },
     {
-      "id": "14651:35233",
-      "name": "cloud-raining-04"
+      "id": "16519:49583",
+      "name": "ic_cloud_raining_04"
     },
     {
-      "id": "14651:35237",
-      "name": "cloud-raining-05"
+      "id": "16519:49586",
+      "name": "ic_cloud_raining_05"
     },
     {
-      "id": "14651:35241",
-      "name": "cloud-raining-06"
+      "id": "16519:49589",
+      "name": "ic_cloud_raining_06"
     },
     {
-      "id": "14651:35245",
-      "name": "cloud-snowing-01"
+      "id": "16519:49592",
+      "name": "ic_cloud_snowing_01"
     },
     {
-      "id": "14651:35249",
-      "name": "cloud-snowing-02"
+      "id": "16519:49595",
+      "name": "ic_cloud_snowing_02"
     },
     {
-      "id": "14651:35253",
-      "name": "cloud-sun-01"
+      "id": "16519:49598",
+      "name": "ic_cloud_sun_01"
     },
     {
-      "id": "14651:35257",
-      "name": "cloud-sun-02"
+      "id": "16519:49601",
+      "name": "ic_cloud_sun_02"
     },
     {
-      "id": "14651:35261",
-      "name": "cloud-sun-03"
+      "id": "16519:49604",
+      "name": "ic_cloud_sun_03"
     },
     {
-      "id": "14651:35265",
-      "name": "droplets-01"
+      "id": "16519:49607",
+      "name": "ic_droplets_01"
     },
     {
-      "id": "14651:35269",
-      "name": "droplets-02"
+      "id": "16519:49610",
+      "name": "ic_droplets_02"
     },
     {
-      "id": "14651:35273",
-      "name": "droplets-03"
+      "id": "16519:49613",
+      "name": "ic_droplets_03"
     },
     {
-      "id": "14651:35277",
-      "name": "hurricane-01"
+      "id": "16519:49616",
+      "name": "ic_hurricane_01"
     },
     {
-      "id": "14651:35281",
-      "name": "hurricane-02"
+      "id": "16519:49619",
+      "name": "ic_hurricane_02"
     },
     {
-      "id": "14651:35285",
-      "name": "hurricane-03"
+      "id": "16519:49622",
+      "name": "ic_hurricane_03"
     },
     {
-      "id": "14651:35289",
-      "name": "lightning-01"
+      "id": "16519:49625",
+      "name": "ic_lightning_01"
     },
     {
-      "id": "14651:35293",
-      "name": "lightning-02"
+      "id": "16519:49628",
+      "name": "ic_lightning_02"
     },
     {
-      "id": "14651:35297",
-      "name": "moon-01"
+      "id": "16519:49631",
+      "name": "ic_moon_01"
     },
     {
-      "id": "14651:35301",
-      "name": "moon-02"
+      "id": "16519:49634",
+      "name": "ic_moon_02"
     },
     {
-      "id": "14651:35305",
-      "name": "moon-eclipse"
+      "id": "16519:49637",
+      "name": "ic_moon_eclipse"
     },
     {
-      "id": "14651:35309",
-      "name": "moon-star"
+      "id": "16519:49640",
+      "name": "ic_moon_star"
     },
     {
-      "id": "14651:35313",
-      "name": "snowflake-01"
+      "id": "16519:49643",
+      "name": "ic_snowflake_01"
     },
     {
-      "id": "14651:35317",
-      "name": "snowflake-02"
+      "id": "16519:49646",
+      "name": "ic_snowflake_02"
     },
     {
-      "id": "14651:35321",
-      "name": "stars-01"
+      "id": "16519:49649",
+      "name": "ic_stars_01"
     },
     {
-      "id": "14651:35325",
-      "name": "stars-02"
+      "id": "16519:49652",
+      "name": "ic_stars_02"
     },
     {
-      "id": "14651:35329",
-      "name": "stars-03"
+      "id": "16519:49655",
+      "name": "ic_stars_03"
     },
     {
-      "id": "14651:35333",
-      "name": "sun"
+      "id": "16519:49658",
+      "name": "ic_sun"
     },
     {
-      "id": "14651:35337",
-      "name": "sun-setting-01"
+      "id": "16519:49661",
+      "name": "ic_sun_setting_01"
     },
     {
-      "id": "14651:35341",
-      "name": "sun-setting-02"
+      "id": "16519:49664",
+      "name": "ic_sun_setting_02"
     },
     {
-      "id": "14651:35345",
-      "name": "sun-setting-03"
+      "id": "16519:49667",
+      "name": "ic_sun_setting_03"
     },
     {
-      "id": "14651:35349",
-      "name": "sunrise"
+      "id": "16519:49670",
+      "name": "ic_sunrise"
     },
     {
-      "id": "14651:35353",
-      "name": "sunset"
+      "id": "16519:49673",
+      "name": "ic_sunset"
     },
     {
-      "id": "14651:35357",
-      "name": "thermometer-01"
+      "id": "16519:49676",
+      "name": "ic_thermometer_01"
     },
     {
-      "id": "14651:35361",
-      "name": "thermometer-02"
+      "id": "16519:49679",
+      "name": "ic_thermometer_02"
     },
     {
-      "id": "14651:35365",
-      "name": "thermometer-03"
+      "id": "16519:49682",
+      "name": "ic_thermometer_03"
     },
     {
-      "id": "14651:35369",
-      "name": "thermometer-cold"
+      "id": "16519:49685",
+      "name": "ic_thermometer_cold"
     },
     {
-      "id": "14651:35373",
-      "name": "thermometer-warm"
+      "id": "16519:49688",
+      "name": "ic_thermometer_warm"
     },
     {
-      "id": "14651:35377",
-      "name": "umbrella-01"
+      "id": "16519:49691",
+      "name": "ic_umbrella_01"
     },
     {
-      "id": "14651:35381",
-      "name": "umbrella-02"
+      "id": "16519:49694",
+      "name": "ic_umbrella_02"
     },
     {
-      "id": "14651:35385",
-      "name": "umbrella-03"
+      "id": "16519:49697",
+      "name": "ic_umbrella_03"
     },
     {
-      "id": "14651:35389",
-      "name": "waves"
+      "id": "16519:49700",
+      "name": "ic_waves"
     },
     {
-      "id": "14651:35393",
-      "name": "wind-01"
+      "id": "16519:49703",
+      "name": "ic_wind_01"
     },
     {
-      "id": "14651:35397",
-      "name": "wind-02"
+      "id": "16519:49706",
+      "name": "ic_wind_02"
     },
     {
-      "id": "14651:35401",
-      "name": "wind-03"
+      "id": "16519:49709",
+      "name": "ic_wind_03"
     }
   ]
 }

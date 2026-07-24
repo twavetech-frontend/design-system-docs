@@ -1,0 +1,4788 @@
+{
+  "Layout": [
+    {
+      "id": "16519:54173",
+      "name": "ic_solid_align_bottom_01"
+    },
+    {
+      "id": "16519:54176",
+      "name": "ic_solid_align_bottom_02"
+    },
+    {
+      "id": "16519:54179",
+      "name": "ic_solid_align_horizontal_centre_01"
+    },
+    {
+      "id": "16519:54182",
+      "name": "ic_solid_align_horizontal_centre_02"
+    },
+    {
+      "id": "16519:54185",
+      "name": "ic_solid_align_left_01"
+    },
+    {
+      "id": "16519:54188",
+      "name": "ic_solid_align_left_02"
+    },
+    {
+      "id": "16519:54191",
+      "name": "ic_solid_align_right_01"
+    },
+    {
+      "id": "16519:54194",
+      "name": "ic_solid_align_right_02"
+    },
+    {
+      "id": "16519:54197",
+      "name": "ic_solid_align_top_01"
+    },
+    {
+      "id": "16519:54200",
+      "name": "ic_solid_align_top_02"
+    },
+    {
+      "id": "16519:54203",
+      "name": "ic_solid_align_vertical_center_01"
+    },
+    {
+      "id": "16519:54206",
+      "name": "ic_solid_align_vertical_center_02"
+    },
+    {
+      "id": "16519:54209",
+      "name": "ic_solid_columns_01"
+    },
+    {
+      "id": "16519:54212",
+      "name": "ic_solid_columns_02"
+    },
+    {
+      "id": "16519:54215",
+      "name": "ic_solid_columns_03"
+    },
+    {
+      "id": "16519:54218",
+      "name": "ic_solid_distribute_spacing_horizontal"
+    },
+    {
+      "id": "16519:54221",
+      "name": "ic_solid_distribute_spacing_vertical"
+    },
+    {
+      "id": "16519:54224",
+      "name": "ic_solid_divider"
+    },
+    {
+      "id": "16519:54227",
+      "name": "ic_solid_flex_align_bottom"
+    },
+    {
+      "id": "16519:54230",
+      "name": "ic_solid_flex_align_left"
+    },
+    {
+      "id": "16519:54233",
+      "name": "ic_solid_flex_align_right"
+    },
+    {
+      "id": "16519:54236",
+      "name": "ic_solid_flex_align_top"
+    },
+    {
+      "id": "16519:54239",
+      "name": "ic_solid_grid_01"
+    },
+    {
+      "id": "16519:54242",
+      "name": "ic_solid_grid_02"
+    },
+    {
+      "id": "16519:54245",
+      "name": "ic_solid_grid_03"
+    },
+    {
+      "id": "16519:54248",
+      "name": "ic_solid_grid_dots_blank"
+    },
+    {
+      "id": "16519:54251",
+      "name": "ic_solid_grid_dots_bottom"
+    },
+    {
+      "id": "16519:54254",
+      "name": "ic_solid_grid_dots_horizontal_center"
+    },
+    {
+      "id": "16519:54257",
+      "name": "ic_solid_grid_dots_left"
+    },
+    {
+      "id": "16519:54260",
+      "name": "ic_solid_grid_dots_outer"
+    },
+    {
+      "id": "16519:54263",
+      "name": "ic_solid_grid_dots_right"
+    },
+    {
+      "id": "16519:54266",
+      "name": "ic_solid_grid_dots_top"
+    },
+    {
+      "id": "16519:54269",
+      "name": "ic_solid_grid_dots_vertical_center"
+    },
+    {
+      "id": "16519:54272",
+      "name": "ic_solid_intersect_circle"
+    },
+    {
+      "id": "16519:54275",
+      "name": "ic_solid_intersect_square"
+    },
+    {
+      "id": "16519:54279",
+      "name": "ic_solid_layer_single"
+    },
+    {
+      "id": "16519:54281",
+      "name": "ic_solid_layers_three_01"
+    },
+    {
+      "id": "16519:54284",
+      "name": "ic_solid_layers_three_02"
+    },
+    {
+      "id": "16519:54287",
+      "name": "ic_solid_layers_two_01"
+    },
+    {
+      "id": "16519:54290",
+      "name": "ic_solid_layers_two_02"
+    },
+    {
+      "id": "16519:54293",
+      "name": "ic_solid_layout_alt_01"
+    },
+    {
+      "id": "16519:54296",
+      "name": "ic_solid_layout_alt_02"
+    },
+    {
+      "id": "16519:54299",
+      "name": "ic_solid_layout_alt_03"
+    },
+    {
+      "id": "16519:54302",
+      "name": "ic_solid_layout_alt_04"
+    },
+    {
+      "id": "16519:54305",
+      "name": "ic_solid_layout_bottom"
+    },
+    {
+      "id": "16519:54308",
+      "name": "ic_solid_layout_grid_01"
+    },
+    {
+      "id": "16519:54311",
+      "name": "ic_solid_layout_grid_02"
+    },
+    {
+      "id": "16519:54314",
+      "name": "ic_solid_layout_left"
+    },
+    {
+      "id": "16519:54317",
+      "name": "ic_solid_layout_right"
+    },
+    {
+      "id": "16519:54320",
+      "name": "ic_solid_layout_top"
+    },
+    {
+      "id": "16519:54323",
+      "name": "ic_solid_list"
+    },
+    {
+      "id": "16519:54326",
+      "name": "ic_solid_maximize_01"
+    },
+    {
+      "id": "16519:54329",
+      "name": "ic_solid_maximize_02"
+    },
+    {
+      "id": "16519:54332",
+      "name": "ic_solid_minimize_01"
+    },
+    {
+      "id": "16519:54335",
+      "name": "ic_solid_minimize_02"
+    },
+    {
+      "id": "16519:54338",
+      "name": "ic_solid_rows_01"
+    },
+    {
+      "id": "16519:54341",
+      "name": "ic_solid_rows_02"
+    },
+    {
+      "id": "16519:54344",
+      "name": "ic_solid_rows_03"
+    },
+    {
+      "id": "16519:54347",
+      "name": "ic_solid_spacing_height_01"
+    },
+    {
+      "id": "16519:54350",
+      "name": "ic_solid_spacing_height_02"
+    },
+    {
+      "id": "16519:54353",
+      "name": "ic_solid_spacing_width_01"
+    },
+    {
+      "id": "16519:54356",
+      "name": "ic_solid_spacing_width_02"
+    },
+    {
+      "id": "16519:54359",
+      "name": "ic_solid_table"
+    }
+  ],
+  "Charts": [
+    {
+      "id": "16519:54364",
+      "name": "ic_solid_bar_chart_01"
+    },
+    {
+      "id": "16519:54367",
+      "name": "ic_solid_bar_chart_02"
+    },
+    {
+      "id": "16519:54370",
+      "name": "ic_solid_bar_chart_03"
+    },
+    {
+      "id": "16519:54373",
+      "name": "ic_solid_bar_chart_04"
+    },
+    {
+      "id": "16519:54376",
+      "name": "ic_solid_bar_chart_05"
+    },
+    {
+      "id": "16519:54379",
+      "name": "ic_solid_bar_chart_06"
+    },
+    {
+      "id": "16519:54382",
+      "name": "ic_solid_bar_chart_07"
+    },
+    {
+      "id": "16519:54385",
+      "name": "ic_solid_bar_chart_08"
+    },
+    {
+      "id": "16519:54388",
+      "name": "ic_solid_bar_chart_09"
+    },
+    {
+      "id": "16519:54391",
+      "name": "ic_solid_bar_chart_10"
+    },
+    {
+      "id": "16519:54394",
+      "name": "ic_solid_bar_chart_11"
+    },
+    {
+      "id": "16519:54397",
+      "name": "ic_solid_bar_chart_12"
+    },
+    {
+      "id": "16519:54400",
+      "name": "ic_solid_bar_chart_circle_01"
+    },
+    {
+      "id": "16519:54403",
+      "name": "ic_solid_bar_chart_circle_02"
+    },
+    {
+      "id": "16519:54406",
+      "name": "ic_solid_bar_chart_circle_03"
+    },
+    {
+      "id": "16519:54409",
+      "name": "ic_solid_bar_chart_square_01"
+    },
+    {
+      "id": "16519:54412",
+      "name": "ic_solid_bar_chart_square_02"
+    },
+    {
+      "id": "16519:54415",
+      "name": "ic_solid_bar_chart_square_03"
+    },
+    {
+      "id": "16519:54418",
+      "name": "ic_solid_bar_chart_square_down"
+    },
+    {
+      "id": "16519:54421",
+      "name": "ic_solid_bar_chart_square_minus"
+    },
+    {
+      "id": "16519:54424",
+      "name": "ic_solid_bar_chart_square_plus"
+    },
+    {
+      "id": "16519:54427",
+      "name": "ic_solid_bar_chart_square_up"
+    },
+    {
+      "id": "16519:54430",
+      "name": "ic_solid_bar_line_chart"
+    },
+    {
+      "id": "16519:54433",
+      "name": "ic_solid_chart_breakout_circle"
+    },
+    {
+      "id": "16519:54436",
+      "name": "ic_solid_chart_breakout_square"
+    },
+    {
+      "id": "16519:54439",
+      "name": "ic_solid_horizontal_bar_chart_01"
+    },
+    {
+      "id": "16519:54442",
+      "name": "ic_solid_horizontal_bar_chart_02"
+    },
+    {
+      "id": "16519:54445",
+      "name": "ic_solid_horizontal_bar_chart_03"
+    },
+    {
+      "id": "16519:54448",
+      "name": "ic_solid_line_chart_down_01"
+    },
+    {
+      "id": "16519:54451",
+      "name": "ic_solid_line_chart_down_02"
+    },
+    {
+      "id": "16519:54454",
+      "name": "ic_solid_line_chart_down_03"
+    },
+    {
+      "id": "16519:54457",
+      "name": "ic_solid_line_chart_down_04"
+    },
+    {
+      "id": "16519:54460",
+      "name": "ic_solid_line_chart_down_05"
+    },
+    {
+      "id": "16519:54463",
+      "name": "ic_solid_line_chart_up_01"
+    },
+    {
+      "id": "16519:54466",
+      "name": "ic_solid_line_chart_up_02"
+    },
+    {
+      "id": "16519:54469",
+      "name": "ic_solid_line_chart_up_03"
+    },
+    {
+      "id": "16519:54472",
+      "name": "ic_solid_line_chart_up_04"
+    },
+    {
+      "id": "16519:54475",
+      "name": "ic_solid_line_chart_up_05"
+    },
+    {
+      "id": "16519:54478",
+      "name": "ic_solid_pie_chart_01"
+    },
+    {
+      "id": "16519:54481",
+      "name": "ic_solid_pie_chart_02"
+    },
+    {
+      "id": "16519:54484",
+      "name": "ic_solid_pie_chart_03"
+    },
+    {
+      "id": "16519:54487",
+      "name": "ic_solid_pie_chart_04"
+    },
+    {
+      "id": "16519:54490",
+      "name": "ic_solid_presentation_chart_01"
+    },
+    {
+      "id": "16519:54493",
+      "name": "ic_solid_presentation_chart_02"
+    },
+    {
+      "id": "16519:54496",
+      "name": "ic_solid_presentation_chart_03"
+    },
+    {
+      "id": "16519:54499",
+      "name": "ic_solid_trend_down_01"
+    },
+    {
+      "id": "16519:54502",
+      "name": "ic_solid_trend_down_02"
+    },
+    {
+      "id": "16519:54505",
+      "name": "ic_solid_trend_up_01"
+    },
+    {
+      "id": "16519:54508",
+      "name": "ic_solid_trend_up_02"
+    }
+  ],
+  "Security": [
+    {
+      "id": "16519:54513",
+      "name": "ic_solid_face_id"
+    },
+    {
+      "id": "16519:54516",
+      "name": "ic_solid_face_id_square"
+    },
+    {
+      "id": "16519:54519",
+      "name": "ic_solid_file_lock_01"
+    },
+    {
+      "id": "16519:54522",
+      "name": "ic_solid_file_lock_02"
+    },
+    {
+      "id": "16519:54525",
+      "name": "ic_solid_file_lock_03"
+    },
+    {
+      "id": "16519:54528",
+      "name": "ic_solid_file_shield_01"
+    },
+    {
+      "id": "16519:54531",
+      "name": "ic_solid_file_shield_02"
+    },
+    {
+      "id": "16519:54534",
+      "name": "ic_solid_file_shield_03"
+    },
+    {
+      "id": "16519:54537",
+      "name": "ic_solid_fingerprint_01"
+    },
+    {
+      "id": "16519:54540",
+      "name": "ic_solid_fingerprint_02"
+    },
+    {
+      "id": "16519:54543",
+      "name": "ic_solid_fingerprint_03"
+    },
+    {
+      "id": "16519:54546",
+      "name": "ic_solid_fingerprint_04"
+    },
+    {
+      "id": "16519:54549",
+      "name": "ic_solid_folder_shield"
+    },
+    {
+      "id": "16519:54552",
+      "name": "ic_solid_key_01"
+    },
+    {
+      "id": "16519:54555",
+      "name": "ic_solid_key_02"
+    },
+    {
+      "id": "16519:54558",
+      "name": "ic_solid_lock_01"
+    },
+    {
+      "id": "16519:54561",
+      "name": "ic_solid_lock_02"
+    },
+    {
+      "id": "16519:54564",
+      "name": "ic_solid_lock_03"
+    },
+    {
+      "id": "16519:54567",
+      "name": "ic_solid_lock_04"
+    },
+    {
+      "id": "16519:54570",
+      "name": "ic_solid_lock_keyhole_circle"
+    },
+    {
+      "id": "16519:54573",
+      "name": "ic_solid_lock_keyhole_square"
+    },
+    {
+      "id": "16519:54576",
+      "name": "ic_solid_lock_unlocked_01"
+    },
+    {
+      "id": "16519:54579",
+      "name": "ic_solid_lock_unlocked_02"
+    },
+    {
+      "id": "16519:54582",
+      "name": "ic_solid_lock_unlocked_03"
+    },
+    {
+      "id": "16519:54585",
+      "name": "ic_solid_lock_unlocked_04"
+    },
+    {
+      "id": "16519:54588",
+      "name": "ic_solid_passcode"
+    },
+    {
+      "id": "16519:54591",
+      "name": "ic_solid_passcode_lock"
+    },
+    {
+      "id": "16519:54594",
+      "name": "ic_solid_scan"
+    },
+    {
+      "id": "16519:54597",
+      "name": "ic_solid_shield_03"
+    },
+    {
+      "id": "16519:54600",
+      "name": "ic_solid_shield_dollar"
+    },
+    {
+      "id": "16519:54603",
+      "name": "ic_solid_shield_off"
+    },
+    {
+      "id": "16519:54606",
+      "name": "ic_solid_shield_plus"
+    },
+    {
+      "id": "16519:54609",
+      "name": "ic_solid_shield_tick"
+    },
+    {
+      "id": "16519:54612",
+      "name": "ic_solid_shield_zap"
+    },
+    {
+      "id": "16519:54615",
+      "name": "ic_solid_shield_01"
+    },
+    {
+      "id": "16519:54618",
+      "name": "ic_solid_shield_02"
+    }
+  ],
+  "Education": [
+    {
+      "id": "16519:54623",
+      "name": "ic_solid_atom_01"
+    },
+    {
+      "id": "16519:54626",
+      "name": "ic_solid_atom_02"
+    },
+    {
+      "id": "16519:54629",
+      "name": "ic_solid_award_01"
+    },
+    {
+      "id": "16519:54632",
+      "name": "ic_solid_award_02"
+    },
+    {
+      "id": "16519:54635",
+      "name": "ic_solid_award_03"
+    },
+    {
+      "id": "16519:54638",
+      "name": "ic_solid_award_04"
+    },
+    {
+      "id": "16519:54641",
+      "name": "ic_solid_award_05"
+    },
+    {
+      "id": "16519:54644",
+      "name": "ic_solid_backpack"
+    },
+    {
+      "id": "16519:54647",
+      "name": "ic_solid_beaker_01"
+    },
+    {
+      "id": "16519:54650",
+      "name": "ic_solid_beaker_02"
+    },
+    {
+      "id": "16519:54653",
+      "name": "ic_solid_book_closed"
+    },
+    {
+      "id": "16519:54656",
+      "name": "ic_solid_book_open_01"
+    },
+    {
+      "id": "16519:54659",
+      "name": "ic_solid_book_open_02"
+    },
+    {
+      "id": "16519:54662",
+      "name": "ic_solid_briefcase_01"
+    },
+    {
+      "id": "16519:54665",
+      "name": "ic_solid_briefcase_02"
+    },
+    {
+      "id": "16519:54668",
+      "name": "ic_solid_calculator"
+    },
+    {
+      "id": "16519:54671",
+      "name": "ic_solid_certificate_01"
+    },
+    {
+      "id": "16519:54674",
+      "name": "ic_solid_certificate_02"
+    },
+    {
+      "id": "16519:54677",
+      "name": "ic_solid_compass"
+    },
+    {
+      "id": "16519:54680",
+      "name": "ic_solid_glasses_01"
+    },
+    {
+      "id": "16519:54683",
+      "name": "ic_solid_glasses_02"
+    },
+    {
+      "id": "16519:54686",
+      "name": "ic_solid_globe_slated_01"
+    },
+    {
+      "id": "16519:54689",
+      "name": "ic_solid_globe_slated_02"
+    },
+    {
+      "id": "16519:54692",
+      "name": "ic_solid_graduation_hat_01"
+    },
+    {
+      "id": "16519:54695",
+      "name": "ic_solid_graduation_hat_02"
+    },
+    {
+      "id": "16519:54698",
+      "name": "ic_solid_microscope"
+    },
+    {
+      "id": "16519:54701",
+      "name": "ic_solid_ruler"
+    },
+    {
+      "id": "16519:54704",
+      "name": "ic_solid_stand"
+    },
+    {
+      "id": "16519:54707",
+      "name": "ic_solid_telescope"
+    },
+    {
+      "id": "16519:54710",
+      "name": "ic_solid_trophy_01"
+    },
+    {
+      "id": "16519:54713",
+      "name": "ic_solid_trophy_02"
+    }
+  ],
+  "Development": [
+    {
+      "id": "16519:54718",
+      "name": "ic_solid_brackets"
+    },
+    {
+      "id": "16519:54721",
+      "name": "ic_solid_brackets_check"
+    },
+    {
+      "id": "16519:54724",
+      "name": "ic_solid_brackets_ellipses"
+    },
+    {
+      "id": "16519:54727",
+      "name": "ic_solid_brackets_minus"
+    },
+    {
+      "id": "16519:54730",
+      "name": "ic_solid_brackets_plus"
+    },
+    {
+      "id": "16519:54733",
+      "name": "ic_solid_brackets_slash"
+    },
+    {
+      "id": "16519:54736",
+      "name": "ic_solid_brackets_x"
+    },
+    {
+      "id": "16519:54739",
+      "name": "ic_solid_browser"
+    },
+    {
+      "id": "16519:54742",
+      "name": "ic_solid_code_01"
+    },
+    {
+      "id": "16519:54745",
+      "name": "ic_solid_code_02"
+    },
+    {
+      "id": "16519:54748",
+      "name": "ic_solid_code_browser"
+    },
+    {
+      "id": "16519:54751",
+      "name": "ic_solid_code_circle_01"
+    },
+    {
+      "id": "16519:54754",
+      "name": "ic_solid_code_circle_02"
+    },
+    {
+      "id": "16519:54757",
+      "name": "ic_solid_code_circle_03"
+    },
+    {
+      "id": "16519:54760",
+      "name": "ic_solid_code_square_01"
+    },
+    {
+      "id": "16519:54763",
+      "name": "ic_solid_code_square_02"
+    },
+    {
+      "id": "16519:54766",
+      "name": "ic_solid_codepen"
+    },
+    {
+      "id": "16519:54769",
+      "name": "ic_solid_container"
+    },
+    {
+      "id": "16519:54772",
+      "name": "ic_solid_cpu_chip_01"
+    },
+    {
+      "id": "16519:54775",
+      "name": "ic_solid_cpu_chip_02"
+    },
+    {
+      "id": "16519:54778",
+      "name": "ic_solid_data"
+    },
+    {
+      "id": "16519:54781",
+      "name": "ic_solid_database_01"
+    },
+    {
+      "id": "16519:54784",
+      "name": "ic_solid_database_02"
+    },
+    {
+      "id": "16519:54787",
+      "name": "ic_solid_database_03"
+    },
+    {
+      "id": "16519:54790",
+      "name": "ic_solid_dataflow_01"
+    },
+    {
+      "id": "16519:54793",
+      "name": "ic_solid_dataflow_02"
+    },
+    {
+      "id": "16519:54796",
+      "name": "ic_solid_dataflow_03"
+    },
+    {
+      "id": "16519:54799",
+      "name": "ic_solid_dataflow_04"
+    },
+    {
+      "id": "16519:54802",
+      "name": "ic_solid_file_code_01"
+    },
+    {
+      "id": "16519:54805",
+      "name": "ic_solid_file_code_02"
+    },
+    {
+      "id": "16519:54808",
+      "name": "ic_solid_folder_code"
+    },
+    {
+      "id": "16519:54811",
+      "name": "ic_solid_git_branch_01"
+    },
+    {
+      "id": "16519:54814",
+      "name": "ic_solid_git_branch_02"
+    },
+    {
+      "id": "16519:54817",
+      "name": "ic_solid_git_commit"
+    },
+    {
+      "id": "16519:54820",
+      "name": "ic_solid_git_merge"
+    },
+    {
+      "id": "16519:54823",
+      "name": "ic_solid_git_pull_request"
+    },
+    {
+      "id": "16519:54826",
+      "name": "ic_solid_package"
+    },
+    {
+      "id": "16519:54829",
+      "name": "ic_solid_package_minus"
+    },
+    {
+      "id": "16519:54832",
+      "name": "ic_solid_package_check"
+    },
+    {
+      "id": "16519:54835",
+      "name": "ic_solid_package_plus"
+    },
+    {
+      "id": "16519:54838",
+      "name": "ic_solid_package_search"
+    },
+    {
+      "id": "16519:54841",
+      "name": "ic_solid_package_x"
+    },
+    {
+      "id": "16519:54844",
+      "name": "ic_solid_puzzle_piece_01"
+    },
+    {
+      "id": "16519:54847",
+      "name": "ic_solid_puzzle_piece_02"
+    },
+    {
+      "id": "16519:54850",
+      "name": "ic_solid_qr_code_01"
+    },
+    {
+      "id": "16519:54853",
+      "name": "ic_solid_qr_code_02"
+    },
+    {
+      "id": "16519:54856",
+      "name": "ic_solid_server_01"
+    },
+    {
+      "id": "16519:54859",
+      "name": "ic_solid_server_02"
+    },
+    {
+      "id": "16519:54862",
+      "name": "ic_solid_server_03"
+    },
+    {
+      "id": "16519:54865",
+      "name": "ic_solid_server_04"
+    },
+    {
+      "id": "16519:54868",
+      "name": "ic_solid_server_05"
+    },
+    {
+      "id": "16519:54871",
+      "name": "ic_solid_server_06"
+    },
+    {
+      "id": "16519:54874",
+      "name": "ic_solid_terminal"
+    },
+    {
+      "id": "16519:54877",
+      "name": "ic_solid_terminal_browser"
+    },
+    {
+      "id": "16519:54880",
+      "name": "ic_solid_terminal_circle"
+    },
+    {
+      "id": "16519:54883",
+      "name": "ic_solid_terminal_square"
+    },
+    {
+      "id": "16519:54886",
+      "name": "ic_solid_variable"
+    }
+  ],
+  "Arrows": [
+    {
+      "id": "16519:54891",
+      "name": "ic_solid_arrow_block_down"
+    },
+    {
+      "id": "16519:54894",
+      "name": "ic_solid_arrow_block_left"
+    },
+    {
+      "id": "16519:54897",
+      "name": "ic_solid_arrow_block_right"
+    },
+    {
+      "id": "16519:54900",
+      "name": "ic_solid_arrow_block_up"
+    },
+    {
+      "id": "16519:54903",
+      "name": "ic_solid_arrow_circle_broken_down"
+    },
+    {
+      "id": "16519:54906",
+      "name": "ic_solid_arrow_circle_broken_down_left"
+    },
+    {
+      "id": "16519:54909",
+      "name": "ic_solid_arrow_circle_broken_down_right"
+    },
+    {
+      "id": "16519:54912",
+      "name": "ic_solid_arrow_circle_broken_left"
+    },
+    {
+      "id": "16519:54915",
+      "name": "ic_solid_arrow_circle_broken_right"
+    },
+    {
+      "id": "16519:54918",
+      "name": "ic_solid_arrow_circle_broken_up"
+    },
+    {
+      "id": "16519:54921",
+      "name": "ic_solid_arrow_circle_broken_up_left"
+    },
+    {
+      "id": "16519:54924",
+      "name": "ic_solid_arrow_circle_broken_up_right"
+    },
+    {
+      "id": "16519:54927",
+      "name": "ic_solid_arrow_circle_down"
+    },
+    {
+      "id": "16519:54930",
+      "name": "ic_solid_arrow_circle_down_left"
+    },
+    {
+      "id": "16519:54933",
+      "name": "ic_solid_arrow_circle_down_right"
+    },
+    {
+      "id": "16519:54936",
+      "name": "ic_solid_arrow_circle_left"
+    },
+    {
+      "id": "16519:54939",
+      "name": "ic_solid_arrow_circle_right"
+    },
+    {
+      "id": "16519:54942",
+      "name": "ic_solid_arrow_circle_up"
+    },
+    {
+      "id": "16519:54945",
+      "name": "ic_solid_arrow_circle_up_left"
+    },
+    {
+      "id": "16519:54948",
+      "name": "ic_solid_arrow_circle_up_right"
+    },
+    {
+      "id": "16519:54951",
+      "name": "ic_solid_arrow_down"
+    },
+    {
+      "id": "16519:54954",
+      "name": "ic_solid_arrow_down_left"
+    },
+    {
+      "id": "16519:54957",
+      "name": "ic_solid_arrow_down_right"
+    },
+    {
+      "id": "16519:54960",
+      "name": "ic_solid_arrow_left"
+    },
+    {
+      "id": "16519:54963",
+      "name": "ic_solid_arrow_narrow_down"
+    },
+    {
+      "id": "16519:54966",
+      "name": "ic_solid_arrow_narrow_down_left"
+    },
+    {
+      "id": "16519:54969",
+      "name": "ic_solid_arrow_narrow_down_right"
+    },
+    {
+      "id": "16519:54972",
+      "name": "ic_solid_arrow_narrow_left"
+    },
+    {
+      "id": "16519:54975",
+      "name": "ic_solid_arrow_narrow_right"
+    },
+    {
+      "id": "16519:54978",
+      "name": "ic_solid_arrow_narrow_up"
+    },
+    {
+      "id": "16519:54981",
+      "name": "ic_solid_arrow_narrow_up_left"
+    },
+    {
+      "id": "16519:54984",
+      "name": "ic_solid_arrow_narrow_up_right"
+    },
+    {
+      "id": "16519:54987",
+      "name": "ic_solid_arrow_right"
+    },
+    {
+      "id": "16519:54990",
+      "name": "ic_solid_arrow_square_down"
+    },
+    {
+      "id": "16519:54993",
+      "name": "ic_solid_arrow_square_down_left"
+    },
+    {
+      "id": "16519:54996",
+      "name": "ic_solid_arrow_square_down_right"
+    },
+    {
+      "id": "16519:54999",
+      "name": "ic_solid_arrow_square_left"
+    },
+    {
+      "id": "16519:55002",
+      "name": "ic_solid_arrow_square_right"
+    },
+    {
+      "id": "16519:55005",
+      "name": "ic_solid_arrow_square_up"
+    },
+    {
+      "id": "16519:55008",
+      "name": "ic_solid_arrow_square_up_left"
+    },
+    {
+      "id": "16519:55011",
+      "name": "ic_solid_arrow_square_up_right"
+    },
+    {
+      "id": "16519:55014",
+      "name": "ic_solid_arrow_up"
+    },
+    {
+      "id": "16519:55017",
+      "name": "ic_solid_arrow_up_left"
+    },
+    {
+      "id": "16519:55020",
+      "name": "ic_solid_arrow_up_right"
+    },
+    {
+      "id": "16519:55023",
+      "name": "ic_solid_arrows_down"
+    },
+    {
+      "id": "16519:55026",
+      "name": "ic_solid_arrows_left"
+    },
+    {
+      "id": "16519:55029",
+      "name": "ic_solid_arrows_right"
+    },
+    {
+      "id": "16519:55032",
+      "name": "ic_solid_arrows_triangle"
+    },
+    {
+      "id": "16519:55035",
+      "name": "ic_solid_arrows_up"
+    },
+    {
+      "id": "16519:55038",
+      "name": "ic_solid_chevron_down"
+    },
+    {
+      "id": "16519:55041",
+      "name": "ic_solid_chevron_down_double"
+    },
+    {
+      "id": "16519:55044",
+      "name": "ic_solid_chevron_left"
+    },
+    {
+      "id": "16519:55047",
+      "name": "ic_solid_chevron_left_double"
+    },
+    {
+      "id": "16519:55050",
+      "name": "ic_solid_chevron_right"
+    },
+    {
+      "id": "16519:55053",
+      "name": "ic_solid_chevron_right_double"
+    },
+    {
+      "id": "16519:55056",
+      "name": "ic_solid_chevron_selector_horizontal"
+    },
+    {
+      "id": "16519:55059",
+      "name": "ic_solid_chevron_selector_vertical"
+    },
+    {
+      "id": "16519:55062",
+      "name": "ic_solid_chevron_up"
+    },
+    {
+      "id": "16519:55065",
+      "name": "ic_solid_chevron_up_double"
+    },
+    {
+      "id": "16519:55068",
+      "name": "ic_solid_corner_down_left"
+    },
+    {
+      "id": "16519:55071",
+      "name": "ic_solid_corner_down_right"
+    },
+    {
+      "id": "16519:55074",
+      "name": "ic_solid_corner_left_down"
+    },
+    {
+      "id": "16519:55077",
+      "name": "ic_solid_corner_left_up"
+    },
+    {
+      "id": "16519:55080",
+      "name": "ic_solid_corner_right_down"
+    },
+    {
+      "id": "16519:55083",
+      "name": "ic_solid_corner_right_up"
+    },
+    {
+      "id": "16519:55086",
+      "name": "ic_solid_corner_up_left"
+    },
+    {
+      "id": "16519:55089",
+      "name": "ic_solid_corner_up_right"
+    },
+    {
+      "id": "16519:55092",
+      "name": "ic_solid_expand_01"
+    },
+    {
+      "id": "16519:55095",
+      "name": "ic_solid_expand_02"
+    },
+    {
+      "id": "16519:55098",
+      "name": "ic_solid_expand_03"
+    },
+    {
+      "id": "16519:55101",
+      "name": "ic_solid_expand_04"
+    },
+    {
+      "id": "16519:55104",
+      "name": "ic_solid_expand_05"
+    },
+    {
+      "id": "16519:55107",
+      "name": "ic_solid_expand_06"
+    },
+    {
+      "id": "16519:55110",
+      "name": "ic_solid_flip_backward"
+    },
+    {
+      "id": "16519:55113",
+      "name": "ic_solid_flip_forward"
+    },
+    {
+      "id": "16519:55116",
+      "name": "ic_solid_infinity"
+    },
+    {
+      "id": "16519:55119",
+      "name": "ic_solid_refresh_ccw_01"
+    },
+    {
+      "id": "16519:55122",
+      "name": "ic_solid_refresh_ccw_02"
+    },
+    {
+      "id": "16519:55125",
+      "name": "ic_solid_refresh_ccw_03"
+    },
+    {
+      "id": "16519:55128",
+      "name": "ic_solid_refresh_ccw_04"
+    },
+    {
+      "id": "16519:55131",
+      "name": "ic_solid_refresh_ccw_05"
+    },
+    {
+      "id": "16519:55134",
+      "name": "ic_solid_refresh_cw_01"
+    },
+    {
+      "id": "16519:55137",
+      "name": "ic_solid_refresh_cw_02"
+    },
+    {
+      "id": "16519:55140",
+      "name": "ic_solid_refresh_cw_03"
+    },
+    {
+      "id": "16519:55143",
+      "name": "ic_solid_refresh_cw_04"
+    },
+    {
+      "id": "16519:55146",
+      "name": "ic_solid_refresh_cw_05"
+    },
+    {
+      "id": "16519:55149",
+      "name": "ic_solid_reverse_left"
+    },
+    {
+      "id": "16519:55152",
+      "name": "ic_solid_reverse_right"
+    },
+    {
+      "id": "16519:55155",
+      "name": "ic_solid_switch_horizontal_01"
+    },
+    {
+      "id": "16519:55158",
+      "name": "ic_solid_switch_horizontal_02"
+    },
+    {
+      "id": "16519:55161",
+      "name": "ic_solid_switch_vertical_01"
+    },
+    {
+      "id": "16519:55164",
+      "name": "ic_solid_switch_vertical_02"
+    }
+  ],
+  "Finance & eCommerce": [
+    {
+      "id": "16519:55169",
+      "name": "ic_solid_bank"
+    },
+    {
+      "id": "16519:55172",
+      "name": "ic_solid_bank_note_01"
+    },
+    {
+      "id": "16519:55175",
+      "name": "ic_solid_bank_note_02"
+    },
+    {
+      "id": "16519:55178",
+      "name": "ic_solid_bank_note_03"
+    },
+    {
+      "id": "16519:55181",
+      "name": "ic_solid_coins_01"
+    },
+    {
+      "id": "16519:55184",
+      "name": "ic_solid_coins_02"
+    },
+    {
+      "id": "16519:55187",
+      "name": "ic_solid_coins_03"
+    },
+    {
+      "id": "16519:55190",
+      "name": "ic_solid_coins_04"
+    },
+    {
+      "id": "16519:55193",
+      "name": "ic_solid_coins_hand"
+    },
+    {
+      "id": "16519:55196",
+      "name": "ic_solid_coins_stacked_01"
+    },
+    {
+      "id": "16519:55199",
+      "name": "ic_solid_coins_stacked_02"
+    },
+    {
+      "id": "16519:55202",
+      "name": "ic_solid_coins_stacked_03"
+    },
+    {
+      "id": "16519:55205",
+      "name": "ic_solid_coins_stacked_04"
+    },
+    {
+      "id": "16519:55208",
+      "name": "ic_solid_coins_swap_01"
+    },
+    {
+      "id": "16519:55211",
+      "name": "ic_solid_coins_swap_02"
+    },
+    {
+      "id": "16519:55214",
+      "name": "ic_solid_credit_card_01"
+    },
+    {
+      "id": "16519:55217",
+      "name": "ic_solid_credit_card_02"
+    },
+    {
+      "id": "16519:55220",
+      "name": "ic_solid_credit_card_check"
+    },
+    {
+      "id": "16519:55223",
+      "name": "ic_solid_credit_card_down"
+    },
+    {
+      "id": "16519:55227",
+      "name": "ic_solid_credit_card_download"
+    },
+    {
+      "id": "16519:55230",
+      "name": "ic_solid_credit_card_edit"
+    },
+    {
+      "id": "16519:55233",
+      "name": "ic_solid_credit_card_lock"
+    },
+    {
+      "id": "16519:55236",
+      "name": "ic_solid_credit_card_minus"
+    },
+    {
+      "id": "16519:55239",
+      "name": "ic_solid_credit_card_plus"
+    },
+    {
+      "id": "16519:55242",
+      "name": "ic_solid_credit_card_refresh"
+    },
+    {
+      "id": "16519:55245",
+      "name": "ic_solid_credit_card_search"
+    },
+    {
+      "id": "16519:55248",
+      "name": "ic_solid_credit_card_shield"
+    },
+    {
+      "id": "16519:55251",
+      "name": "ic_solid_credit_card_up"
+    },
+    {
+      "id": "16519:55254",
+      "name": "ic_solid_credit_card_upload"
+    },
+    {
+      "id": "16519:55257",
+      "name": "ic_solid_credit_card_x"
+    },
+    {
+      "id": "16519:55260",
+      "name": "ic_solid_cryptocurrency_01"
+    },
+    {
+      "id": "16519:55263",
+      "name": "ic_solid_cryptocurrency_02"
+    },
+    {
+      "id": "16519:55266",
+      "name": "ic_solid_cryptocurrency_03"
+    },
+    {
+      "id": "16519:55269",
+      "name": "ic_solid_cryptocurrency_04"
+    },
+    {
+      "id": "16519:55272",
+      "name": "ic_solid_currency_bitcoin"
+    },
+    {
+      "id": "16519:55275",
+      "name": "ic_solid_currency_bitcoin_circle"
+    },
+    {
+      "id": "16519:55278",
+      "name": "ic_solid_currency_dollar"
+    },
+    {
+      "id": "16519:55281",
+      "name": "ic_solid_currency_dollar_circle"
+    },
+    {
+      "id": "16519:55284",
+      "name": "ic_solid_currency_ethereum"
+    },
+    {
+      "id": "16519:55287",
+      "name": "ic_solid_currency_ethereum_circle"
+    },
+    {
+      "id": "16519:55290",
+      "name": "ic_solid_currency_euro"
+    },
+    {
+      "id": "16519:55293",
+      "name": "ic_solid_currency_euro_circle"
+    },
+    {
+      "id": "16519:55296",
+      "name": "ic_solid_currency_pound"
+    },
+    {
+      "id": "16519:55299",
+      "name": "ic_solid_currency_pound_circle"
+    },
+    {
+      "id": "16519:55302",
+      "name": "ic_solid_currency_ruble"
+    },
+    {
+      "id": "16519:55305",
+      "name": "ic_solid_currency_ruble_circle"
+    },
+    {
+      "id": "16519:55308",
+      "name": "ic_solid_currency_rupee_circle"
+    },
+    {
+      "id": "16519:55311",
+      "name": "ic_solid_currency_rupee"
+    },
+    {
+      "id": "16519:55314",
+      "name": "ic_solid_currency_yen"
+    },
+    {
+      "id": "16519:55317",
+      "name": "ic_solid_currency_yen_circle"
+    },
+    {
+      "id": "16519:55320",
+      "name": "ic_solid_diamond_01"
+    },
+    {
+      "id": "16519:55323",
+      "name": "ic_solid_diamond_02"
+    },
+    {
+      "id": "16519:55326",
+      "name": "ic_solid_gift_01"
+    },
+    {
+      "id": "16519:55329",
+      "name": "ic_solid_gift_02"
+    },
+    {
+      "id": "16519:55332",
+      "name": "ic_solid_piggy_bank_01"
+    },
+    {
+      "id": "16519:55335",
+      "name": "ic_solid_piggy_bank_02"
+    },
+    {
+      "id": "16519:55338",
+      "name": "ic_solid_receipt"
+    },
+    {
+      "id": "16519:55341",
+      "name": "ic_solid_receipt_check"
+    },
+    {
+      "id": "16519:55344",
+      "name": "ic_solid_safe"
+    },
+    {
+      "id": "16519:55347",
+      "name": "ic_solid_sale_01"
+    },
+    {
+      "id": "16519:55350",
+      "name": "ic_solid_sale_02"
+    },
+    {
+      "id": "16519:55353",
+      "name": "ic_solid_sale_03"
+    },
+    {
+      "id": "16519:55356",
+      "name": "ic_solid_sale_04"
+    },
+    {
+      "id": "16519:55359",
+      "name": "ic_solid_scales_01"
+    },
+    {
+      "id": "16519:55362",
+      "name": "ic_solid_scales_02"
+    },
+    {
+      "id": "16519:55365",
+      "name": "ic_solid_shopping_bag_01"
+    },
+    {
+      "id": "16519:55368",
+      "name": "ic_solid_shopping_bag_02"
+    },
+    {
+      "id": "16519:55371",
+      "name": "ic_solid_shopping_bag_03"
+    },
+    {
+      "id": "16519:55374",
+      "name": "ic_solid_shopping_cart_01"
+    },
+    {
+      "id": "16519:55377",
+      "name": "ic_solid_shopping_cart_02"
+    },
+    {
+      "id": "16519:55380",
+      "name": "ic_solid_shopping_cart_03"
+    },
+    {
+      "id": "16519:55383",
+      "name": "ic_solid_tag_01"
+    },
+    {
+      "id": "16519:55386",
+      "name": "ic_solid_tag_02"
+    },
+    {
+      "id": "16519:55389",
+      "name": "ic_solid_tag_03"
+    },
+    {
+      "id": "16519:55392",
+      "name": "ic_solid_wallet_01"
+    },
+    {
+      "id": "16519:55395",
+      "name": "ic_solid_wallet_02"
+    },
+    {
+      "id": "16519:55398",
+      "name": "ic_solid_wallet_03"
+    },
+    {
+      "id": "16519:55401",
+      "name": "ic_solid_wallet_04"
+    },
+    {
+      "id": "16519:55404",
+      "name": "ic_solid_wallet_05"
+    }
+  ],
+  "General": [
+    {
+      "id": "16519:55410",
+      "name": "ic_solid_activity"
+    },
+    {
+      "id": "16519:55413",
+      "name": "ic_solid_activity_heart"
+    },
+    {
+      "id": "16519:55416",
+      "name": "ic_solid_anchor"
+    },
+    {
+      "id": "16519:55419",
+      "name": "ic_solid_archive"
+    },
+    {
+      "id": "16519:55422",
+      "name": "ic_solid_asterisk_01"
+    },
+    {
+      "id": "16519:55425",
+      "name": "ic_solid_asterisk_02"
+    },
+    {
+      "id": "16519:55428",
+      "name": "ic_solid_at_sign"
+    },
+    {
+      "id": "16519:55431",
+      "name": "ic_solid_bookmark"
+    },
+    {
+      "id": "16519:55434",
+      "name": "ic_solid_bookmark_add"
+    },
+    {
+      "id": "16519:55437",
+      "name": "ic_solid_bookmark_check"
+    },
+    {
+      "id": "16519:55440",
+      "name": "ic_solid_bookmark_minus"
+    },
+    {
+      "id": "16519:55443",
+      "name": "ic_solid_bookmark_x"
+    },
+    {
+      "id": "16519:55446",
+      "name": "ic_solid_building_01"
+    },
+    {
+      "id": "16519:55449",
+      "name": "ic_solid_building_02"
+    },
+    {
+      "id": "16519:55452",
+      "name": "ic_solid_building_03"
+    },
+    {
+      "id": "16519:55455",
+      "name": "ic_solid_building_04"
+    },
+    {
+      "id": "16519:55458",
+      "name": "ic_solid_building_05"
+    },
+    {
+      "id": "16519:55461",
+      "name": "ic_solid_building_06"
+    },
+    {
+      "id": "16519:55464",
+      "name": "ic_solid_building_07"
+    },
+    {
+      "id": "16519:55467",
+      "name": "ic_solid_building_08"
+    },
+    {
+      "id": "16519:55470",
+      "name": "ic_solid_check"
+    },
+    {
+      "id": "16519:55473",
+      "name": "ic_solid_check_circle"
+    },
+    {
+      "id": "18016:77",
+      "name": "ic_solid_check_circle_02"
+    },
+    {
+      "id": "16519:55476",
+      "name": "ic_solid_check_circle_broken"
+    },
+    {
+      "id": "16519:55479",
+      "name": "ic_solid_check_done_01"
+    },
+    {
+      "id": "16519:55482",
+      "name": "ic_solid_check_done_02"
+    },
+    {
+      "id": "16519:55485",
+      "name": "ic_solid_check_heart"
+    },
+    {
+      "id": "16519:55488",
+      "name": "ic_solid_check_square"
+    },
+    {
+      "id": "16519:55491",
+      "name": "ic_solid_check_square_broken"
+    },
+    {
+      "id": "16519:55494",
+      "name": "ic_solid_check_verified_01"
+    },
+    {
+      "id": "16519:55497",
+      "name": "ic_solid_check_verified_02"
+    },
+    {
+      "id": "16519:55500",
+      "name": "ic_solid_check_verified_03"
+    },
+    {
+      "id": "16519:55503",
+      "name": "ic_solid_cloud_blank_01"
+    },
+    {
+      "id": "16519:55506",
+      "name": "ic_solid_cloud_blank_02"
+    },
+    {
+      "id": "16519:55509",
+      "name": "ic_solid_copy_01"
+    },
+    {
+      "id": "16519:55512",
+      "name": "ic_solid_copy_02"
+    },
+    {
+      "id": "16519:55515",
+      "name": "ic_solid_copy_03"
+    },
+    {
+      "id": "16519:55518",
+      "name": "ic_solid_copy_04"
+    },
+    {
+      "id": "16519:55521",
+      "name": "ic_solid_copy_05"
+    },
+    {
+      "id": "16519:55524",
+      "name": "ic_solid_copy_06"
+    },
+    {
+      "id": "16519:55527",
+      "name": "ic_solid_copy_07"
+    },
+    {
+      "id": "16519:55530",
+      "name": "ic_solid_divide_01"
+    },
+    {
+      "id": "16519:55533",
+      "name": "ic_solid_divide_02"
+    },
+    {
+      "id": "16519:55536",
+      "name": "ic_solid_divide_03"
+    },
+    {
+      "id": "16519:55539",
+      "name": "ic_solid_dots_grid"
+    },
+    {
+      "id": "16519:55542",
+      "name": "ic_solid_dots_horizontal"
+    },
+    {
+      "id": "16519:55545",
+      "name": "ic_solid_dots_vertical"
+    },
+    {
+      "id": "16519:55548",
+      "name": "ic_solid_download_01"
+    },
+    {
+      "id": "16519:55551",
+      "name": "ic_solid_download_01_alt"
+    },
+    {
+      "id": "16519:55554",
+      "name": "ic_solid_download_02"
+    },
+    {
+      "id": "16519:55557",
+      "name": "ic_solid_download_03"
+    },
+    {
+      "id": "16519:55560",
+      "name": "ic_solid_share_04"
+    },
+    {
+      "id": "16519:55563",
+      "name": "ic_solid_share_04_alt"
+    },
+    {
+      "id": "16519:55566",
+      "name": "ic_solid_share_05"
+    },
+    {
+      "id": "16519:55569",
+      "name": "ic_solid_share_06"
+    },
+    {
+      "id": "16519:55572",
+      "name": "ic_solid_share_07"
+    },
+    {
+      "id": "16519:55575",
+      "name": "ic_solid_slash_circle_01"
+    },
+    {
+      "id": "16519:55578",
+      "name": "ic_solid_slash_circle_02"
+    },
+    {
+      "id": "16519:55581",
+      "name": "ic_solid_slash_divider"
+    },
+    {
+      "id": "16519:55584",
+      "name": "ic_solid_slash_octagon"
+    },
+    {
+      "id": "16519:55587",
+      "name": "ic_solid_speedometer_01"
+    },
+    {
+      "id": "16519:55590",
+      "name": "ic_solid_speedometer_02"
+    },
+    {
+      "id": "16519:55593",
+      "name": "ic_solid_speedometer_03"
+    },
+    {
+      "id": "16519:55596",
+      "name": "ic_solid_speedometer_04"
+    },
+    {
+      "id": "16519:55599",
+      "name": "ic_solid_target_01"
+    },
+    {
+      "id": "16519:55602",
+      "name": "ic_solid_target_02"
+    },
+    {
+      "id": "16519:55605",
+      "name": "ic_solid_target_03"
+    },
+    {
+      "id": "16519:55608",
+      "name": "ic_solid_target_04"
+    },
+    {
+      "id": "16519:55611",
+      "name": "ic_solid_target_05"
+    },
+    {
+      "id": "16519:55614",
+      "name": "ic_solid_toggle_01_left"
+    },
+    {
+      "id": "16519:55617",
+      "name": "ic_solid_toggle_01_right"
+    },
+    {
+      "id": "16519:55620",
+      "name": "ic_solid_toggle_02_left"
+    },
+    {
+      "id": "16519:55623",
+      "name": "ic_solid_toggle_02_right"
+    },
+    {
+      "id": "16519:55626",
+      "name": "ic_solid_toggle_03_left"
+    },
+    {
+      "id": "16519:55629",
+      "name": "ic_solid_toggle_03_right"
+    },
+    {
+      "id": "16519:55632",
+      "name": "ic_solid_tool_01"
+    },
+    {
+      "id": "16519:55635",
+      "name": "ic_solid_tool_02"
+    },
+    {
+      "id": "16519:55638",
+      "name": "ic_solid_translate_01"
+    },
+    {
+      "id": "16519:55641",
+      "name": "ic_solid_translate_02"
+    },
+    {
+      "id": "16519:55644",
+      "name": "ic_solid_trash_01"
+    },
+    {
+      "id": "16519:55647",
+      "name": "ic_solid_trash_02"
+    },
+    {
+      "id": "16519:55650",
+      "name": "ic_solid_trash_03"
+    },
+    {
+      "id": "16519:55653",
+      "name": "ic_solid_trash_04"
+    },
+    {
+      "id": "16519:55656",
+      "name": "ic_solid_upload_01"
+    },
+    {
+      "id": "16519:55659",
+      "name": "ic_solid_upload_01_alt"
+    },
+    {
+      "id": "16519:55662",
+      "name": "ic_solid_upload_02"
+    },
+    {
+      "id": "16519:55665",
+      "name": "ic_solid_upload_03"
+    },
+    {
+      "id": "16519:55668",
+      "name": "ic_solid_upload_04"
+    },
+    {
+      "id": "16519:55671",
+      "name": "ic_solid_upload_cloud_01"
+    },
+    {
+      "id": "16519:55674",
+      "name": "ic_solid_upload_cloud_02"
+    },
+    {
+      "id": "16519:55677",
+      "name": "ic_solid_virus"
+    },
+    {
+      "id": "16519:55680",
+      "name": "ic_solid_x_circle"
+    },
+    {
+      "id": "16519:55683",
+      "name": "ic_solid_x_close"
+    },
+    {
+      "id": "16519:55686",
+      "name": "ic_solid_x"
+    },
+    {
+      "id": "16519:55689",
+      "name": "ic_solid_x_square"
+    },
+    {
+      "id": "16519:55692",
+      "name": "ic_solid_zap"
+    },
+    {
+      "id": "16519:55695",
+      "name": "ic_solid_zap_circle"
+    },
+    {
+      "id": "16519:55698",
+      "name": "ic_solid_zap_fast"
+    },
+    {
+      "id": "16519:55701",
+      "name": "ic_solid_zap_off"
+    },
+    {
+      "id": "16519:55704",
+      "name": "ic_solid_zap_square"
+    },
+    {
+      "id": "16519:55707",
+      "name": "ic_solid_link_broken_01"
+    },
+    {
+      "id": "16519:55710",
+      "name": "ic_solid_link_broken_02"
+    },
+    {
+      "id": "16519:55713",
+      "name": "ic_solid_link_external_01"
+    },
+    {
+      "id": "16519:55716",
+      "name": "ic_solid_link_external_01_alt"
+    },
+    {
+      "id": "16519:55719",
+      "name": "ic_solid_link_external_02"
+    },
+    {
+      "id": "16519:55722",
+      "name": "ic_solid_loading_01"
+    },
+    {
+      "id": "16519:55725",
+      "name": "ic_solid_loading_02"
+    },
+    {
+      "id": "16519:55728",
+      "name": "ic_solid_loading_03"
+    },
+    {
+      "id": "16519:55731",
+      "name": "ic_solid_log_in_01"
+    },
+    {
+      "id": "16519:55734",
+      "name": "ic_solid_log_in_01_alt"
+    },
+    {
+      "id": "16519:55737",
+      "name": "ic_solid_log_in_02"
+    },
+    {
+      "id": "16519:55740",
+      "name": "ic_solid_log_in_02_alt"
+    },
+    {
+      "id": "16519:55743",
+      "name": "ic_solid_log_in_03"
+    },
+    {
+      "id": "16519:55746",
+      "name": "ic_solid_log_in_03_alt"
+    },
+    {
+      "id": "16519:55749",
+      "name": "ic_solid_log_in_04"
+    },
+    {
+      "id": "16519:55752",
+      "name": "ic_solid_log_in_04_alt"
+    },
+    {
+      "id": "16519:55755",
+      "name": "ic_solid_log_out_01"
+    },
+    {
+      "id": "16519:55758",
+      "name": "ic_solid_log_out_01_alt"
+    },
+    {
+      "id": "16519:55761",
+      "name": "ic_solid_log_out_02"
+    },
+    {
+      "id": "16519:55764",
+      "name": "ic_solid_log_out_02_alt"
+    },
+    {
+      "id": "16519:55767",
+      "name": "ic_solid_log_out_03"
+    },
+    {
+      "id": "16519:55770",
+      "name": "ic_solid_log_out_03_alt"
+    },
+    {
+      "id": "16519:55773",
+      "name": "ic_solid_log_out_04"
+    },
+    {
+      "id": "16519:55776",
+      "name": "ic_solid_log_out_04_alt"
+    },
+    {
+      "id": "16519:55779",
+      "name": "ic_solid_medical_circle"
+    },
+    {
+      "id": "16519:55782",
+      "name": "ic_solid_medical_cross"
+    },
+    {
+      "id": "16519:55785",
+      "name": "ic_solid_medical_square"
+    },
+    {
+      "id": "16519:55788",
+      "name": "ic_solid_menu_01"
+    },
+    {
+      "id": "16519:55791",
+      "name": "ic_solid_menu_02"
+    },
+    {
+      "id": "16519:55794",
+      "name": "ic_solid_menu_03"
+    },
+    {
+      "id": "16519:55797",
+      "name": "ic_solid_menu_04"
+    },
+    {
+      "id": "16519:55800",
+      "name": "ic_solid_menu_05"
+    },
+    {
+      "id": "16519:55803",
+      "name": "ic_solid_minus"
+    },
+    {
+      "id": "16519:55806",
+      "name": "ic_solid_minus_circle"
+    },
+    {
+      "id": "16519:55809",
+      "name": "ic_solid_minus_square"
+    },
+    {
+      "id": "16519:55812",
+      "name": "ic_solid_percent_01"
+    },
+    {
+      "id": "16519:55815",
+      "name": "ic_solid_percent_02"
+    },
+    {
+      "id": "16519:55818",
+      "name": "ic_solid_percent_03"
+    },
+    {
+      "id": "16519:55821",
+      "name": "ic_solid_pin_01"
+    },
+    {
+      "id": "16519:55824",
+      "name": "ic_solid_pin_02"
+    },
+    {
+      "id": "16519:55827",
+      "name": "ic_solid_placeholder"
+    },
+    {
+      "id": "16519:55830",
+      "name": "ic_solid_plus"
+    },
+    {
+      "id": "16519:55833",
+      "name": "ic_solid_plus_circle"
+    },
+    {
+      "id": "16519:55836",
+      "name": "ic_solid_plus_square"
+    },
+    {
+      "id": "16519:55839",
+      "name": "ic_solid_save_01"
+    },
+    {
+      "id": "16519:55842",
+      "name": "ic_solid_save_02"
+    },
+    {
+      "id": "16519:55845",
+      "name": "ic_solid_save_03"
+    },
+    {
+      "id": "16519:55848",
+      "name": "ic_solid_search_lg"
+    },
+    {
+      "id": "16519:55851",
+      "name": "ic_solid_search_md"
+    },
+    {
+      "id": "16519:55854",
+      "name": "ic_solid_search_refraction"
+    },
+    {
+      "id": "16519:55857",
+      "name": "ic_solid_search_sm"
+    },
+    {
+      "id": "16519:55860",
+      "name": "ic_solid_settings_01"
+    },
+    {
+      "id": "16519:55863",
+      "name": "ic_solid_settings_02"
+    },
+    {
+      "id": "16519:55866",
+      "name": "ic_solid_settings_03"
+    },
+    {
+      "id": "16519:55869",
+      "name": "ic_solid_settings_04"
+    },
+    {
+      "id": "16519:55872",
+      "name": "ic_solid_share_01"
+    },
+    {
+      "id": "16519:55875",
+      "name": "ic_solid_share_01_alt"
+    },
+    {
+      "id": "16519:55878",
+      "name": "ic_solid_share_02"
+    },
+    {
+      "id": "16519:55881",
+      "name": "ic_solid_share_02_alt"
+    },
+    {
+      "id": "16519:55884",
+      "name": "ic_solid_share_03"
+    },
+    {
+      "id": "16519:55887",
+      "name": "ic_solid_download_04"
+    },
+    {
+      "id": "16519:55890",
+      "name": "ic_solid_download_cloud_01"
+    },
+    {
+      "id": "16519:55893",
+      "name": "ic_solid_download_cloud_02"
+    },
+    {
+      "id": "16519:55896",
+      "name": "ic_solid_edit_01"
+    },
+    {
+      "id": "16519:55899",
+      "name": "ic_solid_edit_02"
+    },
+    {
+      "id": "16519:55902",
+      "name": "ic_solid_edit_03"
+    },
+    {
+      "id": "16519:55905",
+      "name": "ic_solid_edit_04"
+    },
+    {
+      "id": "16519:55908",
+      "name": "ic_solid_edit_05"
+    },
+    {
+      "id": "16519:55911",
+      "name": "ic_solid_equal"
+    },
+    {
+      "id": "16519:55914",
+      "name": "ic_solid_equal_not"
+    },
+    {
+      "id": "16519:55917",
+      "name": "ic_solid_eye"
+    },
+    {
+      "id": "16519:55920",
+      "name": "ic_solid_eye_off"
+    },
+    {
+      "id": "16519:55923",
+      "name": "ic_solid_filter_funnel_01"
+    },
+    {
+      "id": "16519:55926",
+      "name": "ic_solid_filter_funnel_02"
+    },
+    {
+      "id": "16519:55929",
+      "name": "ic_solid_filter_lines"
+    },
+    {
+      "id": "16519:55932",
+      "name": "ic_solid_google_chrome"
+    },
+    {
+      "id": "16519:55935",
+      "name": "ic_solid_hash_01"
+    },
+    {
+      "id": "16519:55938",
+      "name": "ic_solid_hash_02"
+    },
+    {
+      "id": "16519:55941",
+      "name": "ic_solid_heart"
+    },
+    {
+      "id": "16519:55944",
+      "name": "ic_solid_heart_circle"
+    },
+    {
+      "id": "16519:55947",
+      "name": "ic_solid_heart_hand"
+    },
+    {
+      "id": "16519:55950",
+      "name": "ic_solid_heart_hexagon"
+    },
+    {
+      "id": "16519:55953",
+      "name": "ic_solid_heart_octagon"
+    },
+    {
+      "id": "16519:55956",
+      "name": "ic_solid_heart_rounded"
+    },
+    {
+      "id": "16519:55959",
+      "name": "ic_solid_heart_square"
+    },
+    {
+      "id": "16519:55962",
+      "name": "ic_solid_hearts"
+    },
+    {
+      "id": "16519:55965",
+      "name": "ic_solid_help_circle"
+    },
+    {
+      "id": "16519:55968",
+      "name": "ic_solid_help_hexagon"
+    },
+    {
+      "id": "16519:55971",
+      "name": "ic_solid_help_octagon"
+    },
+    {
+      "id": "16519:55974",
+      "name": "ic_solid_help_square"
+    },
+    {
+      "id": "16519:55977",
+      "name": "ic_solid_home_01"
+    },
+    {
+      "id": "16519:55980",
+      "name": "ic_solid_home_02"
+    },
+    {
+      "id": "16519:55983",
+      "name": "ic_solid_home_03"
+    },
+    {
+      "id": "16519:55986",
+      "name": "ic_solid_home_04"
+    },
+    {
+      "id": "16519:55989",
+      "name": "ic_solid_home_05"
+    },
+    {
+      "id": "16519:55992",
+      "name": "ic_solid_home_line"
+    },
+    {
+      "id": "16519:55995",
+      "name": "ic_solid_home_smile"
+    },
+    {
+      "id": "16519:55998",
+      "name": "ic_solid_info_circle"
+    },
+    {
+      "id": "16519:56001",
+      "name": "ic_solid_info_hexagon"
+    },
+    {
+      "id": "16519:56004",
+      "name": "ic_solid_info_octagon"
+    },
+    {
+      "id": "16519:56007",
+      "name": "ic_solid_info_square"
+    },
+    {
+      "id": "16519:56010",
+      "name": "ic_solid_life_buoy_01"
+    },
+    {
+      "id": "16519:56013",
+      "name": "ic_solid_life_buoy_02"
+    },
+    {
+      "id": "16519:56016",
+      "name": "ic_solid_link_01"
+    },
+    {
+      "id": "16519:56019",
+      "name": "ic_solid_link_02"
+    },
+    {
+      "id": "16519:56022",
+      "name": "ic_solid_link_03"
+    },
+    {
+      "id": "16519:56025",
+      "name": "ic_solid_link_04"
+    },
+    {
+      "id": "16519:56028",
+      "name": "ic_solid_link_05"
+    }
+  ],
+  "Alerts & feedback": [
+    {
+      "id": "16519:56033",
+      "name": "ic_solid_alert_circle"
+    },
+    {
+      "id": "16519:56036",
+      "name": "ic_solid_alert_hexagon"
+    },
+    {
+      "id": "16519:56039",
+      "name": "ic_solid_alert_octagon"
+    },
+    {
+      "id": "16519:56042",
+      "name": "ic_solid_alert_square"
+    },
+    {
+      "id": "16519:56045",
+      "name": "ic_solid_alert_triangle"
+    },
+    {
+      "id": "16519:56048",
+      "name": "ic_solid_announcement_01"
+    },
+    {
+      "id": "16519:56051",
+      "name": "ic_solid_announcement_02"
+    },
+    {
+      "id": "16519:56054",
+      "name": "ic_solid_announcement_03"
+    },
+    {
+      "id": "16519:56057",
+      "name": "ic_solid_bell_01"
+    },
+    {
+      "id": "16519:56060",
+      "name": "ic_solid_bell_02"
+    },
+    {
+      "id": "16519:56063",
+      "name": "ic_solid_bell_03"
+    },
+    {
+      "id": "16519:56066",
+      "name": "ic_solid_bell_04"
+    },
+    {
+      "id": "16519:56069",
+      "name": "ic_solid_bell_minus"
+    },
+    {
+      "id": "16519:56072",
+      "name": "ic_solid_bell_off_01"
+    },
+    {
+      "id": "16519:56075",
+      "name": "ic_solid_bell_off_02"
+    },
+    {
+      "id": "16519:56078",
+      "name": "ic_solid_bell_off_03"
+    },
+    {
+      "id": "16519:56081",
+      "name": "ic_solid_bell_plus"
+    },
+    {
+      "id": "16519:56084",
+      "name": "ic_solid_bell_ringing_01"
+    },
+    {
+      "id": "16519:56087",
+      "name": "ic_solid_bell_ringing_02"
+    },
+    {
+      "id": "16519:56090",
+      "name": "ic_solid_bell_ringing_03"
+    },
+    {
+      "id": "16519:56093",
+      "name": "ic_solid_bell_ringing_04"
+    },
+    {
+      "id": "16519:56096",
+      "name": "ic_solid_notification_box"
+    },
+    {
+      "id": "16519:56099",
+      "name": "ic_solid_notification_message"
+    },
+    {
+      "id": "16519:56102",
+      "name": "ic_solid_notification_text"
+    },
+    {
+      "id": "16519:56105",
+      "name": "ic_solid_thumbs_down"
+    },
+    {
+      "id": "16519:56108",
+      "name": "ic_solid_thumbs_up"
+    }
+  ],
+  "Shapes": [
+    {
+      "id": "16519:56113",
+      "name": "ic_solid_circle"
+    },
+    {
+      "id": "16519:56116",
+      "name": "ic_solid_cube_01"
+    },
+    {
+      "id": "16519:56119",
+      "name": "ic_solid_cube_02"
+    },
+    {
+      "id": "16519:56122",
+      "name": "ic_solid_cube_03"
+    },
+    {
+      "id": "16519:56125",
+      "name": "ic_solid_cube_04"
+    },
+    {
+      "id": "16519:56128",
+      "name": "ic_solid_cube_outline"
+    },
+    {
+      "id": "16519:56131",
+      "name": "ic_solid_dice_1"
+    },
+    {
+      "id": "16519:56134",
+      "name": "ic_solid_dice_2"
+    },
+    {
+      "id": "16519:56137",
+      "name": "ic_solid_dice_4"
+    },
+    {
+      "id": "16519:56140",
+      "name": "ic_solid_dice_3"
+    },
+    {
+      "id": "16519:56143",
+      "name": "ic_solid_dice_5"
+    },
+    {
+      "id": "16519:56146",
+      "name": "ic_solid_dice_6"
+    },
+    {
+      "id": "16519:56149",
+      "name": "ic_solid_hexagon_01"
+    },
+    {
+      "id": "16519:56152",
+      "name": "ic_solid_hexagon_02"
+    },
+    {
+      "id": "16519:56155",
+      "name": "ic_solid_octagon"
+    },
+    {
+      "id": "16519:56158",
+      "name": "ic_solid_pentagon"
+    },
+    {
+      "id": "16519:56161",
+      "name": "ic_solid_square"
+    },
+    {
+      "id": "16519:56164",
+      "name": "ic_solid_star_01"
+    },
+    {
+      "id": "16519:56167",
+      "name": "ic_solid_star_02"
+    },
+    {
+      "id": "16519:56170",
+      "name": "ic_solid_star_03"
+    },
+    {
+      "id": "16519:56173",
+      "name": "ic_solid_star_04"
+    },
+    {
+      "id": "16519:56176",
+      "name": "ic_solid_star_05"
+    },
+    {
+      "id": "16519:56179",
+      "name": "ic_solid_star_06"
+    },
+    {
+      "id": "16519:56182",
+      "name": "ic_solid_star_07"
+    },
+    {
+      "id": "16519:56185",
+      "name": "ic_solid_triangle"
+    }
+  ],
+  "Users": [
+    {
+      "id": "16519:56190",
+      "name": "ic_solid_face_content"
+    },
+    {
+      "id": "16519:56193",
+      "name": "ic_solid_face_frown"
+    },
+    {
+      "id": "16519:56196",
+      "name": "ic_solid_face_happy"
+    },
+    {
+      "id": "16519:56199",
+      "name": "ic_solid_face_neutral"
+    },
+    {
+      "id": "16519:56202",
+      "name": "ic_solid_face_sad"
+    },
+    {
+      "id": "16519:56205",
+      "name": "ic_solid_face_smile"
+    },
+    {
+      "id": "16519:56208",
+      "name": "ic_solid_face_wink"
+    },
+    {
+      "id": "16519:56211",
+      "name": "ic_solid_user_01"
+    },
+    {
+      "id": "16519:56214",
+      "name": "ic_solid_user_02"
+    },
+    {
+      "id": "16519:56217",
+      "name": "ic_solid_users_03"
+    },
+    {
+      "id": "16519:56220",
+      "name": "ic_solid_user_03"
+    },
+    {
+      "id": "16519:56223",
+      "name": "ic_solid_users_02"
+    },
+    {
+      "id": "16519:56226",
+      "name": "ic_solid_user_check_01"
+    },
+    {
+      "id": "16519:56229",
+      "name": "ic_solid_user_check_02"
+    },
+    {
+      "id": "16519:56232",
+      "name": "ic_solid_user_circle"
+    },
+    {
+      "id": "16519:56235",
+      "name": "ic_solid_user_down_01"
+    },
+    {
+      "id": "16519:56238",
+      "name": "ic_solid_user_down_02"
+    },
+    {
+      "id": "16519:56241",
+      "name": "ic_solid_user_edit"
+    },
+    {
+      "id": "16519:56244",
+      "name": "ic_solid_user_left_01"
+    },
+    {
+      "id": "16519:56247",
+      "name": "ic_solid_user_left_02"
+    },
+    {
+      "id": "16519:56250",
+      "name": "ic_solid_user_minus_01"
+    },
+    {
+      "id": "16519:56253",
+      "name": "ic_solid_user_minus_02"
+    },
+    {
+      "id": "16519:56256",
+      "name": "ic_solid_user_plus_01"
+    },
+    {
+      "id": "16519:56259",
+      "name": "ic_solid_user_plus_02"
+    },
+    {
+      "id": "16519:56262",
+      "name": "ic_solid_user_right_01"
+    },
+    {
+      "id": "16519:56265",
+      "name": "ic_solid_user_right_02"
+    },
+    {
+      "id": "16519:56268",
+      "name": "ic_solid_user_square"
+    },
+    {
+      "id": "16519:56271",
+      "name": "ic_solid_user_up_01"
+    },
+    {
+      "id": "16519:56274",
+      "name": "ic_solid_user_up_02"
+    },
+    {
+      "id": "16519:56277",
+      "name": "ic_solid_user_x_01"
+    },
+    {
+      "id": "16519:56280",
+      "name": "ic_solid_user_x_02"
+    },
+    {
+      "id": "16519:56283",
+      "name": "ic_solid_users_01"
+    },
+    {
+      "id": "16519:56286",
+      "name": "ic_solid_users_check"
+    },
+    {
+      "id": "16519:56289",
+      "name": "ic_solid_users_down"
+    },
+    {
+      "id": "16519:56292",
+      "name": "ic_solid_users_edit"
+    },
+    {
+      "id": "16519:56295",
+      "name": "ic_solid_users_left"
+    },
+    {
+      "id": "16519:56298",
+      "name": "ic_solid_users_minus"
+    },
+    {
+      "id": "16519:56301",
+      "name": "ic_solid_users_plus"
+    },
+    {
+      "id": "16519:56304",
+      "name": "ic_solid_users_right"
+    },
+    {
+      "id": "16519:56307",
+      "name": "ic_solid_users_up"
+    },
+    {
+      "id": "16519:56310",
+      "name": "ic_solid_users_x"
+    }
+  ],
+  "Media & devices": [
+    {
+      "id": "16519:56315",
+      "name": "ic_solid_airplay"
+    },
+    {
+      "id": "16519:56318",
+      "name": "ic_solid_airpods"
+    },
+    {
+      "id": "16519:56321",
+      "name": "ic_solid_battery_charging_01"
+    },
+    {
+      "id": "16519:56324",
+      "name": "ic_solid_battery_charging_02"
+    },
+    {
+      "id": "16519:56327",
+      "name": "ic_solid_battery_empty"
+    },
+    {
+      "id": "16519:56330",
+      "name": "ic_solid_battery_full"
+    },
+    {
+      "id": "16519:56333",
+      "name": "ic_solid_battery_low"
+    },
+    {
+      "id": "16519:56336",
+      "name": "ic_solid_battery_mid"
+    },
+    {
+      "id": "16519:56339",
+      "name": "ic_solid_bluetooth_connect"
+    },
+    {
+      "id": "16519:56342",
+      "name": "ic_solid_bluetooth_off"
+    },
+    {
+      "id": "16519:56345",
+      "name": "ic_solid_bluetooth_on"
+    },
+    {
+      "id": "16519:56348",
+      "name": "ic_solid_bluetooth_signal"
+    },
+    {
+      "id": "16519:56351",
+      "name": "ic_solid_chrome_cast"
+    },
+    {
+      "id": "16519:56354",
+      "name": "ic_solid_clapperboard"
+    },
+    {
+      "id": "16519:56357",
+      "name": "ic_solid_disc_01"
+    },
+    {
+      "id": "16519:56360",
+      "name": "ic_solid_disc_02"
+    },
+    {
+      "id": "16519:56363",
+      "name": "ic_solid_fast_backward"
+    },
+    {
+      "id": "16519:56366",
+      "name": "ic_solid_fast_forward"
+    },
+    {
+      "id": "16519:56369",
+      "name": "ic_solid_film_01"
+    },
+    {
+      "id": "16519:56372",
+      "name": "ic_solid_film_02"
+    },
+    {
+      "id": "16519:56375",
+      "name": "ic_solid_film_03"
+    },
+    {
+      "id": "16519:56378",
+      "name": "ic_solid_gaming_pad_01"
+    },
+    {
+      "id": "16519:56381",
+      "name": "ic_solid_gaming_pad_02"
+    },
+    {
+      "id": "16519:56384",
+      "name": "ic_solid_hard_drive"
+    },
+    {
+      "id": "16519:56387",
+      "name": "ic_solid_headphones_01"
+    },
+    {
+      "id": "16519:56390",
+      "name": "ic_solid_headphones_02"
+    },
+    {
+      "id": "16519:56393",
+      "name": "ic_solid_keyboard_01"
+    },
+    {
+      "id": "16519:56396",
+      "name": "ic_solid_keyboard_02"
+    },
+    {
+      "id": "16519:56399",
+      "name": "ic_solid_laptop_01"
+    },
+    {
+      "id": "16519:56402",
+      "name": "ic_solid_laptop_02"
+    },
+    {
+      "id": "16519:56405",
+      "name": "ic_solid_lightbulb_01"
+    },
+    {
+      "id": "16519:56408",
+      "name": "ic_solid_lightbulb_02"
+    },
+    {
+      "id": "16519:56411",
+      "name": "ic_solid_lightbulb_03"
+    },
+    {
+      "id": "16519:56414",
+      "name": "ic_solid_lightbulb_04"
+    },
+    {
+      "id": "16519:56417",
+      "name": "ic_solid_lightbulb_05"
+    },
+    {
+      "id": "16519:56420",
+      "name": "ic_solid_microphone_01"
+    },
+    {
+      "id": "16519:56423",
+      "name": "ic_solid_microphone_02"
+    },
+    {
+      "id": "16519:56426",
+      "name": "ic_solid_microphone_off_01"
+    },
+    {
+      "id": "16519:56429",
+      "name": "ic_solid_microphone_off_02"
+    },
+    {
+      "id": "16519:56432",
+      "name": "ic_solid_modem_01"
+    },
+    {
+      "id": "16519:56435",
+      "name": "ic_solid_modem_02"
+    },
+    {
+      "id": "16519:56438",
+      "name": "ic_solid_monitor_01"
+    },
+    {
+      "id": "16519:56441",
+      "name": "ic_solid_monitor_02"
+    },
+    {
+      "id": "16519:56444",
+      "name": "ic_solid_monitor_03"
+    },
+    {
+      "id": "16519:56447",
+      "name": "ic_solid_monitor_04"
+    },
+    {
+      "id": "16519:56450",
+      "name": "ic_solid_monitor_05"
+    },
+    {
+      "id": "16519:56453",
+      "name": "ic_solid_mouse"
+    },
+    {
+      "id": "16519:56456",
+      "name": "ic_solid_music_note_01"
+    },
+    {
+      "id": "16519:56459",
+      "name": "ic_solid_music_note_02"
+    },
+    {
+      "id": "16519:56462",
+      "name": "ic_solid_music_note_plus"
+    },
+    {
+      "id": "16519:56465",
+      "name": "ic_solid_pause_circle"
+    },
+    {
+      "id": "16519:56468",
+      "name": "ic_solid_pause_square"
+    },
+    {
+      "id": "16519:56471",
+      "name": "ic_solid_phone_01"
+    },
+    {
+      "id": "16519:56474",
+      "name": "ic_solid_phone_02"
+    },
+    {
+      "id": "16519:56477",
+      "name": "ic_solid_play"
+    },
+    {
+      "id": "16519:56480",
+      "name": "ic_solid_play_circle"
+    },
+    {
+      "id": "16519:56483",
+      "name": "ic_solid_play_square"
+    },
+    {
+      "id": "16519:56486",
+      "name": "ic_solid_podcast"
+    },
+    {
+      "id": "16519:56489",
+      "name": "ic_solid_power_01"
+    },
+    {
+      "id": "16519:56492",
+      "name": "ic_solid_power_02"
+    },
+    {
+      "id": "16519:56495",
+      "name": "ic_solid_power_03"
+    },
+    {
+      "id": "16519:56498",
+      "name": "ic_solid_printer"
+    },
+    {
+      "id": "16519:56501",
+      "name": "ic_solid_recording_01"
+    },
+    {
+      "id": "16519:56504",
+      "name": "ic_solid_recording_02"
+    },
+    {
+      "id": "16519:56507",
+      "name": "ic_solid_recording_03"
+    },
+    {
+      "id": "16519:56510",
+      "name": "ic_solid_repeat_01"
+    },
+    {
+      "id": "16519:56513",
+      "name": "ic_solid_repeat_02"
+    },
+    {
+      "id": "16519:56516",
+      "name": "ic_solid_repeat_03"
+    },
+    {
+      "id": "16519:56519",
+      "name": "ic_solid_repeat_04"
+    },
+    {
+      "id": "16519:56522",
+      "name": "ic_solid_rss_01"
+    },
+    {
+      "id": "16519:56525",
+      "name": "ic_solid_rss_02"
+    },
+    {
+      "id": "16519:56528",
+      "name": "ic_solid_shuffle_01"
+    },
+    {
+      "id": "16519:56531",
+      "name": "ic_solid_shuffle_02"
+    },
+    {
+      "id": "16519:56534",
+      "name": "ic_solid_signal_01"
+    },
+    {
+      "id": "16519:56537",
+      "name": "ic_solid_signal_02"
+    },
+    {
+      "id": "16519:56540",
+      "name": "ic_solid_signal_03"
+    },
+    {
+      "id": "16519:56543",
+      "name": "ic_solid_simcard"
+    },
+    {
+      "id": "16519:56546",
+      "name": "ic_solid_skip_back"
+    },
+    {
+      "id": "16519:56549",
+      "name": "ic_solid_skip_forward"
+    },
+    {
+      "id": "16519:56552",
+      "name": "ic_solid_sliders_01"
+    },
+    {
+      "id": "16519:56555",
+      "name": "ic_solid_sliders_02"
+    },
+    {
+      "id": "16519:56558",
+      "name": "ic_solid_sliders_03"
+    },
+    {
+      "id": "16519:56561",
+      "name": "ic_solid_sliders_04"
+    },
+    {
+      "id": "16519:56564",
+      "name": "ic_solid_speaker_01"
+    },
+    {
+      "id": "16519:56567",
+      "name": "ic_solid_speaker_02"
+    },
+    {
+      "id": "16519:56570",
+      "name": "ic_solid_speaker_03"
+    },
+    {
+      "id": "16519:56573",
+      "name": "ic_solid_stop"
+    },
+    {
+      "id": "16519:56576",
+      "name": "ic_solid_stop_circle"
+    },
+    {
+      "id": "16519:56579",
+      "name": "ic_solid_stop_square"
+    },
+    {
+      "id": "16519:56582",
+      "name": "ic_solid_tablet_01"
+    },
+    {
+      "id": "16519:56585",
+      "name": "ic_solid_tablet_02"
+    },
+    {
+      "id": "16519:56588",
+      "name": "ic_solid_tv_01"
+    },
+    {
+      "id": "16519:56591",
+      "name": "ic_solid_tv_02"
+    },
+    {
+      "id": "16519:56594",
+      "name": "ic_solid_tv_03"
+    },
+    {
+      "id": "16519:56597",
+      "name": "ic_solid_usb_flash_drive"
+    },
+    {
+      "id": "16519:56600",
+      "name": "ic_solid_video_recorder"
+    },
+    {
+      "id": "16519:56603",
+      "name": "ic_solid_video_recorder_off"
+    },
+    {
+      "id": "16519:56606",
+      "name": "ic_solid_voicemail"
+    },
+    {
+      "id": "16519:56609",
+      "name": "ic_solid_volume_max"
+    },
+    {
+      "id": "16519:56612",
+      "name": "ic_solid_volume_min"
+    },
+    {
+      "id": "16519:56615",
+      "name": "ic_solid_volume_minus"
+    },
+    {
+      "id": "16519:56618",
+      "name": "ic_solid_volume_plus"
+    },
+    {
+      "id": "16519:56621",
+      "name": "ic_solid_volume_x"
+    },
+    {
+      "id": "16519:56624",
+      "name": "ic_solid_webcam_01"
+    },
+    {
+      "id": "16519:56627",
+      "name": "ic_solid_webcam_02"
+    },
+    {
+      "id": "16519:56630",
+      "name": "ic_solid_wifi"
+    },
+    {
+      "id": "16519:56633",
+      "name": "ic_solid_wifi_off"
+    },
+    {
+      "id": "16519:56636",
+      "name": "ic_solid_youtube"
+    }
+  ],
+  "Images": [
+    {
+      "id": "16519:56641",
+      "name": "ic_solid_camera_01"
+    },
+    {
+      "id": "16519:56644",
+      "name": "ic_solid_camera_02"
+    },
+    {
+      "id": "16519:56647",
+      "name": "ic_solid_camera_03"
+    },
+    {
+      "id": "16519:56650",
+      "name": "ic_solid_camera_lens"
+    },
+    {
+      "id": "16519:56653",
+      "name": "ic_solid_camera_off"
+    },
+    {
+      "id": "16519:56656",
+      "name": "ic_solid_camera_plus"
+    },
+    {
+      "id": "16519:56659",
+      "name": "ic_solid_colors"
+    },
+    {
+      "id": "16519:56662",
+      "name": "ic_solid_flash"
+    },
+    {
+      "id": "16519:56665",
+      "name": "ic_solid_flash_off"
+    },
+    {
+      "id": "16519:56668",
+      "name": "ic_solid_image_01"
+    },
+    {
+      "id": "16519:56671",
+      "name": "ic_solid_image_02"
+    },
+    {
+      "id": "16519:56674",
+      "name": "ic_solid_image_03"
+    },
+    {
+      "id": "16519:56677",
+      "name": "ic_solid_image_04"
+    },
+    {
+      "id": "16519:56680",
+      "name": "ic_solid_image_05"
+    },
+    {
+      "id": "16519:56683",
+      "name": "ic_solid_image_check"
+    },
+    {
+      "id": "16519:56686",
+      "name": "ic_solid_image_down"
+    },
+    {
+      "id": "16519:56689",
+      "name": "ic_solid_image_left"
+    },
+    {
+      "id": "16519:56692",
+      "name": "ic_solid_image_plus"
+    },
+    {
+      "id": "16519:56695",
+      "name": "ic_solid_image_right"
+    },
+    {
+      "id": "16519:56698",
+      "name": "ic_solid_image_up"
+    },
+    {
+      "id": "16519:56701",
+      "name": "ic_solid_image_user"
+    },
+    {
+      "id": "16519:56704",
+      "name": "ic_solid_image_user_check"
+    },
+    {
+      "id": "16519:56707",
+      "name": "ic_solid_image_user_down"
+    },
+    {
+      "id": "16519:56710",
+      "name": "ic_solid_image_user_left"
+    },
+    {
+      "id": "16519:56713",
+      "name": "ic_solid_image_user_plus"
+    },
+    {
+      "id": "16519:56716",
+      "name": "ic_solid_image_user_right"
+    },
+    {
+      "id": "16519:56719",
+      "name": "ic_solid_image_user_up"
+    },
+    {
+      "id": "16519:56722",
+      "name": "ic_solid_image_user_x"
+    },
+    {
+      "id": "16519:56725",
+      "name": "ic_solid_image_x"
+    }
+  ],
+  "Communication": [
+    {
+      "id": "16519:56730",
+      "name": "ic_solid_annotation"
+    },
+    {
+      "id": "16519:56733",
+      "name": "ic_solid_annotation_alert"
+    },
+    {
+      "id": "16519:56736",
+      "name": "ic_solid_annotation_check"
+    },
+    {
+      "id": "16519:56739",
+      "name": "ic_solid_annotation_dots"
+    },
+    {
+      "id": "16519:56742",
+      "name": "ic_solid_annotation_heart"
+    },
+    {
+      "id": "16519:56745",
+      "name": "ic_solid_annotation_info"
+    },
+    {
+      "id": "16519:56748",
+      "name": "ic_solid_annotation_plus"
+    },
+    {
+      "id": "16519:56751",
+      "name": "ic_solid_annotation_question"
+    },
+    {
+      "id": "16519:56754",
+      "name": "ic_solid_annotation_x"
+    },
+    {
+      "id": "16519:56757",
+      "name": "ic_solid_inbox_01"
+    },
+    {
+      "id": "16519:56760",
+      "name": "ic_solid_inbox_02"
+    },
+    {
+      "id": "16519:56763",
+      "name": "ic_solid_mail_01"
+    },
+    {
+      "id": "16519:56766",
+      "name": "ic_solid_mail_02"
+    },
+    {
+      "id": "16519:56769",
+      "name": "ic_solid_mail_03"
+    },
+    {
+      "id": "16519:56772",
+      "name": "ic_solid_mail_04"
+    },
+    {
+      "id": "16519:56775",
+      "name": "ic_solid_mail_05"
+    },
+    {
+      "id": "16519:56778",
+      "name": "ic_solid_message_alert_circle"
+    },
+    {
+      "id": "16519:56781",
+      "name": "ic_solid_message_alert_square"
+    },
+    {
+      "id": "16519:56784",
+      "name": "ic_solid_message_chat_circle"
+    },
+    {
+      "id": "16519:56787",
+      "name": "ic_solid_message_chat_square"
+    },
+    {
+      "id": "16519:56790",
+      "name": "ic_solid_message_check_circle"
+    },
+    {
+      "id": "16519:56793",
+      "name": "ic_solid_message_check_square"
+    },
+    {
+      "id": "16519:56796",
+      "name": "ic_solid_message_circle_01"
+    },
+    {
+      "id": "16519:56799",
+      "name": "ic_solid_message_circle_02"
+    },
+    {
+      "id": "16519:56802",
+      "name": "ic_solid_message_dots_circle"
+    },
+    {
+      "id": "16519:56805",
+      "name": "ic_solid_message_dots_square"
+    },
+    {
+      "id": "16519:56808",
+      "name": "ic_solid_message_heart_circle"
+    },
+    {
+      "id": "16519:56811",
+      "name": "ic_solid_message_heart_square"
+    },
+    {
+      "id": "16519:56814",
+      "name": "ic_solid_message_notification_circle"
+    },
+    {
+      "id": "16519:56817",
+      "name": "ic_solid_message_notification_square"
+    },
+    {
+      "id": "16519:56820",
+      "name": "ic_solid_message_plus_circle"
+    },
+    {
+      "id": "16519:56823",
+      "name": "ic_solid_message_plus_square"
+    },
+    {
+      "id": "16519:56826",
+      "name": "ic_solid_message_question_circle"
+    },
+    {
+      "id": "16519:56829",
+      "name": "ic_solid_message_question_square"
+    },
+    {
+      "id": "16519:56832",
+      "name": "ic_solid_message_smile_circle"
+    },
+    {
+      "id": "16519:56835",
+      "name": "ic_solid_message_smile_square"
+    },
+    {
+      "id": "16519:56838",
+      "name": "ic_solid_message_square_01"
+    },
+    {
+      "id": "16519:56841",
+      "name": "ic_solid_message_square_02"
+    },
+    {
+      "id": "16519:56844",
+      "name": "ic_solid_message_text_circle_01"
+    },
+    {
+      "id": "16519:56847",
+      "name": "ic_solid_message_text_circle_02"
+    },
+    {
+      "id": "16519:56850",
+      "name": "ic_solid_message_text_square_01"
+    },
+    {
+      "id": "16519:56853",
+      "name": "ic_solid_message_text_square_02"
+    },
+    {
+      "id": "16519:56856",
+      "name": "ic_solid_message_x_circle"
+    },
+    {
+      "id": "16519:56859",
+      "name": "ic_solid_message_x_square"
+    },
+    {
+      "id": "16519:56862",
+      "name": "ic_solid_phone"
+    },
+    {
+      "id": "16519:56865",
+      "name": "ic_solid_phone_call_01"
+    },
+    {
+      "id": "16519:56868",
+      "name": "ic_solid_phone_call_02"
+    },
+    {
+      "id": "16519:56871",
+      "name": "ic_solid_phone_hang_up"
+    },
+    {
+      "id": "16519:56874",
+      "name": "ic_solid_phone_incoming_01"
+    },
+    {
+      "id": "16519:56877",
+      "name": "ic_solid_phone_incoming_02"
+    },
+    {
+      "id": "16519:56880",
+      "name": "ic_solid_phone_outgoing_01"
+    },
+    {
+      "id": "16519:56883",
+      "name": "ic_solid_phone_outgoing_02"
+    },
+    {
+      "id": "16519:56886",
+      "name": "ic_solid_phone_pause"
+    },
+    {
+      "id": "16519:56889",
+      "name": "ic_solid_phone_plus"
+    },
+    {
+      "id": "16519:56892",
+      "name": "ic_solid_phone_x"
+    },
+    {
+      "id": "16519:56895",
+      "name": "ic_solid_send_01"
+    },
+    {
+      "id": "16519:56898",
+      "name": "ic_solid_send_02"
+    },
+    {
+      "id": "16519:56901",
+      "name": "ic_solid_send_03"
+    }
+  ],
+  "Editor": [
+    {
+      "id": "16519:56906",
+      "name": "ic_solid_align_center"
+    },
+    {
+      "id": "16519:56909",
+      "name": "ic_solid_align_justify"
+    },
+    {
+      "id": "16519:56912",
+      "name": "ic_solid_align_left"
+    },
+    {
+      "id": "16519:56915",
+      "name": "ic_solid_align_right"
+    },
+    {
+      "id": "16519:56918",
+      "name": "ic_solid_attachment_01"
+    },
+    {
+      "id": "16519:56921",
+      "name": "ic_solid_attachment_02"
+    },
+    {
+      "id": "16519:56924",
+      "name": "ic_solid_bezier_curve_01"
+    },
+    {
+      "id": "16519:56927",
+      "name": "ic_solid_bezier_curve_02"
+    },
+    {
+      "id": "16519:56930",
+      "name": "ic_solid_bezier_curve_03"
+    },
+    {
+      "id": "16519:56933",
+      "name": "ic_solid_bold_01"
+    },
+    {
+      "id": "16519:56936",
+      "name": "ic_solid_bold_02"
+    },
+    {
+      "id": "16519:56939",
+      "name": "ic_solid_bold_square"
+    },
+    {
+      "id": "16519:56942",
+      "name": "ic_solid_brush_01"
+    },
+    {
+      "id": "16519:56945",
+      "name": "ic_solid_brush_02"
+    },
+    {
+      "id": "16519:56948",
+      "name": "ic_solid_brush_03"
+    },
+    {
+      "id": "16519:56951",
+      "name": "ic_solid_circle_cut"
+    },
+    {
+      "id": "16519:56954",
+      "name": "ic_solid_code_snippet_01"
+    },
+    {
+      "id": "16519:56957",
+      "name": "ic_solid_code_snippet_02"
+    },
+    {
+      "id": "16519:56963",
+      "name": "ic_solid_command"
+    },
+    {
+      "id": "16519:56966",
+      "name": "ic_solid_contrast_01"
+    },
+    {
+      "id": "16519:56969",
+      "name": "ic_solid_contrast_02"
+    },
+    {
+      "id": "16519:56972",
+      "name": "ic_solid_contrast_03"
+    },
+    {
+      "id": "16519:56975",
+      "name": "ic_solid_crop_01"
+    },
+    {
+      "id": "16519:56978",
+      "name": "ic_solid_crop_02"
+    },
+    {
+      "id": "16519:56981",
+      "name": "ic_solid_cursor_01"
+    },
+    {
+      "id": "16519:56984",
+      "name": "ic_solid_cursor_02"
+    },
+    {
+      "id": "16519:56987",
+      "name": "ic_solid_cursor_03"
+    },
+    {
+      "id": "16519:56990",
+      "name": "ic_solid_cursor_04"
+    },
+    {
+      "id": "16519:56993",
+      "name": "ic_solid_cursor_box"
+    },
+    {
+      "id": "16519:56996",
+      "name": "ic_solid_cursor_click_01"
+    },
+    {
+      "id": "16519:56999",
+      "name": "ic_solid_cursor_click_02"
+    },
+    {
+      "id": "16519:57002",
+      "name": "ic_solid_delete"
+    },
+    {
+      "id": "16519:57005",
+      "name": "ic_solid_dotpoints_01"
+    },
+    {
+      "id": "16519:57008",
+      "name": "ic_solid_dotpoints_02"
+    },
+    {
+      "id": "16519:57011",
+      "name": "ic_solid_drop"
+    },
+    {
+      "id": "16519:57014",
+      "name": "ic_solid_dropper"
+    },
+    {
+      "id": "16519:57017",
+      "name": "ic_solid_eraser"
+    },
+    {
+      "id": "16519:57020",
+      "name": "ic_solid_feather"
+    },
+    {
+      "id": "16519:57023",
+      "name": "ic_solid_figma"
+    },
+    {
+      "id": "16519:57026",
+      "name": "ic_solid_framer"
+    },
+    {
+      "id": "16519:57029",
+      "name": "ic_solid_hand"
+    },
+    {
+      "id": "16519:57032",
+      "name": "ic_solid_heading_01"
+    },
+    {
+      "id": "16519:57035",
+      "name": "ic_solid_heading_02"
+    },
+    {
+      "id": "16519:57038",
+      "name": "ic_solid_heading_square"
+    },
+    {
+      "id": "16519:57041",
+      "name": "ic_solid_image_indent_left"
+    },
+    {
+      "id": "16519:57044",
+      "name": "ic_solid_image_indent_right"
+    },
+    {
+      "id": "16519:57047",
+      "name": "ic_solid_italic_01"
+    },
+    {
+      "id": "16519:57050",
+      "name": "ic_solid_italic_02"
+    },
+    {
+      "id": "16519:57053",
+      "name": "ic_solid_italic_square"
+    },
+    {
+      "id": "16519:57056",
+      "name": "ic_solid_left_indent_01"
+    },
+    {
+      "id": "16519:57059",
+      "name": "ic_solid_left_indent_02"
+    },
+    {
+      "id": "16519:57062",
+      "name": "ic_solid_letter_spacing_01"
+    },
+    {
+      "id": "16519:57065",
+      "name": "ic_solid_letter_spacing_02"
+    },
+    {
+      "id": "16519:57068",
+      "name": "ic_solid_line_height"
+    },
+    {
+      "id": "16519:57071",
+      "name": "ic_solid_magic_wand_01"
+    },
+    {
+      "id": "16519:57074",
+      "name": "ic_solid_magic_wand_02"
+    },
+    {
+      "id": "16519:57077",
+      "name": "ic_solid_move"
+    },
+    {
+      "id": "16519:57080",
+      "name": "ic_solid_paint"
+    },
+    {
+      "id": "16519:57083",
+      "name": "ic_solid_paint_pour"
+    },
+    {
+      "id": "16519:57086",
+      "name": "ic_solid_palette"
+    },
+    {
+      "id": "16519:57089",
+      "name": "ic_solid_paragraph_spacing"
+    },
+    {
+      "id": "16519:57092",
+      "name": "ic_solid_paragraph_wrap"
+    },
+    {
+      "id": "16519:57095",
+      "name": "ic_solid_pen_tool_01"
+    },
+    {
+      "id": "16519:57098",
+      "name": "ic_solid_pen_tool_02"
+    },
+    {
+      "id": "16519:57101",
+      "name": "ic_solid_pen_tool_minus"
+    },
+    {
+      "id": "16519:57104",
+      "name": "ic_solid_pen_tool_plus"
+    },
+    {
+      "id": "16519:57107",
+      "name": "ic_solid_pencil_01"
+    },
+    {
+      "id": "16519:57110",
+      "name": "ic_solid_pencil_02"
+    },
+    {
+      "id": "16519:57113",
+      "name": "ic_solid_pencil_line"
+    },
+    {
+      "id": "16519:57116",
+      "name": "ic_solid_perspective_01"
+    },
+    {
+      "id": "16519:57119",
+      "name": "ic_solid_perspective_02"
+    },
+    {
+      "id": "16519:57122",
+      "name": "ic_solid_pilcrow_01"
+    },
+    {
+      "id": "16519:57125",
+      "name": "ic_solid_pilcrow_02"
+    },
+    {
+      "id": "16519:57128",
+      "name": "ic_solid_pilcrow_square"
+    },
+    {
+      "id": "16519:57131",
+      "name": "ic_solid_reflect_01"
+    },
+    {
+      "id": "16519:57134",
+      "name": "ic_solid_reflect_02"
+    },
+    {
+      "id": "16519:57137",
+      "name": "ic_solid_right_indent_01"
+    },
+    {
+      "id": "16519:57140",
+      "name": "ic_solid_right_indent_02"
+    },
+    {
+      "id": "16519:57143",
+      "name": "ic_solid_roller_brush"
+    },
+    {
+      "id": "16519:57146",
+      "name": "ic_solid_scale_01"
+    },
+    {
+      "id": "16519:57149",
+      "name": "ic_solid_scale_02"
+    },
+    {
+      "id": "16519:57152",
+      "name": "ic_solid_scale_03"
+    },
+    {
+      "id": "16519:57155",
+      "name": "ic_solid_scissors_01"
+    },
+    {
+      "id": "16519:57158",
+      "name": "ic_solid_scissors_02"
+    },
+    {
+      "id": "16519:57161",
+      "name": "ic_solid_scissors_cut_01"
+    },
+    {
+      "id": "16519:57164",
+      "name": "ic_solid_scissors_cut_02"
+    },
+    {
+      "id": "16519:57167",
+      "name": "ic_solid_skew"
+    },
+    {
+      "id": "16519:57170",
+      "name": "ic_solid_strikethrough_01"
+    },
+    {
+      "id": "16519:57173",
+      "name": "ic_solid_strikethrough_02"
+    },
+    {
+      "id": "16519:57176",
+      "name": "ic_solid_strikethrough_square"
+    },
+    {
+      "id": "16519:57179",
+      "name": "ic_solid_subscript"
+    },
+    {
+      "id": "16519:57182",
+      "name": "ic_solid_text_input"
+    },
+    {
+      "id": "16519:57185",
+      "name": "ic_solid_transform"
+    },
+    {
+      "id": "16519:57188",
+      "name": "ic_solid_type_01"
+    },
+    {
+      "id": "16519:57191",
+      "name": "ic_solid_type_02"
+    },
+    {
+      "id": "16519:57194",
+      "name": "ic_solid_type_square"
+    },
+    {
+      "id": "16519:57197",
+      "name": "ic_solid_type_strikethrough_01"
+    },
+    {
+      "id": "16519:57200",
+      "name": "ic_solid_type_strikethrough_02"
+    },
+    {
+      "id": "16519:57203",
+      "name": "ic_solid_underline_01"
+    },
+    {
+      "id": "16519:57206",
+      "name": "ic_solid_underline_02"
+    },
+    {
+      "id": "16519:57209",
+      "name": "ic_solid_underline_square"
+    },
+    {
+      "id": "16519:57212",
+      "name": "ic_solid_zoom_in"
+    },
+    {
+      "id": "16519:57217",
+      "name": "ic_solid_zoom_out"
+    }
+  ],
+  "Time": [
+    {
+      "id": "16519:57222",
+      "name": "ic_solid_alarm_clock"
+    },
+    {
+      "id": "16519:57225",
+      "name": "ic_solid_alarm_clock_check"
+    },
+    {
+      "id": "16519:57228",
+      "name": "ic_solid_alarm_clock_minus"
+    },
+    {
+      "id": "16519:57231",
+      "name": "ic_solid_alarm_clock_off"
+    },
+    {
+      "id": "16519:57234",
+      "name": "ic_solid_alarm_clock_plus"
+    },
+    {
+      "id": "16519:57237",
+      "name": "ic_solid_calendar"
+    },
+    {
+      "id": "16519:57240",
+      "name": "ic_solid_calendar_check_01"
+    },
+    {
+      "id": "16519:57243",
+      "name": "ic_solid_calendar_check_02"
+    },
+    {
+      "id": "16519:57246",
+      "name": "ic_solid_calendar_date"
+    },
+    {
+      "id": "16519:57249",
+      "name": "ic_solid_calendar_heart_01"
+    },
+    {
+      "id": "16519:57252",
+      "name": "ic_solid_calendar_heart_02"
+    },
+    {
+      "id": "16519:57255",
+      "name": "ic_solid_calendar_minus_01"
+    },
+    {
+      "id": "16519:57258",
+      "name": "ic_solid_calendar_minus_02"
+    },
+    {
+      "id": "16519:57261",
+      "name": "ic_solid_calendar_plus_01"
+    },
+    {
+      "id": "16519:57264",
+      "name": "ic_solid_calendar_plus_02"
+    },
+    {
+      "id": "16519:57267",
+      "name": "ic_solid_clock"
+    },
+    {
+      "id": "16519:57270",
+      "name": "ic_solid_clock_check"
+    },
+    {
+      "id": "16519:57273",
+      "name": "ic_solid_clock_fast_forward"
+    },
+    {
+      "id": "16519:57276",
+      "name": "ic_solid_clock_plus"
+    },
+    {
+      "id": "16519:57279",
+      "name": "ic_solid_clock_rewind"
+    },
+    {
+      "id": "16519:57282",
+      "name": "ic_solid_clock_snooze"
+    },
+    {
+      "id": "16519:57285",
+      "name": "ic_solid_clock_stopwatch"
+    },
+    {
+      "id": "16519:57288",
+      "name": "ic_solid_hourglass_01"
+    },
+    {
+      "id": "16519:57291",
+      "name": "ic_solid_hourglass_02"
+    },
+    {
+      "id": "16519:57294",
+      "name": "ic_solid_hourglass_03"
+    },
+    {
+      "id": "16519:57297",
+      "name": "ic_solid_clock_refresh"
+    },
+    {
+      "id": "16519:57300",
+      "name": "ic_solid_watch_circle"
+    },
+    {
+      "id": "16519:57303",
+      "name": "ic_solid_watch_square"
+    }
+  ],
+  "Files": [
+    {
+      "id": "16519:57308",
+      "name": "ic_solid_file_01"
+    },
+    {
+      "id": "16519:57311",
+      "name": "ic_solid_file_02"
+    },
+    {
+      "id": "16519:57314",
+      "name": "ic_solid_file_03"
+    },
+    {
+      "id": "16519:57317",
+      "name": "ic_solid_file_04"
+    },
+    {
+      "id": "16519:57320",
+      "name": "ic_solid_file_05"
+    },
+    {
+      "id": "16519:57323",
+      "name": "ic_solid_file_06"
+    },
+    {
+      "id": "16519:57328",
+      "name": "ic_solid_file_07"
+    },
+    {
+      "id": "16519:57331",
+      "name": "ic_solid_file_attachment_01"
+    },
+    {
+      "id": "16519:57334",
+      "name": "ic_solid_file_attachment_02"
+    },
+    {
+      "id": "16519:57337",
+      "name": "ic_solid_file_attachment_03"
+    },
+    {
+      "id": "16519:57340",
+      "name": "ic_solid_file_attachment_04"
+    },
+    {
+      "id": "16519:57343",
+      "name": "ic_solid_file_attachment_05"
+    },
+    {
+      "id": "16519:57346",
+      "name": "ic_solid_file_check_01"
+    },
+    {
+      "id": "16519:57349",
+      "name": "ic_solid_file_check_02"
+    },
+    {
+      "id": "16519:57352",
+      "name": "ic_solid_file_check_03"
+    },
+    {
+      "id": "16519:57355",
+      "name": "ic_solid_file_download_01"
+    },
+    {
+      "id": "16519:57358",
+      "name": "ic_solid_file_download_02"
+    },
+    {
+      "id": "16519:57361",
+      "name": "ic_solid_file_download_03"
+    },
+    {
+      "id": "16519:57364",
+      "name": "ic_solid_file_heart_01"
+    },
+    {
+      "id": "16519:57367",
+      "name": "ic_solid_file_heart_02"
+    },
+    {
+      "id": "16519:57370",
+      "name": "ic_solid_file_heart_03"
+    },
+    {
+      "id": "16519:57373",
+      "name": "ic_solid_file_minus_01"
+    },
+    {
+      "id": "16519:57376",
+      "name": "ic_solid_file_minus_02"
+    },
+    {
+      "id": "16519:57379",
+      "name": "ic_solid_file_minus_03"
+    },
+    {
+      "id": "16519:57382",
+      "name": "ic_solid_file_plus_01"
+    },
+    {
+      "id": "16519:57385",
+      "name": "ic_solid_file_plus_02"
+    },
+    {
+      "id": "16519:57388",
+      "name": "ic_solid_file_plus_03"
+    },
+    {
+      "id": "16519:57391",
+      "name": "ic_solid_file_question_01"
+    },
+    {
+      "id": "16519:57394",
+      "name": "ic_solid_file_question_02"
+    },
+    {
+      "id": "16519:57397",
+      "name": "ic_solid_file_question_03"
+    },
+    {
+      "id": "16519:57400",
+      "name": "ic_solid_file_x_01"
+    },
+    {
+      "id": "16519:57403",
+      "name": "ic_solid_file_x_02"
+    },
+    {
+      "id": "16519:57406",
+      "name": "ic_solid_file_x_03"
+    },
+    {
+      "id": "16519:57409",
+      "name": "ic_solid_file_search_01"
+    },
+    {
+      "id": "16519:57412",
+      "name": "ic_solid_file_search_02"
+    },
+    {
+      "id": "16519:57415",
+      "name": "ic_solid_file_search_03"
+    },
+    {
+      "id": "16519:57418",
+      "name": "ic_solid_folder"
+    },
+    {
+      "id": "16519:57421",
+      "name": "ic_solid_folder_check"
+    },
+    {
+      "id": "16519:57424",
+      "name": "ic_solid_folder_download"
+    },
+    {
+      "id": "16519:57427",
+      "name": "ic_solid_folder_lock"
+    },
+    {
+      "id": "16519:57430",
+      "name": "ic_solid_folder_minus"
+    },
+    {
+      "id": "16519:57433",
+      "name": "ic_solid_folder_plus"
+    },
+    {
+      "id": "16519:57436",
+      "name": "ic_solid_folder_question"
+    },
+    {
+      "id": "16519:57439",
+      "name": "ic_solid_folder_search"
+    },
+    {
+      "id": "16519:57442",
+      "name": "ic_solid_folder_closed"
+    },
+    {
+      "id": "16519:57445",
+      "name": "ic_solid_folder_x"
+    },
+    {
+      "id": "16519:57448",
+      "name": "ic_solid_paperclip"
+    },
+    {
+      "id": "16519:57451",
+      "name": "ic_solid_clipboard"
+    },
+    {
+      "id": "16519:57454",
+      "name": "ic_solid_clipboard_attachment"
+    },
+    {
+      "id": "16519:57457",
+      "name": "ic_solid_clipboard_download"
+    },
+    {
+      "id": "16519:57460",
+      "name": "ic_solid_clipboard_check"
+    },
+    {
+      "id": "16519:57463",
+      "name": "ic_solid_clipboard_x"
+    },
+    {
+      "id": "16519:57466",
+      "name": "ic_solid_clipboard_plus"
+    },
+    {
+      "id": "16519:57469",
+      "name": "ic_solid_clipboard_minus"
+    },
+    {
+      "id": "16519:57472",
+      "name": "ic_solid_sticker_square"
+    },
+    {
+      "id": "16519:57475",
+      "name": "ic_solid_sticker_circle"
+    },
+    {
+      "id": "16519:57478",
+      "name": "ic_solid_box"
+    }
+  ],
+  "Maps & travel": [
+    {
+      "id": "16519:57482",
+      "name": "ic_solid_bus"
+    },
+    {
+      "id": "16519:57484",
+      "name": "ic_solid_car_01"
+    },
+    {
+      "id": "16519:57487",
+      "name": "ic_solid_car_02"
+    },
+    {
+      "id": "16519:57491",
+      "name": "ic_solid_compass_01"
+    },
+    {
+      "id": "16519:57494",
+      "name": "ic_solid_compass_02"
+    },
+    {
+      "id": "16519:57497",
+      "name": "ic_solid_compass_03"
+    },
+    {
+      "id": "16519:57500",
+      "name": "ic_solid_flag_01"
+    },
+    {
+      "id": "16519:57503",
+      "name": "ic_solid_flag_02"
+    },
+    {
+      "id": "16519:57506",
+      "name": "ic_solid_flag_03"
+    },
+    {
+      "id": "16519:57509",
+      "name": "ic_solid_flag_04"
+    },
+    {
+      "id": "16519:57512",
+      "name": "ic_solid_flag_05"
+    },
+    {
+      "id": "16519:57515",
+      "name": "ic_solid_flag_06"
+    },
+    {
+      "id": "16519:57518",
+      "name": "ic_solid_globe_01"
+    },
+    {
+      "id": "16519:57521",
+      "name": "ic_solid_globe_02"
+    },
+    {
+      "id": "16519:57524",
+      "name": "ic_solid_globe_03"
+    },
+    {
+      "id": "16519:57527",
+      "name": "ic_solid_globe_04"
+    },
+    {
+      "id": "16519:57530",
+      "name": "ic_solid_globe_05"
+    },
+    {
+      "id": "16519:57533",
+      "name": "ic_solid_globe_06"
+    },
+    {
+      "id": "16519:57537",
+      "name": "ic_solid_luggage_01"
+    },
+    {
+      "id": "16519:57540",
+      "name": "ic_solid_luggage_02"
+    },
+    {
+      "id": "16519:57543",
+      "name": "ic_solid_luggage_03"
+    },
+    {
+      "id": "16519:57546",
+      "name": "ic_solid_map_01"
+    },
+    {
+      "id": "16519:57549",
+      "name": "ic_solid_map_02"
+    },
+    {
+      "id": "16519:57552",
+      "name": "ic_solid_mark"
+    },
+    {
+      "id": "16519:57555",
+      "name": "ic_solid_marker_pin_01"
+    },
+    {
+      "id": "16519:57558",
+      "name": "ic_solid_marker_pin_02"
+    },
+    {
+      "id": "16519:57561",
+      "name": "ic_solid_marker_pin_03"
+    },
+    {
+      "id": "16519:57564",
+      "name": "ic_solid_marker_pin_04"
+    },
+    {
+      "id": "16519:57567",
+      "name": "ic_solid_marker_pin_05"
+    },
+    {
+      "id": "16519:57570",
+      "name": "ic_solid_marker_pin_06"
+    },
+    {
+      "id": "16519:57573",
+      "name": "ic_solid_navigation_pointer_01"
+    },
+    {
+      "id": "16519:57576",
+      "name": "ic_solid_navigation_pointer_02"
+    },
+    {
+      "id": "16519:57579",
+      "name": "ic_solid_navigation_pointer_off_01"
+    },
+    {
+      "id": "16519:57582",
+      "name": "ic_solid_navigation_pointer_off_02"
+    },
+    {
+      "id": "16519:57585",
+      "name": "ic_solid_passport"
+    },
+    {
+      "id": "16519:57588",
+      "name": "ic_solid_rocket_01"
+    },
+    {
+      "id": "16519:57590",
+      "name": "ic_solid_plane"
+    },
+    {
+      "id": "16519:57594",
+      "name": "ic_solid_rocket_02"
+    },
+    {
+      "id": "16519:57597",
+      "name": "ic_solid_route"
+    },
+    {
+      "id": "16519:57600",
+      "name": "ic_solid_ticket_01"
+    },
+    {
+      "id": "16519:57603",
+      "name": "ic_solid_ticket_02"
+    },
+    {
+      "id": "16519:57606",
+      "name": "ic_solid_train"
+    },
+    {
+      "id": "16519:57609",
+      "name": "ic_solid_tram"
+    },
+    {
+      "id": "16519:57612",
+      "name": "ic_solid_truck_01"
+    },
+    {
+      "id": "16519:57615",
+      "name": "ic_solid_truck_02"
+    }
+  ],
+  "Weather": [
+    {
+      "id": "16519:57621",
+      "name": "ic_solid_cloud_01"
+    },
+    {
+      "id": "16519:57624",
+      "name": "ic_solid_cloud_02"
+    },
+    {
+      "id": "16519:57627",
+      "name": "ic_solid_cloud_03"
+    },
+    {
+      "id": "16519:57630",
+      "name": "ic_solid_cloud_lightning"
+    },
+    {
+      "id": "16519:57633",
+      "name": "ic_solid_cloud_moon"
+    },
+    {
+      "id": "16519:57636",
+      "name": "ic_solid_cloud_off"
+    },
+    {
+      "id": "16519:57639",
+      "name": "ic_solid_cloud_raining_01"
+    },
+    {
+      "id": "16519:57642",
+      "name": "ic_solid_cloud_raining_02"
+    },
+    {
+      "id": "16519:57645",
+      "name": "ic_solid_cloud_raining_03"
+    },
+    {
+      "id": "16519:57648",
+      "name": "ic_solid_cloud_raining_04"
+    },
+    {
+      "id": "16519:57651",
+      "name": "ic_solid_cloud_raining_05"
+    },
+    {
+      "id": "16519:57654",
+      "name": "ic_solid_cloud_raining_06"
+    },
+    {
+      "id": "16519:57657",
+      "name": "ic_solid_cloud_snowing_01"
+    },
+    {
+      "id": "16519:57660",
+      "name": "ic_solid_cloud_snowing_02"
+    },
+    {
+      "id": "16519:57663",
+      "name": "ic_solid_cloud_sun_01"
+    },
+    {
+      "id": "16519:57666",
+      "name": "ic_solid_cloud_sun_02"
+    },
+    {
+      "id": "16519:57669",
+      "name": "ic_solid_cloud_sun_03"
+    },
+    {
+      "id": "16519:57672",
+      "name": "ic_solid_droplets_01"
+    },
+    {
+      "id": "16519:57675",
+      "name": "ic_solid_droplets_02"
+    },
+    {
+      "id": "16519:57678",
+      "name": "ic_solid_droplets_03"
+    },
+    {
+      "id": "16519:57681",
+      "name": "ic_solid_hurricane_01"
+    },
+    {
+      "id": "16519:57684",
+      "name": "ic_solid_hurricane_02"
+    },
+    {
+      "id": "16519:57687",
+      "name": "ic_solid_hurricane_03"
+    },
+    {
+      "id": "16519:57690",
+      "name": "ic_solid_lightning_01"
+    },
+    {
+      "id": "16519:57693",
+      "name": "ic_solid_lightning_02"
+    },
+    {
+      "id": "16519:57696",
+      "name": "ic_solid_moon_01"
+    },
+    {
+      "id": "16519:57699",
+      "name": "ic_solid_moon_02"
+    },
+    {
+      "id": "16519:57702",
+      "name": "ic_solid_moon_eclipse"
+    },
+    {
+      "id": "16519:57705",
+      "name": "ic_solid_moon_star"
+    },
+    {
+      "id": "16519:57708",
+      "name": "ic_solid_snowflake_01"
+    },
+    {
+      "id": "16519:57711",
+      "name": "ic_solid_snowflake_02"
+    },
+    {
+      "id": "16519:57714",
+      "name": "ic_solid_stars_01"
+    },
+    {
+      "id": "16519:57717",
+      "name": "ic_solid_stars_02"
+    },
+    {
+      "id": "16519:57720",
+      "name": "ic_solid_stars_03"
+    },
+    {
+      "id": "16519:57723",
+      "name": "ic_solid_sun"
+    },
+    {
+      "id": "16519:57726",
+      "name": "ic_solid_sun_setting_01"
+    },
+    {
+      "id": "16519:57729",
+      "name": "ic_solid_sun_setting_02"
+    },
+    {
+      "id": "16519:57732",
+      "name": "ic_solid_sun_setting_03"
+    },
+    {
+      "id": "16519:57735",
+      "name": "ic_solid_sunrise"
+    },
+    {
+      "id": "16519:57738",
+      "name": "ic_solid_sunset"
+    },
+    {
+      "id": "16519:57741",
+      "name": "ic_solid_thermometer_01"
+    },
+    {
+      "id": "16519:57744",
+      "name": "ic_solid_thermometer_02"
+    },
+    {
+      "id": "16519:57747",
+      "name": "ic_solid_thermometer_03"
+    },
+    {
+      "id": "16519:57750",
+      "name": "ic_solid_thermometer_cold"
+    },
+    {
+      "id": "16519:57753",
+      "name": "ic_solid_thermometer_warm"
+    },
+    {
+      "id": "16519:57756",
+      "name": "ic_solid_umbrella_01"
+    },
+    {
+      "id": "16519:57759",
+      "name": "ic_solid_umbrella_02"
+    },
+    {
+      "id": "16519:57762",
+      "name": "ic_solid_umbrella_03"
+    },
+    {
+      "id": "16519:57765",
+      "name": "ic_solid_waves"
+    },
+    {
+      "id": "16519:57768",
+      "name": "ic_solid_wind_01"
+    },
+    {
+      "id": "16519:57771",
+      "name": "ic_solid_wind_02"
+    },
+    {
+      "id": "16519:57774",
+      "name": "ic_solid_wind_03"
+    }
+  ]
+}
